@@ -2,6 +2,7 @@ import { news } from "@/data/news";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 type ArticlePageProps = {
   params: Promise<{
@@ -18,10 +19,10 @@ export async function generateMetadata({
     (item) => item.slug === slug
   );
 
-  return {
-    title: article?.title,
-    description: article?.title,
-  };
+return {
+         title: article?.title || "Maalam.net",
+         description: article?.title || "أحدث الأخبار",
+       };
 }
 export default async function ArticlePage({
   params,
@@ -97,47 +98,68 @@ export default async function ArticlePage({
           </div>
 
           <div className="
-            mt-12
-            space-y-8
-            text-zinc-300
-            leading-loose
-            text-xl
-          ">
+                    mt-12
+                    space-y-8
+                    text-zinc-300
+                    leading-loose
+                    text-xl
+                  ">
 
-            <p>
-              يشهد العالم تغيرات متسارعة في مختلف المجالات،
-              وخاصة في التكنولوجيا والإعلام الرقمي، حيث أصبحت
-              المنصات الحديثة تلعب دوراً أساسياً في نقل الأخبار
-              وصناعة المحتوى.
-            </p>
-            <div className="
-                          w-full
-                          h-40
-                          border
-                          border-zinc-800
-                          bg-zinc-950
-                          flex
-                          items-center
-                          justify-center
-                          text-zinc-500
-                          text-lg
-                        ">
+              <ReactMarkdown
+                components={{
+                  h2: ({ children }) => (
+                    <h2 className="
+                      text-3xl
+                      md:text-4xl
+                      font-extrabold
+                      mt-16
+                      mb-6
+                      text-white
+                    ">
+                      {children}
+                    </h2>
+                  ),
 
-                          مساحة إعلانية داخل المقال
+                  p: ({ children }) => (
+                    <p className="
+                      text-zinc-300
+                      leading-loose
+                      text-xl
+                    ">
+                      {children}
+                    </p>
+                  ),
 
-            </div>
+                  ul: ({ children }) => (
+                    <ul className="
+                      list-disc
+                      pr-6
+                      space-y-4
+                      text-xl
+                      text-zinc-300
+                    ">
+                      {children}
+                    </ul>
+                  ),
+                }}
+              >
+                {article.content}
+              </ReactMarkdown>
 
-            <p>
-              تسعى منصة Maalam.net إلى تقديم تجربة عربية حديثة
-              تعتمد على السرعة والوضوح والتصميم العصري مع التركيز
-              على جودة المحتوى وسهولة الوصول للمعلومات.
-            </p>
-
-            <p>
-              ويُتوقع أن تشهد السنوات القادمة تطوراً أكبر في
-              اعتماد تقنيات الذكاء الاصطناعي والتحليل الرقمي
-              في صناعة الإعلام الحديث.
-            </p>
+                    <div className="
+                      w-full
+                      h-40
+                      border
+                      border-zinc-800
+                      bg-zinc-950
+                      flex
+                      items-center
+                      justify-center
+                      text-zinc-500
+                      text-lg
+                    ">
+                      مساحة إعلانية داخل المقال
+                    </div>
 
           </div>
 
@@ -151,6 +173,7 @@ export default async function ArticlePage({
     md:text-4xl
     font-extrabold
     mb-10
+    mx-2
   ">
     مقالات ذات صلة
   </h2>
@@ -168,7 +191,7 @@ export default async function ArticlePage({
       .map((item, index) => (
 
         <Link
-          key={index}
+          key={item.slug}
           href={`/article/${item.slug}`}
           className="
             bg-zinc-900

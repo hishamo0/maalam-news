@@ -5,7 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 
-export default function Header() {
+type HeaderProps = {
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export default function Header({
+  search,
+  setSearch,
+}: HeaderProps) {
 
   const pathname = usePathname();
 
@@ -291,27 +299,29 @@ export default function Header() {
           "
         >
 
-          <input
+            <input
             type="text"
             placeholder="ابحث عن الأخبار..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
             className="
-              w-full
-              bg-zinc-900/80
-              border
-              border-zinc-700
+                w-full
+                bg-zinc-900/80
+                border
+                border-zinc-700
 
-              px-6
-              py-4
+                px-6
+                py-4
 
-              text-white
+                text-white
 
-              outline-none
+                outline-none
 
-              focus:border-red-500
+                focus:border-red-500
 
-              transition
+                transition
             "
-          />
+            />
 
           <button
             onClick={() => setSearchOpen(false)}

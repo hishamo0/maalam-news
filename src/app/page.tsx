@@ -6,7 +6,7 @@ import Hero from "@/components/Hero";
 import NewsCard from "@/components/NewsCard";
 import SectionTitle from "@/components/SectionTitle";
 import TrendingSidebar from "@/components/TrendingSidebar";
-import Footer from "@/components/Footer";
+import Image from "next/image";
 import { news } from "@/data/news";
 import { useState } from "react";
 
@@ -15,13 +15,18 @@ export default function Home() {
   const [search, setSearch] = useState("");
 
   const filteredNews = news.filter((item) =>
-  item.title.includes(search)
+  item.title
+  .toLowerCase()
+  .includes(search.toLowerCase())
   );
 
   return (
    <main className="w-full bg-black text-white min-h-screen">
 
-      <Header />
+      <Header
+          search={search}
+          setSearch={setSearch}
+      />
 
       <Hero />
 
@@ -81,7 +86,7 @@ export default function Home() {
 
           <div className="overflow-hidden">
 
-  <img
+  <Image
     src="https://picsum.photos/1200/700?tech"
     alt="Technology"
     className="
@@ -148,7 +153,7 @@ export default function Home() {
 
         {filteredNews.map((item, index) => (
           <NewsCard
-            key={index}
+            key={item.slug}
             category={item.category}
             title={item.title}
             image={item.image}
@@ -166,7 +171,7 @@ export default function Home() {
 
 </section>
 
-<Footer />
+
 
 
     </main>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Footer() {
   return (
 
@@ -5,7 +6,7 @@ export default function Footer() {
 
       <div className="w-full px-8 py-10">
 
-        <div className="max-w-4xl">
+        <div className="max-w-5xl mx-auto">
 
           <h2 className="text-4xl font-extrabold">
             Maalam.net
@@ -26,21 +27,21 @@ export default function Footer() {
 
           <div className="flex items-center gap-6 text-zinc-400 text-sm">
 
-            <a href="/about" className="hover:text-white transition">
+            <Link href="/about" className="hover:text-white transition">
               من نحن
-            </a>
+            </Link>
 
-            <a href="/privacy-policy" className="hover:text-white transition">
+            <Link href="/privacy-policy" className="hover:text-white transition">
               سياسة الخصوصية
-            </a>
+            </Link>
 
-            <a href="/contact" className="hover:text-white transition">
+            <Link href="/contact" className="hover:text-white transition">
               تواصل معنا
-            </a>
+            </Link>
 
-            <a href="/terms" className="hover:text-white transition">
+            <Link href="/terms" className="hover:text-white transition">
               شروط الاستخدام
-            </a>
+            </Link>
 
           </div>
 
