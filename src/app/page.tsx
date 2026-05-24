@@ -29,6 +29,7 @@ export default function Home() {
       />
 
       <Hero />
+     
 
   <section className="w-full px-4 md:px-8 py-8">
 
