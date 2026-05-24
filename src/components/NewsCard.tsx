@@ -8,6 +8,8 @@ type NewsCardProps = {
   category: string;
   image: string;
   slug: string;
+  content?: string;
+  date?: string;
 };
 
 export default function NewsCard({
@@ -15,6 +17,8 @@ export default function NewsCard({
   category,
   image,
   slug,
+  content,
+  date,
 }: NewsCardProps) {
 
 const [loaded, setLoaded] = useState(false);
@@ -81,9 +85,13 @@ const [loaded, setLoaded] = useState(false);
           {title}
         </h3>
 
-        <p className="text-zinc-400 text-sm mt-4 leading-relaxed">
-          هذا مثال أولي لبطاقة خبر داخل منصة Maalam.net.
-        </p>
+<p className="text-zinc-400 text-sm mt-4 leading-relaxed">
+  {content?.slice(0, 90)}...
+</p>
+
+<div className="mt-4 text-xs text-zinc-500">
+  {date}
+</div>
 
       </div>
 

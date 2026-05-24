@@ -117,19 +117,23 @@ export default function Home() {
 
         <div className="space-y-8">
 
-          <NewsCard
-            category="تكنولوجيا"
-            title="شركات التقنية تتسابق في تطوير نماذج الذكاء الاصطناعي"
-            image="https://picsum.photos/600/400?11"
-            slug="cloud-computing"
-          />
+<NewsCard
+  category="تكنولوجيا"
+  title="شركات التقنية تتسابق في تطوير نماذج الذكاء الاصطناعي"
+  image="https://picsum.photos/600/400?11"
+  slug="cloud-computing"
+  content="تشهد شركات التقنية العالمية سباقاً متسارعاً في تطوير نماذج الذكاء الاصطناعي الحديثة."
+  date="24 مايو 2026"
+/>
 
-          <NewsCard
-            category="تكنولوجيا"
-            title="تطورات جديدة في عالم الحوسبة السحابية"
-            image="https://picsum.photos/600/400?12"
-            slug="cloud-computing"
-          />
+<NewsCard
+  category="تكنولوجيا"
+  title="تطورات جديدة في عالم الحوسبة السحابية"
+  image="https://picsum.photos/600/400?12"
+  slug="cloud-computing"
+  content="تشهد خدمات الحوسبة السحابية تطورات كبيرة مع توسع استخدام الذكاء الاصطناعي."
+  date="24 مايو 2026"
+/>
 
         </div>
 
@@ -158,6 +162,8 @@ export default function Home() {
             title={item.title}
             image={item.image}
             slug={item.slug}
+            content={item.content}
+            date={item.date}
           />
         ))}
 

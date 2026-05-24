@@ -20,9 +20,44 @@ export async function generateMetadata({
   );
 
 return {
-         title: article?.title || "Maalam.net",
-         description: article?.title || "أحدث الأخبار",
-       };
+
+  title: article?.title || "Maalam.net",
+
+  description:
+    article?.content?.slice(0, 160) ||
+    "منصة إخبارية عربية حديثة",
+
+  openGraph: {
+
+    title: article?.title,
+
+    description:
+      article?.content?.slice(0, 160),
+
+    images: [
+      {
+        url: article?.image || "",
+      },
+    ],
+
+    type: "article",
+  },
+
+  twitter: {
+
+    card: "summary_large_image",
+
+    title: article?.title,
+
+    description:
+      article?.content?.slice(0, 160),
+
+    images: [
+      article?.image || "",
+    ],
+  },
+
+};
 }
 export default async function ArticlePage({
   params,
@@ -89,11 +124,11 @@ export default async function ArticlePage({
             text-sm
           ">
 
-            <span>Maalam.net</span>
+            <span>{article.author}</span>
 
             <span>•</span>
 
-            <span>منذ ساعتين</span>
+            <span>{article.date}</span>
 
           </div>
 
@@ -125,6 +160,7 @@ export default async function ArticlePage({
                       text-zinc-300
                       leading-loose
                       text-xl
+                      mx-1
                     ">
                       {children}
                     </p>
@@ -188,7 +224,7 @@ export default async function ArticlePage({
     {news
       .filter((item) => item.slug !== article.slug)
       .slice(0, 3)
-      .map((item, index) => (
+      .map((item) => (
 
         <Link
           key={item.slug}
