@@ -1,11 +1,28 @@
 import { news } from "@/data/news";
+import Link from "next/link";
+import { Metadata } from "next";
+import Image from "next/image";
 
 type ArticlePageProps = {
   params: Promise<{
     slug: string;
   }>;
 };
+export async function generateMetadata({
+  params,
+}: ArticlePageProps): Promise<Metadata> {
 
+  const { slug } = await params;
+
+  const article = news.find(
+    (item) => item.slug === slug
+  );
+
+  return {
+    title: article?.title,
+    description: article?.title,
+  };
+}
 export default async function ArticlePage({
   params,
 }: ArticlePageProps) {
@@ -32,9 +49,11 @@ export default async function ArticlePage({
 
       <div className="max-w-5xl mx-auto px-4 py-16">
 
-        <img
+        <Image
           src={article.image}
           alt={article.title}
+          width={1200}
+          height={700}
           className="
             w-full
             h-[300px]
@@ -125,7 +144,7 @@ export default async function ArticlePage({
         </div>
 
       </div>
-      <div className="mt-24">
+      <div className="max-w-5xl mx-auto px-4 mt-24 pb-24">
 
   <h2 className="
     text-3xl
@@ -148,7 +167,7 @@ export default async function ArticlePage({
       .slice(0, 3)
       .map((item, index) => (
 
-        <a
+        <Link
           key={index}
           href={`/article/${item.slug}`}
           className="
@@ -160,10 +179,12 @@ export default async function ArticlePage({
           "
         >
 
-          <img
+          <Image
             src={item.image}
             alt={item.title}
-            className="
+            width={1200}
+            height={700}
+              className="
               w-full
               h-52
               object-cover
@@ -190,7 +211,7 @@ export default async function ArticlePage({
 
           </div>
 
-        </a>
+        </Link>
 
     ))}
 
