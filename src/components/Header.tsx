@@ -80,7 +80,7 @@ export default function Header({
 
           {/* Desktop Nav */}
 
-          <nav className="hidden md:flex items-center gap-10 text-zinc-300">
+          <nav className="flex flex-wrap items-center gap-6 text-zinc-300">
 
             <button
               onClick={() => setSearchOpen(!searchOpen)}
@@ -90,12 +90,12 @@ export default function Header({
             </button>
 
             <Link
-              href="/politics"
+              href="/section/politics"
               className={`
                 transition
                 duration-300
 
-                ${pathname === "/politics"
+                ${pathname === "/section/politics"
                 ? "text-red-500"
                 : "text-zinc-300 hover:text-red-500"}
               `}
@@ -104,12 +104,12 @@ export default function Header({
             </Link>
 
             <Link
-              href="/economy"
+              href="/section/economy"
               className={`
                 transition
                 duration-300
 
-                ${pathname === "/economy"
+                ${pathname === "/section/economy"
                 ? "text-sky-400"
                 : "text-zinc-300 hover:text-sky-400"}
               `}
@@ -118,12 +118,12 @@ export default function Header({
             </Link>
 
             <Link
-              href="/technology"
+              href="/section/technology"
               className={`
                 transition
                 duration-300
 
-                ${pathname === "/technology"
+                ${pathname === "/section/technology"
                 ? "text-indigo-400"
                 : "text-zinc-300 hover:text-indigo-400"}
               `}
@@ -132,12 +132,12 @@ export default function Header({
             </Link>
 
             <Link
-              href="/culture"
+              href="/section/culture"
               className={`
                 transition
                 duration-300
 
-                ${pathname === "/culture"
+                ${pathname === "/section/culture"
                 ? "text-green-500"
                 : "text-zinc-300 hover:text-green-500"}
               `}
@@ -198,7 +198,7 @@ export default function Header({
         >
 
           <Link
-            href="/politics"
+            href="/section/politics"
             className={`
               text-white
               transition
@@ -206,7 +206,7 @@ export default function Header({
 
               hover:text-red-500
 
-              ${pathname === "/politics"
+              ${pathname === "/section/politics"
               ? "!text-red-500"
               : ""}
             `}
@@ -215,7 +215,7 @@ export default function Header({
           </Link>
 
           <Link
-            href="/economy"
+            href="/section/economy"
             className={`
               text-white
               transition
@@ -223,7 +223,7 @@ export default function Header({
 
               hover:text-sky-400
 
-              ${pathname === "/economy"
+              ${pathname === "/section/economy"
               ? "!text-sky-400"
               : ""}
             `}
@@ -232,7 +232,7 @@ export default function Header({
           </Link>
 
           <Link
-            href="/technology"
+            href="/section/technology"
             className={`
               text-white
               transition
@@ -240,7 +240,7 @@ export default function Header({
 
               hover:text-indigo-400
 
-              ${pathname === "/technology"
+              ${pathname === "/section/technology"
               ? "!text-indigo-400"
               : ""}
             `}
@@ -249,7 +249,7 @@ export default function Header({
           </Link>
 
           <Link
-            href="/culture"
+            href="/section/culture"
             className={`
               text-white
               transition
@@ -257,7 +257,7 @@ export default function Header({
 
               hover:text-green-500
 
-              ${pathname === "/culture"
+              ${pathname === "/section/culture"
               ? "!text-green-500"
               : ""}
             `}
