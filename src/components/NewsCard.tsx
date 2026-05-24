@@ -81,11 +81,11 @@ const [loaded, setLoaded] = useState(false);
         {category}
         </span>
 
-        <h3 className="text-2xl font-bold leading-relaxed mt-3">
+        <h3 className="text-2xl font-bold line-clamp-2 leading-relaxed mt-3">
           {title}
         </h3>
 
-<p className="text-zinc-400 text-sm mt-4 leading-relaxed">
+<p className="text-zinc-400 line-clamp-3 text-sm mt-4 leading-relaxed">
   {content?.slice(0, 90)}...
 </p>
 

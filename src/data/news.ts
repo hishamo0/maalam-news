@@ -19,13 +19,20 @@ export const news = [
     `,
   },
 
-  {
-    slug: "tech-investments",
-    section: "economy",
-    category: "اقتصاد",
-    title: "ارتفاع الاستثمارات التقنية في الشرق الأوسط",
-    image: "https://picsum.photos/600/400?2",
-  },
+{
+  category: "اقتصاد",
+
+  title: "أزمة الديون العالمية تعود إلى الواجهة وسط مخاوف من تباطؤ اقتصادي جديد",
+
+  image: "/images/global-debt.webp",
+
+  slug: "global-debt-crisis-economic-slowdown",
+
+  content:
+    "تتصاعد التحذيرات الاقتصادية الدولية من عودة أزمة الديون العالمية إلى الواجهة، وسط ارتفاع أسعار الفائدة وتباطؤ النمو الاقتصادي العالمي.",
+
+  date: "24 مايو 2026",
+},
 
   {
     slug: "ai-development",
@@ -35,13 +42,20 @@ export const news = [
     image: "https://picsum.photos/600/400?3",
   },
 
-  {
-    slug: "arab-culture",
-    section: "culture",
-    category: "ثقافة",
-    title: "عودة الاهتمام بالإنتاج الثقافي العربي",
-    image: "https://picsum.photos/600/400?4",
-  },
+ {
+  category: "ثقافة",
+
+  title: "سقوط الملكية في العراق عام 1958: الانقلاب الذي غيّر تاريخ المنطقة",
+
+  image: "/images/iraq-1958.webp",
+
+  slug: "iraq-monarchy-fall-1958",
+
+  content:
+    "في فجر الرابع عشر من تموز عام 1958، أطاح ضباط من الجيش العراقي بالنظام الملكي الهاشمي وأعلنوا قيام الجمهورية العراقية، في حدث غيّر تاريخ العراق والمنطقة العربية.",
+
+  date: "24 مايو 2026",
+},
   {
   category: "سياسة",
   title: "تصاعد التحركات الدبلوماسية بشأن إيران وسط حديث عن اتفاق مرتقب",
