@@ -3,20 +3,20 @@ import Link from "next/link";
 import Image from "next/image";
 
 type SectionPageProps = {
-  params: Promise<{
+  params: {
     slug: string;
-  }>;
+  };
 };
 
 export default async function SectionPage({
   params,
 }: SectionPageProps) {
 
-  const { slug } = await params;
+const { slug } = params;
 
-  const sectionNews = news.filter(
-    (item) => item.section === slug
-  );
+const sectionNews = news.filter(
+  (item) => item.category === decodeURIComponent(slug)
+);
 
   if (sectionNews.length === 0) {
     return (
@@ -75,7 +75,7 @@ export default async function SectionPage({
 
             <Link
               key={item.slug}
-              href={`/article/${item.slug}`}
+              href={`/news/${item.slug}`}
               className="
                 bg-zinc-900
                 overflow-hidden
