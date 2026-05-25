@@ -5,7 +5,7 @@ import { news } from "@/data/news";
 export default function PoliticsPage() {
 
   const politicsNews = news.filter(
-    (item) => item.section === "politics"
+    (item) => item.category === "سياسة"
   );
 
   return (
@@ -29,6 +29,9 @@ export default function PoliticsPage() {
               title={item.title}
               image={item.image}
               slug={item.slug}
+              excerpt={item.excerpt}
+              author={item.author}
+              date={item.date}
             />
 
           ))}
