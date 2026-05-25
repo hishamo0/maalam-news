@@ -26,7 +26,7 @@ export default async function ArticlePage({
   return (
     <main className="bg-black text-white min-h-screen">
 
-      <Header search="" setSearch={() => {}} />
+      <Header search="" setSearch={undefined as any} />
 
       <article className="max-w-5xl mx-auto px-4 py-10">
 
@@ -36,7 +36,7 @@ export default async function ArticlePage({
             src={article.image}
             alt={article.title}
             fill
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 1200px"
             className="object-cover"
           />
 
