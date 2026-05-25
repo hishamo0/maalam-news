@@ -80,7 +80,7 @@ export default function ArticlePage({ params }: Props) {
                   leading-8
                 "
                 dangerouslySetInnerHTML={{
-                  __html: article.content || "",
+                  __html: String(article.content),
                 }}
               />
 
