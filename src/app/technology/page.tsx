@@ -4,9 +4,9 @@ import { news } from "@/data/news";
 
 export default function TechnologyPage() {
 
-  const technologyNews = news.filter(
-    (item) => item.section === "technology"
-  );
+const technologyNews = news.filter(
+  (item) => item.category === "تكنولوجيا"
+);
 
   return (
 
@@ -29,6 +29,9 @@ export default function TechnologyPage() {
               title={item.title}
               image={item.image}
               slug={item.slug}
+              excerpt={item.excerpt}
+              author={item.author}
+              date={item.date}
             />
 
           ))}

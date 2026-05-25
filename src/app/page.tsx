@@ -124,6 +124,7 @@ export default function Home() {
   image="https://picsum.photos/600/400?11"
   slug="cloud-computing"
   excerpt="تشهد شركات التقنية العالمية سباقاً متسارعاً في تطوير نماذج الذكاء الاصطناعي الحديثة."
+  author="هيئة التحرير"
   date="24 مايو 2026"
 />
 
@@ -133,6 +134,7 @@ export default function Home() {
   image="https://picsum.photos/600/400?12"
   slug="cloud-computing"
   excerpt="تشهد خدمات الحوسبة السحابية تطورات كبيرة مع توسع استخدام الذكاء الاصطناعي."
+  author="هيئة التحرير"
   date="24 مايو 2026"
 />
 
@@ -164,6 +166,7 @@ export default function Home() {
             image={item.image}
             slug={item.slug}
             excerpt={item.excerpt}
+            author={item.author}
             date={item.date}
           />
         ))}

@@ -4,9 +4,9 @@ import { news } from "@/data/news";
 
 export default function EconomyPage() {
 
-  const economyNews = news.filter(
-    (item) => item.section === "economy"
-  );
+const economyNews = news.filter(
+  (item) => item.category === "اقتصاد"
+);
 
   return (
 
@@ -29,6 +29,9 @@ export default function EconomyPage() {
               title={item.title}
               image={item.image}
               slug={item.slug}
+              excerpt={item.excerpt}
+              author={item.author}
+              date={item.date}
             />
 
           ))}

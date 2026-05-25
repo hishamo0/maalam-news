@@ -4,9 +4,9 @@ import { news } from "@/data/news";
 
 export default function CulturePage() {
 
-  const cultureNews = news.filter(
-    (item) => item.section === "culture"
-  );
+const cultureNews = news.filter(
+  (item) => item.category === "ثقافة"
+);
 
   return (
 
@@ -29,6 +29,9 @@ export default function CulturePage() {
               title={item.title}
               image={item.image}
               slug={item.slug}
+              excerpt={item.excerpt}
+              author={item.author}
+              date={item.date}
             />
 
           ))}

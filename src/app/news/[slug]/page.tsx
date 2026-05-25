@@ -57,9 +57,19 @@ export default function ArticlePage({ params }: Props) {
 
         <div className="mt-8">
 
-          <span className="text-red-500 text-sm font-bold">
-            {article.category}
-          </span>
+<span
+  className={`
+    text-sm
+    font-bold
+
+    ${article.category === "سياسة" ? "text-red-500" : ""}
+    ${article.category === "اقتصاد" ? "text-sky-400" : ""}
+    ${article.category === "تكنولوجيا" ? "text-indigo-400" : ""}
+    ${article.category === "ثقافة" ? "text-green-500" : ""}
+  `}
+>
+  {article.category}
+</span>
 
           <h1 className="text-5xl font-extrabold leading-tight mt-4">
             {article.title}
