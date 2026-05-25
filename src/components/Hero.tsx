@@ -10,13 +10,16 @@ export default function Hero() {
 
     <section className="w-full px-4 py-20">
 
-      <div className="
-        bg-zinc-900
-        overflow-hidden
-        group
-      ">
+      <div
+        className="
+          bg-zinc-900
+          overflow-hidden
+          group
+          rounded-3xl
+        "
+      >
 
-        <Link href={`/article/${heroArticle.slug}`}>
+        <Link href={`/news/${heroArticle.slug}`}>
 
           <div className="overflow-hidden">
 
@@ -25,6 +28,7 @@ export default function Hero() {
               alt={heroArticle.title}
               width={1400}
               height={800}
+              priority
               className="
                 w-full
                 h-[350px]
@@ -40,34 +44,40 @@ export default function Hero() {
 
           <div className="p-6 md:p-10">
 
-            <span className="
-              text-red-500
-              font-semibold
-              text-lg
-            ">
+            <span
+              className="
+                text-red-500
+                font-semibold
+                text-lg
+              "
+            >
               {heroArticle.category}
             </span>
 
-            <h1 className="
-              text-3xl
-              md:text-7xl
-              font-extrabold
-              leading-tight
-              mt-6
-            ">
+            <h1
+              className="
+                text-3xl
+                md:text-7xl
+                font-extrabold
+                leading-tight
+                mt-6
+              "
+            >
 
               {heroArticle.title}
 
             </h1>
 
-            <p className="
-              text-zinc-400
-              text-lg
-              md:text-xl
-              leading-relaxed
-              mt-8
-              max-w-3xl
-            ">
+            <p
+              className="
+                text-zinc-400
+                text-lg
+                md:text-xl
+                leading-relaxed
+                mt-8
+                max-w-3xl
+              "
+            >
 
               {heroArticle.excerpt}
 
