@@ -12,6 +12,7 @@ type NewsCardProps = {
   excerpt?: string;
   author: string;
   date?: string;
+  large?: boolean;
 };
 
 export default function NewsCard({
@@ -22,6 +23,7 @@ export default function NewsCard({
   excerpt,
   author,
   date,
+  large = false,
 }: NewsCardProps) {
 
   const [loaded, setLoaded] = useState(false);
@@ -30,20 +32,20 @@ export default function NewsCard({
 
     <Link href={`/news/${slug}`}>
 
-      <article
-        className="
-          relative
-          group
-          bg-zinc-900
-          overflow-hidden
-          transition-all
-          duration-300
-          hover:-translate-y-2
-          hover:bg-zinc-800
-          hover:shadow-2xl
-          rounded-3xl
-        "
-      >
+      <article className="
+                          relative
+                          group
+                          bg-zinc-900
+                          overflow-hidden
+                          transition-all
+                          duration-300
+                          hover:-translate-y-2
+                          hover:bg-zinc-800
+                          hover:shadow-2xl
+                          rounded-3xl
+                          w-full
+                          h-full
+                        ">
 
         {!loaded && (
           <div className="w-full h-56 bg-zinc-800 animate-pulse"></div>
@@ -57,7 +59,7 @@ export default function NewsCard({
           height={400}
           className={`
             w-full
-            h-56
+            ${large ? "h-[500px]" : "h-56"}
             object-cover
             transition-transform
             duration-500

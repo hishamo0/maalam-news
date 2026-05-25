@@ -101,6 +101,7 @@ export default function Home() {
       .map((item, index) => (
 
         <NewsCard
+          large={true}
           key={index}
           category={item.category}
           title={item.title}
