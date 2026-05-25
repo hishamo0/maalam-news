@@ -87,42 +87,31 @@ export default function Home() {
 
           <div className="overflow-hidden">
 
-  <Image
-    src="https://picsum.photos/1200/700?tech"
-    alt="Technology"
-    className="
-      w-full
-      h-[500px]
-      object-cover
-      transition-transform
-      duration-700
-      hover:scale-105
-    "
-  />
+
 
 </div>
 
-                <div className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 
-                  {news
-                    .filter((item) => item.category === "تكنولوجيا")
-                    .slice(0, 3)
-                    .map((item, index) => (
+                {news
+                  .filter((item) => item.category === "تكنولوجيا")
+                  .slice(0, 3)
+                  .map((item, index) => (
 
-                      <NewsCard
-                        key={index}
-                        category={item.category}
-                        title={item.title}
-                        image={item.image}
-                        slug={item.slug}
-                        excerpt={item.excerpt}
-                        author={item.author}
-                        date={item.date}
-                      />
+                    <NewsCard
+                      key={index}
+                      category={item.category}
+                      title={item.title}
+                      image={item.image}
+                      slug={item.slug}
+                      excerpt={item.excerpt}
+                      author={item.author}
+                      date={item.date}
+                    />
 
-                  ))}
+                ))}
 
-                </div>
+              </div>
 
         </div>
 
