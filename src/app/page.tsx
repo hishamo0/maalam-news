@@ -123,7 +123,7 @@ export default function Home() {
   title="شركات التقنية تتسابق في تطوير نماذج الذكاء الاصطناعي"
   image="https://picsum.photos/600/400?11"
   slug="cloud-computing"
-  content="تشهد شركات التقنية العالمية سباقاً متسارعاً في تطوير نماذج الذكاء الاصطناعي الحديثة."
+  excerpt="تشهد شركات التقنية العالمية سباقاً متسارعاً في تطوير نماذج الذكاء الاصطناعي الحديثة."
   date="24 مايو 2026"
 />
 
@@ -132,7 +132,7 @@ export default function Home() {
   title="تطورات جديدة في عالم الحوسبة السحابية"
   image="https://picsum.photos/600/400?12"
   slug="cloud-computing"
-  content="تشهد خدمات الحوسبة السحابية تطورات كبيرة مع توسع استخدام الذكاء الاصطناعي."
+  excerpt="تشهد خدمات الحوسبة السحابية تطورات كبيرة مع توسع استخدام الذكاء الاصطناعي."
   date="24 مايو 2026"
 />
 
@@ -163,7 +163,7 @@ export default function Home() {
             title={item.title}
             image={item.image}
             slug={item.slug}
-            content={item.content}
+            excerpt={item.excerpt}
             date={item.date}
           />
         ))}

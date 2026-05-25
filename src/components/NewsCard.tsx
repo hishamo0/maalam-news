@@ -8,7 +8,7 @@ type NewsCardProps = {
   category: string;
   image: string;
   slug: string;
-  content?: string;
+  excerpt?: string;
   date?: string;
 };
 
@@ -17,7 +17,7 @@ export default function NewsCard({
   category,
   image,
   slug,
-  content,
+  excerpt,
   date,
 }: NewsCardProps) {
 
@@ -86,7 +86,7 @@ const [loaded, setLoaded] = useState(false);
         </h3>
 
 <p className="text-zinc-400 line-clamp-3 text-sm mt-4 leading-relaxed">
-  {content?.slice(0, 90)}...
+  {excerpt}
 </p>
 
 <div className="mt-4 text-xs text-zinc-500">

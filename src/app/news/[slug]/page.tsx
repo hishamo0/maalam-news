@@ -35,6 +35,10 @@ export default function ArticlePage({ params }: Props) {
     notFound();
   }
 
+  if (!article) {
+  return null;
+}
+
   return (
     <main className="bg-black text-white min-h-screen">
 
@@ -80,7 +84,7 @@ export default function ArticlePage({ params }: Props) {
                   leading-8
                 "
                 dangerouslySetInnerHTML={{
-                  __html: String(article.content),
+                  __html: article.content || "",
                 }}
               />
 
