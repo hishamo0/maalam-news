@@ -24,7 +24,7 @@ export default function NewsCard({
 const [loaded, setLoaded] = useState(false);
   return (
 
-    <Link href={`/article/${slug}`}>
+    <Link href={`/news/${slug}`}>
     <article className="
                 relative
                 group

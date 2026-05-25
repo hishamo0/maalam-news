@@ -35,9 +35,6 @@ export default function ArticlePage({ params }: Props) {
     notFound();
   }
 
-  if (!article) {
-  return null;
-}
 
   return (
     <main className="bg-black text-white min-h-screen">
@@ -52,6 +49,7 @@ export default function ArticlePage({ params }: Props) {
             src={article.image}
             alt={article.title}
             fill
+            sizes="100vw"
             className="object-cover"
           />
 

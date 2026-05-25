@@ -69,7 +69,7 @@ export default function Hero() {
               max-w-3xl
             ">
 
-              {heroArticle.content?.slice(0, 180)}...
+              {heroArticle.excerpt}
 
             </p>
 
