@@ -4,15 +4,19 @@ import Header from "@/components/Header";
 import Image from "next/image";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function ArticlePage({ params }: Props) {
+export default async function ArticlePage({
+  params,
+}: Props) {
+
+  const { slug } = await params;
 
   const article = news.find(
-    (a) => a.slug === params.slug
+    (a) => a.slug === slug
   );
 
   if (!article) {
@@ -40,7 +44,17 @@ export default function ArticlePage({ params }: Props) {
 
         <div className="mt-8">
 
-          <span className="text-red-500 text-sm font-bold">
+          <span
+            className={`
+              text-sm
+              font-bold
+
+              ${article.category === "سياسة" ? "text-red-500" : ""}
+              ${article.category === "اقتصاد" ? "text-sky-400" : ""}
+              ${article.category === "تكنولوجيا" ? "text-indigo-400" : ""}
+              ${article.category === "ثقافة" ? "text-green-500" : ""}
+            `}
+          >
             {article.category}
           </span>
 
@@ -54,23 +68,12 @@ export default function ArticlePage({ params }: Props) {
 
           <div className="mt-10">
 
-                                    <div
-                                    className="prose max-w-none"
-                                    dangerouslySetInnerHTML={{
-                                        __html: `
-                                        <h2>اختبار</h2>
-
-                                        <p>
-                                        إذا ظهر هذا بشكل صحيح فالمشكلة من البيانات.
-                                        </p>
-
-                                        <ul>
-                                            <li>عنصر 1</li>
-                                            <li>عنصر 2</li>
-                                        </ul>
-                                        `,
-                                    }}
-                                    />
+            <div
+              className="prose max-w-none"
+              dangerouslySetInnerHTML={{
+                __html: article.content,
+              }}
+            />
 
           </div>
 

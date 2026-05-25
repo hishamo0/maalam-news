@@ -4,7 +4,7 @@ import { news } from "@/data/news";
 export default function sitemap(): MetadataRoute.Sitemap {
 
   const articles = news.map((article) => ({
-    url: `https://maalam.net/article/${article.slug}`,
+    url: `https://maalam.net/news/${article.slug}`,
     lastModified: new Date(),
   }));
 
