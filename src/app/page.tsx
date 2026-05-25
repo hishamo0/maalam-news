@@ -102,41 +102,27 @@ export default function Home() {
 
 </div>
 
-          <div className="mt-6">
+                <div className="space-y-8">
 
-            <span className="text-indigo-400 text-sm font-bold border-b-2 border-indigo-400 pb-1">
-              تكنولوجيا
-            </span>
+                  {news
+                    .filter((item) => item.category === "تكنولوجيا")
+                    .slice(0, 3)
+                    .map((item, index) => (
 
-            <h2 className="text-4xl font-extrabold leading-tight mt-6">
-              الذكاء الاصطناعي يغيّر مستقبل الإعلام الرقمي
-            </h2>
+                      <NewsCard
+                        key={index}
+                        category={item.category}
+                        title={item.title}
+                        image={item.image}
+                        slug={item.slug}
+                        excerpt={item.excerpt}
+                        author={item.author}
+                        date={item.date}
+                      />
 
-          </div>
+                  ))}
 
-        </div>
-
-        <div className="space-y-8">
-
-<NewsCard
-  category="تكنولوجيا"
-  title="شركات التقنية تتسابق في تطوير نماذج الذكاء الاصطناعي"
-  image="https://picsum.photos/600/400?11"
-  slug="cloud-computing"
-  excerpt="تشهد شركات التقنية العالمية سباقاً متسارعاً في تطوير نماذج الذكاء الاصطناعي الحديثة."
-  author="هيئة التحرير"
-  date="24 مايو 2026"
-/>
-
-<NewsCard
-  category="تكنولوجيا"
-  title="تطورات جديدة في عالم الحوسبة السحابية"
-  image="https://picsum.photos/600/400?12"
-  slug="cloud-computing"
-  excerpt="تشهد خدمات الحوسبة السحابية تطورات كبيرة مع توسع استخدام الذكاء الاصطناعي."
-  author="هيئة التحرير"
-  date="24 مايو 2026"
-/>
+                </div>
 
         </div>
 
