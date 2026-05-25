@@ -81,20 +81,12 @@ export default function ArticlePage({ params }: Props) {
 
               <div className="mt-10">
 
-              <div
-                className="
-                  prose
-                  prose-invert
-                  prose-h2:text-white
-                  prose-p:text-zinc-200
-                  prose-li:text-zinc-200
-                  max-w-none
-                  leading-8
-                "
-                dangerouslySetInnerHTML={{
-                  __html: article.content || "",
-                }}
-              />
+      <div
+        className="prose max-w-none"
+        dangerouslySetInnerHTML={{
+          __html: article.content || "",
+        }}
+      />
 
               </div>
 
