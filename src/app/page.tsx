@@ -115,27 +115,53 @@ export default function Home() {
 
   </div>
 
-                                        <div className="space-y-8">
+                <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
 
-                                          {news
-                                            .filter((item) => item.category === "تكنولوجيا")
-                                            .slice(1, 3)
-                                            .map((item, index) => (
+                  <div className="space-y-8">
 
-                                              <NewsCard
-                                                key={index}
-                                                category={item.category}
-                                                title={item.title}
-                                                image={item.image}
-                                                slug={item.slug}
-                                                excerpt={item.excerpt}
-                                                author={item.author}
-                                                date={item.date}
-                                              />
+                    {news
+                      .filter((item) => item.category === "تكنولوجيا")
+                      .slice(1, 3)
+                      .map((item, index) => (
 
-                                          ))}
+                        <NewsCard
+                          key={index}
+                          category={item.category}
+                          title={item.title}
+                          image={item.image}
+                          slug={item.slug}
+                          excerpt={item.excerpt}
+                          author={item.author}
+                          date={item.date}
+                        />
 
-                                        </div>
+                    ))}
+
+                  </div>
+
+                  <div className="xl:col-span-2">
+
+                    {news
+                      .filter((item) => item.category === "تكنولوجيا")
+                      .slice(0, 1)
+                      .map((item, index) => (
+
+                        <NewsCard
+                          key={index}
+                          category={item.category}
+                          title={item.title}
+                          image={item.image}
+                          slug={item.slug}
+                          excerpt={item.excerpt}
+                          author={item.author}
+                          date={item.date}
+                        />
+
+                    ))}
+
+                  </div>
+
+                </div>
 
 </div>
 
