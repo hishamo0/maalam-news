@@ -2,7 +2,7 @@ import { news } from "@/data/news";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
-import ReactMarkdown from "react-markdown";
+
 
 type ArticlePageProps = {
   params: Promise<{
@@ -140,47 +140,20 @@ export default async function ArticlePage({
                     text-xl
                   ">
 
-              <ReactMarkdown
-                components={{
-                  h2: ({ children }) => (
-                    <h2 className="
-                      text-3xl
-                      md:text-4xl
-                      font-extrabold
-                      mt-16
-                      mb-6
-                      text-white
-                    ">
-                      {children}
-                    </h2>
-                  ),
-
-                  p: ({ children }) => (
-                    <p className="
-                      text-zinc-300
-                      leading-loose
-                      text-xl
-                      mx-1
-                    ">
-                      {children}
-                    </p>
-                  ),
-
-                  ul: ({ children }) => (
-                    <ul className="
-                      list-disc
-                      pr-6
-                      space-y-4
-                      text-xl
-                      text-zinc-300
-                    ">
-                      {children}
-                    </ul>
-                  ),
-                }}
-              >
-                {article.content}
-              </ReactMarkdown>
+              <div
+  className="
+    prose
+    prose-invert
+    prose-h2:text-white
+    prose-p:text-zinc-200
+    prose-li:text-zinc-200
+    max-w-none
+    leading-8
+  "
+  dangerouslySetInnerHTML={{
+    __html: article.content,
+  }}
+/>
 
                     <div className="
                       w-full
