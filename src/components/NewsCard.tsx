@@ -87,7 +87,7 @@ export default function NewsCard({
 
         </div>
 
-        <div className="p-5 flex flex-col gap-4">
+        <div className="p-5 flex flex-col flex-1">
 
           <span
             className={`
@@ -127,7 +127,7 @@ export default function NewsCard({
                 leading-relaxed
 
 ${large
-  ? "text-lg leading-loose line-clamp-6"
+  ? "text-lg leading-loose flex-1"
   : "text-sm line-clamp-2"}
               `}
             >
