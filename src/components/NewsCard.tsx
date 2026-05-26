@@ -126,9 +126,9 @@ export default function NewsCard({
                 text-zinc-400
                 leading-relaxed
 
-                ${large
-                  ? "text-base line-clamp-3"
-                  : "text-sm line-clamp-2"}
+${large
+  ? "text-lg line-clamp-6"
+  : "text-sm line-clamp-2"}
               `}
             >
               {excerpt}
