@@ -4,6 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+/* =========================================================
+   نوع البيانات الخاصة بالكرت
+========================================================= */
+
 type NewsCardProps = {
   title: string;
   category: string;
@@ -14,6 +18,10 @@ type NewsCardProps = {
   date?: string;
   large?: boolean;
 };
+
+/* =========================================================
+   كومبوننت بطاقة الخبر
+========================================================= */
 
 export default function NewsCard({
   title,
@@ -26,11 +34,26 @@ export default function NewsCard({
   large = false,
 }: NewsCardProps) {
 
+  /* =========================================================
+     حالة تحميل الصورة لإظهار Skeleton
+  ========================================================= */
+
   const [loaded, setLoaded] = useState(false);
 
   return (
 
-    <Link href={`/news/${slug}`} className="block h-full">
+    /* =========================================================
+       رابط الخبر
+    ========================================================= */
+
+    <Link
+      href={`/news/${slug}`}
+      className="block"
+    >
+
+      {/* =====================================================
+         الكرت الرئيسي
+      ===================================================== */}
 
       <article
         className={`
@@ -38,21 +61,28 @@ export default function NewsCard({
           group
           bg-zinc-900
           overflow-hidden
+          rounded-3xl
+
           transition-all
           duration-300
+
           hover:-translate-y-2
           hover:bg-zinc-800
           hover:shadow-2xl
-          rounded-3xl
+
           w-full
-          h-full
 
           flex
           flex-col
         `}
       >
 
+        {/* =====================================================
+           Skeleton أثناء تحميل الصورة
+        ===================================================== */}
+
         {!loaded && (
+
           <div
             className={`
               w-full
@@ -61,7 +91,12 @@ export default function NewsCard({
               animate-pulse
             `}
           />
+
         )}
+
+        {/* =====================================================
+           الصورة الرئيسية
+        ===================================================== */}
 
         <div className="relative overflow-hidden">
 
@@ -75,19 +110,33 @@ export default function NewsCard({
               w-full
               ${large ? "h-[420px]" : "h-56"}
               object-cover
+
               transition-transform
               duration-500
+
               group-hover:scale-105
 
               ${loaded ? "block" : "hidden"}
             `}
           />
 
+          {/* =================================================
+             تدرج فوق الصورة
+          ================================================= */}
+
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
         </div>
 
-        <div className="p-5 flex flex-col flex-1">
+        {/* =====================================================
+           محتوى الكرت
+        ===================================================== */}
+
+        <div className="p-5 flex flex-col gap-4">
+
+          {/* =================================================
+             التصنيف
+          ================================================= */}
 
           <span
             className={`
@@ -98,14 +147,29 @@ export default function NewsCard({
               inline-block
               w-fit
 
-              ${category === "سياسة" ? "text-red-500 border-red-500" : ""}
-              ${category === "اقتصاد" ? "text-sky-400 border-sky-400" : ""}
-              ${category === "تكنولوجيا" ? "text-indigo-400 border-indigo-400" : ""}
-              ${category === "ثقافة" ? "text-green-500 border-green-500" : ""}
+              ${category === "سياسة"
+                ? "text-red-500 border-red-500"
+                : ""}
+
+              ${category === "اقتصاد"
+                ? "text-sky-400 border-sky-400"
+                : ""}
+
+              ${category === "تكنولوجيا"
+                ? "text-indigo-400 border-indigo-400"
+                : ""}
+
+              ${category === "ثقافة"
+                ? "text-green-500 border-green-500"
+                : ""}
             `}
           >
             {category}
           </span>
+
+          {/* =================================================
+             عنوان الخبر
+          ================================================= */}
 
           <h3
             className={`
@@ -113,27 +177,37 @@ export default function NewsCard({
               leading-relaxed
 
               ${large
-                ? "text-3xl line-clamp-2"
-                : "text-xl line-clamp-2"}
+                ? "text-4xl line-clamp-3"
+                : "text-2xl line-clamp-2"}
             `}
           >
             {title}
           </h3>
 
+          {/* =================================================
+             مقتطف الخبر
+          ================================================= */}
+
           {excerpt && (
+
             <p
               className={`
                 text-zinc-400
-                leading-relaxed
+                leading-loose
 
-${large
-  ? "text-lg leading-loose flex-1"
-  : "text-sm line-clamp-2"}
+                ${large
+                  ? "text-lg"
+                  : "text-sm line-clamp-2"}
               `}
             >
               {excerpt}
             </p>
+
           )}
+
+          {/* =================================================
+             معلومات الكاتب والتاريخ
+          ================================================= */}
 
           <div className="flex items-center justify-between text-xs text-zinc-500 pt-2">
 
