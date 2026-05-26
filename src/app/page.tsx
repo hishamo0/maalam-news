@@ -85,28 +85,34 @@ export default function Home() {
 
 <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-stretch">
 
-  {/* المقال الكبير */}
-  <div className="xl:col-span-2 h-full">
+{/* المقال الكبير */}
+<div className="xl:col-span-2 h-full">
 
-    {technologyNews
-      .slice(0, 1)
-      .map((item, index) => (
+  {technologyNews
+    .slice(0, 1)
+    .map((item, index) => (
 
-        <NewsCard
-          large={true}
-          key={index}
-          category={item.category}
-          title={item.title}
-          image={item.image}
-          slug={item.slug}
-          excerpt={item.content}
-          author={item.author}
-          date={item.date}
-        />
+      <NewsCard
+        large={true}
+        key={index}
+        category={item.category}
+        title={item.title}
+        image={item.image}
+        slug={item.slug}
 
-    ))}
+        excerpt={
+          item.content
+            ?.replace(/<[^>]*>/g, "")
+            .slice(0, 450)
+        }
 
-  </div>
+        author={item.author}
+        date={item.date}
+      />
+
+  ))}
+
+</div>
 
   {/* المقالات الصغيرة */}
   <div className="space-y-8 h-full flex flex-col">
