@@ -83,60 +83,59 @@ export default function Home() {
                   shadow-[0_0_40px_rgba(79,70,229,0.08)]
                   ">
 
-        <div className="lg:col-span-2">
+<div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
 
+  {/* المقالات الصغيرة */}
+  <div className="space-y-8">
 
-                <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+    {news
+      .filter((item) => item.category === "تكنولوجيا")
+      .slice(1, 3)
+      .map((item, index) => (
 
-                  <div className="space-y-8">
+        <NewsCard
+          key={index}
+          category={item.category}
+          title={item.title}
+          image={item.image}
+          slug={item.slug}
+          excerpt={item.excerpt}
+          author={item.author}
+          date={item.date}
+        />
 
-                    {news
-                      .filter((item) => item.category === "تكنولوجيا")
-                      .slice(1, 3)
-                      .map((item, index) => (
+    ))}
 
-                        <NewsCard
-                          key={index}
-                          category={item.category}
-                          title={item.title}
-                          image={item.image}
-                          slug={item.slug}
-                          excerpt={item.excerpt}
-                          author={item.author}
-                          date={item.date}
-                        />
+  </div>
 
-                    ))}
+  {/* المقال الكبير */}
+  <div className="xl:col-span-2">
 
-                  </div>
+    {news
+      .filter((item) => item.category === "تكنولوجيا")
+      .slice(0, 1)
+      .map((item, index) => (
 
-                  <div className="xl:col-span-2">
+        <NewsCard
+          large={true}
+          key={index}
+          category={item.category}
+          title={item.title}
+          image={item.image}
+          slug={item.slug}
+          excerpt={item.excerpt}
+          author={item.author}
+          date={item.date}
+        />
 
-                    {news
-                      .filter((item) => item.category === "تكنولوجيا")
-                      .slice(0, 1)
-                      .map((item, index) => (
+    ))}
 
-                        <NewsCard
-                          key={index}
-                          category={item.category}
-                          title={item.title}
-                          image={item.image}
-                          slug={item.slug}
-                          excerpt={item.excerpt}
-                          author={item.author}
-                          date={item.date}
-                        />
+  </div>
 
-                    ))}
+</div>
+                
 
-                  </div>
-
-                </div>
-
-
-
-        </div>
+          
 
       </div>
 
