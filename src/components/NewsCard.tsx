@@ -45,6 +45,7 @@ export default function NewsCard({
           hover:shadow-2xl
           rounded-3xl
           w-full
+          h-full
 
           flex
           flex-col

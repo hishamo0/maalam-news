@@ -83,54 +83,57 @@ export default function Home() {
             "
           >
 
-            <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-start">
+<div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-stretch">
 
-              {/* المقالات الصغيرة */}
-              <div className="space-y-8">
+  {/* المقال الكبير */}
+  <div className="xl:col-span-2 h-full">
 
-                {technologyNews
-                  .slice(1, 3)
-                  .map((item, index) => (
+    {technologyNews
+      .slice(0, 1)
+      .map((item, index) => (
 
-                    <NewsCard
-                      key={index}
-                      category={item.category}
-                      title={item.title}
-                      image={item.image}
-                      slug={item.slug}
-                      excerpt={item.excerpt}
-                      author={item.author}
-                      date={item.date}
-                    />
+        <NewsCard
+          large={true}
+          key={index}
+          category={item.category}
+          title={item.title}
+          image={item.image}
+          slug={item.slug}
+          excerpt={item.excerpt}
+          author={item.author}
+          date={item.date}
+        />
 
-                ))}
+    ))}
 
-              </div>
+  </div>
 
-              {/* المقال الكبير */}
-              <div className="xl:col-span-2">
+  {/* المقالات الصغيرة */}
+  <div className="space-y-8 h-full flex flex-col">
 
-                {technologyNews
-                  .slice(0, 1)
-                  .map((item, index) => (
+    {technologyNews
+      .slice(1, 3)
+      .map((item, index) => (
 
-                    <NewsCard
-                      large={true}
-                      key={index}
-                      category={item.category}
-                      title={item.title}
-                      image={item.image}
-                      slug={item.slug}
-                      excerpt={item.excerpt}
-                      author={item.author}
-                      date={item.date}
-                    />
+        <div className="flex-1" key={index}>
 
-                ))}
+          <NewsCard
+            category={item.category}
+            title={item.title}
+            image={item.image}
+            slug={item.slug}
+            excerpt={item.excerpt}
+            author={item.author}
+            date={item.date}
+          />
 
-              </div>
+        </div>
 
-            </div>
+    ))}
+
+  </div>
+
+</div>
 
           </div>
 
