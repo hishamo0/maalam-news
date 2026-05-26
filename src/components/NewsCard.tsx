@@ -30,48 +30,63 @@ export default function NewsCard({
 
   return (
 
-    <Link href={`/news/${slug}`}>
+    <Link href={`/news/${slug}`} className="block h-full">
 
-      <article className="
-                          relative
-                          group
-                          bg-zinc-900
-                          overflow-hidden
-                          transition-all
-                          duration-300
-                          hover:-translate-y-2
-                          hover:bg-zinc-800
-                          hover:shadow-2xl
-                          rounded-3xl
-                          w-full
-                          h-full
-                        ">
+      <article
+        className={`
+          relative
+          group
+          bg-zinc-900
+          overflow-hidden
+          transition-all
+          duration-300
+          hover:-translate-y-2
+          hover:bg-zinc-800
+          hover:shadow-2xl
+          rounded-3xl
+          w-full
+
+          flex
+          flex-col
+        `}
+      >
 
         {!loaded && (
-          <div className="w-full h-56 bg-zinc-800 animate-pulse"></div>
+          <div
+            className={`
+              w-full
+              ${large ? "h-[420px]" : "h-56"}
+              bg-zinc-800
+              animate-pulse
+            `}
+          />
         )}
 
-        <Image
-          onLoad={() => setLoaded(true)}
-          src={image}
-          alt={title}
-          width={600}
-          height={400}
-          className={`
-            w-full
-            ${large ? "h-[500px]" : "h-56"}
-            object-cover
-            transition-transform
-            duration-500
-            group-hover:scale-105
+        <div className="relative overflow-hidden">
 
-            ${loaded ? "block" : "hidden"}
-          `}
-        />
+          <Image
+            onLoad={() => setLoaded(true)}
+            src={image}
+            alt={title}
+            width={1200}
+            height={700}
+            className={`
+              w-full
+              ${large ? "h-[420px]" : "h-56"}
+              object-cover
+              transition-transform
+              duration-500
+              group-hover:scale-105
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+              ${loaded ? "block" : "hidden"}
+            `}
+          />
 
-        <div className="relative z-10 p-5">
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+
+        </div>
+
+        <div className="p-5 flex flex-col gap-4">
 
           <span
             className={`
@@ -80,6 +95,7 @@ export default function NewsCard({
               border-b-2
               pb-1
               inline-block
+              w-fit
 
               ${category === "سياسة" ? "text-red-500 border-red-500" : ""}
               ${category === "اقتصاد" ? "text-sky-400 border-sky-400" : ""}
@@ -90,15 +106,35 @@ export default function NewsCard({
             {category}
           </span>
 
-          <h3 className="text-2xl font-bold line-clamp-2 leading-relaxed mt-3">
+          <h3
+            className={`
+              font-bold
+              leading-relaxed
+
+              ${large
+                ? "text-3xl line-clamp-2"
+                : "text-xl line-clamp-2"}
+            `}
+          >
             {title}
           </h3>
 
-          <p className="text-zinc-400 line-clamp-3 text-sm mt-4 leading-relaxed">
-            {excerpt}
-          </p>
+          {excerpt && (
+            <p
+              className={`
+                text-zinc-400
+                leading-relaxed
 
-          <div className="mt-4 flex items-center justify-between text-xs text-zinc-500">
+                ${large
+                  ? "text-base line-clamp-3"
+                  : "text-sm line-clamp-2"}
+              `}
+            >
+              {excerpt}
+            </p>
+          )}
+
+          <div className="flex items-center justify-between text-xs text-zinc-500 pt-2">
 
             <span>
               {author}
