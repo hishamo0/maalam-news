@@ -103,7 +103,7 @@ export default function Home() {
         excerpt={
           item.content
             ?.replace(/<[^>]*>/g, "")
-            .slice(0, 450)
+            .slice(0, 850)
         }
 
         author={item.author}
