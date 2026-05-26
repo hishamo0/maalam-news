@@ -127,7 +127,7 @@ export default function NewsCard({
                 leading-relaxed
 
 ${large
-  ? "text-lg line-clamp-6"
+  ? "text-lg line-clamp-none"
   : "text-sm line-clamp-2"}
               `}
             >
