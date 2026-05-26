@@ -14,6 +14,7 @@ type NewsCardProps = {
   image: string;
   slug: string;
   excerpt?: string;
+
   author: string;
   date?: string;
   large?: boolean;
@@ -29,6 +30,7 @@ export default function NewsCard({
   image,
   slug,
   excerpt,
+
   author,
   date,
   large = false,

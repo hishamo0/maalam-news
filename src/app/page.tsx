@@ -99,7 +99,7 @@ export default function Home() {
           title={item.title}
           image={item.image}
           slug={item.slug}
-          excerpt={item.excerpt}
+          excerpt={item.content}
           author={item.author}
           date={item.date}
         />
