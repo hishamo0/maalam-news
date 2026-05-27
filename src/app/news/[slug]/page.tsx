@@ -4,8 +4,11 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import NewsCard from "@/components/NewsCard";
 import ShareButtons from "@/components/ShareButtons";
+
 import Image from "next/image";
+
 import ReadingProgress from "@/components/ReadingProgress";
+
 import type { Metadata } from "next";
 
 /* =========================================================
@@ -17,6 +20,7 @@ type Props = {
     slug: string;
   }>;
 };
+
 /* =========================================================
    Dynamic SEO Metadata
 ========================================================= */
@@ -38,60 +42,60 @@ export async function generateMetadata({
     };
 
   }
-  
+
   /* =====================================================
      تنظيف النص من HTML
   ===================================================== */
-const cleanDescription =
-  article.content
-    .replace(/<[^>]*>/g, "")
-    .slice(0, 160);
 
-return {
+  const cleanDescription =
+    article.content
+      .replace(/<[^>]*>/g, "")
+      .slice(0, 160);
 
-  title: article.title,
-
-  description: cleanDescription,
-
-  alternates: {
-    canonical: `https://maalam.net/news/${article.slug}`,
-  },
-
-  openGraph: {
+  return {
 
     title: article.title,
 
     description: cleanDescription,
 
-    url: `https://maalam.net/news/${article.slug}`,
+    alternates: {
+      canonical: `https://maalam.net/news/${article.slug}`,
+    },
 
-    images: [
-      {
-        url: article.image,
-        width: 1200,
-        height: 630,
-        alt: article.title,
-      },
-    ],
+    openGraph: {
 
-    type: "article",
-  },
+      title: article.title,
 
-  twitter: {
+      description: cleanDescription,
 
-    card: "summary_large_image",
+      url: `https://maalam.net/news/${article.slug}`,
 
-    title: article.title,
+      images: [
+        {
+          url: article.image,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
 
-    description: cleanDescription,
+      type: "article",
+    },
 
-    images: [article.image],
-  },
+    twitter: {
 
-};
-  
-};
+      card: "summary_large_image",
 
+      title: article.title,
+
+      description: cleanDescription,
+
+      images: [article.image],
+    },
+
+  };
+
+}
 
 /* =========================================================
    صفحة المقال
@@ -135,17 +139,40 @@ export default async function ArticlePage({
     )
     .slice(0, 3);
 
+  /* =====================================================
+     ألوان التصنيفات
+  ===================================================== */
+
+  const categoryColor =
+
+    article.category === "سياسة"
+      ? "bg-red-500"
+
+      : article.category === "اقتصاد"
+      ? "bg-sky-400"
+
+      : article.category === "تكنولوجيا"
+      ? "bg-indigo-400"
+
+      : "bg-green-500";
+
   return (
 
     <main className="bg-black text-white min-h-screen overflow-x-hidden">
-      <ReadingProgress />
+
+      {/* =================================================
+         شريط تقدم القراءة
+      ================================================= */}
+
+      <ReadingProgress
+      color={categoryColor}
+      />
 
       {/* =================================================
          الهيدر
       ================================================= */}
 
-      <Header
-      />
+      <Header />
 
       {/* =================================================
          Hero المقال
@@ -202,7 +229,9 @@ export default async function ArticlePage({
                   : ""}
               `}
             >
+
               {article.category}
+
             </span>
 
             {/* العنوان */}
@@ -230,8 +259,9 @@ export default async function ArticlePage({
               </span>
 
             </div>
+
             {/* =========================================================
-              أزرار مشاركة المقال
+               أزرار مشاركة المقال
             ========================================================= */}
 
             <div className="mt-6">
@@ -299,19 +329,33 @@ export default async function ArticlePage({
 
         <div className="max-w-7xl mx-auto">
 
-          {/* عنوان القسم */}
+          {/* =================================================
+             عنوان القسم
+          ================================================= */}
 
           <div className="flex items-center gap-3 mb-10">
 
-            <div className="w-1 h-8 bg-indigo-500 rounded-full" />
+            <div
+              className={`
+                w-1
+                h-8
+                rounded-full
+
+                ${categoryColor}
+              `}
+            />
 
             <h2 className="text-3xl font-bold">
+
               أخبار متعلقة
+
             </h2>
 
           </div>
 
-          {/* الكروت */}
+          {/* =================================================
+             الكروت
+          ================================================= */}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -339,4 +383,5 @@ export default async function ArticlePage({
     </main>
 
   );
+
 }

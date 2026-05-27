@@ -7,10 +7,20 @@
 import { useEffect, useState } from "react";
 
 /* =========================================================
+   Props
+========================================================= */
+
+type ReadingProgressProps = {
+  color: string;
+};
+
+/* =========================================================
    شريط تقدم القراءة
 ========================================================= */
 
-export default function ReadingProgress() {
+export default function ReadingProgress({
+  color,
+}: ReadingProgressProps) {
 
   /* =======================================================
      نسبة التقدم
@@ -64,9 +74,11 @@ export default function ReadingProgress() {
         left-0
         h-[3px]
         z-[9999]
-        bg-red-500
         transition-all
         duration-150
+
+        ${color}
+       `}
       "
       style={{
         width: `${progress}%`,
