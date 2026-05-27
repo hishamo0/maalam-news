@@ -43,16 +43,16 @@ export default function NewsCard({
 const hoverStyles: Record<string, string> = {
 
   سياسة:
-    "hover:border-red-500/40 group-hover:text-red-500",
+    "hover:border-red-500/40",
 
   اقتصاد:
-    "hover:border-sky-400/40 group-hover:text-sky-400",
+    "hover:border-sky-400/40",
 
   تكنولوجيا:
-    "hover:border-indigo-400/40 group-hover:text-indigo-400",
+    "hover:border-indigo-400/40",
 
   ثقافة:
-    "hover:border-green-500/40 group-hover:text-green-500",
+    "hover:border-green-500/40",
 
 };
   // روابط التصنيفات
@@ -154,6 +154,21 @@ const hoverStyles: Record<string, string> = {
               text-white
               transition-colors
               duration-300
+
+            ${
+
+              category === "سياسة"
+                ? "group-hover:text-red-500"
+
+                : category === "اقتصاد"
+                ? "group-hover:text-sky-400"
+
+                : category === "تكنولوجيا"
+                ? "group-hover:text-indigo-400"
+
+                : "group-hover:text-green-500"
+
+            }
 
               ${large ? "text-3xl" : "text-xl"}
             `}
