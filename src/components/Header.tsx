@@ -1,218 +1,177 @@
 "use client";
 
-import { Search, Menu } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
+/* =========================================================
+   Imports
+========================================================= */
+
 import Image from "next/image";
+import Link from "next/link";
 
-type HeaderProps = {
-  search?: string;
-  setSearch?: React.Dispatch<React.SetStateAction<string>>;
-};
+import { usePathname, useRouter } from "next/navigation";
 
-export default function Header({
-  search = "",
-  setSearch,
-}: HeaderProps) {
+import { useEffect, useState } from "react";
+
+import { Menu, Search, X } from "lucide-react";
+
+/* =========================================================
+   الهيدر الرئيسي
+========================================================= */
+
+export default function Header() {
+
+  /* =======================================================
+     حالات المينو والبحث
+  ======================================================= */
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  /* =======================================================
+     تخزين النص المكتوب داخل البحث
+  ======================================================= */
+
+  const [search, setSearch] = useState("");
+
+  /* =======================================================
+     معرفة الصفحة الحالية
+  ======================================================= */
 
   const pathname = usePathname();
 
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
+  /* =======================================================
+     التنقل داخل الموقع
+  ======================================================= */
 
-  const searchRef = useRef<HTMLDivElement>(null);
-  const menuRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+
+  /* =======================================================
+     إغلاق المينو عند تغيير الصفحة
+  ======================================================= */
 
   useEffect(() => {
 
-    function handleClickOutside(event: MouseEvent) {
+    setMenuOpen(false);
 
-      if (
-        searchRef.current &&
-        !searchRef.current.contains(event.target as Node)
-      ) {
-        setSearchOpen(false);
-      }
+  }, [pathname]);
 
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target as Node)
-        ) {
-        setMenuOpen(false);
-        }
-            }
-    
+  /* =======================================================
+     تنفيذ البحث
+  ======================================================= */
 
-     if 
-        (searchOpen || menuOpen) {
-        document.addEventListener("mousedown", handleClickOutside);
-        }
+  const handleSearch = (
+    e: React.FormEvent
+  ) => {
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    e.preventDefault();
 
-  }, [searchOpen, menuOpen]);
+    // منع البحث الفارغ
+    if (!search.trim()) return;
+
+    // الانتقال لصفحة البحث
+    router.push(
+      `/search?q=${encodeURIComponent(search)}`
+    );
+
+    // إغلاق نافذة البحث
+    setSearchOpen(false);
+
+  };
 
   return (
 
-    <>
-    
-      <header className="sticky top-0 z-50 border-b border-zinc-800 bg-black/50 backdrop-blur">
+    <header
+      className="
+        fixed
+        top-0
+        left-0
+        w-full
+        z-50
+        bg-black/90
+        backdrop-blur-md
+        border-b
+        border-white/10
+      "
+    >
 
-        <div className="w-full px-6 h-14 flex items-center justify-between">
+      {/* ===================================================
+         الحاوية الرئيسية
+      =================================================== */}
 
-          {/* Logo */}
-
-          <div className="flex items-center gap-2">
-
-            <Image
-              src="/MAALAM_LOGO.png"
-              alt="Maalam"
-              width={32}
-              height={32}
-              className="h-8 w-8 object-contain"
-            />
-
-            <h1 className="text-2xl font-extrabold">
-              Maalam.net
-            </h1>
-
-          </div>
-
-          {/* Desktop Nav */}
-
-          <nav className="hidden md:flex flex-wrap items-center gap-6 text-zinc-300">
-
-            <button
-              onClick={() => setSearchOpen(!searchOpen)}
-              className="text-zinc-300 hover:text-white transition"
-            >
-              <Search size={20} />
-            </button>
-
-            <Link
-              href="/category/politics"
-              className={`
-                transition
-                duration-300
-
-                ${pathname === "/category/politics"
-                ? "text-red-500"
-                : "text-zinc-300 hover:text-red-500"}
-              `}
-            >
-              سياسة
-            </Link>
-
-            <Link
-              href="/category/economy"
-              className={`
-                transition
-                duration-300
-
-                ${pathname === "/category/economy"
-                ? "text-sky-400"
-                : "text-zinc-300 hover:text-sky-400"}
-              `}
-            >
-              اقتصاد
-            </Link>
-
-            <Link
-              href="/category/technology"
-              className={`
-                transition
-                duration-300
-
-                ${pathname === "/category/technology"
-                ? "text-indigo-400"
-                : "text-zinc-300 hover:text-indigo-400"}
-              `}
-            >
-              تكنولوجيا
-            </Link>
-
-            <Link
-              href="/category/culture"
-              className={`
-                transition
-                duration-300
-
-                ${pathname === "/category/culture"
-                ? "text-green-500"
-                : "text-zinc-300 hover:text-green-500"}
-              `}
-            >
-              ثقافة
-            </Link>
-
-          </nav>
-
-          {/* Mobile Menu Button */}
-
-          <button
-            aria-label="Open menu"
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-white block md:hidden"
-          >
-            <Menu size={32} />
-          </button>
-
-        </div>
-
-      </header>
-
-      {/* Mobile Menu */}
-
-      {menuOpen && (
-
-        <div
-        ref={menuRef}
+      <div
         className="
-          fixed
-          top-16
-          right-2
-          w-56
-
-          bg-black/40
-          backdrop-blur-2xl
-
-          border
-          border-white/10
-
-          rounded-2xl
-
-          px-6
-          py-6
-
+          max-w-7xl
+          mx-auto
+          px-4
+          md:px-8
+          h-14
           flex
-          flex-col
-          gap-6
+          items-center
+          justify-between
+        "
+      >
 
-          text-xl
+        {/* =================================================
+           اللوجو
+        ================================================= */}
 
-          z-50
+        <Link
+          href="/"
+          className="
+            flex
+            items-center
+            gap-3
+            shrink-0
+          "
+        >
 
-          shadow-[0_0_40px_rgba(0,0,0,0.6)]
+          <Image
+            src="/MAALAM_LOGO.png"
+            alt="Maalam"
+            width={32}
+            height={32}
+            className="object-contain"
+          />
 
-          animate-[slideDown_.25s_ease]
+          <span
+            className="
+              text-white
+              font-black
+              text-xl
+              tracking-wide
+            "
+          >
+            Maalam
+          </span>
+
+        </Link>
+
+        {/* =================================================
+           روابط الديسكتوب
+        ================================================= */}
+
+        <nav
+          className="
+            hidden
+            md:flex
+            flex-wrap
+            items-center
+            gap-6
+            text-zinc-300
           "
         >
 
           <Link
             href="/category/politics"
             className={`
-              text-white
-              transition
-              duration-300
-
+              transition-colors
               hover:text-red-500
 
-              ${pathname === "/category/politics"
-              ? "!text-red-500"
-              : ""}
+              ${
+                pathname === "/category/politics"
+                  ? "text-red-500"
+                  : ""
+              }
             `}
           >
             سياسة
@@ -221,15 +180,14 @@ export default function Header({
           <Link
             href="/category/economy"
             className={`
-              text-white
-              transition
-              duration-300
-
+              transition-colors
               hover:text-sky-400
 
-              ${pathname === "/category/economy"
-              ? "!text-sky-400"
-              : ""}
+              ${
+                pathname === "/category/economy"
+                  ? "text-sky-400"
+                  : ""
+              }
             `}
           >
             اقتصاد
@@ -238,15 +196,14 @@ export default function Header({
           <Link
             href="/category/technology"
             className={`
-              text-white
-              transition
-              duration-300
-
+              transition-colors
               hover:text-indigo-400
 
-              ${pathname === "/category/technology"
-              ? "!text-indigo-400"
-              : ""}
+              ${
+                pathname === "/category/technology"
+                  ? "text-indigo-400"
+                  : ""
+              }
             `}
           >
             تكنولوجيا
@@ -255,98 +212,196 @@ export default function Header({
           <Link
             href="/category/culture"
             className={`
-              text-white
-              transition
-              duration-300
-
+              transition-colors
               hover:text-green-500
 
-              ${pathname === "/category/culture"
-              ? "!text-green-500"
-              : ""}
+              ${
+                pathname === "/category/culture"
+                  ? "text-green-500"
+                  : ""
+              }
             `}
           >
             ثقافة
           </Link>
 
-        </div>
+        </nav>
 
-      )}
-
-      {/* Search Bar */}
-
-      {searchOpen && (
+        {/* =================================================
+           أزرار البحث والموبايل
+        ================================================= */}
 
         <div
-          ref={searchRef}
           className="
-          fixed
-          top-14
-          left-0
-          w-full
-
-          bg-black/70
-          backdrop-blur-xl
-
-          border-b
-          border-zinc-800
-
-          p-6
-
-          z-50
-
-          flex
-          items-center
-          gap-4
-
-          animate-[slideDown_.25s_ease]
+            flex
+            items-center
+            gap-3
           "
         >
 
-            <input
-            type="text"
-            placeholder="ابحث عن الأخبار..."
-            value={search || ""}
-            onChange={(e) => setSearch?.(e.target.value)}
-            className="
-                w-full
-                bg-zinc-900/80
-                border
-                border-zinc-700
-
-                px-6
-                py-4
-
-                text-white
-
-                outline-none
-
-                focus:border-red-500
-
-                transition
-            "
-            />
+          {/* ===============================================
+             زر البحث
+          =============================================== */}
 
           <button
             aria-label="Open search"
-            onClick={() => setSearchOpen(false)}
+            onClick={() =>
+              setSearchOpen(!searchOpen)
+            }
             className="
-              text-zinc-400
+              text-zinc-300
               hover:text-white
-
-              text-3xl
-
-              transition
+              transition-colors
             "
           >
-            ×
+
+            <Search size={20} />
+
+          </button>
+
+          {/* ===============================================
+             زر الموبايل
+          =============================================== */}
+
+          <button
+            aria-label="Open menu"
+            onClick={() =>
+              setMenuOpen(!menuOpen)
+            }
+            className="
+              md:hidden
+              text-zinc-300
+              hover:text-white
+              transition-colors
+            "
+          >
+
+            {menuOpen ? (
+              <X size={24} />
+            ) : (
+              <Menu size={24} />
+            )}
+
           </button>
 
         </div>
 
+      </div>
+
+      {/* ===================================================
+         نافذة البحث
+      =================================================== */}
+
+      {searchOpen && (
+
+        <div
+          className="
+            border-t
+            border-white/10
+            bg-black
+            px-4
+            py-4
+          "
+        >
+
+          <form
+            onSubmit={handleSearch}
+            className="
+              max-w-3xl
+              mx-auto
+              relative
+            "
+          >
+
+            <input
+              type="text"
+              value={search}
+              onChange={(e) =>
+                setSearch(e.target.value)
+              }
+              placeholder="ابحث عن الأخبار..."
+              className="
+                w-full
+                bg-[#111]
+                border
+                border-white/10
+                rounded-xl
+                px-5
+                py-3
+                text-white
+                outline-none
+                focus:border-red-500
+                transition-colors
+              "
+            />
+
+          </form>
+
+        </div>
+
       )}
 
-    </>
+      {/* ===================================================
+         مينو الموبايل
+      =================================================== */}
+
+      {menuOpen && (
+
+        <div
+          className="
+            md:hidden
+            border-t
+            border-white/10
+            bg-black
+          "
+        >
+
+          <nav
+            className="
+              flex
+              flex-col
+              px-4
+              py-4
+              gap-4
+            "
+          >
+
+            <Link
+              href="/category/politics"
+              className="text-zinc-300 hover:text-red-500 transition-colors"
+            >
+              سياسة
+            </Link>
+
+            <Link
+              href="/category/economy"
+              className="text-zinc-300 hover:text-sky-400 transition-colors"
+            >
+              اقتصاد
+            </Link>
+
+            <Link
+              href="/category/technology"
+              className="text-zinc-300 hover:text-indigo-400 transition-colors"
+            >
+              تكنولوجيا
+            </Link>
+
+            <Link
+              href="/category/culture"
+              className="text-zinc-300 hover:text-green-500 transition-colors"
+            >
+              ثقافة
+            </Link>
+
+          </nav>
+
+        </div>
+
+      )}
+
+    </header>
 
   );
+
 }
