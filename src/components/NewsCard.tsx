@@ -123,9 +123,9 @@ const hoverStyles: Record<string, string> = {
                 e.preventDefault();
                 e.stopPropagation();
 
-router.push(
-  categoryLinks[category] || "/category/general"
-);
+              router.push(
+                categoryLinks[category] || "/category/general"
+              );
               }}
               className={`
                 text-sm
@@ -154,7 +154,6 @@ router.push(
               text-white
               transition-colors
               duration-300
-              group-hover:text-red-500
 
               ${large ? "text-3xl" : "text-xl"}
             `}
