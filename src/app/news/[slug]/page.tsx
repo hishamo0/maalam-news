@@ -3,9 +3,9 @@ import { notFound } from "next/navigation";
 
 import Header from "@/components/Header";
 import NewsCard from "@/components/NewsCard";
-
+import ShareButtons from "@/components/ShareButtons";
 import Image from "next/image";
-
+import ReadingProgress from "@/components/ReadingProgress";
 import type { Metadata } from "next";
 
 /* =========================================================
@@ -138,6 +138,7 @@ export default async function ArticlePage({
   return (
 
     <main className="bg-black text-white min-h-screen overflow-x-hidden">
+      <ReadingProgress />
 
       {/* =================================================
          الهيدر
@@ -227,6 +228,17 @@ export default async function ArticlePage({
               <span>
                 {article.date}
               </span>
+
+            </div>
+            /* =========================================================
+              أزرار مشاركة المقال
+            ========================================================= */
+
+            <div className="mt-6">
+
+              <ShareButtons
+                title={article.title}
+              />
 
             </div>
 
