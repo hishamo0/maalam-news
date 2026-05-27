@@ -36,7 +36,25 @@ export default function NewsCard({
     تكنولوجيا: "text-indigo-400 border-indigo-400",
     ثقافة: "text-green-500 border-green-500",
   };
+  /* =========================================================
+   ألوان الـ hover حسب التصنيف
+========================================================= */
 
+const hoverStyles: Record<string, string> = {
+
+  سياسة:
+    "hover:border-red-500/40 group-hover:text-red-500",
+
+  اقتصاد:
+    "hover:border-sky-400/40 group-hover:text-sky-400",
+
+  تكنولوجيا:
+    "hover:border-indigo-400/40 group-hover:text-indigo-400",
+
+  ثقافة:
+    "hover:border-green-500/40 group-hover:text-green-500",
+
+};
   // روابط التصنيفات
   const categoryLinks: Record<string, string> = {
     سياسة: "/category/politics",
@@ -56,11 +74,12 @@ export default function NewsCard({
           border-white/10
           transition-all
           duration-300
-          hover:border-red-500/40
           hover:-translate-y-1
           h-full
           flex
           flex-col
+
+          ${hoverStyles[category]}
 
           ${large ? "min-h-[520px]" : "min-h-[420px]"}
         `}

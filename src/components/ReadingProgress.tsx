@@ -68,7 +68,7 @@ export default function ReadingProgress({
   return (
 
     <div
-      className="
+      className={`
         fixed
         top-0
         left-0
@@ -79,7 +79,7 @@ export default function ReadingProgress({
 
         ${color}
        `}
-      "
+
       style={{
         width: `${progress}%`,
       }}
