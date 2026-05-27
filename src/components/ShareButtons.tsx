@@ -4,7 +4,15 @@
    Imports
 ========================================================= */
 
-import { Copy, Send, Share2 } from "lucide-react";
+import {
+  FaWhatsapp,
+  FaFacebookF,
+  FaXTwitter,
+} from "react-icons/fa6";
+
+import { Copy } from "lucide-react";
+
+import { useState } from "react";
 
 /* =========================================================
    Props
@@ -32,6 +40,12 @@ export default function ShareButtons({
       : "";
 
   /* =======================================================
+     رسالة النسخ
+  ======================================================= */
+
+  const [copied, setCopied] = useState(false);
+
+  /* =======================================================
      مشاركة واتساب
   ======================================================= */
 
@@ -50,16 +64,34 @@ export default function ShareButtons({
   };
 
   /* =======================================================
-     مشاركة تلغرام
+     مشاركة تويتر / X
   ======================================================= */
 
-  const shareTelegram = () => {
+  const shareTwitter = () => {
 
     window.open(
 
-      `https://t.me/share/url?url=${encodeURIComponent(
+      `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+        title
+      )}&url=${encodeURIComponent(url)}`,
+
+      "_blank"
+
+    );
+
+  };
+
+  /* =======================================================
+     مشاركة فيسبوك
+  ======================================================= */
+
+  const shareFacebook = () => {
+
+    window.open(
+
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
         url
-      )}&text=${encodeURIComponent(title)}`,
+      )}`,
 
       "_blank"
 
@@ -75,106 +107,181 @@ export default function ShareButtons({
 
     await navigator.clipboard.writeText(url);
 
-    alert("تم نسخ الرابط");
+    // إظهار الرسالة
+    setCopied(true);
+
+    // إخفاء الرسالة بعد ثانيتين ونصف
+    setTimeout(() => {
+
+      setCopied(false);
+
+    }, 2500);
 
   };
 
   return (
 
-    <div
-      className="
-        flex
-        items-center
-        gap-3
-        flex-wrap
-      "
-    >
+    <>
 
-      {/* ===============================================
-         واتساب
-      =============================================== */}
+      {/* ===================================================
+         أزرار المشاركة
+      =================================================== */}
 
-      <button
-        onClick={shareWhatsApp}
+      <div
         className="
-          bg-green-500/10
-          border
-          border-green-500/30
-          hover:bg-green-500/20
-          transition-colors
-          rounded-xl
-          px-4
-          py-2
-          text-sm
           flex
           items-center
-          gap-2
+          gap-3
+          flex-wrap
         "
       >
 
-        <Share2 size={16} />
+        {/* ===============================================
+           واتساب
+        =============================================== */}
 
-        واتساب
+        <button
+          onClick={shareWhatsApp}
+          className="
+            bg-green-500/10
+            border
+            border-green-500/30
+            hover:bg-green-500/20
+            transition-colors
+            rounded-xl
+            px-4
+            py-2
+            text-sm
+            flex
+            items-center
+            gap-2
+          "
+        >
 
-      </button>
+          <FaWhatsapp size={16} />
+          واتساب
 
-      {/* ===============================================
-         تلغرام
-      =============================================== */}
+        </button>
 
-      <button
-        onClick={shareTelegram}
-        className="
-          bg-sky-500/10
-          border
-          border-sky-500/30
-          hover:bg-sky-500/20
-          transition-colors
-          rounded-xl
-          px-4
-          py-2
-          text-sm
-          flex
-          items-center
-          gap-2
-        "
-      >
+        {/* ===============================================
+           تويتر / X
+        =============================================== */}
 
-        <Send size={16} />
+        <button
+          onClick={shareTwitter}
+          className="
+            bg-sky-500/10
+            border
+            border-sky-500/30
+            hover:bg-sky-500/20
+            transition-colors
+            rounded-xl
+            px-4
+            py-2
+            text-sm
+            flex
+            items-center
+            gap-2
+          "
+        >
 
-        تلغرام
+          <FaXTwitter size={16} />
 
-      </button>
+          تويتر
 
-      {/* ===============================================
-         نسخ الرابط
-      =============================================== */}
+        </button>
 
-      <button
-        onClick={copyLink}
-        className="
-          bg-white/5
-          border
-          border-white/10
-          hover:bg-white/10
-          transition-colors
-          rounded-xl
-          px-4
-          py-2
-          text-sm
-          flex
-          items-center
-          gap-2
-        "
-      >
+        {/* ===============================================
+           فيسبوك
+        =============================================== */}
 
-        <Copy size={16} />
+        <button
+          onClick={shareFacebook}
+          className="
+            bg-blue-500/10
+            border
+            border-blue-500/30
+            hover:bg-blue-500/20
+            transition-colors
+            rounded-xl
+            px-4
+            py-2
+            text-sm
+            flex
+            items-center
+            gap-2
+          "
+        >
 
-        نسخ الرابط
+          <FaFacebookF size={16} />
 
-      </button>
+          فيسبوك
 
-    </div>
+        </button>
+
+        {/* ===============================================
+           نسخ الرابط
+        =============================================== */}
+
+        <button
+          onClick={copyLink}
+          className="
+            bg-white/5
+            border
+            border-white/10
+            hover:bg-white/10
+            transition-colors
+            rounded-xl
+            px-4
+            py-2
+            text-sm
+            flex
+            items-center
+            gap-2
+          "
+        >
+
+          <Copy size={16} />
+
+          نسخ الرابط
+
+        </button>
+
+      </div>
+
+      {/* ===================================================
+         رسالة النسخ
+      =================================================== */}
+
+      {copied && (
+
+        <div
+          className="
+            fixed
+            bottom-6
+            left-1/2
+            -translate-x-1/2
+            bg-black/90
+            backdrop-blur-xl
+            border
+            border-white/10
+            text-white
+            px-5
+            py-3
+            rounded-xl
+            shadow-2xl
+            z-[9999]
+            text-sm
+          "
+        >
+
+          تم نسخ الرابط بنجاح
+
+        </div>
+
+      )}
+
+    </>
 
   );
 
