@@ -3,230 +3,172 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
-/* =========================================================
-   نوع البيانات الخاصة بالكرت
-========================================================= */
+import { useRouter } from "next/navigation";
 
 type NewsCardProps = {
-  title: string;
-  category: string;
-  image: string;
   slug: string;
-  excerpt?: string;
-
+  title: string;
+  excerpt: string;
+  image: string;
+  category: string;
   author: string;
-  date?: string;
+  date: string;
   large?: boolean;
 };
 
-/* =========================================================
-   كومبوننت بطاقة الخبر
-========================================================= */
-
 export default function NewsCard({
-  title,
-  category,
-  image,
   slug,
+  title,
   excerpt,
-
+  image,
+  category,
   author,
   date,
   large = false,
 }: NewsCardProps) {
+  const [imageError, setImageError] = useState(false);
+  const router = useRouter();
 
-  /* =========================================================
-     حالة تحميل الصورة لإظهار Skeleton
-  ========================================================= */
+  // ألوان التصنيفات
+  const categoryStyles: Record<string, string> = {
+    سياسة: "text-red-500 border-red-500",
+    اقتصاد: "text-sky-400 border-sky-400",
+    تكنولوجيا: "text-indigo-400 border-indigo-400",
+    ثقافة: "text-green-500 border-green-500",
+  };
 
-  const [loaded, setLoaded] = useState(false);
+  // روابط التصنيفات
+  const categoryLinks: Record<string, string> = {
+    سياسة: "/category/politics",
+    اقتصاد: "/category/economy",
+    تكنولوجيا: "/category/technology",
+    ثقافة: "/category/culture",
+  };
 
   return (
-
-    /* =========================================================
-       رابط الخبر
-    ========================================================= */
-
-    <Link
-      href={`/news/${slug}`}
-      className="block"
-    >
-
-      {/* =====================================================
-         الكرت الرئيسي
-      ===================================================== */}
-
+    <Link href={`/news/${slug}`} className="block group h-full">
       <article
         className={`
-          relative
-          group
-          bg-zinc-900
+          bg-[#111]
+          rounded-2xl
           overflow-hidden
-          rounded-3xl
-
+          border
+          border-white/10
           transition-all
           duration-300
-
-          hover:-translate-y-2
-          hover:bg-zinc-800
-          hover:shadow-2xl
-
-          w-full
-
+          hover:border-red-500/40
+          hover:-translate-y-1
+          h-full
           flex
           flex-col
+
+          ${large ? "min-h-[520px]" : "min-h-[420px]"}
         `}
       >
+        {/* الصورة */}
+        <div
+          className={`
+            relative
+            overflow-hidden
 
-        {/* =====================================================
-           Skeleton أثناء تحميل الصورة
-        ===================================================== */}
-
-        {!loaded && (
-
-          <div
-            className={`
-              w-full
-              ${large ? "h-[420px]" : "h-56"}
-              bg-zinc-800
-              animate-pulse
-            `}
-          />
-
-        )}
-
-        {/* =====================================================
-           الصورة الرئيسية
-        ===================================================== */}
-
-        <div className="relative overflow-hidden">
-
+            ${large ? "h-[320px]" : "h-[220px]"}
+          `}
+        >
           <Image
-            onLoad={() => setLoaded(true)}
-            src={image}
+            src={
+              imageError
+                ? "https://placehold.co/1200x800/111111/FFFFFF?text=Maalam"
+                : image
+            }
             alt={title}
-            width={1200}
-            height={700}
-            className={`
-              w-full
-              ${large ? "h-[420px]" : "h-56"}
+            fill
+            className="
               object-cover
-
               transition-transform
               duration-500
-
               group-hover:scale-105
-
-              ${loaded ? "block" : "hidden"}
-            `}
+            "
+            onError={() => setImageError(true)}
           />
 
-          {/* =================================================
-             تدرج فوق الصورة
-          ================================================= */}
-
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
         </div>
 
-        {/* =====================================================
-           محتوى الكرت
-        ===================================================== */}
+        {/* المحتوى */}
+        <div className="flex flex-col flex-1 p-5">
+          {/* التصنيف */}
+          <div className="mb-3">
+            <div
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
 
-        <div className="p-5 flex flex-col gap-4">
+router.push(
+  categoryLinks[category] || "/category/general"
+);
+              }}
+              className={`
+                text-sm
+                font-bold
+                border-b-2
+                pb-1
+                inline-block
+                w-fit
+                cursor-pointer
+                transition-opacity
+                hover:opacity-80
 
-          {/* =================================================
-             التصنيف
-          ================================================= */}
+                ${categoryStyles[category] || "text-white border-white"}
+              `}
+            >
+              {category}
+            </div>
+          </div>
 
-          <span
+          {/* العنوان */}
+          <h2
             className={`
-              text-sm
-              font-bold
-              border-b-2
-              pb-1
-              inline-block
-              w-fit
+              font-extrabold
+              leading-tight
+              mb-3
+              text-white
+              transition-colors
+              duration-300
+              group-hover:text-red-500
 
-              ${category === "سياسة"
-                ? "text-red-500 border-red-500"
-                : ""}
-
-              ${category === "اقتصاد"
-                ? "text-sky-400 border-sky-400"
-                : ""}
-
-              ${category === "تكنولوجيا"
-                ? "text-indigo-400 border-indigo-400"
-                : ""}
-
-              ${category === "ثقافة"
-                ? "text-green-500 border-green-500"
-                : ""}
-            `}
-          >
-            {category}
-          </span>
-
-          {/* =================================================
-             عنوان الخبر
-          ================================================= */}
-
-          <h3
-            className={`
-              font-bold
-              leading-relaxed
-
-              ${large
-                ? "text-4xl line-clamp-3"
-                : "text-2xl line-clamp-2"}
+              ${large ? "text-3xl" : "text-xl"}
             `}
           >
             {title}
-          </h3>
+          </h2>
 
-          {/* =================================================
-             مقتطف الخبر
-          ================================================= */}
+          {/* الوصف */}
+          <p
+            className={`
+              text-gray-300
+              leading-relaxed
+              mb-5
+              flex-1
 
-          {excerpt && (
+              ${large ? "text-base" : "text-sm"}
+            `}
+          >
+            {excerpt}
+          </p>
 
-            <p
-              className={`
-                text-zinc-400
-                leading-loose
+          {/* التاريخ */}
+<div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between">
+  <span className="text-xs text-gray-400">
+    بواسطة {author}
+  </span>
 
-                ${large
-                  ? "text-lg"
-                  : "text-sm line-clamp-2"}
-              `}
-            >
-              {excerpt}
-            </p>
-
-          )}
-
-          {/* =================================================
-             معلومات الكاتب والتاريخ
-          ================================================= */}
-
-          <div className="flex items-center justify-between text-xs text-zinc-500 pt-2">
-
-            <span>
-              {author}
-            </span>
-
-            <span>
-              {date}
-            </span>
-
-          </div>
-
+  <span className="text-xs text-gray-500">
+    {date}
+  </span>
+</div>
         </div>
-
       </article>
-
     </Link>
   );
 }

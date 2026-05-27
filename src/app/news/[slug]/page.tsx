@@ -38,56 +38,61 @@ export async function generateMetadata({
     };
 
   }
-
+  
   /* =====================================================
      تنظيف النص من HTML
   ===================================================== */
+const cleanDescription =
+  article.content
+    .replace(/<[^>]*>/g, "")
+    .slice(0, 160);
 
-  const cleanDescription =
-    article.content
-      .replace(/<[^>]*>/g, "")
-      .slice(0, 160);
+return {
 
-  return {
+  title: article.title,
+
+  description: cleanDescription,
+
+  alternates: {
+    canonical: `https://maalam.net/news/${article.slug}`,
+  },
+
+  openGraph: {
 
     title: article.title,
 
     description: cleanDescription,
 
-    openGraph: {
+    url: `https://maalam.net/news/${article.slug}`,
 
-      title: article.title,
+    images: [
+      {
+        url: article.image,
+        width: 1200,
+        height: 630,
+        alt: article.title,
+      },
+    ],
 
-      description: cleanDescription,
+    type: "article",
+  },
 
-      url: `https://maalam.net/news/${article.slug}`,
+  twitter: {
 
-      images: [
-        {
-          url: article.image,
-          width: 1200,
-          height: 630,
-          alt: article.title,
-        },
-      ],
+    card: "summary_large_image",
 
-      type: "article",
-    },
+    title: article.title,
 
-    twitter: {
+    description: cleanDescription,
 
-      card: "summary_large_image",
+    images: [article.image],
+  },
 
-      title: article.title,
+};
+  
+};
 
-      description: cleanDescription,
 
-      images: [article.image],
-    },
-
-  };
-
-}
 /* =========================================================
    صفحة المقال
 ========================================================= */
@@ -140,7 +145,7 @@ export default async function ArticlePage({
 
       <Header
         search=""
-        setSearch={undefined as any}
+        setSearch={() => {}}
       />
 
       {/* =================================================
@@ -203,7 +208,7 @@ export default async function ArticlePage({
 
             {/* العنوان */}
 
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mt-6 max-w-5xl">
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mt-6 max-w-5xl">
 
               {article.title}
 

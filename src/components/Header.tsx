@@ -4,6 +4,7 @@ import { Search, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 type HeaderProps = {
   search: string;
@@ -66,9 +67,11 @@ export default function Header({
 
           <div className="flex items-center gap-2">
 
-            <img
-              src="/maalam_logo.png"
+            <Image
+              src="/MAALAM_LOGO.png"
               alt="Maalam"
+              width={32}
+              height={32}
               className="h-8 w-8 object-contain"
             />
 
@@ -80,7 +83,7 @@ export default function Header({
 
           {/* Desktop Nav */}
 
-          <nav className="flex flex-wrap items-center gap-6 text-zinc-300">
+          <nav className="hidden md:flex flex-wrap items-center gap-6 text-zinc-300">
 
             <button
               onClick={() => setSearchOpen(!searchOpen)}
@@ -90,12 +93,12 @@ export default function Header({
             </button>
 
             <Link
-              href="/section/politics"
+              href="/category/politics"
               className={`
                 transition
                 duration-300
 
-                ${pathname === "/section/politics"
+                ${pathname === "/category/politics"
                 ? "text-red-500"
                 : "text-zinc-300 hover:text-red-500"}
               `}
@@ -104,12 +107,12 @@ export default function Header({
             </Link>
 
             <Link
-              href="/section/economy"
+              href="/category/economy"
               className={`
                 transition
                 duration-300
 
-                ${pathname === "/section/economy"
+                ${pathname === "/category/economy"
                 ? "text-sky-400"
                 : "text-zinc-300 hover:text-sky-400"}
               `}
@@ -118,12 +121,12 @@ export default function Header({
             </Link>
 
             <Link
-              href="/section/technology"
+              href="/category/technology"
               className={`
                 transition
                 duration-300
 
-                ${pathname === "/section/technology"
+                ${pathname === "/category/technology"
                 ? "text-indigo-400"
                 : "text-zinc-300 hover:text-indigo-400"}
               `}
@@ -132,12 +135,12 @@ export default function Header({
             </Link>
 
             <Link
-              href="/section/culture"
+              href="/category/culture"
               className={`
                 transition
                 duration-300
 
-                ${pathname === "/section/culture"
+                ${pathname === "/category/culture"
                 ? "text-green-500"
                 : "text-zinc-300 hover:text-green-500"}
               `}
@@ -150,6 +153,7 @@ export default function Header({
           {/* Mobile Menu Button */}
 
           <button
+            aria-label="Open menu"
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-white block md:hidden"
           >
@@ -198,7 +202,7 @@ export default function Header({
         >
 
           <Link
-            href="/section/politics"
+            href="/category/politics"
             className={`
               text-white
               transition
@@ -206,7 +210,7 @@ export default function Header({
 
               hover:text-red-500
 
-              ${pathname === "/section/politics"
+              ${pathname === "/category/politics"
               ? "!text-red-500"
               : ""}
             `}
@@ -215,7 +219,7 @@ export default function Header({
           </Link>
 
           <Link
-            href="/section/economy"
+            href="/category/economy"
             className={`
               text-white
               transition
@@ -223,7 +227,7 @@ export default function Header({
 
               hover:text-sky-400
 
-              ${pathname === "/section/economy"
+              ${pathname === "/category/economy"
               ? "!text-sky-400"
               : ""}
             `}
@@ -232,7 +236,7 @@ export default function Header({
           </Link>
 
           <Link
-            href="/section/technology"
+            href="/category/technology"
             className={`
               text-white
               transition
@@ -240,7 +244,7 @@ export default function Header({
 
               hover:text-indigo-400
 
-              ${pathname === "/section/technology"
+              ${pathname === "/category/technology"
               ? "!text-indigo-400"
               : ""}
             `}
@@ -249,7 +253,7 @@ export default function Header({
           </Link>
 
           <Link
-            href="/section/culture"
+            href="/category/culture"
             className={`
               text-white
               transition
@@ -257,7 +261,7 @@ export default function Header({
 
               hover:text-green-500
 
-              ${pathname === "/section/culture"
+              ${pathname === "/category/culture"
               ? "!text-green-500"
               : ""}
             `}
@@ -324,6 +328,7 @@ export default function Header({
             />
 
           <button
+            aria-label="Open search"
             onClick={() => setSearchOpen(false)}
             className="
               text-zinc-400
