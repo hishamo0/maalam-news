@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import NewsCard from "@/components/NewsCard";
 
 import Image from "next/image";
-import Link from "next/link";
+
 import type { Metadata } from "next";
 
 /* =========================================================
@@ -144,8 +144,6 @@ export default async function ArticlePage({
       ================================================= */}
 
       <Header
-        search=""
-        setSearch={() => {}}
       />
 
       {/* =================================================

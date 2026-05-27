@@ -7,12 +7,12 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 type HeaderProps = {
-  search: string;
-  setSearch: React.Dispatch<React.SetStateAction<string>>;
+  search?: string;
+  setSearch?: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export default function Header({
-  search,
+  search = "",
   setSearch,
 }: HeaderProps) {
 
@@ -306,8 +306,8 @@ export default function Header({
             <input
             type="text"
             placeholder="ابحث عن الأخبار..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            value={search || ""}
+            onChange={(e) => setSearch?.(e.target.value)}
             className="
                 w-full
                 bg-zinc-900/80
