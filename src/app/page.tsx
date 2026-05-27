@@ -11,7 +11,11 @@ import { useState } from "react";
 
 export default function Home() {
 
-  const [search, setSearch] = useState("");
+  /* =========================================================
+   تخزين قيمة البحث
+========================================================= */
+
+const [search, setSearch] = useState("");
 
   const filteredNews = news.filter((item) =>
     item.title
@@ -27,10 +31,7 @@ export default function Home() {
 
     <main className="w-full min-h-screen bg-black text-white overflow-x-hidden">
 
-      <Header
-        search={search}
-        setSearch={setSearch}
-      />
+<Header />
 
       <Hero />
 
