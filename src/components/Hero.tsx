@@ -158,10 +158,11 @@ export default function Hero() {
 
             <h1
               className={`
-                text-3xl
-                md:text-4xl
+                text-2xl
+                md:text-3xl
                 font-extrabold
-                line-clamp-1
+                line-clamp-2
+               md:line-clamp-1
                 leading-tight
                 mt-5
 
@@ -184,6 +185,7 @@ export default function Hero() {
                 text-base
                 md:text-lg
                 line-clamp-2
+                md:line-clamp-1
                 leading-relaxed
                 mt-6
                 max-w-4xl
@@ -210,8 +212,10 @@ export default function Hero() {
                     -translate-y-1/2
                     z-20
 
-                    w-10
-                    h-10
+                    w-8
+                    h-8
+                    md:w-10
+                    md:h-10
 
                     rounded-full
                     bg-black/50
@@ -224,8 +228,9 @@ export default function Hero() {
                     items-center
                     justify-center
 
-                    opacity-0
-                    group-hover:opacity-100
+                    opacity-100
+                    md:opacity-0
+                    md:group-hover:opacity-100
 
                     transition-all
                     duration-300
