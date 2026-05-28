@@ -317,8 +317,6 @@ export default async function ArticlePage({
             "
           >
 
-
-```tsx id="d9u2ws"
 {/* TOC */}
 <div className="w-full h-fit">
   {headings.length > 0 && (
@@ -366,7 +364,7 @@ export default async function ArticlePage({
       </details>
 
       {/* Desktop */}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block space-y-3">
         <h3
           className="
             text-xl
@@ -382,7 +380,7 @@ export default async function ArticlePage({
           📑 محتويات المقال
         </h3>
 
-        <ul className="space-y-3">
+        
           {headings.map((heading, index) => (
             <li key={index}>
               <a
@@ -403,12 +401,12 @@ export default async function ArticlePage({
               </a>
             </li>
           ))}
-        </ul>
+       
       </div>
     </div>
   )}
 </div>
-```
+
 
 
         
