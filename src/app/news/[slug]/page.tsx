@@ -334,76 +334,52 @@ export default async function ArticlePage({
       "
     >
       {/* Mobile */}
-      <details className="lg:hidden">
-        <summary className="cursor-pointer text-xl font-black text-white">
-          📑 محتويات المقال
-        </summary>
 
-        <ul className="space-y-3 mt-4">
-          {headings.map((heading, index) => (
-            <li key={index}>
-              <a
-                href={`#${createSlug(heading)}`}
-                className="
-                  block
-                  rounded-xl
-                  px-4
-                  py-3
-                  text-zinc-300
-                  hover:bg-white/5
-                  hover:text-white
-                  transition-all
-                  duration-300
-                "
-              >
-                {heading}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </details>
+<details>
+  <summary
+    className="
+      cursor-pointer
+      text-1g
+      md:text-2xl
+      font-black
+      text-white
+      flex
+      items-center
+      gap-2
+      select-none
+    "
+  >
+    📑 محتويات المقال
+  </summary>
 
-      {/* Desktop */}
-      <div className="hidden lg:block space-y-3">
-        <h3
+  <ul className="space-y-3 mt-6">
+    {headings.map((heading, index) => (
+      <li key={index}>
+        <a
+          href={`#${createSlug(heading)}`}
           className="
-            text-xl
-            md:text-2xl
-            font-black
-            text-white
-            mb-6
-            flex
-            items-center
-            gap-2
+            block
+            rounded-xl
+            px-3
+            py-2
+            md:px-4
+            md:py-3
+
+
+            text-zinc-300
+            hover:bg-white/5
+            hover:text-white
+            transition-all
+            duration-300
           "
         >
-          📑 محتويات المقال
-        </h3>
-
-        
-          {headings.map((heading, index) => (
-            <li key={index}>
-              <a
-                href={`#${createSlug(heading)}`}
-                className="
-                  block
-                  rounded-xl
-                  px-4
-                  py-3
-                  text-zinc-300
-                  hover:bg-white/5
-                  hover:text-white
-                  transition-all
-                  duration-300
-                "
-              >
-                {heading}
-              </a>
-            </li>
-          ))}
-       
+          {heading}
+        </a>
+      </li>
+    ))}
+  </ul>
+</details>
       </div>
-    </div>
   )}
 </div>
 
