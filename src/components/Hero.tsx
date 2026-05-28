@@ -136,7 +136,7 @@ export default function Hero() {
              المحتوى
           ============================================== */}
 
-          <div className="p-6 md:p-8">
+          <div className="p-6 md:p-10 min-h-[220px]">
 
             {/* التصنيف */}
 
@@ -161,6 +161,7 @@ export default function Hero() {
                 text-3xl
                 md:text-4xl
                 font-extrabold
+                line-clamp-1
                 leading-tight
                 mt-5
 
@@ -182,6 +183,7 @@ export default function Hero() {
                 text-zinc-400
                 text-base
                 md:text-lg
+                line-clamp-2
                 leading-relaxed
                 mt-6
                 max-w-4xl
@@ -193,6 +195,83 @@ export default function Hero() {
             </p>
 
           </div>
+          <button
+                  onClick={(e) => {
+                    e.preventDefault();
+
+                    setCurrentIndex((prev) =>
+                      prev === 0 ? 4 : prev - 1
+                    );
+                  }}
+                  className="
+                    absolute
+                    top-1/2
+                    left-4
+                    -translate-y-1/2
+                    z-20
+
+                    w-10
+                    h-10
+
+                    rounded-full
+                    bg-black/50
+                    backdrop-blur-sm
+
+                    text-white
+                    text-xl
+
+                    flex
+                    items-center
+                    justify-center
+
+                    opacity-0
+                    group-hover:opacity-100
+
+                    transition-all
+                    duration-300
+                  "
+                >
+                  ←
+                </button>
+
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+
+                    setCurrentIndex((prev) =>
+                      prev === 4 ? 0 : prev + 1
+                    );
+                  }}
+                  className="
+                    absolute
+                    top-1/2
+                    right-4
+                    -translate-y-1/2
+                    z-20
+
+                    w-10
+                    h-10
+
+                    rounded-full
+                    bg-black/50
+                    backdrop-blur-sm
+
+                    text-white
+                    text-xl
+
+                    flex
+                    items-center
+                    justify-center
+
+                    opacity-0
+                    group-hover:opacity-100
+
+                    transition-all
+                    duration-300
+                  "
+                >
+                  →
+                </button>
 
         </Link>
 
