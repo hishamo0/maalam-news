@@ -365,7 +365,7 @@ export default async function ArticlePage({
       </details>
 
       {/* Desktop */}
-      <div className="hidden lg:block">
+      <div className="block lg:hidden">
         <h3
           className="
             text-xl
