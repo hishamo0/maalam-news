@@ -11,6 +11,18 @@ import ReadingProgress from "@/components/ReadingProgress";
 
 import type { Metadata } from "next";
 
+    /* =====================================================
+    
+  ===================================================== */
+
+  const createSlug = (text: string) =>
+  text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-");
+
+
 /* =========================================================
    نوع البيانات الخاصة بالصفحة
 ========================================================= */
@@ -42,6 +54,7 @@ export async function generateMetadata({
     };
 
   }
+
 
   /* =====================================================
      تنظيف النص من HTML
@@ -127,6 +140,9 @@ export default async function ArticlePage({
     notFound();
   }
 
+  const headings = Array.from(
+  article.content.matchAll(/<h2>([\s\S]*?)<\/h2>/g)
+  ).map((match) => match[1]);
   /* =====================================================
      مقالات متعلقة
   ===================================================== */
@@ -158,7 +174,7 @@ export default async function ArticlePage({
 
   return (
 
-    <main className="bg-black text-white min-h-screen overflow-x-hidden">
+    <main className="bg-black text-white min-h-screen overflow-x-hidden scroll-smooth">
 
       {/* =================================================
          شريط تقدم القراءة
@@ -286,6 +302,40 @@ export default async function ArticlePage({
 
         <div className="max-w-4xl mx-auto">
 
+                    {headings.length > 0 && (
+            <div
+              className="
+                mb-10
+                rounded-2xl
+                border
+                border-zinc-800
+                bg-zinc-900/60
+                p-6
+              "
+            >
+          <h3 className="text-xl font-bold text-white mb-4">
+            📑 محتويات المقال
+          </h3>
+
+          <ul className="space-y-3">
+            {headings.map((heading, index) => (
+              <li key={index}>
+                <a
+                  href={`#${createSlug(heading)}`}
+                  className="
+                    text-zinc-300
+                    hover:text-white
+                    transition-colors
+                  "
+                >
+                  {heading}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
           <article
             className="
               prose
@@ -313,7 +363,11 @@ export default async function ArticlePage({
               prose-blockquote:border-indigo-500
             "
             dangerouslySetInnerHTML={{
-              __html: article.content,
+            __html: article.content.replace(
+              /<h2>([\s\S]*?)<\/h2>/g,
+              (_, title) =>
+                `<h2 id="${createSlug(title)}">${title}</h2>`
+            ),
             }}
           />
 
