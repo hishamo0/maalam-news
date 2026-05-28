@@ -309,7 +309,7 @@ export default async function ArticlePage({
 
               grid
               grid-cols-1
-              lg:grid-cols-[1fr_320px]
+              lg:grid-cols-1
 
               gap-10
 
@@ -318,6 +318,7 @@ export default async function ArticlePage({
           >
 
 
+```tsx id="d9u2ws"
 {/* TOC */}
 <div className="w-full h-fit">
   {headings.length > 0 && (
@@ -365,7 +366,7 @@ export default async function ArticlePage({
       </details>
 
       {/* Desktop */}
-      <div className="block lg:hidden">
+      <div className="hidden lg:block">
         <h3
           className="
             text-xl
@@ -407,6 +408,8 @@ export default async function ArticlePage({
     </div>
   )}
 </div>
+```
+
 
         
           <article
