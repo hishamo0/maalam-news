@@ -13,12 +13,9 @@ import ReadingProgress from "@/components/ReadingProgress";
 
 import type { Metadata } from "next";
 
-import { useState } from "react";
-
     /* =====================================================
     
   ===================================================== */
-  const [tocOpen, setTocOpen] = useState(false);
 
   const createSlug = (text: string) =>
   text
