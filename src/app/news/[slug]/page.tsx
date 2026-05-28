@@ -1,3 +1,5 @@
+"use client";
+
 import { news } from "@/data/news";
 import { notFound } from "next/navigation";
 
@@ -11,9 +13,12 @@ import ReadingProgress from "@/components/ReadingProgress";
 
 import type { Metadata } from "next";
 
+import { useState } from "react";
+
     /* =====================================================
     
   ===================================================== */
+  const [tocOpen, setTocOpen] = useState(false);
 
   const createSlug = (text: string) =>
   text
@@ -314,91 +319,33 @@ export default async function ArticlePage({
               px-4
             "
           >
-            <div className="hidden lg:block sticky top-24 h-fit">
 
-  {headings.length > 0 && (
-
-    <div
-      className="
-        mb-10
-
-        rounded-3xl
-
-        border
-        border-white/10
-
-        bg-white/5
-        backdrop-blur-xl
-
-        p-6
-        md:p-8
-
-        shadow-2xl
-      "
-    >
-
-      <h3
-        className="
-          text-xl
-          md:text-2xl
-          font-black
-          text-white
-
-          mb-6
-
-          flex
-          items-center
-          gap-2
-        "
-      >
-        📑 محتويات المقال
-      </h3>
-
-      <ul className="space-y-3">
-
-        {headings.map((heading, index) => (
-
-          <li key={index}>
-
-            <a
-              href={`#${createSlug(heading)}`}
-              className="
-                block
-
-                rounded-xl
-
-                px-4
-                py-3
-
-                text-zinc-300
-
-                hover:bg-white/5
-                hover:text-white
-
-                transition-all
-                duration-300
-              "
-            >
-
-              {heading}
-
-            </a>
-
-          </li>
-
-        ))}
-
-      </ul>
-
-    </div>
-
-  )}
-
+{/* TOC Content */}
+<div className={`${tocOpen ? "block" : "hidden"} lg:block mt-4`}>
+  <ul className="space-y-3">
+    {headings.map((heading, index) => (
+      <li key={index}>
+        <a
+          href={`#${createSlug(heading)}`}
+          className="
+            block
+            rounded-xl
+            px-4
+            py-3
+            text-zinc-300
+            hover:bg-white/5
+            hover:text-white
+            transition-all
+          "
+        >
+          {heading}
+        </a>
+      </li>
+    ))}
+  </ul>
 </div>
-
-<div className="min-w-0">
-
-  <article
+        
+          <article
             className="
               prose
               prose-invert
@@ -434,8 +381,8 @@ export default async function ArticlePage({
           />
 
         </div>
-       </div>     
-     </section>
+
+      </section>
 
       {/* =================================================
          الأخبار المتعلقة
