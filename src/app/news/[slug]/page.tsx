@@ -175,6 +175,31 @@ export default async function ArticlePage({
       : "bg-green-500";
 
   return (
+    <>
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      headline: article.title,
+      description: article.excerpt,
+      image: [article.image],
+      author: {
+        "@type": "Organization",
+        name: "Maalam",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Maalam",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://maalam.net/logo.png",
+        },
+      },
+    }),
+  }}
+/>
 
     <main className="bg-black text-white min-h-screen overflow-x-hidden scroll-smooth">
 
@@ -251,6 +276,36 @@ export default async function ArticlePage({
               {article.category}
 
             </span>
+
+            {/* Breadcrumbs */}
+
+    <nav
+      className="
+        flex
+        items-center
+        flex-wrap
+        gap-2
+        text-sm
+        text-zinc-400
+        mb-6
+      "
+    >
+  <a href="/" className="hover:text-white transition-colors">
+    الرئيسية
+  </a>
+
+  <span>
+
+<a href={`/category/${article.category}`}
+className="hover:text-white transition-colors" >
+  {article.category} </a>
+
+  </span>
+
+  <span className="text-zinc-300 line-clamp-1">
+    {article.title}
+  </span>
+</nav>
 
             {/* العنوان */}
 
@@ -349,7 +404,7 @@ export default async function ArticlePage({
       select-none
     "
   >
-    📑 محتويات المقال
+    📑 اضغط لرؤية محتويات المقال
   </summary>
 
   <ul className="space-y-3 mt-6">
@@ -485,6 +540,7 @@ export default async function ArticlePage({
       </section>
 
     </main>
+  </>
 
   );
 
