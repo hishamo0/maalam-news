@@ -1,4 +1,4 @@
-"use client";
+
 
 import { news } from "@/data/news";
 import { notFound } from "next/navigation";
@@ -320,30 +320,97 @@ export default async function ArticlePage({
             "
           >
 
-{/* TOC Content */}
-<div className={`${tocOpen ? "block" : "hidden"} lg:block mt-4`}>
-  <ul className="space-y-3">
-    {headings.map((heading, index) => (
-      <li key={index}>
-        <a
-          href={`#${createSlug(heading)}`}
+
+{/* TOC */}
+<div className="w-full h-fit">
+  {headings.length > 0 && (
+    <div
+      className="
+        mb-10
+        rounded-3xl
+        border
+        border-white/10
+        bg-white/5
+        backdrop-blur-xl
+        p-6
+        md:p-8
+        shadow-2xl
+      "
+    >
+      {/* Mobile */}
+      <details className="lg:hidden">
+        <summary className="cursor-pointer text-xl font-black text-white">
+          📑 محتويات المقال
+        </summary>
+
+        <ul className="space-y-3 mt-4">
+          {headings.map((heading, index) => (
+            <li key={index}>
+              <a
+                href={`#${createSlug(heading)}`}
+                className="
+                  block
+                  rounded-xl
+                  px-4
+                  py-3
+                  text-zinc-300
+                  hover:bg-white/5
+                  hover:text-white
+                  transition-all
+                  duration-300
+                "
+              >
+                {heading}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+
+      {/* Desktop */}
+      <div className="hidden lg:block">
+        <h3
           className="
-            block
-            rounded-xl
-            px-4
-            py-3
-            text-zinc-300
-            hover:bg-white/5
-            hover:text-white
-            transition-all
+            text-xl
+            md:text-2xl
+            font-black
+            text-white
+            mb-6
+            flex
+            items-center
+            gap-2
           "
         >
-          {heading}
-        </a>
-      </li>
-    ))}
-  </ul>
+          📑 محتويات المقال
+        </h3>
+
+        <ul className="space-y-3">
+          {headings.map((heading, index) => (
+            <li key={index}>
+              <a
+                href={`#${createSlug(heading)}`}
+                className="
+                  block
+                  rounded-xl
+                  px-4
+                  py-3
+                  text-zinc-300
+                  hover:bg-white/5
+                  hover:text-white
+                  transition-all
+                  duration-300
+                "
+              >
+                {heading}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )}
 </div>
+
         
           <article
             className="
