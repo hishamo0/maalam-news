@@ -295,48 +295,110 @@ export default async function ArticlePage({
       </section>
 
       {/* =================================================
-         محتوى المقال
+         محتوى المقال Table of Content
       ================================================= */}
 
       <section className="w-full px-4 md:px-8 py-16">
 
-        <div className="max-w-4xl mx-auto">
+        <div
+            className="
+              max-w-7xl
+              mx-auto
 
-                    {headings.length > 0 && (
-            <div
+              grid
+              grid-cols-1
+              lg:grid-cols-[1fr_320px]
+
+              gap-10
+
+              px-4
+            "
+          >
+            <div className="hidden lg:block sticky top-24 h-fit">
+
+  {headings.length > 0 && (
+
+    <div
+      className="
+        mb-10
+
+        rounded-3xl
+
+        border
+        border-white/10
+
+        bg-white/5
+        backdrop-blur-xl
+
+        p-6
+        md:p-8
+
+        shadow-2xl
+      "
+    >
+
+      <h3
+        className="
+          text-xl
+          md:text-2xl
+          font-black
+          text-white
+
+          mb-6
+
+          flex
+          items-center
+          gap-2
+        "
+      >
+        📑 محتويات المقال
+      </h3>
+
+      <ul className="space-y-3">
+
+        {headings.map((heading, index) => (
+
+          <li key={index}>
+
+            <a
+              href={`#${createSlug(heading)}`}
               className="
-                mb-10
-                rounded-2xl
-                border
-                border-zinc-800
-                bg-zinc-900/60
-                p-6
+                block
+
+                rounded-xl
+
+                px-4
+                py-3
+
+                text-zinc-300
+
+                hover:bg-white/5
+                hover:text-white
+
+                transition-all
+                duration-300
               "
             >
-          <h3 className="text-xl font-bold text-white mb-4">
-            📑 محتويات المقال
-          </h3>
 
-          <ul className="space-y-3">
-            {headings.map((heading, index) => (
-              <li key={index}>
-                <a
-                  href={`#${createSlug(heading)}`}
-                  className="
-                    text-zinc-300
-                    hover:text-white
-                    transition-colors
-                  "
-                >
-                  {heading}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+              {heading}
 
-          <article
+            </a>
+
+          </li>
+
+        ))}
+
+      </ul>
+
+    </div>
+
+  )}
+
+</div>
+
+<div className="min-w-0">
+
+  <article
             className="
               prose
               prose-invert
@@ -372,8 +434,8 @@ export default async function ArticlePage({
           />
 
         </div>
-
-      </section>
+       </div>     
+     </section>
 
       {/* =================================================
          الأخبار المتعلقة
