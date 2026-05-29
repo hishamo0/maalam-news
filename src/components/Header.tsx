@@ -9,7 +9,7 @@ import Link from "next/link";
 
 import { usePathname, useRouter } from "next/navigation";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Menu, Search, X } from "lucide-react";
 
@@ -26,6 +26,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [searchOpen, setSearchOpen] = useState(false);
+
+  const menuRef = useRef<HTMLDivElement>(null);
 
   /* =======================================================
      تخزين النص المكتوب داخل البحث
@@ -55,6 +57,34 @@ export default function Header() {
 
   }, [pathname]);
 
+
+  useEffect(() => {
+
+  function handleClickOutside(event: MouseEvent) {
+
+    if (!menuOpen) return;
+    
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target as Node)
+    ) {
+      setMenuOpen(false);
+    }
+  }
+
+  document.addEventListener(
+    "mousedown",
+    handleClickOutside
+  );
+
+  return () => {
+    document.removeEventListener(
+      "mousedown",
+      handleClickOutside
+    );
+  };
+
+}, []);
   /* =======================================================
      تنفيذ البحث
   ======================================================= */
@@ -348,6 +378,7 @@ export default function Header() {
       {menuOpen && (
 
         <div
+          ref={menuRef}
           className="
             md:hidden
             border-t
