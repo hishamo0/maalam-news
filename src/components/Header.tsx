@@ -9,7 +9,7 @@ import Link from "next/link";
 
 import { usePathname, useRouter } from "next/navigation";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Menu, Search, X } from "lucide-react";
 
@@ -26,8 +26,6 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [searchOpen, setSearchOpen] = useState(false);
-
-  const menuRef = useRef<HTMLDivElement>(null);
 
   /* =======================================================
      تخزين النص المكتوب داخل البحث
@@ -57,34 +55,6 @@ export default function Header() {
 
   }, [pathname]);
 
-
-  useEffect(() => {
-
-  function handleClickOutside(event: MouseEvent) {
-
-    if (!menuOpen) return;
-    
-    if (
-      menuRef.current &&
-      !menuRef.current.contains(event.target as Node)
-    ) {
-      setMenuOpen(false);
-    }
-  }
-
-  document.addEventListener(
-    "mousedown",
-    handleClickOutside
-  );
-
-  return () => {
-    document.removeEventListener(
-      "mousedown",
-      handleClickOutside
-    );
-  };
-
-}, []);
   /* =======================================================
      تنفيذ البحث
   ======================================================= */
@@ -377,60 +347,75 @@ export default function Header() {
 
       {menuOpen && (
 
-        <div
-          ref={menuRef}
-          className="
-            md:hidden
-            border-t
-            border-white/10
-            bg-black
-          "
+  <>
+
+    <div
+      className="
+        fixed
+        inset-0
+        bg-black/50
+        z-40
+        md:hidden
+      "
+      onClick={() => setMenuOpen(false)}
+    />
+
+    <div
+      className="
+        relative
+        z-50
+        md:hidden
+        border-t
+        border-white/10
+        bg-black
+      "
+    >
+
+      <nav
+        className="
+          flex
+          flex-col
+          px-4
+          py-4
+          gap-4
+        "
+      >
+
+        <Link
+          href="/category/politics"
+          className="text-zinc-300 hover:text-red-500 transition-colors"
         >
+          سياسة
+        </Link>
 
-          <nav
-            className="
-              flex
-              flex-col
-              px-4
-              py-4
-              gap-4
-            "
-          >
+        <Link
+          href="/category/economy"
+          className="text-zinc-300 hover:text-sky-400 transition-colors"
+        >
+          اقتصاد
+        </Link>
 
-            <Link
-              href="/category/politics"
-              className="text-zinc-300 hover:text-red-500 transition-colors"
-            >
-              سياسة
-            </Link>
+        <Link
+          href="/category/technology"
+          className="text-zinc-300 hover:text-indigo-400 transition-colors"
+        >
+          تكنولوجيا
+        </Link>
 
-            <Link
-              href="/category/economy"
-              className="text-zinc-300 hover:text-sky-400 transition-colors"
-            >
-              اقتصاد
-            </Link>
+        <Link
+          href="/category/culture"
+          className="text-zinc-300 hover:text-green-500 transition-colors"
+        >
+          ثقافة
+        </Link>
 
-            <Link
-              href="/category/technology"
-              className="text-zinc-300 hover:text-indigo-400 transition-colors"
-            >
-              تكنولوجيا
-            </Link>
+      </nav>
 
-            <Link
-              href="/category/culture"
-              className="text-zinc-300 hover:text-green-500 transition-colors"
-            >
-              ثقافة
-            </Link>
+    </div>
 
-          </nav>
+  </>
 
-        </div>
-
-      )}
-
+)}
     </header>
 
   );
