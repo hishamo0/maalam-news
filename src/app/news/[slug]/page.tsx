@@ -30,9 +30,9 @@ import type { Metadata } from "next";
 ========================================================= */
 
 type Props = {
-  params: Promise<{
+  params: {
     slug: string;
-  }>;
+  };
 };
 
 /* =========================================================
@@ -43,7 +43,7 @@ export async function generateMetadata({
   params,
 }: Props): Promise<Metadata> {
 
-  const { slug } = await params;
+  const { slug } = params;
 
   const article = news.find(
     (a) => a.slug === slug
