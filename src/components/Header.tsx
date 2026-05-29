@@ -354,7 +354,7 @@ export default function Header() {
         fixed
         inset-0
         bg-black/50
-        z-40
+        z-30
         md:hidden
       "
       onClick={() => setMenuOpen(false)}
