@@ -79,7 +79,9 @@ export async function generateMetadata({
 
     openGraph: {
 
-      title: article.title,
+      siteName: "Maalam", locale: "ar_AR",
+
+      title: `${article.title} | Maalam`,
 
       description: cleanDescription,
 
@@ -101,7 +103,7 @@ export async function generateMetadata({
 
       card: "summary_large_image",
 
-      title: article.title,
+      title: `${article.title} | Maalam`,
 
       description: cleanDescription,
 
@@ -506,7 +508,7 @@ className="hover:text-white transition-colors" >
 
             <h2 className="text-3xl font-bold">
 
-              أخبار متعلقة
+              أخبار ذات صلة
 
             </h2>
 
@@ -516,7 +518,7 @@ className="hover:text-white transition-colors" >
              الكروت
           ================================================= */}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
 
             {relatedNews.map((item) => (
 

@@ -1,5 +1,18 @@
 import Link from "next/link";
 
+
+
+export const metadata = {
+  title: "404 - الصفحة غير موجودة | Maalam",
+
+  description:
+    "الصفحة التي تبحث عنها غير موجودة أو ربما تم نقلها.",
+};
+
+
+
+
+
 export default function NotFoundPage() {
 
   return (

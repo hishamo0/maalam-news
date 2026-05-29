@@ -3,6 +3,7 @@ import { Cairo } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
+
 const cairo = Cairo({
   subsets: ["arabic"],
   variable: "--font-cairo",

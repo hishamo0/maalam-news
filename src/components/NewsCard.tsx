@@ -154,6 +154,7 @@ const hoverStyles: Record<string, string> = {
               text-white
               transition-colors
               duration-300
+              line-clamp-2
 
             ${
 
@@ -183,6 +184,7 @@ const hoverStyles: Record<string, string> = {
               leading-relaxed
               mb-5
               flex-1
+              line-clamp-2
 
               ${large ? "text-base" : "text-sm"}
             `}

@@ -9,8 +9,39 @@ import TrendingSidebar from "@/components/TrendingSidebar";
 import { news } from "@/data/news";
 import { useState } from "react";
 
-export default function Home() {
+ /* =========================================================
+      Metadata
+========================================================= */
 
+export const metadata = {
+  title: "Maalam | آخر أخبار التقنية والسياسة والاقتصاد",
+
+  description:
+    "موقع معالم يقدم أحدث الأخبار والتحليلات في التقنية والسياسة والاقتصاد والثقافة.",
+
+  openGraph: {
+    title: "Maalam",
+    description:
+      "آخر أخبار التقنية والسياسة والاقتصاد والثقافة.",
+    url: "https://maalam.net",
+    siteName: "Maalam",
+    locale: "ar_AR",
+    type: "website",
+  },
+
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Maalam",
+    description:
+      "آخر أخبار التقنية والسياسة والاقتصاد والثقافة.",
+  },
+
+
+};
+
+
+export default function Home() {
   /* =========================================================
    تخزين قيمة البحث
 ========================================================= */
