@@ -358,7 +358,7 @@ className="hover:text-white transition-colors" >
          محتوى المقال Table of Content
       ================================================= */}
 
-      <section className="w-full px-4 md:px-8 py-16">
+      <section className="w-full px-4 md:px-8 pt-8 pb-16">
 
         <div
             className="
@@ -394,7 +394,7 @@ className="hover:text-white transition-colors" >
     >
       {/* Mobile */}
 
-<details open>
+<details>
   <summary
     className="
       cursor-pointer
