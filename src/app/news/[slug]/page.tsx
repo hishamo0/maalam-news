@@ -8,6 +8,7 @@ import NewsCard from "@/components/NewsCard";
 import ShareButtons from "@/components/ShareButtons";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import ReadingProgress from "@/components/ReadingProgress";
 
@@ -145,8 +146,8 @@ export default async function ArticlePage({
   }
 
   const headings = Array.from(
-  article.content.matchAll(/<h2>([\s\S]*?)<\/h2>/g)
-  ).map((match) => match[1]);
+  article.content.matchAll(/<h([23])>([\s\S]*?)<\/h\1>/g)
+  ).map((match) => match[2]);
   /* =====================================================
      مقالات متعلقة
   ===================================================== */
@@ -292,9 +293,9 @@ export default async function ArticlePage({
         mb-6
       "
     >
-  <a href="/" className="hover:text-white transition-colors">
+  <Link href="/" className="hover:text-white transition-colors">
     الرئيسية
-  </a>
+  </Link>
 
   <span>
 
@@ -366,16 +367,17 @@ className="hover:text-white transition-colors" >
 
               grid
               grid-cols-1
-              lg:grid-cols-1
+              lg:grid-cols-[280px_minmax(0,1fr)]
 
               gap-10
+              items-start
 
               px-4
             "
           >
 
 {/* TOC */}
-<div className="w-full h-fit">
+<aside className="w-full h-fit lg:sticky lg:top-24">
   {headings.length > 0 && (
     <div
       className="
@@ -392,7 +394,7 @@ className="hover:text-white transition-colors" >
     >
       {/* Mobile */}
 
-<details>
+<details open>
   <summary
     className="
       cursor-pointer
@@ -438,7 +440,7 @@ className="hover:text-white transition-colors" >
 </details>
       </div>
   )}
-</div>
+</aside>
 
 
 
@@ -471,9 +473,9 @@ className="hover:text-white transition-colors" >
             "
             dangerouslySetInnerHTML={{
             __html: article.content.replace(
-              /<h2>([\s\S]*?)<\/h2>/g,
-              (_, title) =>
-                `<h2 id="${createSlug(title)}">${title}</h2>`
+              /<h([23])>([\s\S]*?)<\/h\1>/g,
+              (_, level, title) =>
+                `<h${level} id="${createSlug(title)}">${title}</h${level}>`
             ),
             }}
           />

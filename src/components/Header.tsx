@@ -9,7 +9,7 @@ import Link from "next/link";
 
 import { usePathname, useRouter } from "next/navigation";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Menu, Search, X } from "lucide-react";
 
@@ -46,16 +46,6 @@ export default function Header() {
   const router = useRouter();
 
   /* =======================================================
-     إغلاق المينو عند تغيير الصفحة
-  ======================================================= */
-
-  useEffect(() => {
-
-    setMenuOpen(false);
-
-  }, [pathname]);
-
-  /* =======================================================
      تنفيذ البحث
   ======================================================= */
 
@@ -80,11 +70,10 @@ export default function Header() {
 
   return (
 
+    <>
+
     <header
-      onClick={() => {
-    if (menuOpen) setMenuOpen(false);
-  }}
-      className="
+        className="
         fixed
         top-0
         left-0
@@ -344,76 +333,92 @@ export default function Header() {
 
       )}
 
+    </header>
+
       {/* ===================================================
          مينو الموبايل
       =================================================== */}
 
-      {menuOpen && (
+{menuOpen && (
 
-        <>
+  <>
 
-          <div
-          onClick={(e) => e.stopPropagation()}
-            className="
-              fixed
-              top-14
-              right-0
-              w-full
-              z-50
-              md:hidden
-              border-t
-              border-white/10
-              bg-black
-            "
-          >
+    <div
+      className="
+        fixed
+        inset-0
+        z-40
+        md:hidden
+      "
+      onClick={() => setMenuOpen(false)}
+    />
 
-            <nav
-              className="
-                flex
-                flex-col
-                px-4
-                py-4
-                gap-4
-              "
-            >
+    <div
+      onClick={(e) => e.stopPropagation()}
+      className="
+        fixed
+        top-14
+        right-0
+        w-full
+        z-50
+        md:hidden
+        border-t
+        border-white/10
+        bg-black
+      "
+    >
 
-              <Link
-                href="/category/politics"
-                className="text-zinc-300 hover:text-red-500 transition-colors"
-              >
-                سياسة
-              </Link>
+      <nav
+        className="
+          flex
+          flex-col
+          px-4
+          py-4
+          gap-4
+        "
+      >
 
-              <Link
-                href="/category/economy"
-                className="text-zinc-300 hover:text-sky-400 transition-colors"
-              >
-                اقتصاد
-              </Link>
+        <Link
+          href="/category/politics"
+          onClick={() => setMenuOpen(false)}
+          className="text-zinc-300 hover:text-red-500 transition-colors"
+        >
+          سياسة
+        </Link>
 
-              <Link
-                href="/category/technology"
-                className="text-zinc-300 hover:text-indigo-400 transition-colors"
-              >
-                تكنولوجيا
-              </Link>
+        <Link
+          href="/category/economy"
+          onClick={() => setMenuOpen(false)}
+          className="text-zinc-300 hover:text-sky-400 transition-colors"
+        >
+          اقتصاد
+        </Link>
 
-              <Link
-                href="/category/culture"
-                className="text-zinc-300 hover:text-green-500 transition-colors"
-              >
-                ثقافة
-              </Link>
+        <Link
+          href="/category/technology"
+          onClick={() => setMenuOpen(false)}
+          className="text-zinc-300 hover:text-indigo-400 transition-colors"
+        >
+          تكنولوجيا
+        </Link>
 
-            </nav>
+        <Link
+          href="/category/culture"
+          onClick={() => setMenuOpen(false)}
+          className="text-zinc-300 hover:text-green-500 transition-colors"
+        >
+          ثقافة
+        </Link>
 
-          </div>
+      </nav>
 
-        </>
+    </div>
 
-      )}
+  </>
 
-    </header>
+)}
+
+    </>
 
   );
 
