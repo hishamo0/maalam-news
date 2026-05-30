@@ -81,6 +81,9 @@ export default function Header() {
   return (
 
     <header
+      onClick={() => {
+    if (menuOpen) setMenuOpen(false);
+  }}
       className="
         fixed
         top-0
@@ -350,17 +353,7 @@ export default function Header() {
         <>
 
           <div
-            className="
-              fixed
-              inset-0
-              bg-black/50
-              z-40
-              md:hidden
-            "
-            onClick={() => setMenuOpen(false)}
-          />
-
-          <div
+          onClick={(e) => e.stopPropagation()}
             className="
               fixed
               top-14
