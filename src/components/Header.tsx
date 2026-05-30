@@ -347,75 +347,79 @@ export default function Header() {
 
       {menuOpen && (
 
-  <>
+        <>
 
-    <div
-      className="
-        fixed
-        inset-0
-        bg-black/50
-        z-30
-        md:hidden
-      "
-      onClick={() => setMenuOpen(false)}
-    />
+          <div
+            className="
+              fixed
+              inset-0
+              bg-black/50
+              z-40
+              md:hidden
+            "
+            onClick={() => setMenuOpen(false)}
+          />
 
-    <div
-      className="
-        relative
-        z-50
-        md:hidden
-        border-t
-        border-white/10
-        bg-black
-      "
-    >
+          <div
+            className="
+              fixed
+              top-14
+              right-0
+              w-full
+              z-50
+              md:hidden
+              border-t
+              border-white/10
+              bg-black
+            "
+          >
 
-      <nav
-        className="
-          flex
-          flex-col
-          px-4
-          py-4
-          gap-4
-        "
-      >
+            <nav
+              className="
+                flex
+                flex-col
+                px-4
+                py-4
+                gap-4
+              "
+            >
 
-        <Link
-          href="/category/politics"
-          className="text-zinc-300 hover:text-red-500 transition-colors"
-        >
-          سياسة
-        </Link>
+              <Link
+                href="/category/politics"
+                className="text-zinc-300 hover:text-red-500 transition-colors"
+              >
+                سياسة
+              </Link>
 
-        <Link
-          href="/category/economy"
-          className="text-zinc-300 hover:text-sky-400 transition-colors"
-        >
-          اقتصاد
-        </Link>
+              <Link
+                href="/category/economy"
+                className="text-zinc-300 hover:text-sky-400 transition-colors"
+              >
+                اقتصاد
+              </Link>
 
-        <Link
-          href="/category/technology"
-          className="text-zinc-300 hover:text-indigo-400 transition-colors"
-        >
-          تكنولوجيا
-        </Link>
+              <Link
+                href="/category/technology"
+                className="text-zinc-300 hover:text-indigo-400 transition-colors"
+              >
+                تكنولوجيا
+              </Link>
 
-        <Link
-          href="/category/culture"
-          className="text-zinc-300 hover:text-green-500 transition-colors"
-        >
-          ثقافة
-        </Link>
+              <Link
+                href="/category/culture"
+                className="text-zinc-300 hover:text-green-500 transition-colors"
+              >
+                ثقافة
+              </Link>
 
-      </nav>
+            </nav>
 
-    </div>
+          </div>
 
-  </>
+        </>
 
-)}
+      )}
+
     </header>
 
   );

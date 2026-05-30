@@ -396,7 +396,7 @@ className="hover:text-white transition-colors" >
   <summary
     className="
       cursor-pointer
-      text-1g
+      text-lg
       md:text-2xl
       font-black
       text-white
