@@ -15,6 +15,756 @@ export const news: NewsItem[] = [
 
   {
 title:
+"Ryzen vs Intel.. مقارنة شاملة بين AMD و Intel وأيهما أفضل في 2026؟",
+
+slug:
+"ryzen-vs-intel-ultimate-guide",
+
+excerpt:
+"مقارنة تفصيلية بين Ryzen و Intel من حيث الألعاب والمونتاج والحرارة واستهلاك الطاقة والسعر والترقية المستقبلية.",
+
+description:
+"تعرف على الفرق الحقيقي بين Ryzen و Intel وأيهما أفضل للألعاب والعمل والمونتاج والاستخدام اليومي في 2026.",
+
+category:
+"تكنولوجيا",
+
+image:
+"/images/ryzen-vs-intel-ultimate.webp",
+
+author:
+"هيئة التحرير",
+
+date:
+"30 مايو 2026",
+
+content:
+`<p>
+تعد معالجات Ryzen من AMD ومعالجات Intel Core من أكثر المعالجات انتشاراً في عالم الكمبيوترات والألعاب وصناعة المحتوى، ومع احتدام المنافسة بين الشركتين أصبح اختيار المعالج المناسب أكثر صعوبة من أي وقت مضى.
+
+</p>
+
+<p>
+في الماضي كانت Intel تهيمن بشكل شبه كامل على سوق المعالجات، لكن AMD استطاعت قلب المنافسة عبر سلسلة Ryzen التي قدمت أداء قوياً وعدداً كبيراً من الأنوية وأسعاراً منافسة للغاية.
+</p>
+
+<p>
+حالياً تقدم كل من AMD و Intel معالجات قوية جداً، لكن الاختيار الصحيح يعتمد على نوع استخدامك وميزانيتك وطبيعة البرامج أو الألعاب التي تستخدمها يومياً.
+</p>
+
+<img
+src="/images/ryzen7800-vs-intel14700k.webp"
+alt="مقارنة بين ryzen 7 7800 و intel ه7 14700k
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h3>
+الإجابة السريعة
+</h3>
+
+<div class="overflow-x-auto my-8">
+<table class="w-full min-w-[850px] text-right border-collapse">
+
+<thead>
+<tr class="bg-white/10">
+<th class="p-4 border border-white/10">الفئة</th>
+<th class="p-4 border border-white/10">Ryzen</th>
+<th class="p-4 border border-white/10">Intel</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="p-4 border border-white/10">الألعاب</td>
+<td class="p-4 border border-white/10">ممتاز</td>
+<td class="p-4 border border-white/10">متفوق أحياناً</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">المونتاج والرندر</td>
+<td class="p-4 border border-white/10">متفوق غالباً</td>
+<td class="p-4 border border-white/10">قوي جداً</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">الحرارة</td>
+<td class="p-4 border border-white/10">أفضل غالباً</td>
+<td class="p-4 border border-white/10">أعلى ببعض الفئات</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">السعر مقابل الأداء</td>
+<td class="p-4 border border-white/10">أفضل غالباً</td>
+<td class="p-4 border border-white/10">جيد جداً</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">الترقية المستقبلية</td>
+<td class="p-4 border border-white/10">أفضل</td>
+<td class="p-4 border border-white/10">أضعف نسبياً</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<h3>
+شرح فئات Ryzen و Intel
+</h3>
+
+<p>
+تقسم AMD و Intel معالجاتها إلى عدة فئات تستهدف استخدامات مختلفة.
+</p>
+
+<div class="overflow-x-auto my-8">
+<table class="w-full min-w-[850px] text-right border-collapse">
+
+<thead>
+<tr class="bg-white/10">
+<th class="p-4 border border-white/10">الفئة</th>
+<th class="p-4 border border-white/10">AMD Ryzen</th>
+<th class="p-4 border border-white/10">Intel Core</th>
+<th class="p-4 border border-white/10">الاستخدام</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="p-4 border border-white/10">اقتصادي</td>
+<td class="p-4 border border-white/10">Ryzen 3</td>
+<td class="p-4 border border-white/10">Core i3</td>
+<td class="p-4 border border-white/10">استخدام يومي</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">متوسط</td>
+<td class="p-4 border border-white/10">Ryzen 5</td>
+<td class="p-4 border border-white/10">Core i5</td>
+<td class="p-4 border border-white/10">ألعاب وعمل</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">قوي</td>
+<td class="p-4 border border-white/10">Ryzen 7</td>
+<td class="p-4 border border-white/10">Core i7</td>
+<td class="p-4 border border-white/10">مونتاج وألعاب قوية</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">احترافي</td>
+<td class="p-4 border border-white/10">Ryzen 9</td>
+<td class="p-4 border border-white/10">Core i9</td>
+<td class="p-4 border border-white/10">رندر واحتراف</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<h3>
+ما معنى الأنوية والخيوط؟
+</h3>
+
+<p>
+الأنوية Cores هي الوحدات الأساسية داخل المعالج والمسؤولة عن تنفيذ العمليات، بينما تمثل الخيوط Threads عدد المهام التي يستطيع المعالج التعامل معها بنفس الوقت.
+</p>
+
+<p>
+كلما زاد عدد الأنوية والخيوط تحسن الأداء في:
+</p>
+
+<ul>
+<li>المونتاج</li>
+<li>الرندر</li>
+<li>البث المباشر</li>
+<li>تشغيل برامج متعددة</li>
+<li>تعدد المهام</li>
+</ul>
+
+<p>
+أما الألعاب فتعتمد غالباً بشكل أكبر على سرعة النواة الواحدة.
+</p>
+
+<h3>
+ما هو Clock Speed؟
+</h3>
+
+<p>
+سرعة المعالج أو Clock Speed تقاس بالجيجاهرتز GHz، وهي تمثل سرعة تنفيذ العمليات داخل المعالج.
+</p>
+
+<p>
+كلما ارتفع التردد زادت سرعة المعالج في بعض المهام، خصوصاً الألعاب والأداء الأحادي.
+</p>
+
+<p>
+لهذا السبب تتفوق Intel أحياناً في الألعاب التنافسية بسبب الترددات المرتفعة والأداء الأحادي القوي.
+</p>
+
+<img
+src="/images/cache-memory.webp"
+alt="ما هي ذاكرة الكاش"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h3>
+ما هي ذاكرة Cache؟
+</h3>
+
+<p>
+الـCache هي ذاكرة فائقة السرعة داخل المعالج تساعد على الوصول السريع للبيانات وتقليل وقت الاستجابة.
+</p>
+
+<p>
+المعالجات التي تحتوي على Cache أكبر قد تقدم أداء أفضل خصوصاً في الألعاب.
+</p>
+
+<h3>
+ما هي تقنية X3D من AMD؟
+</h3>
+
+<p>
+قدمت AMD تقنية 3D V-Cache ضمن بعض معالجات Ryzen X3D مثل Ryzen 7 7800X3D، وهي تعتمد على إضافة ذاكرة Cache ضخمة فوق المعالج لتحسين الأداء في الألعاب.
+</p>
+
+<p>
+هذه التقنية جعلت بعض معالجات Ryzen من أقوى الخيارات المخصصة للألعاب حالياً.
+</p>
+
+<img
+src="/images/amd-x3d-gaming.webp"
+alt="معالجات Ryzen X3D"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h3>
+أفضل المعالجات الحالية
+</h3>
+
+<div class="overflow-x-auto my-8">
+<table class="w-full min-w-[900px] text-right border-collapse">
+
+<thead>
+<tr class="bg-white/10">
+<th class="p-4 border border-white/10">المعالج</th>
+<th class="p-4 border border-white/10">الاستخدام</th>
+<th class="p-4 border border-white/10">عدد الأنوية</th>
+<th class="p-4 border border-white/10">عدد الخيوط</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="p-4 border border-white/10">Ryzen 7 7800X3D</td>
+<td class="p-4 border border-white/10">الألعاب</td>
+<td class="p-4 border border-white/10">8</td>
+<td class="p-4 border border-white/10">16</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">Core i7-14700K</td>
+<td class="p-4 border border-white/10">ألعاب وعمل</td>
+<td class="p-4 border border-white/10">20</td>
+<td class="p-4 border border-white/10">28</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">Ryzen 9 7950X</td>
+<td class="p-4 border border-white/10">مونتاج ورندر</td>
+<td class="p-4 border border-white/10">16</td>
+<td class="p-4 border border-white/10">32</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">Core i9-14900K</td>
+<td class="p-4 border border-white/10">احترافي</td>
+<td class="p-4 border border-white/10">24</td>
+<td class="p-4 border border-white/10">32</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<img
+src="/images/ryzen-vs-intel-gaming-performance.webp"
+alt="الأداء في الألعاب بين ryzen و intel"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h3>
+الأداء في الألعاب
+</h3>
+
+<p>
+في الماضي كانت Intel تتفوق بشكل واضح في الألعاب، لكن الفارق أصبح صغيراً جداً حالياً.
+</p>
+
+<p>
+بعض معالجات Intel ما تزال تحقق FPS أعلى قليلاً في الألعاب التنافسية، بينما تتفوق معالجات Ryzen X3D في عدد كبير من الألعاب الحديثة.
+</p>
+
+
+<div class="overflow-x-auto my-8">
+<table class="w-full min-w-[850px] text-right border-collapse">
+
+<thead>
+<tr class="bg-white/10">
+<th class="p-4 border border-white/10">اللعبة</th>
+<th class="p-4 border border-white/10">Ryzen 7 7800X3D</th>
+<th class="p-4 border border-white/10">Core i7-14700K</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="p-4 border border-white/10">CS2</td>
+<td class="p-4 border border-white/10">520 FPS</td>
+<td class="p-4 border border-white/10">540 FPS</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">Cyberpunk 2077</td>
+<td class="p-4 border border-white/10">188 FPS</td>
+<td class="p-4 border border-white/10">181 FPS</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">Fortnite</td>
+<td class="p-4 border border-white/10">410 FPS</td>
+<td class="p-4 border border-white/10">425 FPS</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<img
+src="/images/ryzen-vs-intel-production-and-editing.webp"
+alt="الأداء في الانتاجية والمونتاج بين ryzen و intel"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h3>
+الأداء في المونتاج والرندر
+</h3>
+
+<p>
+في برامج مثل Premiere Pro و Blender تتفوق المعالجات ذات الأنوية الكثيرة بشكل واضح.
+</p>
+
+<p>
+لهذا السبب تعتبر معالجات Ryzen 9 و Core i9 من أفضل الخيارات للمونتاج والرندر الثقيل.
+</p>
+
+<img
+src="/images/ryzen-vs-intel-energy-and-heat.webp"
+alt="الأداء في استهلاك الطاقة والحرارة بين رايزن و انتل"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h3>
+استهلاك الطاقة والحرارة
+</h3>
+
+<p>
+بعض معالجات Intel الحديثة قد تستهلك طاقة مرتفعة تحت الضغط، ما يؤدي إلى حرارة أعلى وحاجة لتبريد قوي.
+</p>
+
+<p>
+أما AMD فقد حسنت بشكل كبير كفاءة استهلاك الطاقة ضمن الأجيال الحديثة.
+</p>
+
+<div class="overflow-x-auto my-8">
+<table class="w-full min-w-[850px] text-right border-collapse">
+
+<thead>
+<tr class="bg-white/10">
+<th class="p-4 border border-white/10">المعالج</th>
+<th class="p-4 border border-white/10">متوسط الاستهلاك</th>
+<th class="p-4 border border-white/10">متوسط الحرارة</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="p-4 border border-white/10">Ryzen 7 7800X3D</td>
+<td class="p-4 border border-white/10">90W</td>
+<td class="p-4 border border-white/10">70°C</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">Core i7-14700K</td>
+<td class="p-4 border border-white/10">180W</td>
+<td class="p-4 border border-white/10">88°C</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<h3>
+الرسوميات المدمجة
+</h3>
+
+<p>
+بعض المعالجات تأتي مع معالج رسومي مدمج Integrated Graphics يسمح بتشغيل الجهاز بدون كرت شاشة منفصل.
+</p>
+
+<p>
+هذه الميزة مفيدة للأعمال المكتبية والاستخدام اليومي وبعض الألعاب الخفيفة.
+</p>
+
+<h3>
+PCIe و DDR5
+</h3>
+
+<p>
+المعالجات الحديثة من AMD و Intel تدعم تقنيات حديثة مثل PCIe 5.0 و DDR5 التي تقدم سرعات أعلى للأقراص والرامات.
+</p>
+
+<p>
+هذه التقنيات تساعد على تحسين الأداء وتجهيز الجهاز للمستقبل.
+</p>
+
+<img
+src="/images/ryzen-vs-intel-future-upgrade.webp"
+alt="الأفضل بين رايزن و انتل في الترقية المستقبلية"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h3>
+الترقية المستقبلية
+</h3>
+
+<p>
+تشتهر AMD بدعم منصاتها لفترات طويلة، حيث يمكن ترقية المعالج مستقبلاً بدون تغيير اللوحة الأم في كثير من الأحيان.
+</p>
+
+<p>
+أما Intel فتقوم بتغيير المقبس بشكل متكرر نسبياً بين الأجيال.
+</p>
+
+<h3>
+أفضل خيار حسب الميزانية
+</h3>
+
+<div class="overflow-x-auto my-8">
+<table class="w-full min-w-[900px] text-right border-collapse">
+
+<thead>
+<tr class="bg-white/10">
+<th class="p-4 border border-white/10">الميزانية</th>
+<th class="p-4 border border-white/10">أفضل Ryzen</th>
+<th class="p-4 border border-white/10">أفضل Intel</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="p-4 border border-white/10">اقتصادية</td>
+<td class="p-4 border border-white/10">Ryzen 5 7600</td>
+<td class="p-4 border border-white/10">Core i5-14400F</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">متوسطة</td>
+<td class="p-4 border border-white/10">Ryzen 7 7700X</td>
+<td class="p-4 border border-white/10">Core i7-14700K</td>
+</tr>
+
+<tr>
+<td class="p-4 border border-white/10">احترافية</td>
+<td class="p-4 border border-white/10">Ryzen 9 7950X</td>
+<td class="p-4 border border-white/10">Core i9-14900K</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<h3>
+الأسئلة الشائعة
+</h3>
+
+<h3>
+هل Ryzen أفضل للألعاب؟
+</h3>
+
+<p>
+بعض معالجات Ryzen X3D تعتبر من أقوى معالجات الألعاب حالياً، لكن Intel ما تزال قوية جداً في الألعاب التنافسية.
+</p>
+
+<h3>
+هل Intel يسخن أكثر؟
+</h3>
+
+<p>
+بعض معالجات Intel الحديثة تستهلك طاقة أعلى تحت الضغط، ما يؤدي إلى حرارة أكبر مقارنة ببعض معالجات Ryzen.
+</p>
+
+<h3>
+هل Ryzen أفضل للمونتاج؟
+</h3>
+
+<p>
+في كثير من الحالات نعم، خصوصاً ضمن المعالجات متعددة الأنوية.
+</p>
+
+<h3>
+أيهما أفضل للمستقبل؟
+</h3>
+
+<p>
+AMD تقدم حالياً دعماً ممتازاً لمنصة AM5 والترقية المستقبلية.
+</p>
+
+<h3>
+الخلاصة
+</h3>
+
+<p>
+المنافسة بين Ryzen و Intel أصبحت أقوى من أي وقت مضى، ولم يعد هناك خيار سيئ بين الشركتين.
+</p>
+
+<p>
+إذا كنت تبحث عن أفضل قيمة مقابل السعر وأداء قوي في العمل والمونتاج فغالباً سيكون Ryzen خياراً ممتازاً، بينما تستمر Intel بتقديم أداء قوي جداً خصوصاً لعشاق الألعاب التنافسية.
+</p>
+
+<div class="mt-10 text-sm text-zinc-400 leading-8">
+#Ryzen #Intel #AMD #CPU #GamingPC #معالجات #ألعاب #كمبيوتر
+</div>`,
+},
+
+  {
+title:
+"Ryzen 7 vs Core i7.. أيهما أفضل للألعاب والعمل في 2026؟",
+
+slug:
+"ryzen-7-vs-core-i7",
+
+excerpt:
+"مقارنة شاملة بين Ryzen 7 و Core i7 من حيث الأداء والألعاب واستهلاك الطاقة والسعر.",
+
+description:
+"تعرف على الفرق بين Ryzen 7 و Core i7 وأيهما يقدم أداء أفضل للألعاب والمونتاج والاستخدام اليومي.",
+
+category:
+"تكنولوجيا",
+
+image:
+"/images/ryzen7-vs-corei7.webp",
+
+author:
+"هيئة التحرير",
+
+date:
+"30 مايو 2026",
+
+content:
+`<p>
+تعتبر معالجات Ryzen 7 من AMD ومعالجات Core i7 من Intel من أكثر الفئات شعبية بين اللاعبين وصناع المحتوى والمستخدمين المحترفين.
+
+</p>
+
+<p>
+ومع التطور الكبير في أداء المعالجات خلال السنوات الأخيرة، أصبح الاختيار بين Ryzen 7 و Core i7 أكثر صعوبة من السابق، خاصة مع تقارب الأداء في الألعاب والعمل الاحترافي.
+</p>
+
+<img
+src="/images/cpu-comparison.webp"
+alt="مقارنة Ryzen 7 و Core i7"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h3>
+الفرق الأساسي بين Ryzen 7 و Core i7
+</h3>
+
+<p>
+تركز AMD في معالجات Ryzen 7 على تقديم عدد أنوية وخيوط معالجة مرتفع مقابل السعر، بينما تعتمد Intel في Core i7 على الأداء القوي للنواة الواحدة والترددات العالية.
+</p>
+
+<p>
+هذا الاختلاف يجعل كل معالج مناسباً لفئة معينة من المستخدمين بحسب طبيعة الاستخدام.
+</p>
+
+<h3>
+الأداء في الألعاب
+</h3>
+
+<p>
+في السنوات الأخيرة أصبحت المنافسة متقاربة جداً بين Ryzen 7 و Core i7 في الألعاب الحديثة.
+</p>
+
+<p>
+غالباً تتفوق Intel بفارق بسيط في بعض الألعاب التي تعتمد على قوة النواة الواحدة، بينما تقدم AMD أداء ممتازاً واستقراراً قوياً خصوصاً مع دقات 1440p و 4K.
+</p>
+
+<img
+src="/images/gaming-cpu-performance.webp"
+alt="أداء المعالجات في الألعاب"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<ul>
+<li>Core i7 يقدم FPS أعلى قليلاً في بعض الألعاب التنافسية</li>
+<li>Ryzen 7 يوفر أداء ممتازاً مع استهلاك طاقة أقل غالباً</li>
+<li>الفارق الحقيقي بالألعاب أصبح صغيراً جداً</li>
+</ul>
+
+<h3>
+الأداء في المونتاج والتصميم
+</h3>
+
+<p>
+عند العمل على برامج المونتاج والتصميم والرندر، تظهر قوة الأنوية والخيوط بشكل واضح.
+</p>
+
+<p>
+معالجات Ryzen 7 تتفوق غالباً في المهام متعددة الأنوية مثل:
+</p>
+
+<ul>
+<li>تحرير الفيديو</li>
+<li>الرندر ثلاثي الأبعاد</li>
+<li>البث المباشر</li>
+<li>تشغيل برامج متعددة بنفس الوقت</li>
+</ul>
+
+<h3>
+استهلاك الطاقة والحرارة
+</h3>
+
+<p>
+تستهلك بعض معالجات Core i7 الحديثة طاقة أعلى تحت الضغط مقارنة ببعض إصدارات Ryzen 7، ما يؤدي أحياناً إلى حرارة أكبر وحاجة لتبريد أقوى.
+</p>
+
+<img
+src="/images/cpu-temperature.webp"
+alt="حرارة المعالج"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<p>
+أما AMD فقد حسنت بشكل كبير كفاءة استهلاك الطاقة في الأجيال الأخيرة.
+</p>
+
+<h3>
+السعر مقابل الأداء
+</h3>
+
+<p>
+واحدة من أقوى نقاط Ryzen 7 هي تقديم قيمة ممتازة مقابل السعر، حيث يحصل المستخدم غالباً على عدد أنوية مرتفع وأداء قوي بسعر منافس.
+</p>
+
+<p>
+لكن Intel لا تزال تقدم أداءً ممتازاً خصوصاً للمستخدمين الذين يركزون على الألعاب فقط.
+</p>
+
+<h3>
+أيهما أفضل للألعاب؟
+</h3>
+
+<p>
+إذا كان استخدامك الأساسي هو الألعاب التنافسية وتحقيق أعلى FPS ممكن فقد يكون Core i7 خياراً ممتازاً.
+</p>
+
+<p>
+أما إذا كنت تريد جهازاً متوازناً للألعاب والعمل والبث والمونتاج فغالباً سيكون Ryzen 7 خياراً قوياً جداً.
+</p>
+
+<h3>
+أيهما أفضل للمونتاج وصناعة المحتوى؟
+</h3>
+
+<p>
+في الأعمال الاحترافية متعددة المهام تتفوق معالجات Ryzen 7 غالباً بفضل عدد الأنوية والخيوط المرتفع.
+</p>
+
+<h3>
+هل ما زالت Intel أفضل من AMD؟
+</h3>
+
+<p>
+لم تعد Intel تهيمن على سوق المعالجات كما في السابق، حيث أصبحت AMD منافساً قوياً جداً في الأداء والكفاءة والسعر.
+</p>
+
+<p>
+حالياً يعتمد الاختيار الحقيقي على ميزانيتك وطبيعة استخدامك وليس على اسم الشركة فقط.
+</p>
+
+<h3>
+الخلاصة
+</h3>
+
+<p>
+كل من Ryzen 7 و Core i7 يقدمان أداء قوياً جداً في 2026، والفروقات الحقيقية أصبحت أصغر من السابق.
+</p>
+
+<p>
+إذا كنت تريد أفضل قيمة مقابل السعر واستخداماً متنوعاً فقد يكون Ryzen 7 خياراً ممتازاً، بينما يناسب Core i7 اللاعبين الذين يبحثون عن أعلى أداء ممكن في بعض الألعاب.
+</p>
+
+<div class="mt-10 text-sm text-zinc-400 leading-8">
+#Ryzen7 #Corei7 #AMD #Intel #CPU #معالجات #ألعاب #GamingPC
+</div>`,
+  },
+
+  {
+title:
 "حل مشكلة App Store لا يحمّل التطبيقات في الآيفون",
 
 slug:
