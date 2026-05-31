@@ -13,6 +13,7 @@ import Link from "next/link";
 import ReadingProgress from "@/components/ReadingProgress";
 
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 
     /* =====================================================
     
@@ -176,6 +177,15 @@ export default async function ArticlePage({
       ? "bg-indigo-400"
 
       : "bg-green-500";
+
+  const articleAccentColor =
+    article.category === "سياسة"
+      ? "#ef4444"
+      : article.category === "اقتصاد"
+      ? "#38bdf8"
+      : article.category === "تكنولوجيا"
+      ? "#818cf8"
+      : "#22c55e";
 
   return (
     <>
@@ -447,6 +457,7 @@ className="hover:text-white transition-colors" >
         
           <article
             className="
+              article-content
               prose
               prose-invert
               prose-lg
@@ -471,6 +482,11 @@ className="hover:text-white transition-colors" >
 
               prose-blockquote:border-indigo-500
             "
+            style={
+              {
+                "--article-accent": articleAccentColor,
+              } as CSSProperties
+            }
             dangerouslySetInnerHTML={{
             __html: article.content.replace(
               /<h([23])>([\s\S]*?)<\/h\1>/g,

@@ -68,3 +68,28 @@ html {
   color: #d4d4d8;
   margin-bottom: 0.75rem;
 }
+
+.article-content {
+  scrollbar-color: var(--article-accent) #18181b;
+}
+
+.article-content * {
+  scrollbar-color: var(--article-accent) #18181b;
+}
+
+.article-content *::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.article-content *::-webkit-scrollbar-track {
+  background: #18181b;
+}
+
+.article-content *::-webkit-scrollbar-thumb {
+  background: var(--article-accent);
+}
+
+.article-content *::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--article-accent) 82%, white);
+}
