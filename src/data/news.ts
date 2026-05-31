@@ -67,46 +67,46 @@ style="
 </h3>
 
 <div class="overflow-x-auto my-8">
-<table class="w-full min-w-[850px] text-right border-collapse">
+<table class="w-auto min-w-[850px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="p-4 border border-white/10">الفئة</th>
-<th class="p-4 border border-white/10">Ryzen</th>
-<th class="p-4 border border-white/10">Intel</th>
+<th class="px-2 py-2 border border-white/10">الفئة</th>
+<th class="px-2 py-2 border border-white/10">Ryzen</th>
+<th class="px-2 py-2 border border-white/10">Intel</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="p-4 border border-white/10">الألعاب</td>
-<td class="p-4 border border-white/10">ممتاز</td>
-<td class="p-4 border border-white/10">متفوق أحياناً</td>
+<td class="px-2 py-2 border border-white/10">الألعاب</td>
+<td class="px-2 py-2 border border-white/10">ممتاز</td>
+<td class="px-2 py-2 border border-white/10">متفوق أحياناً</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">المونتاج والرندر</td>
-<td class="p-4 border border-white/10">متفوق غالباً</td>
-<td class="p-4 border border-white/10">قوي جداً</td>
+<td class="px-2 py-2 border border-white/10">المونتاج والرندر</td>
+<td class="px-2 py-2 border border-white/10">متفوق غالباً</td>
+<td class="px-2 py-2 border border-white/10">قوي جداً</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">الحرارة</td>
-<td class="p-4 border border-white/10">أفضل غالباً</td>
-<td class="p-4 border border-white/10">أعلى ببعض الفئات</td>
+<td class="px-2 py-2 border border-white/10">الحرارة</td>
+<td class="px-2 py-2 border border-white/10">أفضل غالباً</td>
+<td class="px-2 py-2 border border-white/10">أعلى ببعض الفئات</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">السعر مقابل الأداء</td>
-<td class="p-4 border border-white/10">أفضل غالباً</td>
-<td class="p-4 border border-white/10">جيد جداً</td>
+<td class="px-2 py-2 border border-white/10">السعر مقابل الأداء</td>
+<td class="px-2 py-2 border border-white/10">أفضل غالباً</td>
+<td class="px-2 py-2 border border-white/10">جيد جداً</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">الترقية المستقبلية</td>
-<td class="p-4 border border-white/10">أفضل</td>
-<td class="p-4 border border-white/10">أضعف نسبياً</td>
+<td class="px-2 py-2 border border-white/10">الترقية المستقبلية</td>
+<td class="px-2 py-2 border border-white/10">أفضل</td>
+<td class="px-2 py-2 border border-white/10">أضعف نسبياً</td>
 </tr>
 
 </tbody>
