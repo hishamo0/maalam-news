@@ -89,8 +89,7 @@ const hoverStyles: Record<string, string> = {
           className={`
             relative
             overflow-hidden
-
-            ${large ? "h-[320px]" : "h-[220px]"}
+            aspect-video
           `}
         >
           <Image

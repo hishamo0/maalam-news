@@ -208,7 +208,12 @@ style="
 
 <p>
 الحفاظ على تحديث الجهاز وتوفير مساحة تخزين كافية يساعد على عمل App Store بشكل مستقر وسريع.
-</p>`,
+</p>
+
+
+<div class="mt-10 text-sm text-zinc-400 leading-8">
+  #الآيفون #iPhone #مشاكل_الآيفون #حل_مشاكل_الآيفون #AppStore
+</div>`,
   },
 
   {
@@ -717,7 +722,7 @@ style="
   </ul>
 
    <img
-    src="/images/iphone-freeze-problem.webp"
+    src="/images/reset-network-settings.webp"
     alt=" إعادة ضبط الإعدادات"
     style="
       width:100%;
