@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { news } from "@/data/news";
 import Image from "next/image";
@@ -8,21 +8,14 @@ import Link from "next/link";
 
 const SLIDE_DELAY = 5000;
 const FADE_DELAY = 280;
-const THUMBNAIL_COUNT = 4;
+const FEATURED_COUNT = 5;
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isChanging, setIsChanging] = useState(false);
 
-  const heroArticle = news[currentIndex];
-
-  const thumbnailIndexes = useMemo(
-    () =>
-      Array.from({ length: THUMBNAIL_COUNT }, (_, index) =>
-        (currentIndex + index + 1) % news.length
-      ),
-    [currentIndex]
-  );
+  const featuredNews = news.slice(0, FEATURED_COUNT);
+  const heroArticle = featuredNews[currentIndex];
 
   const goToSlide = (index: number) => {
     if (index === currentIndex) {
@@ -42,28 +35,28 @@ export default function Hero() {
       setIsChanging(true);
 
       window.setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % news.length);
+        setCurrentIndex((prev) => (prev + 1) % featuredNews.length);
         setIsChanging(false);
       }, FADE_DELAY);
     }, SLIDE_DELAY);
 
     return () => window.clearInterval(interval);
-  }, []);
+  }, [featuredNews.length]);
 
   return (
-    <section className="w-full px-4 py-8">
-      <div className="mx-auto grid max-w-7xl gap-3 [direction:ltr] lg:grid-cols-[minmax(180px,0.46fr)_minmax(0,1fr)]">
-        <div className="order-2 grid grid-cols-2 gap-3 [direction:rtl] lg:order-1 lg:grid-cols-1">
-          {thumbnailIndexes.map((index) => {
-            const article = news[index];
-
+    <section className="w-full px-2 py-6 sm:px-4 sm:py-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(86px,0.34fr)_minmax(0,1fr)] gap-2 [direction:ltr] sm:grid-cols-[minmax(150px,0.36fr)_minmax(0,1fr)] sm:gap-3 lg:grid-cols-[minmax(210px,0.42fr)_minmax(0,1fr)]">
+        <div className="grid grid-cols-1 gap-2 [direction:rtl] sm:gap-3">
+          {featuredNews.map((article, index) => {
             return (
               <button
                 key={article.slug}
                 type="button"
                 onClick={() => goToSlide(index)}
                 aria-label={article.title}
-                className="group relative h-[92px] overflow-hidden bg-zinc-900 outline-none transition duration-300 focus-visible:ring-2 focus-visible:ring-red-500 sm:h-[120px] lg:h-[128px]"
+                className={`group relative h-[62px] overflow-hidden bg-zinc-900 outline-none transition duration-300 focus-visible:ring-2 focus-visible:ring-red-500 sm:h-[96px] lg:h-[124px] ${
+                  currentIndex === index ? "ring-2 ring-red-500" : ""
+                }`}
               >
                 <Image
                   src={article.image}
@@ -72,7 +65,11 @@ export default function Hero() {
                   height={292}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
-                <span className="absolute inset-0 bg-black/10 transition duration-300 group-hover:bg-black/0" />
+                <span
+                  className={`absolute inset-0 transition duration-300 group-hover:bg-black/0 ${
+                    currentIndex === index ? "bg-black/0" : "bg-black/25"
+                  }`}
+                />
               </button>
             );
           })}
@@ -80,9 +77,9 @@ export default function Hero() {
 
         <Link
           href={`/news/${heroArticle.slug}`}
-          className="group order-1 block overflow-hidden bg-zinc-900 [direction:rtl] lg:order-2"
+          className="group block overflow-hidden bg-zinc-900 [direction:rtl]"
         >
-          <div className="relative h-[260px] overflow-hidden sm:h-[340px] lg:h-[548px]">
+          <div className="relative h-[342px] overflow-hidden sm:h-[528px] lg:h-[668px]">
             <Image
               key={heroArticle.slug}
               src={heroArticle.image}
@@ -96,16 +93,16 @@ export default function Hero() {
             />
           </div>
 
-          <div className="bg-zinc-950 px-4 py-4 sm:px-6 lg:px-7">
-            <span className="text-sm font-semibold text-red-500">
+          <div className="bg-zinc-950 px-3 py-3 sm:px-5 sm:py-4 lg:px-7">
+            <span className="text-xs font-semibold text-red-500 sm:text-sm">
               {heroArticle.category}
             </span>
 
-            <h1 className="mt-3 line-clamp-1 text-xl font-extrabold leading-tight transition-colors duration-300 group-hover:text-red-500 sm:text-2xl lg:text-3xl">
+            <h1 className="mt-2 line-clamp-1 text-sm font-extrabold leading-tight transition-colors duration-300 group-hover:text-red-500 sm:mt-3 sm:text-2xl lg:text-3xl">
               {heroArticle.title}
             </h1>
 
-            <p className="mt-3 line-clamp-1 text-sm leading-relaxed text-zinc-400 sm:text-base lg:text-lg">
+            <p className="mt-2 line-clamp-1 text-xs leading-relaxed text-zinc-400 sm:mt-3 sm:text-base lg:text-lg">
               {heroArticle.excerpt}
             </p>
           </div>
