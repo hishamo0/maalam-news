@@ -2,12 +2,12 @@
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import LatestNewsSlider from "@/components/LatestNewsSlider";
 import NewsCard from "@/components/NewsCard";
 import SectionTitle from "@/components/SectionTitle";
 import TrendingSidebar from "@/components/TrendingSidebar";
 
 import { news } from "@/data/news";
-import { useState } from "react";
 
  /* =========================================================
       Metadata
@@ -15,18 +15,6 @@ import { useState } from "react";
 
 
 export default function Home() {
-  /* =========================================================
-   تخزين قيمة البحث
-========================================================= */
-
-const [search, setSearch] = useState("");
-
-  const filteredNews = news.filter((item) =>
-    item.title
-      .toLowerCase()
-      .includes(search.toLowerCase())
-  );
-
   const technologyNews = news.filter(
     (item) => item.category === "تكنولوجيا"
   );
@@ -167,24 +155,7 @@ const [search, setSearch] = useState("");
                 color="bg-red-500"
               />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                {filteredNews.map((item) => (
-
-                  <NewsCard
-                    key={item.slug}
-                    category={item.category}
-                    title={item.title}
-                    image={item.image}
-                    slug={item.slug}
-                    excerpt={item.excerpt}
-                    author={item.author}
-                    date={item.date}
-                  />
-
-                ))}
-
-              </div>
+              <LatestNewsSlider items={news} />
 
             </div>
 
