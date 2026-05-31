@@ -67,7 +67,7 @@ style="
 </h3>
 
 <div class="overflow-x-auto my-8">
-<table class="w-auto min-w-[850px] text-right border-collapse">
+<table class="w-auto min-w-[550px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
