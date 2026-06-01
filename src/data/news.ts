@@ -993,6 +993,79 @@ Ryzen 7 أم Core i7 للابتوبات؟
 أما معالجات Core i7 المحمولة فتقدم أداءً قوياً جداً خصوصاً في اللابتوبات المخصصة للألعاب والعمل الاحترافي.
 </p>
 
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-auto min-w-[950px] text-right border-collapse">
+
+<thead>
+<tr class="bg-white/10">
+<th class="px-3 py-3 border border-white/10">العامل</th>
+<th class="px-3 py-3 border border-white/10">AMD Ryzen 7</th>
+<th class="px-3 py-3 border border-white/10">Intel Core i7</th>
+<th class="px-3 py-3 border border-white/10">الأفضل</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="px-3 py-3 border border-white/10">كفاءة استهلاك الطاقة</td>
+<td class="px-3 py-3 border border-white/10">كفاءة ممتازة مع استهلاك طاقة أقل</td>
+<td class="px-3 py-3 border border-white/10">أداء قوي لكن باستهلاك طاقة أعلى</td>
+<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+</tr>
+
+<tr class="bg-white/5">
+<td class="px-3 py-3 border border-white/10">عمر البطارية</td>
+<td class="px-3 py-3 border border-white/10">غالباً أطول في اللابتوبات النحيفة</td>
+<td class="px-3 py-3 border border-white/10">منافس لكنه أقصر في كثير من الحالات</td>
+<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-white/10">الحرارة</td>
+<td class="px-3 py-3 border border-white/10">حرارة أقل أثناء الاستخدام الطويل</td>
+<td class="px-3 py-3 border border-white/10">درجات حرارة أعلى تحت الضغط</td>
+<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+</tr>
+
+<tr class="bg-white/5">
+<td class="px-3 py-3 border border-white/10">الأداء مقابل استهلاك الطاقة</td>
+<td class="px-3 py-3 border border-white/10">توازن ممتاز بين الأداء والكفاءة</td>
+<td class="px-3 py-3 border border-white/10">أداء أعلى لكن بكفاءة أقل</td>
+<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-white/10">الأداء اللحظي</td>
+<td class="px-3 py-3 border border-white/10">قوي ومستقر</td>
+<td class="px-3 py-3 border border-white/10">أداء أعلى في المهام الثقيلة</td>
+<td class="px-3 py-3 border border-white/10">Core i7</td>
+</tr>
+
+<tr class="bg-white/5">
+<td class="px-3 py-3 border border-white/10">الاستخدام الواقعي</td>
+<td class="px-3 py-3 border border-white/10">توفير ثابت وملحوظ للبطارية</td>
+<td class="px-3 py-3 border border-white/10">يعتمد بشكل كبير على تبريد الجهاز وإعدادات الشركة المصنعة</td>
+<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+إذا كانت كفاءة البطارية هي الأولوية الأساسية لديك في اللابتوبات، فإن معالجات AMD Ryzen 7 تتفوّق غالباً بفضل استهلاك الطاقة المنخفض والكفاءة العالية أثناء الاستخدام اليومي والمستمر.
+</p>
+
+<p>
+في المقابل، توفّر معالجات Intel Core i7 أداءً قوياً جداً، خاصة في المهام الثقيلة والأداء اللحظي السريع، لكنها غالباً تستهلك طاقة أكبر وتنتج حرارة أعلى تحت الضغط.
+</p>
+
+<p>
+ومع ذلك، تبقى التجربة النهائية مرتبطة أيضاً بجودة تبريد اللابتوب، وسعة البطارية، ونوع الشاشة، وطريقة ضبط الشركة المصنعة للجهاز.
+</p>
+
 <img
 src="/images/laptop-cpu-comparison.webp"
 alt="Ryzen 7 vs Core i7 Laptop"

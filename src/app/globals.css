@@ -72,6 +72,12 @@ html {
   scrollbar-color: var(--article-accent) #18181b;
 }
 
+.article-content table,
+.article-content th,
+.article-content td {
+  font-size: 0.8rem;
+}
+
 .article-content * {
   scrollbar-color: var(--article-accent) #18181b;
 }
