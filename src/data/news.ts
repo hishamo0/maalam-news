@@ -13,6 +13,967 @@ export type NewsItem = {
 export const news: NewsItem[] = [
 
   {
+title:
+"الفرق بين AMD Ryzen 5 و AMD Ryzen 7: أيهما أفضل للألعاب والعمل وصناعة المحتوى؟",
+
+slug:
+"amd-ryzen-5-vs-amd-ryzen-7",
+
+excerpt:
+"مقارنة شاملة بين AMD Ryzen 5 و AMD Ryzen 7 تشمل الألعاب والمونتاج والبث المباشر واستهلاك الطاقة وأشهر المعالجات مثل Ryzen 5 7600 و Ryzen 7 7800X3D لمساعدتك في اختيار المعالج المناسب.",
+
+description:
+"تعرف على الفرق الحقيقي بين AMD Ryzen 5 و AMD Ryzen 7 من حيث الأداء وعدد الأنوية والكاش والألعاب والمونتاج والقيمة مقابل السعر مع مقارنة تفصيلية لأشهر معالجات السلسلتين.",
+
+category:
+"تكنولوجيا",
+
+image:
+"/images/amd-ryzen-5-vs-ryzen-7.webp",
+
+author:
+"هيئة التحرير",
+
+date:
+"5 يونيو 2026",
+
+content:
+`
+
+<p>
+عند البحث عن معالج جديد من AMD ستجد نفسك غالباً
+أمام خيارين من أكثر الخيارات شعبية في السوق: Ryzen 5 و Ryzen 7. وبينما يبدو الفرق بينهما بسيطاً للوهلة الأولى،
+فإن اختيار المعالج المناسب قد
+يؤثر بشكل مباشر على تجربة الاستخدام لسنوات طويلة.
+</p>
+
+<p>
+يعتقد الكثير من المستخدمين أن Ryzen 7 أفضل دائماً لأنه يحمل رقماً أعلى ويحتوي على عدد أنوية أكبر، لكن
+الأداء لا يعتمد فقط على عدد الأنوية، بل يتأثر أيضاً بالمعمارية وحجم الذاكرة المخبأة والترددات وطبيعة البرامج التي تستخدمها يومياً.
+</p>
+
+
+<h2>ما هو Ryzen 5؟</h2>
+
+<p>
+تمثل سلسلة Ryzen 5 الفئة المتوسطة ضمن معالجات AMD، وهي الفئة التي تستهدف غالبية المستخدمين الباحثين
+عن توازن ممتاز بين الأداء والسعر.
+</p>
+
+<p>
+عادة ما تأتي معالجات Ryzen 5 بعدد يتراوح بين 6 و8 أنوية مع دعم تقنية SMT التي تسمح لكل نواة بمعالجة خيطين في
+الوقت نفسه، ما يحسن
+أداء تعدد المهام
+والتطبيقات الحديثة.
+</p>
+
+<p>
+تشتهر هذه السلسلة بكونها الخيار المفضل للاعبين، حيث توفر
+أداء قوياً جداً في الألعاب دون الحاجة إلى دفع مبالغ كبيرة مقابل أنوية إضافية قد لا تستفيد منها معظم الألعاب.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>أبرز مميزات Ryzen 5</strong>
+
+<ul>
+<li>قيمة ممتازة مقابل السعر.</li>
+<li>أداء قوي في الألعاب الحديثة.</li>
+<li>استهلاك طاقة منخفض نسبياً.</li>
+<li>مناسب للاستخدام اليومي والدراسة والعمل.</li>
+<li>يتوفر ضمن عدة أجيال وأسعار مختلفة.</li>
+</ul>
+
+</div>
+
+<h3>أشهر معالجات Ryzen 5</h3>
+
+<p>
+يعتبر Ryzen 5 5600 أحد أنجح معالجات AMD خلال السنوات الماضية بفضل سعره المنخفض وأدائه الممتاز على منصة AM4.
+</p>
+
+<p>
+أما Ryzen 5 7600 فقد أصبح من أكثر المعالجات شعبية على منصة AM5 الحديثة بفضل دعمه لذاكرة DDR5 وتقنية PCIe 5.0.
+</p>
+
+<p>
+كما يعد Ryzen 5 9600X من أحدث الخيارات المتوفرة حالياً، حيث يقدم أداء قوياً للنواة الواحدة يجعله خياراً ممتازاً للاعبين.
+</p>
+
+<h2>ما هو Ryzen 7؟</h2>
+
+<p>
+تمثل سلسلة Ryzen 7 الفئة الأعلى مباشرة من Ryzen 5، وتستهدف المستخدمين الذين يحتاجون إلى قوة معالجة إضافية للتعامل مع التطبيقات الثقيلة أو تعدد المهام المكثف.
+</p>
+
+<p>
+تحتوي معظم معالجات Ryzen 7 الحديثة على 8 أنوية و16 خيط معالجة، ما يمنحها أفضلية واضحة في تطبيقات الرندر والمونتاج والبث المباشر مقارنة بمعظم معالجات Ryzen 5.
+</p>
+
+<p>
+ورغم أن الفارق في الألعاب قد يكون محدوداً أحياناً، إلا أن Ryzen 7 يصبح خياراً أكثر جاذبية للمستخدمين الذين يعملون على مشاريع احترافية أو يخططون للاحتفاظ بأجهزتهم لفترة طويلة.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>أبرز مميزات Ryzen 7</strong>
+
+<ul>
+<li>عدد أنوية أكبر.</li>
+<li>أداء أفضل في البرامج الاحترافية.</li>
+<li>قدرة أعلى على تعدد المهام.</li>
+<li>مناسب للبث المباشر وصناعة المحتوى.</li>
+<li>عمر افتراضي أطول نسبياً مع تطور البرامج والألعاب.</li>
+</ul>
+
+</div>
+
+<h3>أشهر معالجات Ryzen 7</h3>
+
+<p>
+يعد Ryzen 7 5700X أحد أفضل الخيارات الاقتصادية لمنصة AM4 بفضل أدائه المتوازن وسعره المنافس.
+</p>
+
+<p>
+أما Ryzen 7 7700X فيوفر أداء قوياً جداً في الألعاب والإنتاجية على منصة AM5.
+</p>
+
+<p>
+ويعتبر Ryzen 7 7800X3D من أفضل معالجات الألعاب في العالم بفضل تقنية 3D V-Cache التي تزيد من حجم الذاكرة المخبأة بشكل كبير.
+</p>
+
+<p>
+في المقابل يمثل Ryzen 7 9700X أحدث أجيال السلسلة ويقدم تحسينات ملحوظة في الكفاءة والأداء.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-auto min-w-[750px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المعالج
+</th>
+
+<th class="border border-zinc-500 p-4">
+الأنوية / الخيوط
+</th>
+
+<th class="border border-zinc-500 p-4">
+المعمارية
+</th>
+
+<th class="border border-zinc-500 p-4">
+الذاكرة المخبأة L3
+</th>
+
+<th class="border border-zinc-500 p-4">
+أقصى تردد
+</th>
+
+<th class="border border-zinc-500 p-4">
+Cinebench R23 Multi-Core
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 5 7600</td>
+<td class="border border-zinc-500 p-4">6 / 12</td>
+<td class="border border-zinc-500 p-4">Zen 4</td>
+<td class="border border-zinc-500 p-4">38MB</td>
+<td class="border border-zinc-500 p-4">5.1GHz</td>
+<td class="border border-zinc-500 p-4">≈ 14,800</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 5 9600X</td>
+<td class="border border-zinc-500 p-4">6 / 12</td>
+<td class="border border-zinc-500 p-4">Zen 5</td>
+<td class="border border-zinc-500 p-4">38MB</td>
+<td class="border border-zinc-500 p-4">5.4GHz</td>
+<td class="border border-zinc-500 p-4">≈ 16,900</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7700</td>
+<td class="border border-zinc-500 p-4">8 / 16</td>
+<td class="border border-zinc-500 p-4">Zen 4</td>
+<td class="border border-zinc-500 p-4">40MB</td>
+<td class="border border-zinc-500 p-4">5.3GHz</td>
+<td class="border border-zinc-500 p-4">≈ 19,200</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7700X</td>
+<td class="border border-zinc-500 p-4">8 / 16</td>
+<td class="border border-zinc-500 p-4">Zen 4</td>
+<td class="border border-zinc-500 p-4">40MB</td>
+<td class="border border-zinc-500 p-4">5.4GHz</td>
+<td class="border border-zinc-500 p-4">≈ 19,800</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7800X3D</td>
+<td class="border border-zinc-500 p-4">8 / 16</td>
+<td class="border border-zinc-500 p-4">Zen 4</td>
+<td class="border border-zinc-500 p-4">104MB</td>
+<td class="border border-zinc-500 p-4">5.0GHz</td>
+<td class="border border-zinc-500 p-4">≈ 18,000</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 9700X</td>
+<td class="border border-zinc-500 p-4">8 / 16</td>
+<td class="border border-zinc-500 p-4">Zen 5</td>
+<td class="border border-zinc-500 p-4">40MB</td>
+<td class="border border-zinc-500 p-4">5.5GHz</td>
+<td class="border border-zinc-500 p-4">≈ 22,000</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<p>
+تعتمد نتائج Cinebench R23 على اختبار الأداء متعدد الأنوية، لذلك فهي تعكس قوة المعالج في المهام الاحترافية مثل الرندر والمونتاج أكثر مما تعكس أداءه داخل الألعاب. ولهذا السبب قد يتفوق Ryzen 7 7800X3D في الألعاب على بعض المعالجات التي تحقق نتائج أعلى في Cinebench.
+</p>
+
+<h2>لماذا لا تعني الأنوية الإضافية أداءً أفضل دائماً؟</h2>
+
+<p>
+من أكثر المفاهيم الخاطئة انتشاراً بين المستخدمين الاعتقاد بأن زيادة عدد الأنوية تؤدي بشكل مباشر إلى زيادة مماثلة في الأداء. فعندما يرى المستخدم أن Ryzen 7 يحتوي على 8 أنوية بينما Ryzen 5 يحتوي على 6 أنوية، فإنه يفترض تلقائياً أن Ryzen 7 أسرع بنسبة كبيرة.
+</p>
+
+
+<p>
+لكن أحياناً قد يتفوق Ryzen 5 حديث مثل Ryzen 5 9600X على Ryzen 7 أقدم مثل Ryzen 7 5800X في العديد من الألعاب والتطبيقات رغم امتلاك الأخير عدداً أكبر من الأنوية.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>العوامل التي تؤثر على أداء المعالج:</strong>
+
+<ul>
+<li>عدد الأنوية والخيوط.</li>
+<li>المعمارية المستخدمة.</li>
+<li>التردد الأساسي وتردد التعزيز.</li>
+<li>حجم ذاكرة Cache.</li>
+<li>كفاءة استهلاك الطاقة.</li>
+<li>طريقة استغلال البرامج للأنوية.</li>
+</ul>
+
+</div>
+
+<h2>مقارنة المواصفات بين Ryzen 5 و Ryzen 7</h2>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-auto min-w-[400px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المواصفات
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ryzen 5
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ryzen 7
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">عدد الأنوية</td>
+<td class="border border-zinc-500 p-4">6 إلى 8</td>
+<td class="border border-zinc-500 p-4">8 إلى 12</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">عدد الخيوط</td>
+<td class="border border-zinc-500 p-4">12 إلى 16</td>
+<td class="border border-zinc-500 p-4">16 إلى 24</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">الألعاب</td>
+<td class="border border-zinc-500 p-4">ممتاز</td>
+<td class="border border-zinc-500 p-4">ممتاز جداً</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">المونتاج</td>
+<td class="border border-zinc-500 p-4">جيد جداً</td>
+<td class="border border-zinc-500 p-4">ممتاز</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">البث المباشر</td>
+<td class="border border-zinc-500 p-4">جيد</td>
+<td class="border border-zinc-500 p-4">ممتاز</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">استهلاك الطاقة</td>
+<td class="border border-zinc-500 p-4">أقل</td>
+<td class="border border-zinc-500 p-4">أعلى قليلاً</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h2>الأداء في الألعاب</h2>
+
+<p>
+بالنسبة لمعظم اللاعبين، تعتبر الألعاب العامل الأهم عند اختيار المعالج. وهنا يجب توضيح نقطة
+مهمة جداً، وهي أن معظم الألعاب الحديثة لا تستفيد بشكل كامل من جميع الأنوية الموجودة داخل المعالج.
+</p>
+
+<p>
+تعتمد الألعاب بشكل أساسي على قوة النواة الواحدة وسرعة الوصول إلى البيانات داخل الذاكرة المخبأة.
+ولهذا السبب لا تكون الفروقات بين Ryzen 5 و Ryzen 7 كبيرة كما يتوقع البعض.
+</p>
+
+<p>
+في كثير من الحالات قد لا يتجاوز الفارق بين Ryzen 5 7600 و Ryzen 7 7700X نسبة 5% إلى 12% فقط
+عند استخدام نفس كرت الشاشة.
+</p>
+
+<p>
+أما إذا كنت تستخدم بطاقة رسومية فائقة القوة مثل RTX 5080 أو RTX 5090 مع شاشة عالية التردد، فقد تبدأ الأنوية الإضافية والكاش الأكبر بإظهار فائدتها بشكل أوضح.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>معلومة مهمة:</strong>
+
+<p>
+يعتبر Ryzen 7 7800X3D من أفضل معالجات الألعاب في العالم بفضل تقنية 3D V-Cache التي تسمح بتخزين كمية أكبر من بيانات اللعبة داخل المعالج نفسه وتقليل الحاجة للوصول إلى ذاكرة RAM.
+</p>
+
+</div>
+
+<h2>ماذا يحدث داخل المعالج أثناء اللعب؟</h2>
+
+<p>
+عند تشغيل لعبة حديثة مثل Cyberpunk 2077 أو Starfield يقوم المعالج بحساب الذكاء الاصطناعي وحركة الشخصيات والفيزياء
+والعالم المفتوح وإرسال التعليمات إلى كرت الشاشة.
+</p>
+
+<p>
+إذا لم يستطع المعالج تنفيذ هذه العمليات بالسرعة المطلوبة سيظهر ما يعرف باسم اختناق المعالج
+أو CPU Bottleneck، وهنا تبدأ المعالجات الأقوى بإظهار تفوقها.
+</p>
+
+<img
+src="/images/ryzen5-vs-ryzen7-gaming.webp"
+alt="اختبارات رايزن 5 ورايزن 7 في الألعاب
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h2>نتائج الأداء الفعلية في الألعاب</h2>
+
+<p>
+لإعطاء صورة أوضح عن الفروقات بين الفئتين، يمكن النظر
+إلى متوسط الأداء التقريبي في عدد من الألعاب الشهيرة عند استخدام بطاقة رسومية قوية وعلى دقة 1080p.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-auto min-w-[400px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المعالج
+</th>
+
+<th class="border border-zinc-500 p-4">
+الأنوية/الخيوط
+</th>
+
+<th class="border border-zinc-500 p-4">
+CoD: Warzone 2.0
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td "ulr class="border border-zinc-500 p-4">Ryzen 5 7600</td>
+<td class="border border-zinc-500 p-4">6 / 12 </td>
+<td dir="ltr" class="border border-zinc-500 p-4">235 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 5 9600X</td>
+<td class="border border-zinc-500 p-4">6 / 12</td>
+<td dir="ltr" class="border border-zinc-500 p-4">250 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7700</td>
+<td class="border border-zinc-500 p-4">8 / 16</td>
+<td dir="ltr" class="border border-zinc-500 p-4">238 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 9700X</td>
+<td class="border border-zinc-500 p-4">8 / 16</td>
+<td dir="ltr" class="border border-zinc-500 p-4">250 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7800X3D</td>
+<td class="border border-zinc-500 p-4">8 / 16</td>
+<td dir="ltr" class="border border-zinc-500 p-4">234 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 9800X3D</td>
+<td class="border border-zinc-500 p-4">8 / 16</td>
+<td dir="ltr" class="border border-zinc-500 p-4">249 FPS</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<h2>الأداء في المونتاج وصناعة المحتوى</h2>
+
+<p>
+تختلف المعادلة تماماً عند استخدام برامج المونتاج والرندر.
+فهذه البرامج تستفيد بشكل مباشر من زيادة عدد الأنوية والخيوط.
+</p>
+
+<p>
+برامج مثل Adobe Premiere Pro و DaVinci Resolve و After Effects قادرة على توزيع الأحمال على عدد كبير من الأنوية،
+ما يمنح Ryzen 7 أفضلية واضحة مقارنة بمعظم معالجات Ryzen 5.
+</p>
+
+<p>
+في المشاريع الاحترافية التي تتضمن فيديوهات 4K أو تأثيرات معقدة قد يتفوق Ryzen 7
+بنسبة تتراوح بين 15% و35% حسب نوع المشروع.
+</p>
+
+<h2>أفضل معالجات Ryzen 5</h2>
+
+<h3>Ryzen 5 5600</h3>
+
+<p>
+رغم مرور سنوات على إطلاقه ما زال Ryzen 5 5600 من أفضل المعالجات الاقتصادية المتاحة لمنصة AM4.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>المميزات</strong>
+
+<ul>
+<li>سعر منخفض.</li>
+<li>أداء ممتاز مقابل التكلفة.</li>
+<li>مناسب للألعاب الحديثة.</li>
+</ul>
+
+<strong>العيوب</strong>
+
+<ul>
+<li>لا يدعم DDR5.</li>
+<li>منصة أقدم مقارنة بـ AM5.</li>
+</ul>
+
+</div>
+
+<h3>Ryzen 5 7600</h3>
+
+<p>
+يعتبر من أكثر معالجات AMD شعبية حالياً بفضل توازنه الممتاز بين السعر والأداء.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>المميزات</strong>
+
+<ul>
+<li>دعم DDR5.</li>
+<li>أداء ألعاب قوي.</li>
+<li>استهلاك طاقة منخفض.</li>
+</ul>
+
+<strong>العيوب</strong>
+
+<ul>
+<li>أغلى من Ryzen 5 5600.</li>
+</ul>
+
+</div>
+
+<h3>Ryzen 5 9600X</h3>
+
+<p>
+يمثل Ryzen 5 9600X الجيل الأحدث من الفئة المتوسطة لدى AMD، ويعتمد على معمارية Zen 5 التي قدمت تحسينات ملحوظة في أداء النواة الواحدة وكفاءة استهلاك الطاقة.
+</p>
+
+<p>
+يعتبر هذا المعالج خياراً ممتازاً للاعبين الذين يرغبون في الحصول على أداء حديث دون الانتقال إلى الفئات الأعلى سعراً.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>المميزات</strong>
+
+<ul>
+<li>أداء قوي جداً في الألعاب.</li>
+<li>تحسينات واضحة في معمارية Zen 5.</li>
+<li>كفاءة عالية في استهلاك الطاقة.</li>
+<li>أداء ممتاز للنواة الواحدة.</li>
+</ul>
+
+<strong>العيوب</strong>
+
+<ul>
+<li>الفارق عن Ryzen 5 7600 ليس ضخماً في جميع الألعاب.</li>
+<li>سعر أعلى من بعض البدائل.</li>
+</ul>
+
+</div>
+
+<h2>أفضل معالجات Ryzen 7</h2>
+
+<h3>Ryzen 7 5700X</h3>
+
+<p>
+إذا كنت تمتلك منصة AM4 ولا ترغب في تغيير اللوحة الأم والذاكرة، فإن Ryzen 7 5700X يعد من أفضل خيارات الترقية المتاحة حالياً.
+</p>
+
+<p>
+يمنحك هذا المعالج 8 أنوية و16 خيط معالجة مع أداء ممتاز في الألعاب والإنتاجية بسعر مناسب نسبياً.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>المميزات</strong>
+
+<ul>
+<li>8 أنوية و16 خيط معالجة.</li>
+<li>أداء قوي في البرامج الاحترافية.</li>
+<li>مناسب لمنصة AM4.</li>
+<li>قيمة ممتازة مقابل السعر.</li>
+</ul>
+
+<strong>العيوب</strong>
+
+<ul>
+<li>منصة قديمة نسبياً.</li>
+<li>لا يدعم أحدث تقنيات AM5.</li>
+</ul>
+
+</div>
+
+<h3>Ryzen 7 7700X</h3>
+
+<p>
+يعد Ryzen 7 7700X من أكثر المعالجات توازناً في فئة Ryzen 7، حيث يجمع بين الأداء القوي في الألعاب والقدرة العالية على التعامل مع برامج المونتاج والبث المباشر.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>المميزات</strong>
+
+<ul>
+<li>أداء قوي في الألعاب.</li>
+<li>ممتاز للمونتاج والبث.</li>
+<li>دعم DDR5 و PCIe 5.0.</li>
+<li>8 أنوية و16 خيط معالجة.</li>
+</ul>
+
+<strong>العيوب</strong>
+
+<ul>
+<li>حرارة أعلى من Ryzen 5.</li>
+<li>يحتاج إلى تبريد جيد للحصول على أفضل أداء.</li>
+</ul>
+
+</div>
+
+<h3>Ryzen 7 7800X3D</h3>
+
+<p>
+يعتبر Ryzen 7 7800X3D أحد أشهر معالجات AMD على الإطلاق، بل ويصنفه الكثير من الخبراء
+كأفضل معالج مخصص للألعاب في العالم خلال السنوات الأخيرة.
+</p>
+
+<p>
+يعتمد هذا المعالج على تقنية 3D V-Cache التي تضيف كمية ضخمة من الذاكرة المخبأة، ما يسمح بتقليل زمن الوصول إلى
+البيانات وتحسين الأداء داخل الألعاب بشكل ملحوظ.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>المميزات</strong>
+
+<ul>
+<li>من أفضل معالجات الألعاب المتوفرة.</li>
+<li>تقنية 3D V-Cache.</li>
+<li>استهلاك طاقة جيد مقارنة بأدائه.</li>
+<li>أداء استثنائي مع البطاقات الرسومية القوية.</li>
+</ul>
+
+<strong>العيوب</strong>
+
+<ul>
+<li>أغلى من معظم معالجات Ryzen 5.</li>
+<li>فوائده تظهر بشكل أكبر للاعبين المتقدمين.</li>
+</ul>
+
+</div>
+
+<h3>Ryzen 7 9700X</h3>
+
+<p>
+يمثل Ryzen 7 9700X أحدث أجيال سلسلة Ryzen 7،
+ويستفيد من التحسينات التي قدمتها معمارية Zen 5 في الأداء والكفاءة.
+</p>
+
+<p>
+يوفر هذا المعالج توازناً ممتازاً بين الألعاب والإنتاجية،
+ويعتبر خياراً قوياً لمن يبحث عن جهاز قادر على التعامل مع مختلف المهام لسنوات طويلة.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>المميزات</strong>
+
+<ul>
+<li>معمارية حديثة.</li>
+<li>أداء قوي للنواة الواحدة.</li>
+<li>أداء ممتاز في تعدد المهام.</li>
+<li>كفاءة طاقة محسنة.</li>
+</ul>
+
+<strong>العيوب</strong>
+
+<ul>
+<li>سعر أعلى من Ryzen 5.</li>
+<li>الفارق في الألعاب قد لا يبرر السعر لبعض المستخدمين.</li>
+</ul>
+
+</div>
+
+
+
+<p>
+توضح النتائج السابقة أن Ryzen 7 يتفوق بالفعل في معظم الألعاب، لكن
+الفارق غالباً ما يكون أقل مما يتوقعه الكثير من المستخدمين. لذلك يبقى Ryzen 5 خياراً ممتازاً لمن يبحث عن
+أفضل قيمة مقابل السعر.
+</p>
+
+<h2>متى تختار Ryzen 5؟</h2>
+
+<p>
+رغم الشعبية الكبيرة التي تتمتع بها معالجات Ryzen 7، إلا أن الحقيقة هي أن معظم المستخدمين لا يحتاجون إلى هذه الفئة.
+ففي كثير من الحالات يقدم Ryzen 5 تجربة شبه مطابقة في الألعاب والاستخدام اليومي مع توفير مبلغ مالي.
+</p>
+
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اختر Ryzen 5 إذا كنت:</strong>
+
+<ul>
+<li>تلعب الألعاب بشكل أساسي.</li>
+<li>تبحث عن أفضل قيمة مقابل السعر.</li>
+<li>طالباً أو مستخدماً عادياً.</li>
+<li>لا تستخدم برامج الرندر الثقيلة بشكل يومي.</li>
+<li>تريد بناء حاسوب قوي بميزانية محدودة.</li>
+<li>تخطط لإنفاق جزء أكبر من الميزانية على البطاقة الرسومية.</li>
+</ul>
+
+</div>
+
+<h2>متى تختار Ryzen 7؟</h2>
+
+<p>
+تصبح معالجات Ryzen 7 أكثر منطقية عندما يبدأ
+المستخدم بالاعتماد على البرامج الاحترافية أو تنفيذ عدة مهام ثقيلة في الوقت نفسه.
+</p>
+
+<p>
+فكلما زاد عدد الأنوية والخيوط زادت قدرة
+المعالج على التعامل مع الرندر والتصدير والبث المباشر والبرامج التي تستفيد من المعالجة المتوازية.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اختر Ryzen 7 إذا كنت:</strong>
+
+<ul>
+<li>صانع محتوى أو يوتيوبر.</li>
+<li>تستخدم Premiere Pro أو DaVinci Resolve باستمرار.</li>
+<li>تبث الألعاب مباشرة على Twitch أو YouTube.</li>
+<li>تشغل عدة برامج ثقيلة في الوقت نفسه.</li>
+<li>تستخدم برامج التصميم ثلاثي الأبعاد.</li>
+<li>تريد هامشاً أكبر للمستقبل.</li>
+</ul>
+
+</div>
+
+<h2>هل يستحق Ryzen 7 فرق السعر؟</h2>
+
+<p>
+يعتمد الجواب على طبيعة استخدامك. فإذا كان الفارق السعري بسيطاً
+نسبياً وكانت لديك نية لاستخدام برامج احترافية أو الاحتفاظ بالحاسوب لسنوات طويلة، فقد يكون Ryzen 7 استثماراً جيداً.
+</p>
+
+<p>
+أما إذا كان استخدامك الرئيسي يقتصر على الألعاب والتصفح والاستخدام اليومي، فإن Ryzen 5 يقدم عادة أفضل قيمة مقابل السعر.
+</p>
+
+<h2>الخلاصة</h2>
+
+<p>
+تمثل سلسلتا Ryzen 5 و Ryzen 7 اثنتين من أنجح فئات المعالجات التي أطلقتها AMD خلال السنوات الأخيرة، لكن اختيار الفئة المناسبة يعتمد على احتياجاتك الفعلية وليس على الرقم الموجود في اسم المعالج فقط.
+</p>
+
+<p>
+بالنسبة لمعظم المستخدمين سيظل Ryzen 5 الخيار الأكثر توازناً بفضل قدرته على تقديم أداء ممتاز في الألعاب والاستخدام اليومي مقابل سعر معقول.
+</p>
+
+<p>
+أما Ryzen 7 فهو الخيار الأنسب للمستخدمين المحترفين وصناع المحتوى والأشخاص الذين يعتمدون على التطبيقات الثقيلة أو يرغبون في الاحتفاظ بأجهزتهم لفترة أطول.
+</p>
+
+<p>
+والأهم من ذلك كله هو عدم مقارنة Ryzen 5 و Ryzen 7 بناءً على الاسم فقط، بل النظر إلى الجيل والمعمارية ونتائج الأداء الفعلية قبل اتخاذ قرار الشراء.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a
+href="/news/ryzen-5-9600x-vs-ryzen-7-9700x"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;
+"
+>
+Ryzen 5 9600X vs Ryzen 7 9700X: أيهما يقدم قيمة أفضل؟
+</a>
+
+<a
+href="/news/amd-vs-intel-gaming-comparison"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;
+"
+>
+AMD أم Intel للألعاب؟ مقارنة شاملة بين العملاقين
+</a>
+
+</div>
+
+<h2>الأسئلة الشائعة</h2>
+
+<h3>هل Ryzen 7 أفضل دائماً من Ryzen 5؟</h3>
+
+<p>
+لا. في بعض الحالات يتفوق Ryzen 5 حديث على Ryzen 7 أقدم منه بفضل التحسينات المعمارية والتقنيات الأحدث.
+</p>
+
+<h3>هل Ryzen 5 مناسب للألعاب الحديثة؟</h3>
+
+<p>
+نعم، بل إن معظم اللاعبين حول العالم يستخدمون معالجات ضمن هذه الفئة أو ما يعادلها، وهي قادرة على تشغيل أحدث الألعاب بكفاءة عالية.
+</p>
+
+<h3>هل يستحق Ryzen 7 فرق السعر للألعاب فقط؟</h3>
+
+<p>
+في أغلب الحالات لا. إذا كان استخدامك الأساسي هو الألعاب فإن Ryzen 5 يقدم قيمة أفضل مقابل السعر.
+</p>
+
+<h3>هل Ryzen 7 أفضل للمونتاج؟</h3>
+
+<p>
+نعم. بفضل عدد الأنوية والخيوط الأكبر يتمتع Ryzen 7 بأداء أفضل في برامج المونتاج والرندر وصناعة المحتوى.
+</p>
+
+<h3>هل Ryzen 5 يكفي للبث المباشر؟</h3>
+
+<p>
+نعم، لكن Ryzen 7 يوفر تجربة أكثر راحة عند تشغيل اللعبة والبث وبرامج إضافية في الوقت نفسه.
+</p>
+
+<h3>ما أفضل معالج Ryzen 5 للألعاب؟</h3>
+
+<p>
+يعد Ryzen 5 7600 و Ryzen 5 9600X من أفضل الخيارات الحالية للاعبين الذين يبحثون عن توازن بين الأداء والسعر.
+</p>
+
+<h3>ما أفضل معالج Ryzen 7 للألعاب؟</h3>
+
+<p>
+يعتبر Ryzen 7 7800X3D من أفضل معالجات الألعاب المتوفرة حالياً بفضل تقنية 3D V-Cache.
+</p>
+
+<h3>هل Ryzen 7 أفضل للمستقبل؟</h3>
+
+<p>
+بشكل عام نعم، لأن الألعاب والبرامج الحديثة تستفيد تدريجياً من عدد أكبر من الأنوية.
+</p>
+
+<h3>هل أختار Ryzen 5 7600 أم Ryzen 7 7700X؟</h3>
+
+<p>
+إذا كان استخدامك الأساسي للألعاب فسيكون Ryzen 5 7600 كافياً لمعظم الحالات، أما إذا كنت تعمل على المونتاج أو البث أو تعدد المهام بشكل مكثف فسيكون Ryzen 7 7700X خياراً أفضل.
+</p>
+
+<h3>هل أحتاج إلى Ryzen 7 مع RTX 5060 أو RTX 5070؟</h3>
+
+<p>
+في معظم الحالات لا. يستطيع Ryzen 5 حديث تشغيل هذه البطاقات بكفاءة عالية دون مشاكل اختناق ملحوظة.
+</p>
+
+
+
+`
+},
+
+
+  {
   title:
     "Intel Core Ultra 7 265K vs Intel Core Ultra 9 285K.. هل يستحق Ultra 9 فرق السعر فعلاً؟",
 
@@ -65,7 +1026,7 @@ export const news: NewsItem[] = [
 <tr class="bg-zinc-900">
 
 <th class="border border-zinc-500 p-4">
-المواصفة
+المواصفات
 </th>
 
 <th class="border border-zinc-500 p-4">
@@ -1272,7 +2233,7 @@ AMD تقدم حالياً دعماً ممتازاً لمنصة AM5 والترق�
 </div>`,
   },
 
-{
+  {
 title:
 "Ryzen 7 vs Core i7.. أيهما أفضل للألعاب والعمل في 2026؟",
 
@@ -2053,7 +3014,7 @@ style="
 <div class="mt-10 text-sm text-zinc-400 leading-8">
 #Ryzen7 #Corei7 #AMD #Intel #GamingPC #CPU #معالجات #ألعاب
 </div>`,
-},
+  },
 
 
   {
@@ -3704,6 +4665,30 @@ style="
 وبحسب تقارير اقتصادية، فإن حجم الاستثمارات في قطاع الذكاء الاصطناعي تجاوز مستويات قياسية خلال العام الحالي، وسط توقعات باستمرار هذا النمو خلال السنوات المقبلة.
 </p>
 
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>اقرأ أيضاً:</strong>
+
+<a
+href="/news/ai-changing-future-digital-media-2026"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;
+"
+>
+الذكاء الاصطناعي يغيّر مستقبل الإعلام الرقمي
+</a>
+</div>
+
 <h2>
 منافسة على النماذج الأكثر تطورًا
 </h2>
@@ -3847,6 +4832,30 @@ style="
 <p>
 ويرى خبراء أن هذا التطور غيّر بشكل واضح طريقة صناعة الأخبار وتوزيعها، حيث أصبحت البيانات والتحليلات عنصرًا رئيسيًا في اتخاذ القرارات التحريرية.
 </p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>اقرأ أيضاً:</strong>
+
+<a
+href="/news/ai-companies-race-next-generation-models-2026"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;
+"
+>
+شركات التقنية تتسابق في تطوير نماذج الذكاء الاصطناعي
+</a>
+</div>
 
 <h2>
 منافسة رقمية متسارعة

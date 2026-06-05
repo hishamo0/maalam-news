@@ -54,6 +54,17 @@ export default function Home() {
 
       </section>
 
+      {/* الأكثر قراءة */}
+      <section className="w-full px-4 md:px-8 pb-16">
+
+        <div className="max-w-7xl mx-auto">
+
+          <TrendingSidebar />
+
+        </div>
+
+      </section>
+
       {/* قسم التكنولوجيا */}
       <section className="w-full px-4 md:px-8 pb-24">
 
@@ -145,24 +156,12 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto">
 
-          <div className="grid grid-cols-1 xl:grid-cols-[1fr_320px] gap-12 items-start">
-
-            {/* الأخبار */}
-            <div>
-
               <SectionTitle
                 title="أحدث الأخبار"
                 color="bg-red-500"
               />
 
               <LatestNewsSlider items={news} />
-
-            </div>
-
-            {/* الشريط الجانبي */}
-            <TrendingSidebar />
-
-          </div>
 
         </div>
 
