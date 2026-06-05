@@ -182,6 +182,30 @@ LGA1851
 من سلسلة F للمعالج 285K.
 </p>
 
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>اقرأ أيضاً:</strong>
+
+<a
+href="/news/ryzen-vs-intel-ultimate-guide"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;
+"
+>
+Ryzen vs Intel.. مقارنة شاملة بين AMD و Intel
+</a>
+</div>
+
 <h2>
 ما الفرق الحقيقي بين المعالجين؟
 </h2>
