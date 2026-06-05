@@ -683,7 +683,7 @@ Ultra 9 285K
 <p>
 أما إذا كنت من المستخدمين المحترفين الذين يعملون يومياً على الرندرة والمونتاج الثقيل، فسيمنحك Ultra 9 قوة إضافية ستلاحظها فعلاً أثناء العمل.
 </p>`
-},
+  },
 
   {
 title:
@@ -864,6 +864,30 @@ style="
 <p>
 أما الألعاب فتعتمد غالباً بشكل أكبر على سرعة النواة الواحدة.
 </p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>اقرأ أيضاً:</strong>
+
+<a
+href="/news/intel-core-ultra-7-265k-vs-intel-core-ultra-9-285k"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;
+"
+>
+Intel Core Ultra 7 265K vs Intel Core Ultra 9 285K
+</a>
+</div>
 
 <h2>
 ما هو Clock Speed؟
@@ -1410,6 +1434,30 @@ style="
  margin:24px 0;
 "
 />
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>اقرأ أيضاً:</strong>
+
+<a
+href="/news/intel-core-ultra-7-265k-vs-intel-core-ultra-9-285k"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;
+"
+>
+Intel Core Ultra 7 265K vs Intel Core Ultra 9 285K
+</a>
+</div>
 
 <h2>
 Benchmark نتائج الألعاب – دقة 1440p مع RTX 4080
