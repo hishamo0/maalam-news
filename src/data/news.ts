@@ -12,6 +12,654 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
 
+  {
+  title:
+    "Intel Core Ultra 7 265K vs Intel Core Ultra 9 285K.. هل يستحق Ultra 9 فرق السعر فعلاً؟",
+
+  slug:
+    "intel-core-ultra-7-265k-vs-intel-core-ultra-9-285k",
+
+  excerpt:
+    "مقارنة تفصيلية بين Intel Core Ultra 7 265K وIntel Core Ultra 9 285K من حيث أداء الألعاب والرندرة واستهلاك الطاقة والقيمة مقابل السعر.",
+
+  description:
+    "تعرف على الفروقات الحقيقية بين Intel Core Ultra 7 265K وIntel Core Ultra 9 285K وأيهما الأفضل للألعاب أو المونتاج وصناعة المحتوى.",
+
+  category:
+    "تكنولوجيا",
+
+  image:
+    "/images/intel-core-ultra-7-265k-vs-285k.webp",
+
+  author:
+    "هيئة التحرير",
+
+  date:
+    "2 يونيو 2026",
+
+  content:
+`<p>
+مع إطلاق معالجات Arrow Lake الجديدة، تحاول إنتل استعادة تفوقها في الفئة العليا، ويعتبر كل من Intel Core Ultra 7 265K و Intel Core Ultra 9 285K من أقوى الخيارات المتاحة حالياً للاعبين وصناع المحتوى.
+</p>
+
+<p>
+لكن السؤال الحقيقي ليس: أيهما أقوى؟
+</p>
+
+<p>
+بل: هل ستشعر فعلاً بالفرق أثناء الاستخدام اليومي والألعاب؟ وهل يستحق Ultra 9 285K دفع مبلغ إضافي كبير مقارنة بـ Ultra 7 265K؟
+</p>
+
+<p>
+في هذه المقارنة سنركز على الأداء الحقيقي وليس مجرد الأرقام، بداية من الألعاب وحتى الرندرة واستهلاك الطاقة والقيمة مقابل السعر.
+</p>
+
+<h2>
+مقارنة المواصفات
+</h2>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-auto min-w-[550px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المواصفة
+</th>
+
+<th class="border border-zinc-500 p-4">
+Intel Core Ultra 7 265K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Intel Core Ultra 9 285K
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+عدد الأنوية
+</td>
+
+<td class="border border-zinc-500 p-4">
+20 نواة
+</td>
+
+<td class="border border-zinc-500 p-4">
+24 نواة
+</td>
+</tr>
+
+<tr class="bg-zinc-900/40">
+<td class="border border-zinc-500 p-4">
+عدد الخيوط
+</td>
+
+<td class="border border-zinc-500 p-4">
+20
+</td>
+
+<td class="border border-zinc-500 p-4">
+24
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+أقصى تردد
+</td>
+
+<td class="border border-zinc-500 p-4">
+حتى 5.5GHz
+</td>
+
+<td class="border border-zinc-500 p-4">
+حتى 5.7GHz
+</td>
+</tr>
+
+<tr class="bg-zinc-900/40">
+<td class="border border-zinc-500 p-4">
+الذاكرة المؤقتة
+</td>
+
+<td class="border border-zinc-500 p-4">
+L3__36MB
+</td>
+
+<td class="border border-zinc-500 p-4">
+L3__40MB
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+استهلاك الطاقة
+</td>
+
+<td class="border border-zinc-500 p-4">
+أقل نسبياً
+</td>
+
+<td class="border border-zinc-500 p-4">
+أعلى بشكل واضح
+</td>
+</tr>
+
+<tr class="bg-zinc-900/40">
+<td class="border border-zinc-500 p-4">
+المقبس
+</td>
+
+<td class="border border-zinc-500 p-4">
+LGA1851
+</td>
+
+<td class="border border-zinc-500 p-4">
+LGA1851
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<p>
+تم تصنيع أنوية الحوسبة باستخدام تقنية N3B (3 نانومتر) من TSMC. ويشترك كلا المعالجين
+في نفس التصميم الأساسي للنواة
+الهجينة، والذي يجمع بين أنوية "Lion Cove" عالية الأداء
+وأنوية "Skymont" الفعالة، بالإضافة إلى دعم متطابق لذاكرة DDR5-6400 CUDIMM  واتصال PCIe 5.0.
+</p>
+
+<p>
+بالإضافة إلى ذلك، لدى Intel خيار Core Ultra 7 265KF بدون
+رسومات مدمجة (يشير الحرف 'F' إلى هذه الخاصية)، ولا يوجد خيار
+من سلسلة F للمعالج 285K.
+</p>
+
+<h2>
+ما الفرق الحقيقي بين المعالجين؟
+</h2>
+
+<p>
+على الورق يبدو Ultra 9 285K متفوقاً بوضوح، لكن أثناء الاستخدام الواقعي تصبح الصورة مختلفة قليلاً.
+</p>
+
+<p>
+وبالنظر إلى المواصفات الفنية فقط، يُقدّم معالج Core Ultra 9 285K تكوينًا أكثر قوةً للنوى والذاكرة
+المخبئية، وهو مصمم خصيصًا للمستخدمين الذين يُطالبون
+بأقصى أداء في المهام متعددة
+الخيوط، بينما يُوفّر معالج Core Ultra 7 265K ترددًا أساسيًا أعلى قليلًا وعددًا مُماثلًا من نوى الأداء.
+
+<p>
+في الألعاب مثلاً، لن تشعر بفارق ضخم بين المعالجين إلا إذا كنت تستخدم بطاقة رسومية فائقة القوة مثل RTX 5090 وتلعب على دقة 1080p مع معدل تحديث مرتفع جداً.
+</p>
+
+<p>
+أما على دقة 1440p و4K، فإن كرت الشاشة يصبح العامل الأهم، ما يجعل الفارق بين المعالجين محدوداً في معظم الألعاب الحديثة.
+</p>
+
+<img
+src="/images/intel-ultra-gaming.webp"
+alt="أداء معالجات إنتل في الألعاب"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h2>
+أداء الألعاب واختبارات FPS
+</h2>
+
+<p>
+في اختبارات الألعاب الحديثة مع RTX 5090 بدقة 1080p، استطاع Ultra 9 285K تحقيق أرقام أعلى بفارق يتراوح غالباً بين 5% و10%.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-auto min-w-[450px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+اللعبة
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ultra 7 265K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ultra 9 285K
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Monster Hunter Wilds
+</td>
+
+<td dir="ltr" class="border border-zinc-500 p-4">
+136 FPS
+</td>
+
+<td dir="ltr" class="border border-zinc-500 p-4">
+142 FPS
+</td>
+</tr>
+
+<tr class="bg-zinc-900/40">
+<td class="border border-zinc-500 p-4">
+F1 2024
+</td>
+
+<td dir="ltr" class="border border-zinc-500 p-4">
+211 FPS
+</td>
+
+<td dir="ltr" class="border border-zinc-500 p-4">
+220 FPS
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Starfield
+</td>
+
+<td dir="ltr" class="border border-zinc-500 p-4">
+122 FPS
+</td>
+
+<td dir="ltr" class="border border-zinc-500 p-4">
+128 FPS
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<p>
+لكن هنا تأتي النقطة المهمة:
+</p>
+
+<p>
+إذا كنت تلعب على شاشة 144Hz أو 165Hz فلن تشعر غالباً بهذا الفرق أثناء اللعب الفعلي، خصوصاً على دقة 1440p أو 4K.
+</p>
+
+<p>
+لذلك يعتبر Ultra 7 265K خياراً ذكياً جداً لمعظم اللاعبين، لأنه يقدم أداء قريباً جداً بسعر أقل واستهلاك طاقة أفضل.
+</p>
+
+<h2>
+هل يوجد Bottleneck مع RTX 5090؟
+</h2>
+
+<p>
+كلا المعالجين قادران على تشغيل أقوى كروت الشاشة الحديثة بدون مشاكل حقيقية، لكن Ultra 9 285K يقدم مساحة إضافية للألعاب التنافسية الثقيلة أو البث المباشر أثناء اللعب.
+</p>
+
+<p>
+أما Ultra 7 265K فلن يشكل عنق زجاجة فعلي في معظم الاستخدامات، خصوصاً مع اللعب على 1440p و4K.
+</p>
+
+<p>
+في النهاية، يُقدّم معالج Ultra 9 285K أداءً أفضل في الألعاب، وإن كان طفيفًا، مقارنةً بمعالج Ultra 7 265K بدقة
+ 1080p، حيث تتراوح الزيادة عادةً بين 4-6% في المتوسط، و1% كحد أدنى، وذلك في مجموعة واسعة من الألعاب.
+</p>
+
+<p>
+وتتجلى مزاياه الرئيسية في أداءٍ مستدامٍ أعلى قليلًا في الألعاب التي تتطلب معالجةً مكثفةً من المعالج. لكن هذه
+المكاسب تأتي بتكلفةٍ باهظة: زيادةٌ في استهلاك الطاقة بنسبة 14%، والأهم من ذلك،
+مضاعفة السعر، مما يجعل معالج Core 7 265K يُقدّم قيمةً تُقارب ضعف قيمة معالج Core 9 285K.
+</p>
+
+<h2>
+الأداء الإنتاجي والرندرة
+</h2>
+
+<p>
+هنا يبدأ Ultra 9 285K بإظهار تفوقه الحقيقي.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-auto min-w-[450px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+البرنامج
+</th>
+
+<th class="border border-zinc-500 p-4">
+  <span class="block font-bold">
+    Ultra 7 265K
+  </span>
+
+  <span class="block text-sm text-gray-400 mt-1">
+   Multi Core
+  </span>
+</th>
+
+
+<th class="border border-zinc-500 p-4">
+  <span class="block font-bold">
+    Ultra 7 265K
+  </span>
+
+  <span class="block text-sm text-gray-400 mt-1">
+  Multi Core
+  </span>
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Cinebench 2024
+</td>
+
+<td class="border border-zinc-500 p-4">
+2099
+</td>
+
+<td class="border border-zinc-500 p-4">
+2496
+</td>
+</tr>
+
+<th class="border border-zinc-500 p-4">
+  <span class="block font-bold">
+    Handbrake x264 10-Bit
+  </span>
+
+  <span 
+  dir="ltr"
+   class="block text-sm text-gray-400 mt-1">
+   1.6 GB . MKV to MP4 Video Encode
+  </span>
+</th>
+
+<td 
+dir="ltr" class="border border-zinc-500 p-4">
+62 FPS
+</td>
+<td 
+dir="ltr" class="border border-zinc-500 p-4">
+72 FPS
+</td>
+
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+VRay 6
+</td>
+
+<td class="border border-zinc-500 p-4">
+36,178
+</td>
+
+<td class="border border-zinc-500 p-4">
+43,979
+</td>
+
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Blender - Junkshop
+</td>
+
+<td dir="ltr" class="border border-zinc-500 p-4">
+146 SPM
+</td>
+
+<td dir="ltr" class="border border-zinc-500 p-4">
+178 SPM
+</td>
+
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Blender - Monster
+</td>
+
+<td dir="ltr" class="border border-zinc-500 p-4">
+220 SPM
+</td>
+
+<td dir="ltr" class="border border-zinc-500 p-4">
+266 SPM
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<p>
+في برامج مثل Premiere Pro و Blender و DaVinci Resolve، تستفيد هذه التطبيقات بشكل مباشر من عدد الأنوية الأعلى، ما يمنح Ultra 9 أفضلية واضحة أثناء الرندرة والتصدير.
+</p>
+
+<p>
+في بعض الاختبارات استطاع Ultra 9 إنهاء عمليات الرندرة أسرع بنسبة وصلت إلى 25% مقارنة بـ Ultra 7.
+</p>
+
+<p>
+وهذا فرق سيشعر به فعلاً أي شخص يعمل يومياً على مشاريع فيديو ثقيلة أو مشاريع ثلاثية الأبعاد.
+</p>
+
+<img
+src="/images/intel-render-performance.webp"
+alt="أداء الرندرة على معالجات إنتل"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<h2>
+استهلاك الطاقة والحرارة
+</h2>
+
+<p>
+واحدة من أهم النقاط التي يتجاهلها الكثير من المستخدمين هي استهلاك الطاقة.
+</p>
+
+<p>
+Ultra 9 285K يستهلك طاقة أعلى بشكل ملحوظ تحت الضغط الكامل، وقد تصل الحرارة إلى
+مستويات مرتفعة، لذلك يفضل استخدام مبرد مائي متكامل (AIO) عالي الأداء بحجم 280 مم أو 360 مم خاصة إذا
+أردنا كسر السرعة على هذا المعالج، بالإضافة إلى لوحة أم ممتازة مزودة بوحدات VRM من الطراز الأول
+</p>
+
+<p>
+وهذا قد يعني تكلفة إضافية بقيمة 100-200$.
+</p>
+
+<p>
+في المقابل، يعتبر Ultra 7 265K أسهل في التبريد وأكثر كفاءة، فمبرد هوائي متوسط ​​الأداء أو نظام تبريد مائي متكامل (AIO) بحجم 240 مم قد يكون كافيًا لمعالج Core Ultra 7 حتى مع كسر سرعة متوسط،
+ما يجعله خياراً عملياً أكثر لكثير من المستخدمين.
+</p>
+
+
+
+<h2>
+القيمة مقابل السعر
+</h2>
+
+<p>
+هنا تصبح المنافسة أكثر تعقيداً.
+</p>
+
+<p>
+إذا كان استخدامك الأساسي هو الألعاب، فمن الصعب تبرير فرق السعر الكبير لصالح Ultra 9 285K، لأن الفارق بالأداء ليس ضخماً في معظم السيناريوهات الواقعية.
+</p>
+
+<p>
+لكن إذا كنت تعمل على المونتاج والرندرة أو تعتمد على تعدد المهام بشكل مكثف، فقد يكون Ultra 9 استثماراً أفضل على المدى الطويل.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-auto min-w-[450px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المعيار
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ultra 7 265K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ultra 9 285K
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+الميزات والمواصفات
+</td>
+
+<td class="border border-zinc-500 p-4">
+
+</td>
+
+<td class="border border-zinc-500 p-4 text-center align-middle">
+  ✅
+</td>
+</tr>
+
+<tr class="bg-zinc-900/40">
+<td class="border border-zinc-500 p-4">
+ألعاب الفيديو
+</td>
+
+<td class="border border-zinc-500 p-4 text-center align-middle">
+  ✅
+</td>
+
+<td class="border border-zinc-500 p-4 text-center align-middle">
+  ✅
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+تطبيقات الإنتاجية
+</td>
+
+<td class="border border-zinc-500 p-4">
+
+</td>
+
+<td class="border border-zinc-500 p-4 text-center align-middle">
+  ✅
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+كسر سرعة المعالج
+</td>
+
+<td class="border border-zinc-500 p-4 text-center align-middle">
+  ✅
+</td>
+
+<td class="border border-zinc-500 p-4 text-center align-middle">
+  ✅
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+استهلاك الطاقة، والكفاءة، والتبريد
+</td>
+
+<td class="border border-zinc-500 p-4 text-center align-middle">
+  ✅
+</td>
+
+<td class="border border-zinc-500 p-4 text-center align-middle">
+
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+التسعير
+</td>
+
+<td class="border border-zinc-500 p-4 text-center align-middle">
+  ✅
+</td>
+
+<td class="border border-zinc-500 p-4 text-center align-middle">
+
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h2>
+أي معالج يجب أن تختار؟
+</h2>
+
+<ul>
+<li>
+اختر Intel Core Ultra 7 265K إذا كنت تريد أفضل قيمة مقابل السعر وتركز بشكل أساسي على الألعاب.
+</li>
+
+<li>
+اختر Intel Core Ultra 9 285K إذا كنت تحتاج أقصى أداء ممكن للأعمال الاحترافية والرندرة وصناعة المحتوى.
+</li>
+</ul>
+
+<h2>
+الخلاصة النهائية
+</h2>
+
+<p>
+رغم أن Intel Core Ultra 9 285K هو المعالج الأقوى تقنياً، إلا أن Intel Core Ultra 7 265K قد يكون الخيار الأذكى لمعظم المستخدمين.
+</p>
+
+<p>
+فارق الأداء في الألعاب ليس كبيراً بما يكفي لتبرير فرق السعر واستهلاك الطاقة المرتفع، بينما يقدم Ultra 7 توازناً ممتازاً بين الأداء والكفاءة والسعر.
+</p>
+
+<p>
+أما إذا كنت من المستخدمين المحترفين الذين يعملون يومياً على الرندرة والمونتاج الثقيل، فسيمنحك Ultra 9 قوة إضافية ستلاحظها فعلاً أثناء العمل.
+</p>`
+},
 
   {
 title:
@@ -53,8 +701,8 @@ content:
 </p>
 
 <img
-src="/images/ryzen7800-vs-intel14700k.webp"
-alt="مقارنة بين ryzen 7 7800 و intel ه7 14700k
+src="/images/ryzen7500-vs-intel14700k.webp"
+alt="مقارنة بين ryzen 7 7500 و intel ه7 14700k
 style="
  width:100%;
  border-radius:18px;
@@ -236,7 +884,7 @@ style="
 </h2>
 
 <p>
-قدمت AMD تقنية 3D V-Cache ضمن بعض معالجات Ryzen X3D مثل Ryzen 7 7800X3D، وهي تعتمد على إضافة ذاكرة Cache ضخمة فوق المعالج لتحسين الأداء في الألعاب.
+قدمت AMD تقنية 3D V-Cache ضمن بعض معالجات Ryzen X3D مثل Ryzen 7 7500X3D، وهي تعتمد على إضافة ذاكرة Cache ضخمة فوق المعالج لتحسين الأداء في الألعاب.
 </p>
 
 <p>
@@ -272,7 +920,7 @@ style="
 <tbody>
 
 <tr>
-<td class="p-4 border border-white/10">Ryzen 7 7800X3D</td>
+<td class="p-4 border border-white/10">Ryzen 7 7500X3D</td>
 <td class="p-4 border border-white/10">الألعاب</td>
 <td class="p-4 border border-white/10">8</td>
 <td class="p-4 border border-white/10">16</td>
@@ -333,7 +981,7 @@ style="
 <thead>
 <tr class="bg-white/10">
 <th class="p-4 border border-white/10">اللعبة</th>
-<th class="p-4 border border-white/10">Ryzen 7 7800X3D</th>
+<th class="p-4 border border-white/10">Ryzen 7 7500X3D</th>
 <th class="p-4 border border-white/10">Core i7-14700K</th>
 </tr>
 </thead>
@@ -421,7 +1069,7 @@ style="
 <tbody>
 
 <tr>
-<td class="p-4 border border-white/10">Ryzen 7 7800X3D</td>
+<td class="p-4 border border-white/10">Ryzen 7 7500X3D</td>
 <td class="p-4 border border-white/10">90W</td>
 <td class="p-4 border border-white/10">70°C</td>
 </tr>
@@ -709,7 +1357,7 @@ style="
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Ryzen 7 7800X3D</td>
+<td class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</td>
 <td class="px-3 py-3 border border-white/10">8</td>
 <td class="px-3 py-3 border border-white/10">16</td>
 <td class="px-3 py-3 border border-white/10">5.0GHz</td>
@@ -744,7 +1392,7 @@ Benchmark نتائج الألعاب – دقة 1440p مع RTX 4080
 </h2>
 
 <p>
-تم جمع النتائج التالية من عدة مراجعات احترافية لمعالجي Ryzen 7 7800X3D و Core i7-14700K باستخدام كرت RTX 4080 على إعدادات عالية بدقة 1440p.
+تم جمع النتائج التالية من عدة مراجعات احترافية لمعالجي Ryzen 7 7500X3D و Core i7-14700K باستخدام كرت RTX 4080 على إعدادات عالية بدقة 1440p.
 </p>
 
 <!-- الجدول الأول -->
@@ -759,7 +1407,7 @@ Benchmark نتائج الألعاب – دقة 1440p مع RTX 4080
 <thead>
 <tr class="bg-white/10">
 <th class="px-3 py-3 border border-white/10">اللعبة</th>
-<th class="px-3 py-3 border border-white/10">Ryzen 7 7800X3D</th>
+<th class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</th>
 <th class="px-3 py-3 border border-white/10">Core i7-14700K</th>
 </tr>
 </thead>
@@ -805,7 +1453,7 @@ Benchmark نتائج الألعاب – دقة 1440p مع RTX 4080
 <thead>
 <tr class="bg-white/10">
 <th class="px-3 py-3 border border-white/10">اللعبة</th>
-<th class="px-3 py-3 border border-white/10">Ryzen 7 7800X3D</th>
+<th class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</th>
 <th class="px-3 py-3 border border-white/10">Core i7-14700K</th>
 <th class="px-3 py-3 border border-white/10">الفارق</th>
 </tr>
@@ -857,7 +1505,7 @@ Benchmark نتائج الألعاب – دقة 1440p مع RTX 4080
 <thead>
 <tr class="bg-white/10">
 <th class="px-3 py-3 border border-white/10">اللعبة</th>
-<th class="px-3 py-3 border border-white/10">Ryzen 7 7800X3D</th>
+<th class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</th>
 <th class="px-3 py-3 border border-white/10">Core i7-14700K</th>
 <th class="px-3 py-3 border border-white/10">الأفضل</th>
 </tr>
@@ -926,7 +1574,7 @@ style="
 <thead>
 <tr class="bg-white/10">
 <th class="px-3 py-3 border border-white/10">البرنامج</th>
-<th class="px-3 py-3 border border-white/10">Ryzen 7 7800X3D</th>
+<th class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</th>
 <th class="px-3 py-3 border border-white/10">Core i7-14700K</th>
 <th class="px-3 py-3 border border-white/10">الفائز</th>
 </tr>
@@ -1120,7 +1768,7 @@ style="
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Ryzen 7 7800X3D</td>
+<td class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</td>
 <td class="px-3 py-3 border border-white/10">RTX 4070 Super</td>
 <td class="px-3 py-3 border border-white/10">ألعاب 1440p</td>
 </tr>
@@ -1181,7 +1829,7 @@ style="
 
 <tr>
 <td class="px-3 py-3 border border-white/10">ألعاب 1440p</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7 7800X3D</td>
+<td class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</td>
 <td class="px-3 py-3 border border-white/10">RTX 4070 Super</td>
 <td class="px-3 py-3 border border-white/10">32GB DDR5</td>
 </tr>
@@ -1236,7 +1884,7 @@ style="
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Ryzen 7 7800X3D</td>
+<td class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</td>
 <td class="px-3 py-3 border border-white/10">90W</td>
 <td class="px-3 py-3 border border-white/10">70°C</td>
 </tr>
