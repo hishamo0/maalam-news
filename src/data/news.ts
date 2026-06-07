@@ -13,6 +13,1001 @@ export type NewsItem = {
 export const news: NewsItem[] = [
 
   {
+    
+title:
+"Intel Core i5-13600K Review: هل ما زال أفضل معالج للفئة المتوسطة في 2026؟",
+
+slug:
+"intel-core-i5-13600k-review",
+
+excerpt:
+"مراجعة شاملة لمعالج Intel Core i5-13600K تتناول الأداء في الألعاب والإنتاجية واستهلاك الطاقة والحرارة مع مقارنات مباشرة ضد Intel Core i5-14600K و Intel Core Ultra 5 245K و Ryzen 5 7600X و Ryzen 7 7700X.",
+
+description:
+"تعرف على مواصفات وأداء Intel Core i5-13600K في الألعاب والمونتاج والرندر، وهل ما زال أحد أفضل معالجات الفئة المتوسطة في عام 2026.",
+
+category:
+"تكنولوجيا",
+
+image:
+"/images/intel-core-i5-13600k-review.webp",
+
+author:
+"هيئة التحرير",
+
+date:
+"7 يونيو 2026",
+
+content:
+`
+
+
+<p>
+رغم مرور عدة سنوات على إطلاقه، ما زال معالج Intel Core i5-13600K يُعتبر واحداً من أنجح معالجات إنتل خلال العقد الأخير. فعندما ظهر لأول مرة ضمن عائلة Raptor Lake نجح في تقديم مزيج استثنائي من الأداء والسعر، حيث اقترب من أداء معالجات Core i7 الرائدة مع الحفاظ على سعر أقل بكثير.
+</p>
+
+<p>
+وفي عام 2026 ما زال هذا المعالج حاضراً بقوة في تجميعات الألعاب وصناعة المحتوى، خصوصاً مع انخفاض أسعاره مقارنة بالجيل الأحدث Core i5-14600K ومعالجات Intel Core Ultra الجديدة. لذلك يطرح كثير من المستخدمين سؤالاً مهماً: هل ما زال Intel Core i5-13600K خياراً ذكياً للشراء أم أن الوقت حان للانتقال إلى بدائل أحدث؟
+</p>
+
+<p>
+في هذه المراجعة الشاملة سنقارن المعالج بأبرز المنافسين مثل Core i5-14600K و Core Ultra 5 245K و Ryzen 5 7600X و Ryzen 7 7700X.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/intel-core-i5-14600k-review"
+style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+Intel Core-i5 14600K مراجعة شاملة
+</a>
+
+</div>
+
+
+<h2>نظرة سريعة على Intel Core i5-13600K</h2>
+
+<p>
+يعتمد Intel Core i5-13600K على معمارية Raptor Lake ويأتي بتصميم هجين يجمع بين أنوية الأداء العالية P-Cores وأنوية الكفاءة E-Cores. ويضم المعالج 14 نواة و20 خيط معالجة، وهو نفس العدد الموجود في Core i5-14600K الأحدث.
+</p>
+
+<p>
+وقد ركزت إنتل في هذا الجيل على زيادة حجم الذاكرة المخبأة وتحسين الترددات، الأمر الذي جعل 13600K قفزة كبيرة مقارنة بمعالج 12600K السابق، كما سمح له بمنافسة معالجات Ryzen 7 الأغلى سعراً في كثير من الاختبارات.
+</p>
+
+<h2>المواصفات التقنية</h2>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[900px] text-right border-collapse">
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-lg p-3 mb-3 text-sm text-zinc-300">
+📱 اسحب الجدول يميناً ويساراً لمشاهدة جميع المعالجات والمواصفات.
+</div>
+
+<thead>
+<tr class="bg-zinc-900">
+
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">
+المعيار
+</th>
+
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">
+Intel Core i5-13600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Intel Core i5-14600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Intel Core Ultra 5 245K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ryzen 5 7600X
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ryzen 7 7700X
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">الأنوية / الخيوط</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">14 / 20</td>
+<td class="border border-zinc-500 p-4">14 / 20</td>
+<td class="border border-zinc-500 p-4">14 / 14</td>
+<td class="border border-zinc-500 p-4">6 / 12</td>
+<td class="border border-zinc-500 p-4">8 / 16</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">أنوية الأداء</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">6</td>
+<td class="border border-zinc-500 p-4">6</td>
+<td class="border border-zinc-500 p-4">6</td>
+<td class="border border-zinc-500 p-4">6</td>
+<td class="border border-zinc-500 p-4">8</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">أنوية الكفاءة</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">8</td>
+<td class="border border-zinc-500 p-4">8</td>
+<td class="border border-zinc-500 p-4">8</td>
+<td class="border border-zinc-500 p-4">لا يوجد</td>
+<td class="border border-zinc-500 p-4">لا يوجد</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">أقصى تردد</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">5.1GHz</td>
+<td class="border border-zinc-500 p-4">5.3GHz</td>
+<td class="border border-zinc-500 p-4">5.2GHz</td>
+<td class="border border-zinc-500 p-4">5.3GHz</td>
+<td class="border border-zinc-500 p-4">5.4GHz</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">L3 Cache</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">24MB</td>
+<td class="border border-zinc-500 p-4">24MB</td>
+<td class="border border-zinc-500 p-4">24MB</td>
+<td class="border border-zinc-500 p-4">32MB</td>
+<td class="border border-zinc-500 p-4">32MB</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h2>لماذا حقق Intel Core i5-13600K هذه الشعبية؟</h2>
+
+<p>
+يكمن سر نجاح المعالج في قدرته على تقديم أداء قريب جداً من Core i7-13700K في العديد من السيناريوهات، مع سعر أقل بشكل ملحوظ. كما أن وجود 8 أنوية كفاءة يمنحه أفضلية واضحة في المهام متعددة الخيوط مقارنة بمعالجات Ryzen 5 المنافسة.
+</p>
+
+<p>
+إضافة إلى ذلك يدعم المعالج لوحات DDR4 و DDR5 في الوقت نفسه، وهو أمر مهم للمستخدمين الذين يرغبون في ترقية المعالج دون تغيير كامل المنصة.
+</p>
+
+<h2>أداء Intel Core i5-13600K في الألعاب</h2>
+
+<p>
+رغم مرور عدة سنوات على إطلاقه، ما زال Intel Core i5-13600K يقدم أداءً قوياً للغاية في الألعاب الحديثة. وبفضل امتلاكه 6 أنوية أداء و8 أنوية كفاءة، يستطيع تشغيل أقوى كروت الشاشة الحديثة دون عنق زجاجة ملحوظ في معظم السيناريوهات.
+</p>
+
+<p>
+وخلال الاختبارات باستخدام بطاقة RTX 4070 على دقة 1080p، استطاع المعالج تحقيق نتائج ممتازة جعلته قريباً جداً من Core i5-14600K ومعالجات Core Ultra الحديثة.
+</p>
+
+<figure style="margin:32px 0;">
+
+<img
+src="/images/i5-13600k-gaming-performance.webp"
+alt="أداء Intel Core i5-13600K في الألعاب"
+style="
+width:100%;
+border-radius:12px;
+display:block;
+"
+/>
+
+<figcaption
+style="
+text-align:center;
+font-size:14px;
+color:#9ca3af;
+margin-top:10px;
+"
+>
+أداء Intel Core i5-13600K مع بطاقة RTX 4070 على دقة 1080p في مجموعة من الألعاب الحديثة والتنافسية.
+</figcaption>
+
+</figure>
+
+<h3>متوسط الأداء في الألعاب الثقيلة</h3>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[700px] md:min-w-[900px] text-right border-collapse">
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-lg p-3 mb-3 text-sm text-zinc-300">
+📱 اسحب الجدول يميناً ويساراً لمشاهدة جميع المعالجات والمواصفات.
+</div>
+
+<thead class="sticky top-0 z-30">
+
+<tr class="bg-zinc-900">
+
+<th class="sticky right-0 top-0 z-40 bg-zinc-900 border border-zinc-500 p-4">
+اللعبة
+</th>
+
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+Core i5-13600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i5-14600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core Ultra 5 245K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ryzen 7 7700X
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ryzen 7 7800X3D
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
+Cyberpunk 2077
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">172</td>
+<td class="border border-zinc-500 p-4">177</td>
+<td class="border border-zinc-500 p-4">175</td>
+<td class="border border-zinc-500 p-4">174</td>
+<td class="border border-zinc-500 p-4">203</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
+Starfield
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">106</td>
+<td class="border border-zinc-500 p-4">111</td>
+<td class="border border-zinc-500 p-4">109</td>
+<td class="border border-zinc-500 p-4">108</td>
+<td class="border border-zinc-500 p-4">128</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
+Hogwarts Legacy
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">141</td>
+<td class="border border-zinc-500 p-4">146</td>
+<td class="border border-zinc-500 p-4">144</td>
+<td class="border border-zinc-500 p-4">142</td>
+<td class="border border-zinc-500 p-4">166</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
+Dragon's Dogma 2
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">88</td>
+<td class="border border-zinc-500 p-4">93</td>
+<td class="border border-zinc-500 p-4">91</td>
+<td class="border border-zinc-500 p-4">89</td>
+<td class="border border-zinc-500 p-4">110</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+كما نلاحظ، يبقى الفارق بين Core i5-13600K و Core i5-14600K صغيراً نسبياً في معظم الألعاب، وغالباً لا يتجاوز عدة إطارات في الثانية.
+</p>
+
+<p>
+أما معالج Ryzen 7 7800X3D فيحافظ على الصدارة بفضل تقنية 3D V-Cache التي تمنحه أفضلية واضحة في الألعاب المعتمدة على الذاكرة المخبأة.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/amd-ryzen-5-7600x3d-review"
+style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+AMD Ryzen 5 7600X3D مراجعة شاملة
+</a>
+
+</div>
+
+
+<h2>الأداء في الألعاب التنافسية</h2>
+
+<p>
+في الألعاب التنافسية يعتمد الأداء بشكل كبير على قوة المعالج، وهنا يثبت Core i5-13600K أنه ما زال من أفضل الخيارات للاعبين الذين يستخدمون شاشات 240Hz و360Hz.
+</p>
+
+
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[300px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+اللعبة
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i5-13600K
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">Counter-Strike 2</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15">427 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Valorant</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15">598 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Rainbow Six Siege</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15">462 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Apex Legends</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15">258 FPS</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<h2>الأداء في الإنتاجية وصناعة المحتوى</h2>
+
+<p>
+إذا كانت الألعاب نقطة قوة Core i5-13600K، فإن الإنتاجية هي المجال الذي يظهر فيه المعالج شخصيته الحقيقية.
+</p>
+
+<p>
+بفضل امتلاكه 14 نواة و20 خيط معالجة، يقدم المعالج أداءً ممتازاً في الرندر والمونتاج وتحرير الصور والفيديو.
+</p>
+
+<figure style="margin:32px 0;">
+
+<img
+src="/images/i5-13600k-cinebench-r23.webp"
+alt="نتائج Cinebench R23 لمعالج Intel Core i5-13600K"
+style="
+width:100%;
+border-radius:12px;
+display:block;
+"
+/>
+
+<figcaption
+style="
+text-align:center;
+font-size:14px;
+color:#9ca3af;
+margin-top:10px;
+"
+>
+مقارنة نتائج Cinebench R23 Multi-Core بين أبرز المعالجات المنافسة.
+</figcaption>
+
+</figure>
+
+<h3>نتائج Cinebench R23 Multi-Core</h3>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[350px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المعالج
+</th>
+
+<th class="border border-zinc-500 p-4">
+Cinebench R23 Multi-Core
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+Intel Core i5-13600K
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+24100
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Intel Core i5-14600K
+</td>
+<td class="border border-zinc-500 p-4">
+24700
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Intel Core Ultra 5 245K
+</td>
+<td class="border border-zinc-500 p-4">
+26300
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Ryzen 7 7700X
+</td>
+<td class="border border-zinc-500 p-4">
+19800
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Ryzen 5 7600X
+</td>
+<td class="border border-zinc-500 p-4">
+15100
+</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+توضح نتائج Cinebench R23 أن Intel Core i5-13600K ما زال يمتلك قوة حوسبية كبيرة حتى بعد عدة أجيال من إطلاقه. فالفرق بينه وبين Core i5-14600K محدود نسبياً، بينما يتفوق بوضوح على Ryzen 5 7600X و Ryzen 7 7700X في الأداء متعدد الخيوط.
+</p>
+
+<h3>الأداء في Adobe Premiere Pro</h3>
+
+<p>
+يُعد Core i5-13600K من أفضل المعالجات المتوسطة للمونتاج بفضل العدد الكبير من الأنوية والخيوط، بالإضافة إلى دعم تقنية Intel Quick Sync التي تسرع عمليات الترميز وفك الترميز للفيديو.
+</p>
+
+<p>
+في مشاريع 4K داخل Premiere Pro يقدم المعالج أداءً قريباً جداً من Core i5-14600K، ويتفوق في كثير من الحالات على Ryzen 5 7600X بفارق ملحوظ.
+</p>
+
+<h3>الأداء في Blender</h3>
+
+<p>
+عند اختبار الرندر ثلاثي الأبعاد باستخدام Blender، يظهر تفوق تصميم Intel الهجين بوضوح. حيث تستفيد برامج الرندر من أنوية الأداء وأنوية الكفاءة معاً، مما يمنح المعالج نتائج قوية مقارنة بفئته السعرية.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/ryzen-vs-intel-ultimate-guide"
+style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+مقارنة شاملة بين AMD و Intel
+</a>
+
+</div>
+
+
+<h2>استهلاك الطاقة والحرارة</h2>
+
+<p>
+مثل معظم معالجات Raptor Lake، لا يعتبر Intel Core i5-13600K بطلاً في كفاءة الطاقة. لكنه يعوض ذلك بأداء مرتفع جداً يجعل استهلاكه مبرراً للكثير من المستخدمين.
+</p>
+
+<h3>متوسط استهلاك الطاقة</h3>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[500px] md:min-w-[700px] text-right border-collapse">
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-lg p-3 mb-3 text-sm text-zinc-300">
+📱 اسحب الجدول يميناً ويساراً لمشاهدة جميع المعالجات والمواصفات.
+</div>
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المعالج
+</th>
+
+<th class="border border-zinc-500 p-4">
+استهلاك الألعاب
+</th>
+
+<th class="border border-zinc-500 p-4">
+استهلاك الضغط الكامل
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+Intel Core i5-13600K
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+145W
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+181W
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Intel Core i5-14600K
+</td>
+<td class="border border-zinc-500 p-4">
+155W
+</td>
+<td class="border border-zinc-500 p-4">
+181W
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Intel Core Ultra 5 245K
+</td>
+<td class="border border-zinc-500 p-4">
+118W
+</td>
+<td class="border border-zinc-500 p-4">
+159W
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Ryzen 7 7700X
+</td>
+<td class="border border-zinc-500 p-4">
+105W
+</td>
+<td class="border border-zinc-500 p-4">
+142W
+</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+يتضح أن Core Ultra 5 245K يتفوق من ناحية الكفاءة، بينما يستهلك Core i5-13600K طاقة أكبر لكنه يعوض ذلك بأداء ممتاز في الألعاب والإنتاجية.
+</p>
+
+<h3>درجات الحرارة</h3>
+
+<p>
+مع استخدام مبرد هوائي احترافي أو مبرد مائي 240 ملم، يستطيع المعالج العمل ضمن درجات حرارة آمنة أثناء الاستخدام اليومي والألعاب.
+</p>
+
+<p>
+أما عند الضغط الكامل لفترات طويلة، فمن الأفضل استخدام مبرد مائي 360 ملم للحصول على أفضل النتائج الممكنة.
+</p>
+
+<figure style="margin:32px 0;">
+
+<img
+src="/images/i5-13600k-power-temperature.webp"
+alt="استهلاك الطاقة ودرجات الحرارة لمعالج Intel Core i5-13600K"
+style="
+width:100%;
+border-radius:12px;
+display:block;
+"
+/>
+
+<figcaption
+style="
+text-align:center;
+font-size:14px;
+color:#9ca3af;
+margin-top:10px;
+"
+>
+مقارنة استهلاك الطاقة ودرجات الحرارة بين Intel Core i5-13600K وأبرز المعالجات المنافسة.
+</figcaption>
+
+</figure>
+
+<h2>مقارنة سريعة مع Intel Core i5-14600K</h2>
+
+<p>
+تعتبر هذه المقارنة من أكثر المقارنات شيوعاً حالياً، لأن المعالجين يمتلكان نفس عدد الأنوية والخيوط تقريباً.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المعيار
+</th>
+
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+i5-13600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+i5-14600K
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+الألعاب
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+ممتاز
+</td>
+<td class="border border-zinc-500 p-4">
+أفضل بفارق بسيط
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+الإنتاجية
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+ممتاز
+</td>
+<td class="border border-zinc-500 p-4">
+أفضل قليلاً
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+استهلاك الطاقة
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+أقل قليلاً
+</td>
+<td class="border border-zinc-500 p-4">
+أعلى قليلاً
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+القيمة مقابل السعر
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+ممتازة
+</td>
+<td class="border border-zinc-500 p-4">
+جيدة جداً
+</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+في الواقع يعتبر Core i5-14600K تحديثاً محدوداً لـ Core i5-13600K، لذلك إذا وجدت المعالج الأقدم بسعر أقل بشكل واضح فإنه يبقى صفقة ممتازة حتى في 2026.
+</p>
+
+<h2>مقارنة Intel Core i5-13600K و Intel Core Ultra 5 245K</h2>
+
+<p>
+مع إطلاق معمارية Arrow Lake، قدمت Intel معالج Core Ultra 5 245K كخليفة غير مباشر لسلسلة Core i5 التقليدية. ورغم أن المعالج الجديد يأتي بتحسينات كبيرة في الكفاءة واستهلاك الطاقة، إلا أن الفارق في الأداء ليس دائماً بالحجم الذي قد يتوقعه البعض.
+</p>
+
+<p>
+في الألعاب، يقدم Core Ultra 5 245K نتائج متقاربة جداً مع Core i5-13600K و Core i5-14600K، بينما يظهر تفوق أكبر في بعض تطبيقات الإنتاجية الحديثة التي تستفيد من التحسينات المعمارية الجديدة.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المعيار
+</th>
+
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+Core i5-13600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core Ultra 5 245K
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+الألعاب
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+ممتاز
+</td>
+<td class="border border-zinc-500 p-4">
+ممتاز
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+الإنتاجية
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+قوية جداً
+</td>
+<td class="border border-zinc-500 p-4">
+أفضل قليلاً
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+استهلاك الطاقة
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+أعلى
+</td>
+<td class="border border-zinc-500 p-4">
+أقل بشكل واضح
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+دعم المنصة
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+LGA1700
+</td>
+<td class="border border-zinc-500 p-4">
+LGA1851
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+القيمة مقابل السعر
+</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+ممتازة
+</td>
+<td class="border border-zinc-500 p-4">
+جيدة جداً
+</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+إذا كنت تملك بالفعل منصة LGA1700 أو تستطيع شراء Core i5-13600K بسعر منخفض، فمن الصعب تبرير الانتقال إلى Core Ultra 5 245K. أما إذا كنت تبني جهازاً جديداً بالكامل وتبحث عن منصة أحدث تدعم الأجيال القادمة، فقد يكون Core Ultra خياراً منطقياً أكثر.
+</p>
+
+<h2>المميزات والعيوب</h2>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>المميزات</strong>
+
+<ul>
+
+<li>أداء ألعاب ممتاز حتى في 2026.</li>
+
+<li>أداء إنتاجية قوي جداً بفضل 14 نواة و20 خيط معالجة.</li>
+
+<li>قريب جداً من Core i5-14600K في معظم الاختبارات.</li>
+
+<li>دعم DDR4 و DDR5.</li>
+
+<li>دعم Intel Quick Sync للمونتاج وصناعة المحتوى.</li>
+
+<li>متوفر بأسعار منخفضة مقارنة بسعر الإطلاق.</li>
+
+<li>واحد من أفضل المعالجات من ناحية القيمة مقابل السعر.</li>
+
+</ul>
+
+</div>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>العيوب</strong>
+
+<ul>
+
+<li>استهلاك طاقة مرتفع نسبياً مقارنة بمعالجات Ryzen الحديثة.</li>
+
+<li>حرارة أعلى من بعض المنافسين.</li>
+
+<li>منصة LGA1700 وصلت إلى نهاية دورة حياتها تقريباً.</li>
+
+<li>أضعف من معالجات X3D في الألعاب المعتمدة على الكاش.</li>
+
+</ul>
+
+</div>
+
+<h2>هل ما زال Intel Core i5-13600K يستحق الشراء في 2026؟</h2>
+
+<p>
+الإجابة المختصرة هي نعم.
+</p>
+
+<p>
+رغم ظهور أجيال أحدث من Intel و AMD، ما زال Core i5-13600K يقدم مزيجاً ممتازاً من الأداء والسعر يجعله واحداً من أفضل خيارات الفئة المتوسطة العليا.
+</p>
+
+<p>
+في الألعاب يستطيع تشغيل أقوى البطاقات الرسومية الحديثة مثل RTX 4070 و RTX 5070 و RTX 5080 دون مشاكل تذكر، بينما يوفر في الوقت نفسه أداءً إنتاجياً قوياً للمونتاج والبث المباشر والرندر.
+</p>
+
+<p>
+كما أن انخفاض سعره خلال السنوات الماضية جعله أكثر جاذبية من أي وقت مضى، خصوصاً عند مقارنته بمعالجات أحدث لا تقدم سوى مكاسب محدودة مقابل زيادة واضحة في التكلفة.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>لمن نوصي بهذا المعالج؟</strong>
+
+<ul>
+
+<li>لاعبي 1080p و 1440p.</li>
+
+<li>صناع المحتوى والمونتاج.</li>
+
+<li>البث المباشر Streaming.</li>
+
+<li>المستخدمين الذين يملكون منصة LGA1700.</li>
+
+<li>الباحثين عن أفضل قيمة مقابل السعر.</li>
+
+</ul>
+
+</div>
+
+<h2>الخلاصة</h2>
+
+<p>
+قد لا يكون Intel Core i5-13600K أحدث معالج في السوق، لكنه ما زال واحداً من أفضل المعالجات التي أطلقتها Intel خلال السنوات الأخيرة.
+</p>
+
+<p>
+فهو يقدم أداء ألعاب قوياً جداً، وأداء إنتاجية يقترب من بعض معالجات الفئات الأعلى، مع دعم واسع للذواكر والمنصات وأسعار أصبحت أكثر جاذبية من أي وقت مضى.
+</p>
+
+<p>
+إذا وجدت Core i5-13600K بسعر مناسب في 2026، فسيبقى خياراً ممتازاً لمعظم المستخدمين، بل وقد يكون أفضل صفقة في فئته السعرية.
+</p>
+
+<h2>الأسئلة الشائعة</h2>
+
+<h3>هل Intel Core i5-13600K مناسب للألعاب في 2026؟</h3>
+
+<p>
+نعم، وما زال قادراً على تشغيل أحدث الألعاب بمعدلات إطارات مرتفعة جداً.
+</p>
+
+<h3>هل الفرق كبير بين 13600K و 14600K؟</h3>
+
+<p>
+لا، الفارق محدود وغالباً لا يتجاوز عدة نقاط مئوية في معظم الاختبارات.
+</p>
+
+<h3>هل يتفوق Ryzen 7 7800X3D عليه في الألعاب؟</h3>
+
+<p>
+نعم، خصوصاً في الألعاب التي تستفيد من تقنية 3D V-Cache.
+</p>
+
+<h3>هل يحتاج إلى مبرد مائي؟</h3>
+
+<p>
+ليس بالضرورة، لكن يفضل استخدام مبرد هوائي احترافي أو مبرد مائي للحصول على أفضل أداء ممكن.
+</p>
+
+<h3>هل يستحق الترقية من Core i5-12600K؟</h3>
+
+<p>
+نعم، خصوصاً للمستخدمين الذين يعملون على الإنتاجية أو يمتلكون بطاقات رسومية قوية.
+</p>
+
+
+`
+  },
+  {
 title:
 "Intel Core i5-14600K Review: هل ما زال ملك الفئة المتوسطة للألعاب والإنتاجية؟",
 
@@ -3315,7 +4310,8 @@ Ultra 9 285K
 
 <p>
 أما إذا كنت من المستخدمين المحترفين الذين يعملون يومياً على الرندرة والمونتاج الثقيل، فسيمنحك Ultra 9 قوة إضافية ستلاحظها فعلاً أثناء العمل.
-</p>`
+</p>
+  `
   },
 
   {
