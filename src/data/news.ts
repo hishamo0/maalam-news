@@ -14,6 +14,860 @@ export const news: NewsItem[] = [
 
   {
 title:
+"Intel Core i5-14600K Review: هل ما زال ملك الفئة المتوسطة للألعاب والإنتاجية؟",
+
+slug:
+"intel-core-i5-14600k-review",
+
+excerpt:
+"مراجعة شاملة لمعالج Intel Core i5-14600K تتناول الأداء في الألعاب والإنتاجية واستهلاك الطاقة والحرارة مع مقارنات مباشرة ضد Ryzen 5 7600X و Ryzen 5 7600X3D و Ryzen 7 7700X.",
+
+description:
+"تعرف على مواصفات وأداء Intel Core i5-14600K في الألعاب والمونتاج والرندر، وهل ما زال أحد أفضل معالجات الفئة المتوسطة في 2026.",
+
+category:
+"تكنولوجيا",
+
+image:
+"/images/intel-core-i5-14600k-review.webp",
+
+author:
+"هيئة التحرير",
+
+date:
+"7 يونيو 2026",
+
+content:
+`
+
+<p>
+عندما أطلقت Intel معالج Core i5-13600K في عام 2022، نجحت في تقديم واحد من أفضل معالجات الفئة المتوسطة على الإطلاق. فقد استطاع الجمع بين أداء ألعاب ممتاز وأداء إنتاجية قوي بسعر منافس، ما جعله خياراً مفضلاً لدى اللاعبين وصناع المحتوى على حد سواء.
+</p>
+
+<p>
+ومع وصول الجيل الرابع عشر، قدمت Intel معالج Core i5-14600K كخليفة مباشر لذلك النجاح. وعلى الرغم من أن المعالج لا يقدم تغييراً جذرياً في البنية مقارنة بسابقه، إلا أنه يحصل على ترددات أعلى وتحسينات طفيفة في الأداء تسمح له بالحفاظ على مكانته ضمن أفضل المعالجات المتوسطة المتاحة حالياً.
+</p>
+
+<p>
+لكن مع اشتداد المنافسة من AMD وظهور معالجات مثل Ryzen 5 7600X3D و Ryzen 7 7700X، يبقى السؤال الأهم:
+</p>
+
+<p>
+هل ما زال Intel Core i5-14600K أحد أفضل الخيارات للألعاب والإنتاجية؟ أم أن المنافسين أصبحوا يقدمون قيمة أفضل؟
+</p>
+
+
+
+<h2>مواصفات Intel Core i5-14600K</h2>
+
+<p>
+يعتمد المعالج على معمارية Raptor Lake Refresh ويستخدم مقبس LGA 1700، وهو آخر جيل رئيسي من Intel على هذه المنصة قبل الانتقال الكامل إلى معالجات Core Ultra الحديثة.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[900px] md:min-w-[1100px] text-right border-collapse">
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-lg p-3 mb-3 text-sm text-zinc-300">
+📱 اسحب الجدول يميناً ويساراً لمشاهدة جميع المعالجات والمواصفات.
+</div>
+
+
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="sticky right-0 z-20 bg-zinc-900 border border-zinc-500 p-4">
+المعيار
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i5-13600K
+</th>
+
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+Core i5-14600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i7-13700K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i7-14700K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i9-13900K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i9-14900K
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,1.35)]">أنوية الأداء (P-Cores)</td>
+<td class="border border-zinc-500 p-4">6</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">6</td>
+<td class="border border-zinc-500 p-4">8</td>
+<td class="border border-zinc-500 p-4">8</td>
+<td class="border border-zinc-500 p-4">8</td>
+<td class="border border-zinc-500 p-4">8</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,1.35)]">أقصى تردد لأنوية الأداء</td>
+<td class="border border-zinc-500 p-4">5.1GHz</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">5.3GHz</td>
+<td class="border border-zinc-500 p-4">5.4GHz</td>
+<td class="border border-zinc-500 p-4">5.6GHz</td>
+<td class="border border-zinc-500 p-4">5.8GHz</td>
+<td class="border border-zinc-500 p-4">6.0GHz</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">أنوية الكفاءة (E-Cores)</td>
+<td class="border border-zinc-500 p-4">8</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">8</td>
+<td class="border border-zinc-500 p-4">8</td>
+<td class="border border-zinc-500 p-4">12</td>
+<td class="border border-zinc-500 p-4">16</td>
+<td class="border border-zinc-500 p-4">16</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">أقصى تردد لأنوية الكفاءة</td>
+<td class="border border-zinc-500 p-4">3.9GHz</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">4.0GHz</td>
+<td class="border border-zinc-500 p-4">4.2GHz</td>
+<td class="border border-zinc-500 p-4">4.3GHz</td>
+<td class="border border-zinc-500 p-4">4.3GHz</td>
+<td class="border border-zinc-500 p-4">4.4GHz</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">عدد الخيوط (Threads)</td>
+<td class="border border-zinc-500 p-4">20</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">20</td>
+<td class="border border-zinc-500 p-4">24</td>
+<td class="border border-zinc-500 p-4">28</td>
+<td class="border border-zinc-500 p-4">32</td>
+<td class="border border-zinc-500 p-4">32</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">ذاكرة L3 Cache</td>
+<td class="border border-zinc-500 p-4">24MB</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">24MB</td>
+<td class="border border-zinc-500 p-4">30MB</td>
+<td class="border border-zinc-500 p-4">33MB</td>
+<td class="border border-zinc-500 p-4">36MB</td>
+<td class="border border-zinc-500 p-4">36MB</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">كرت الشاشة المدمج</td>
+<td class="border border-zinc-500 p-4">UHD 770</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">UHD 770</td>
+<td class="border border-zinc-500 p-4">UHD 770</td>
+<td class="border border-zinc-500 p-4">UHD 770</td>
+<td class="border border-zinc-500 p-4">UHD 770</td>
+<td class="border border-zinc-500 p-4">UHD 770</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">استهلاك الطاقة </td>
+<td class="border border-zinc-500 p-4">125W - 181W</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">125W - 181W</td>
+<td class="border border-zinc-500 p-4">125W - 253W</td>
+<td class="border border-zinc-500 p-4">125W - 253W</td>
+<td class="border border-zinc-500 p-4">125W - 253W</td>
+<td class="border border-zinc-500 p-4">125W - 253W</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/ryzen-vs-intel-ultimate-guide"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;
+"
+>
+مقارنة شاملة بين AMD و Intel 
+</a>
+</div>
+
+
+
+<h2>معمارية Raptor Lake Refresh</h2>
+
+<p>
+يعتمد Core i5-14600K على فلسفة Intel الهجينة التي تجمع بين نوعين مختلفين من الأنوية داخل المعالج نفسه.
+</p>
+
+<p>
+النوع الأول هو أنوية الأداء أو Performance Cores، وهي الأنوية الأقوى والأسرع والمخصصة للألعاب والمهام الثقيلة.
+</p>
+
+<p>
+أما النوع الثاني فهو أنوية الكفاءة أو Efficient Cores، وهي مصممة للتعامل مع المهام الخلفية والأحمال المتوازية مع استهلاك أقل للطاقة.
+</p>
+
+<p>
+هذا التصميم يسمح للمعالج بتوزيع المهام بذكاء بين الأنوية المختلفة باستخدام تقنية Intel Thread Director، ما يؤدي إلى استغلال أفضل لموارد النظام.
+</p>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>توزيع الأنوية في i5-14600K</strong>
+
+<ul>
+<li>6 أنوية أداء (P-Cores)</li>
+<li>8 أنوية كفاءة (E-Cores)</li>
+<li>20 خيط معالجة إجمالي</li>
+<li>تردد يصل إلى 5.3GHz</li>
+</ul>
+
+</div>
+
+<h2>لماذا يعتبر Core i5-14600K معالجاً مميزاً؟</h2>
+
+<p>
+على عكس العديد من معالجات الفئة المتوسطة، لا يعتمد i5-14600K على عدد محدود من الأنوية فقط، بل يقدم مزيجاً قوياً من الأداء الخام وعدد الخيوط المرتفع.
+</p>
+
+<p>
+وهذا يجعله قادراً على التعامل مع الألعاب الحديثة بسهولة، وفي الوقت نفسه يوفر أداء قوياً في برامج المونتاج والرندر والبث المباشر.
+</p>
+
+<p>
+ولهذا السبب يعتبره الكثير من المستخدمين أحد أكثر المعالجات توازناً في السوق، لأنه لا يركز على الألعاب فقط كما تفعل بعض معالجات X3D، ولا يضحي بالأداء اليومي لصالح تخصص معين.
+</p>
+<h2>أداء Intel Core i5-14600K في الألعاب</h2>
+
+<p>
+رغم أن Intel لم تقدم تغييرات جذرية مقارنة بمعالج Core i5-13600K، إلا أن رفع الترددات وتحسين إدارة الطاقة سمحا لـ Core i5-14600K بالحفاظ على مكانته كواحد من أفضل معالجات الألعاب في الفئة المتوسطة العليا.
+</p>
+
+<p>
+عند اختباره مع بطاقات رسومية قوية مثل RTX 4090 أو RTX 5090 وعلى دقة 1080p، يقدم المعالج معدلات إطارات مرتفعة جداً تجعله منافساً مباشراً لمعالجات Ryzen 7 و Ryzen 5 الحديثة.
+</p>
+
+<p>
+وفي معظم الألعاب الحديثة يكون الفارق بينه وبين المعالجات الأغلى سعراً صغيراً نسبياً، خصوصاً عند الانتقال إلى دقة 1440p أو 4K حيث يصبح العبء الأكبر على البطاقة الرسومية.
+</p>
+
+<h3>متوسط الأداء في الألعاب</h3>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[300px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">المعالج</th>
+<th class="border border-zinc-500 p-4">الأداء النسبي</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7800X3D</td>
+<td class="border border-zinc-500 p-4">100%</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 5 7600X3D</td>
+<td class="border border-zinc-500 p-4">96%</td>
+</tr>
+
+<tr>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">Intel Core i5-14600K</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">93%</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7700X</td>
+<td class="border border-zinc-500 p-4">92%</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 5 7600X</td>
+<td class="border border-zinc-500 p-4">88%</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+توضح هذه النتائج أن i5-14600K لا يستطيع منافسة معالجات X3D في بعض الألعاب المعتمدة بشكل كبير على الكاش، لكنه يبقى ضمن أفضل معالجات الألعاب المتوفرة في هذه الفئة السعرية.
+</p>
+
+<h3>الأداء في الألعاب التنافسية</h3>
+
+<p>
+في ألعاب مثل Counter-Strike 2 و Valorant و Rainbow Six Siege و Apex Legends يستطيع المعالج تحقيق معدلات إطارات مرتفعة جداً تتجاوز احتياجات معظم الشاشات الحديثة.
+</p>
+
+<figure style="margin:32px 0;">
+
+
+
+<p>
+وبفضل الترددات العالية لأنوية الأداء P-Cores، يقدم المعالج استجابة ممتازة وزمن تأخير منخفض في الألعاب التنافسية.
+</p>
+
+<img
+src="/images/core-i5-14600k-gaming-performance.webp"
+alt="AMD 3D V-Cache"
+style="
+width:100%;
+border-radius:12px;
+display:block;
+"
+/>
+
+<figcaption
+style="
+text-align:center;
+font-size:14px;
+color:#9ca3af;
+margin-top:10px;
+"
+>
+أداء معالج Intel Core i5 14600K في الألعاب مع كرت شاشة RTX 4070.
+</figcaption>
+
+</figure>
+
+<h3>الأداء في الألعاب الثقيلة</h3>
+
+<p>
+في ألعاب مثل Cyberpunk 2077 و Starfield و Hogwarts Legacy و Dragon's Dogma 2 يحافظ المعالج على أداء قوي جداً، لكنه يتراجع بفارق بسيط أمام Ryzen 7 7800X3D و Ryzen 5 7600X3D في بعض السيناريوهات.
+</p>
+
+<p>
+مع ذلك يبقى الفارق صغيراً بما يكفي لعدم ملاحظته أثناء اللعب الفعلي في أغلب الحالات.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/amd-ryzen-5-7600x3d-review"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;
+"
+>
+مراجعة Ryzen 5 7600X3D
+</a>
+</div>
+
+amd-ryzen-5-7600x3d-review
+
+<h2>الأداء في الإنتاجية</h2>
+
+<p>
+إذا كانت الألعاب نقطة قوة معالجات X3D، فإن الإنتاجية تعتبر نقطة القوة الحقيقية لمعالج Intel Core i5-14600K.
+</p>
+
+<p>
+بفضل امتلاكه 14 نواة و20 خيط معالجة يستطيع المعالج التعامل مع الأحمال المتوازية بشكل أفضل من معظم معالجات Ryzen 5 المنافسة.
+</p>
+
+<h3>نتائج Cinebench R23 Multi-Core</h3>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">المعالج</th>
+<th class="border border-zinc-500 p-4">Cinebench R23 Multi-Core</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">Intel Core i5-14600K</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">≈ 24,700</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7700X</td>
+<td class="border border-zinc-500 p-4">≈ 19,800</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7800X3D</td>
+<td class="border border-zinc-500 p-4">≈ 18,100</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 5 7600X</td>
+<td class="border border-zinc-500 p-4">≈ 15,100</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 5 7600X3D</td>
+<td class="border border-zinc-500 p-4">≈ 14,500</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+هنا يظهر الفارق الحقيقي بين Intel و AMD. فبينما تتفوق معالجات X3D في الألعاب، ينجح Core i5-14600K في تحقيق نتائج أعلى بشكل واضح في التطبيقات الاحترافية متعددة الخيوط.
+</p>
+
+<h3>الأداء في Premiere Pro</h3>
+
+<p>
+يعتبر Core i5-14600K واحداً من أفضل المعالجات المتوسطة للمونتاج، حيث يقدم أداء قوياً في Adobe Premiere Pro بفضل العدد الكبير من الأنوية والخيوط.
+</p>
+
+<p>
+كما تستفيد بعض عمليات التسريع من وجود المعالج الرسومي المدمج Intel UHD Graphics 770 الذي يدعم Quick Sync Video.
+</p>
+
+<h3>الأداء في Blender</h3>
+
+<p>
+في برامج الرندر ثلاثي الأبعاد يتفوق المعالج بسهولة على Ryzen 5 7600X و Ryzen 5 7600X3D بفضل عدد الأنوية الأعلى.
+</p>
+
+<p>
+كما يقترب أحياناً من أداء بعض معالجات Ryzen 7 رغم فارق السعر المحدود.
+</p>
+
+<h2>لماذا يتفوق على Ryzen 5 في الإنتاجية؟</h2>
+
+<p>
+السبب الرئيسي يعود إلى فلسفة التصميم المختلفة بين Intel و AMD.
+</p>
+
+<p>
+فبينما يعتمد Ryzen 5 7600X على 6 أنوية و12 خيط معالجة فقط، يقدم Core i5-14600K ما مجموعه 14 نواة و20 خيط معالجة.
+</p>
+
+<p>
+هذا الفارق الكبير يسمح للمعالج بالتعامل مع عدد أكبر من المهام في الوقت نفسه، وهو ما يظهر بوضوح في الرندر والمونتاج والبرامج الاحترافية.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>أبرز نقاط قوة i5-14600K</strong>
+
+<ul>
+<li>أداء ألعاب ممتاز.</li>
+<li>أداء إنتاجية قوي جداً.</li>
+<li>عدد كبير من الأنوية والخيوط.</li>
+<li>دعم DDR4 و DDR5.</li>
+<li>دعم Quick Sync Video.</li>
+<li>قيمة ممتازة مقابل السعر.</li>
+</ul>
+
+</div>
+
+<h2>استهلاك الطاقة والحرارة</h2>
+
+<p>
+رغم أن Intel Core i5-14600K يقدم أداءً قوياً للغاية، إلا أن هذا الأداء لا يأتي مجاناً. فمقارنة بمعالجات Ryzen الحديثة، يستهلك المعالج كمية أكبر من الطاقة وينتج حرارة أعلى تحت الأحمال الثقيلة.
+</p>
+
+<p>
+لكن في المقابل، فإن هذا الاستهلاك المرتفع يترجم إلى أداء إنتاجية قوي جداً يجعل الكثير من المستخدمين يتقبلون هذه التضحية.
+</p>
+
+<h3>استهلاك الطاقة أثناء الألعاب</h3>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المعالج
+</th>
+
+<th class="border border-zinc-500 p-4">
+متوسط استهلاك الطاقة
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7800X3D</td>
+<td class="border border-zinc-500 p-4">65W</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 5 7600X3D</td>
+<td class="border border-zinc-500 p-4">78W</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 5 7600X</td>
+<td class="border border-zinc-500 p-4">88W</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Ryzen 7 7700X</td>
+<td class="border border-zinc-500 p-4">105W</td>
+</tr>
+
+<tr>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">Intel Core i5-14600K</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">155W</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+يتضح هنا أن Intel ما زالت متأخرة خلف AMD من ناحية كفاءة استهلاك الطاقة، خصوصاً أمام معالجات X3D التي تحقق نتائج مذهلة مع استهلاك منخفض جداً.
+</p>
+
+<h3>درجات الحرارة</h3>
+
+<p>
+عند استخدام مبرد هوائي احترافي أو مبرد مائي 360 ملم، يستطيع المعالج العمل ضمن درجات حرارة آمنة حتى أثناء الضغط الطويل.
+</p>
+
+<p>
+ومع ذلك، تبقى درجات الحرارة أعلى من معظم معالجات Ryzen المنافسة، خاصة عند إزالة حدود الطاقة الافتراضية من اللوحة الأم.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>التبريد الموصى به</strong>
+
+<ul>
+<li>مبرد هوائي احترافي ثنائي الأبراج.</li>
+<li>مبرد مائي 240 ملم كحد أدنى.</li>
+<li>مبرد مائي 360 ملم للحصول على أفضل النتائج.</li>
+</ul>
+
+</div>
+
+<h2>مقارنة Intel Core i5-14600K و Ryzen 5 7600X</h2>
+
+<p>
+تعتبر هذه المقارنة من أكثر المقارنات شيوعاً بين مستخدمي الفئة المتوسطة.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">المعيار</th>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">i5-14600K</th>
+<th class="border border-zinc-500 p-4">Ryzen 5 7600X</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">الأنوية</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">14</td>
+<td class="border border-zinc-500 p-4">6</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">الخيوط</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">20</td>
+<td class="border border-zinc-500 p-4">12</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">الألعاب</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">أفضل قليلاً</td>
+<td class="border border-zinc-500 p-4">ممتاز</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">الإنتاجية</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">أفضل بوضوح</td>
+<td class="border border-zinc-500 p-4">أضعف</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<h2>مقارنة Intel Core i5-14600K و Ryzen 5 7600X3D</h2>
+
+<p>
+هذه المقارنة تمثل صراعاً بين فلسفتين مختلفتين تماماً.
+</p>
+
+<p>
+يعتمد Ryzen 5 7600X3D على تقنية 3D V-Cache لتحقيق أفضل أداء ألعاب ممكن، بينما يعتمد i5-14600K على عدد الأنوية الكبير لتقديم أداء أكثر توازناً.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">المعيار</th>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">i5-14600K</th>
+<th class="border border-zinc-500 p-4">7600X3D</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">الألعاب</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">ممتاز</td>
+<td class="border border-zinc-500 p-4">الأفضل</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">الإنتاجية</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">أفضل بكثير</td>
+<td class="border border-zinc-500 p-4">أضعف</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">استهلاك الطاقة</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">أعلى</td>
+<td class="border border-zinc-500 p-4">أقل</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">القيمة للاعبين</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">ممتازة</td>
+<td class="border border-zinc-500 p-4">استثنائية</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+إذا كان هدفك الأساسي هو الألعاب فقط، فإن Ryzen 5 7600X3D يتفوق غالباً.
+</p>
+
+<p>
+أما إذا كنت تستخدم جهازك للألعاب والعمل معاً، فإن Intel Core i5-14600K يعتبر الخيار الأكثر توازناً.
+</p>
+
+<h2>مقارنة Intel Core i5-14600K و Ryzen 7 7700X</h2>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">المعيار</th>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">i5-14600K</th>
+<th class="border border-zinc-500 p-4">7700X</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">الأنوية</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">14</td>
+<td class="border border-zinc-500 p-4">8</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">الخيوط</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">20</td>
+<td class="border border-zinc-500 p-4">16</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">الألعاب</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">متقارب جداً</td>
+<td class="border border-zinc-500 p-4">متقارب جداً</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">الإنتاجية</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">أفضل</td>
+<td class="border border-zinc-500 p-4">أقل قليلاً</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<h2>Intel core i5 14600K المميزات والعيوب</h2>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>المميزات</strong>
+
+<ul>
+<li>أداء ألعاب قوي جداً.</li>
+<li>أداء إنتاجية ممتاز.</li>
+<li>14 نواة و20 خيط معالجة.</li>
+<li>دعم DDR4 وDDR5.</li>
+<li>دعم Quick Sync Video.</li>
+<li>قيمة ممتازة مقابل السعر.</li>
+</ul>
+
+</div>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>العيوب</strong>
+
+<ul>
+<li>استهلاك طاقة مرتفع.</li>
+<li>حرارة أعلى من Ryzen.</li>
+<li>يتطلب تبريداً جيداً.</li>
+<li>منصة LGA1700 وصلت تقريباً إلى نهاية عمرها.</li>
+</ul>
+
+</div>
+
+<h2>الخلاصة</h2>
+
+<p>
+قد لا يكون Intel Core i5-14600K أسرع معالج ألعاب في السوق، لكنه بلا شك واحد من أكثر المعالجات توازناً المتوفرة حالياً.
+</p>
+
+<p>
+فهو يقدم أداء ألعاب ممتازاً، وأداء إنتاجية يتفوق على معظم منافسيه المباشرين، مع دعم واسع للذواكر واللوحات الأم.
+</p>
+
+<p>
+إذا كنت تبحث عن معالج للألعاب فقط فقد تجد خيارات أفضل من AMD X3D، أما إذا كنت تريد جهازاً قادراً على اللعب والعمل والبث المباشر والمونتاج في الوقت نفسه، فإن Core i5-14600K يبقى واحداً من أفضل الخيارات المتاحة ضمن فئته السعرية.
+</p>
+
+<h2>الأسئلة الشائعة</h2>
+
+<h3>هل i5-14600K مناسب للألعاب؟</h3>
+<p>
+نعم، ويعتبر من أقوى معالجات الألعاب في الفئة المتوسطة العليا.
+</p>
+
+<h3>هل يحتاج إلى مبرد مائي؟</h3>
+<p>
+ليس إلزامياً، لكن يوصى باستخدام مبرد قوي للحصول على أفضل أداء.
+</p>
+
+<h3>هل يتفوق على Ryzen 5 7600X؟</h3>
+<p>
+نعم، خصوصاً في الإنتاجية والتطبيقات متعددة الخيوط.
+</p>
+
+<h3>هل Ryzen 5 7600X3D أفضل منه؟</h3>
+<p>
+في الألعاب فقط غالباً نعم، أما في الإنتاجية فـ i5-14600K يتفوق بشكل واضح.
+</p>
+
+
+
+
+`
+  },
+
+  {
+title:
 "AMD Ryzen 5 7600X3D Review: هل يستطيع معالج بست أنوية منافسة 7800X3D؟",
 
 slug:
@@ -320,6 +1174,25 @@ margin-top:10px;
 هذه النتائج توضح أن Ryzen 5 7600X3D لا ينافس فقط معالجات Ryzen 5 الأخرى، بل يقترب من الفئة العليا المخصصة للألعاب.
 </p>
 
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/amd-ryzen-5-vs-amd-ryzen-7"
+style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+الفرق بين Ryzen 5 و Ryzen 7: أيهما أفضل للألعاب والعمل؟
+</a>
+
+</div>
+
 <h3>الأداء في ألعاب التصويب التنافسية</h3>
 
 <p>
@@ -399,22 +1272,22 @@ Cinebench R23 Multi-Core
 
 <tr>
 <td class="border border-zinc-500 p-4">Core Ultra 7 265K</td>
-<td class="border border-zinc-500 p-4">≈ 36300</td>
+<td class="border border-zinc-500 p-4">≈ 36,300</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">Core Ultra 5 245K</td>
-<td class="border border-zinc-500 p-4">≈ 25350</td>
+<td class="border border-zinc-500 p-4">≈ 25,350</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">Ryzen 7 7700X</td>
-<td class="border border-zinc-500 p-4">≈ 19600</td>
+<td class="border border-zinc-500 p-4">≈ 19,800</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">Ryzen 7 7800X3D</td>
-<td class="border border-zinc-500 p-4">≈ 18200</td>
+<td class="border border-zinc-500 p-4">≈ 18,100</td>
 </tr>
 
 
@@ -423,12 +1296,12 @@ Cinebench R23 Multi-Core
 
 <tr>
 <td class="border border-zinc-500 p-4">Ryzen 5 7600X3D</td>
-<td class="border border-zinc-500 p-4">≈ 15500</td>
+<td class="border border-zinc-500 p-4">≈ 14,500</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">Ryzen 5 7600X</td>
-<td class="border border-zinc-500 p-4">≈ 15300</td>
+<td class="border border-zinc-500 p-4">≈ 15,100</td>
 </tr>
 
 </tbody>
@@ -806,34 +1679,10 @@ margin:24px 0;
 إذا كان استخدامك الرئيسي هو الألعاب فالإجابة غالباً نعم، أما في الإنتاجية فلن يكون الفارق كبيراً.
 </p>
 
-<div
-style="
-background:#111827;
-border:1px solid #374151;
-padding:16px;
-border-radius:12px;
-margin:24px 0;
-"
->
 
-<strong>اقرأ أيضاً:</strong>
-
-<a href="/news/amd-ryzen-5-vs-amd-ryzen-7" style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
-الفرق بين Ryzen 5 و Ryzen 7: أيهما أفضل للألعاب والعمل؟
-</a>
-
-<a href="/news/ryzen-7-7800x3d-review" style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
-مراجعة Ryzen 7 7800X3D: ملك معالجات الألعاب
-</a>
-
-<a href="/news/best-gaming-cpu-guide" style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
-أفضل معالجات الألعاب في 2026
-</a>
-
-</div>
 
 `
-},
+  },
 
   {
 title:
