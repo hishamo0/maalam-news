@@ -12,6 +12,813 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
 
+{
+title:
+"Intel Core i5-12600K Review: هل ما زال صفقة الفئة المتوسطة الأفضل في 2026؟",
+
+slug:
+"intel-core-i5-12600k-review",
+
+excerpt:
+"مراجعة شاملة لمعالج Intel Core i5-12600K تتناول الأداء في الألعاب والإنتاجية واستهلاك الطاقة والحرارة مع مقارنات مباشرة ضد Intel Core i5-13600K و Intel Core i5-14600K و Intel Core Ultra 5 245K و Ryzen 5 7600X.",
+
+description:
+"تعرف على مواصفات وأداء Intel Core i5-12600K في الألعاب والمونتاج والرندر، وهل ما زال أحد أفضل معالجات الفئة المتوسطة من حيث القيمة مقابل السعر في عام 2026.",
+
+category:
+"تكنولوجيا",
+
+image:
+"/images/intel-core-i5-12600k-review.webp",
+
+author:
+"هيئة التحرير",
+
+date:
+"8 يونيو 2026",
+
+content:
+
+`
+
+<p>
+عندما أطلقت Intel معالج Core i5-12600K في أواخر عام 2021، لم يكن مجرد تحديث اعتيادي
+لسلسلة Core i5، بل كان بداية مرحلة جديدة بالكامل لمعالجات
+الشركة.
+</p>
+<p>
+فقد قدم لأول مرة التصميم الهجين الذي يجمع بين أنوية الأداء العالية (P-Cores) وأنوية
+الكفاءة (E-Cores)، وهي التقنية التي أصبحت لاحقاً أساس جميع معالجات Intel الحديثة.
+</p>
+
+<p>
+وبعد مرور عدة سنوات على إطلاقه، ما زال Intel Core i5-12600K يحظى بشعبية كبيرة بين اللاعبين وصناع المحتوى
+بفضل أدائه القوي وأسعاره المنخفضة مقارنة بالمعالجات الأحدث مثل 
+<a href="/news/intel-core-i5-13600k-review"
+style="color:#818cf8;font-weight:600;">
+Intel Core i5-13600K
+</a>
+ و 
+ <a href="/news/intel-core-i5-14600k-review"
+style="color:#818cf8;font-weight:600;">
+Intel Core i5-14600K
+</a>؟
+
+</p>
+
+
+
+<h2>نظرة سريعة على Intel Core i5-12600K</h2>
+
+<p>
+يعتمد Intel Core i5-12600K على معمارية Alder Lake ويضم 10 أنوية و16 خيط معالجة، موزعة بين 6 أنوية أداء عالية و4 أنوية كفاءة. وقد شكل هذا التصميم قفزة كبيرة مقارنة بالأجيال السابقة التي اعتمدت على الأنوية التقليدية فقط.
+</p>
+
+<p>
+كما يتميز المعالج بدعمه لكل من DDR4 و DDR5، ما يمنح المستخدمين مرونة كبيرة عند بناء أو ترقية الحواسيب.
+</p>
+
+<h2>المواصفات التقنية</h2>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[950px] text-right border-collapse">
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-lg p-3 mb-3 text-sm text-zinc-300">
+📱 اسحب الجدول يميناً ويساراً لمشاهدة جميع المعالجات والمواصفات.
+</div>
+
+<thead>
+<tr class="bg-zinc-900">
+
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">
+المعيار
+</th>
+
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
+Intel Core i5-12600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Intel Core i5-13600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Intel Core i5-14600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Intel Core Ultra 5 245K
+</th>
+
+<th class="border border-zinc-500 p-4">
+AMD Ryzen 5 7600X
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">الأنوية / الخيوط</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">10 / 16</td>
+<td class="border border-zinc-500 p-4">14 / 20</td>
+<td class="border border-zinc-500 p-4">14 / 20</td>
+<td class="border border-zinc-500 p-4">14 / 14</td>
+<td class="border border-zinc-500 p-4">6 / 12</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">أنوية الأداء</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">6</td>
+<td class="border border-zinc-500 p-4">6</td>
+<td class="border border-zinc-500 p-4">6</td>
+<td class="border border-zinc-500 p-4">6</td>
+<td class="border border-zinc-500 p-4">6</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">أنوية الكفاءة</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">4</td>
+<td class="border border-zinc-500 p-4">8</td>
+<td class="border border-zinc-500 p-4">8</td>
+<td class="border border-zinc-500 p-4">8</td>
+<td class="border border-zinc-500 p-4">لا يوجد</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">أقصى تردد</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">4.9GHz</td>
+<td class="border border-zinc-500 p-4">5.1GHz</td>
+<td class="border border-zinc-500 p-4">5.3GHz</td>
+<td class="border border-zinc-500 p-4">5.2GHz</td>
+<td class="border border-zinc-500 p-4">5.3GHz</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">L3 Cache</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">20MB</td>
+<td class="border border-zinc-500 p-4">24MB</td>
+<td class="border border-zinc-500 p-4">24MB</td>
+<td class="border border-zinc-500 p-4">24MB</td>
+<td class="border border-zinc-500 p-4">32MB</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<h2>لماذا ما زال Intel Core i5-12600K مهماً في 2026؟</h2>
+
+<p>
+رغم ظهور أجيال أحدث، ما زال Core i5-12600K يقدم أداءً قوياً للغاية في الألعاب الحديثة، كما أنه يستفيد من انخفاض سعره بشكل كبير مقارنة بفترة الإطلاق.
+</p>
+
+<p>
+في الواقع، يستطيع المعالج تشغيل كروت شاشة قوية مثل RTX 4070 و RTX 5070 دون مشاكل تذكر في معظم الألعاب، ما يجعله خياراً جذاباً للمستخدمين الباحثين عن أفضل قيمة مقابل السعر.
+</p>
+
+<h2>أداء Intel Core i5-12600K في الألعاب</h2>
+
+<p>
+رغم أن Intel Core i5-12600K أصبح أقدم بثلاثة أجيال تقريباً من أحدث معالجات Intel، إلا أنه ما زال يقدم أداءً قوياً للغاية في الألعاب الحديثة. ويعود ذلك إلى امتلاكه 6 أنوية أداء عالية الأداء قادرة على التعامل مع أقوى البطاقات الرسومية الحالية دون عنق زجاجة ملحوظ في معظم السيناريوهات.
+</p>
+
+<p>
+وخلال الاختبارات باستخدام بطاقة RTX 4070 على دقة 1080p، تمكن المعالج من تحقيق نتائج ممتازة جعلته قريباً بشكل مفاجئ من Core i5-13600K و Core i5-14600K في عدد كبير من الألعاب.
+</p>
+
+<figure style="margin:32px 0;">
+
+<img
+src="/images/i5-12600k-gaming-performance.webp"
+alt="أداء Intel Core i5-12600K في الألعاب"
+style="
+width:100%;
+border-radius:12px;
+display:block;
+"
+/>
+
+<figcaption
+style="
+text-align:center;
+font-size:14px;
+color:#9ca3af;
+margin-top:10px;
+"
+>
+مقارنة أداء Intel Core i5-12600K في مجموعة من الألعاب الحديثة باستخدام RTX 4070 على دقة 1080p.
+</figcaption>
+
+</figure>
+
+<h3>متوسط الأداء في الألعاب الثقيلة</h3>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[650px] md:min-w-[700px] text-right border-collapse">
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-lg p-3 mb-3 text-sm text-zinc-300">
+📱 اسحب الجدول يميناً ويساراً لمشاهدة جميع المعالجات والمواصفات.
+</div>
+
+<thead class="sticky top-0 z-30">
+
+<tr class="bg-zinc-900">
+
+<th class="sticky right-0 top-0 z-40 bg-zinc-900 border border-zinc-500 p-4">
+اللعبة
+</th>
+
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
+Core i5-12600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i5-13600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i5-14600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ryzen 5 7600X
+</th>
+
+<th class="border border-zinc-500 p-4">
+Ryzen 7 7800X3D
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
+Forza Horizon 5 - Extreme
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">126</td>
+<td class="border border-zinc-500 p-4">135</td>
+<td class="border border-zinc-500 p-4">128</td>
+<td class="border border-zinc-500 p-4">134</td>
+<td class="border border-zinc-500 p-4">125</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
+Fortnite - EPIC
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">158</td>
+<td class="border border-zinc-500 p-4">153</td>
+<td class="border border-zinc-500 p-4">167</td>
+<td class="border border-zinc-500 p-4">146</td>
+<td class="border border-zinc-500 p-4">151</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
+COD Warzone 3 - Low
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">169</td>
+<td class="border border-zinc-500 p-4">177</td>
+<td class="border border-zinc-500 p-4">194</td>
+<td class="border border-zinc-500 p-4">184</td>
+<td class="border border-zinc-500 p-4">235</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
+Cyberpunk 2077 - Ultra
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">90</td>
+<td class="border border-zinc-500 p-4">82</td>
+<td class="border border-zinc-500 p-4">77</td>
+<td class="border border-zinc-500 p-4">79</td>
+<td class="border border-zinc-500 p-4">76</td>
+</tr>
+
+<tr>
+<td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
+CS 2 - Very High
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">225</td>
+<td class="border border-zinc-500 p-4">229</td>
+<td class="border border-zinc-500 p-4">221</td>
+<td class="border border-zinc-500 p-4">236</td>
+<td class="border border-zinc-500 p-4">233</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+كما توضح النتائج، ما زال Intel Core i5-12600K قادراً على تقديم تجربة لعب ممتازة حتى في الألعاب الحديثة الثقيلة. ورغم تفوق Core i5-13600K و Core i5-14600K بفارق ملحوظ أحياناً، إلا أن الفجوة ليست كبيرة بما يكفي لجعل 12600K يبدو قديماً أو غير مناسب للألعاب.
+</p>
+
+<h2>الأداء في الألعاب التنافسية</h2>
+
+<p>
+في الألعاب التنافسية التي تعتمد بشكل أساسي على قوة المعالج، يواصل Intel Core i5-12600K تقديم معدلات إطارات مرتفعة للغاية تتجاوز احتياجات معظم اللاعبين حتى مع شاشات 240Hz و360Hz.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[350px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+اللعبة
+</th>
+
+<td class="border border-zinc-500 p-4">
+إعدادات 1080
+</th>
+
+<td class="border border-zinc-500 p-4">
+Core i5-12600K
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">Red Dead Redemption 2</td>
+<td class="border border-zinc-500 p-4">EPIC</td>
+<td dir="ltr" class="border border-zinc-500 p-4">127 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Rainbow Six Siege</td>
+<td class="border border-zinc-500 p-4">HIGH</td>
+<td dir="ltr" class="border border-zinc-500 p-4">273 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Battlefield 5</td>
+<td class="border border-zinc-500 p-4">HIGH</td>
+<td dir="ltr" class="border border-zinc-500 p-4">152 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Apex The Witcher 3</td>
+<td class="border border-zinc-500 p-4">ULTRA</td>
+<td dir="ltr" class="border border-zinc-500 p-4">140 FPS</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">Apex Legends</td>
+<td class="border border-zinc-500 p-4">HIGH</td>
+<td dir="ltr" class="border border-zinc-500 p-4">297 FPS</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+بالنسبة للاعبين الذين يركزون على الألعاب التنافسية، فإن Intel Core i5-12600K مع RTX 4070 ما زال يوفر أداءً أكثر من كافٍ لتحقيق معدلات تحديث مرتفعة جداً، حتى مع بطاقات رسومية حديثة مثل RTX 4070.
+</p>
+
+<h2>الأداء في الإنتاجية وصناعة المحتوى</h2>
+
+<p>
+إذا كان Intel Core i5-12600K ما زال قادراً على المنافسة في الألعاب، فإن أداؤه في الإنتاجية هو ما جعله يحافظ على شعبيته حتى اليوم. فبفضل تصميمه الهجين الذي يجمع بين أنوية الأداء وأنوية الكفاءة، يستطيع المعالج التعامل مع برامج المونتاج والرندر وتحرير الصور بكفاءة عالية مقارنة بسعره الحالي.
+</p>
+
+<p>
+ورغم أن الأجيال الأحدث مثل Core i5-13600K و Core i5-14600K تتفوق عليه بوضوح في المهام متعددة الخيوط، إلا أن الفارق لا يزال مقبولاً بالنسبة لمعالج أصبح متوفراً بأسعار أقل بكثير من سعر إطلاقه.
+</p>
+
+<figure style="margin:32px 0;">
+
+<img
+src="/images/i5-12600k-cinebench-r23.webp"
+alt="نتائج Cinebench R23 لمعالج Intel Core i5-12600K"
+style="
+width:100%;
+border-radius:12px;
+display:block;
+"
+/>
+
+<figcaption
+style="
+text-align:center;
+font-size:14px;
+color:#9ca3af;
+margin-top:10px;
+"
+>
+مقارنة نتائج Cinebench R23 Multi-Core بين Intel Core i5-12600K وأبرز المنافسين.
+</figcaption>
+
+</figure>
+
+
+
+<p>
+توضح النتائج أن Intel Core i5-12600K ما زال يتفوق على Ryzen 5 7600X في العديد من اختبارات الإنتاجية متعددة الخيوط، لكنه يتراجع بشكل واضح أمام Core i5-13600K و Core i5-14600K اللذين يقدمان عدداً أكبر من أنوية الكفاءة.
+</p>
+
+<h3>الأداء في Adobe Premiere Pro</h3>
+
+<p>
+في برامج تحرير الفيديو مثل Premiere Pro يقدم Intel Core i5-12600K أداءً جيداً للغاية بفضل تقنية Intel Quick Sync التي تساعد على تسريع عمليات تصدير الفيديو ومعالجة ملفات H.264 و H.265.
+</p>
+
+<p>
+ورغم تفوق المعالجات الأحدث في المشاريع الكبيرة والمعقدة، فإن 12600K ما زال مناسباً لصناع المحتوى الذين يعملون على مشاريع 1080p و4K متوسطة الحجم.
+</p>
+
+<h3>الأداء في Blender</h3>
+
+<p>
+عند اختبار الرندر ثلاثي الأبعاد باستخدام Blender، يظهر الفارق بوضوح بين 12600K والأجيال الأحدث من Intel. ومع ذلك يبقى المعالج قادراً على تقديم نتائج جيدة جداً مقارنة بفئته السعرية الحالية.
+</p>
+
+<h2>استهلاك الطاقة والحرارة</h2>
+
+<p>
+من أبرز مزايا Intel Core i5-12600K مقارنة بخلفائه أنه أسهل تبريداً في معظم الحالات. فعدد أنوية الكفاءة الأقل واستهلاك الطاقة المنخفض نسبياً يجعلان التحكم بدرجات الحرارة أسهل من Core i5-13600K و Core i5-14600K.
+</p>
+
+<figure style="margin:32px 0;">
+
+<img
+src="/images/i5-12600k-power-temperature.webp"
+alt="استهلاك الطاقة ودرجات الحرارة لمعالج Intel Core i5-12600K"
+style="
+width:100%;
+border-radius:12px;
+display:block;
+"
+/>
+
+<figcaption
+style="
+text-align:center;
+font-size:14px;
+color:#9ca3af;
+margin-top:10px;
+"
+>
+مقارنة استهلاك الطاقة ودرجات الحرارة بين Intel Core i5-12600K وأبرز المنافسين.
+</figcaption>
+
+</figure>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[450px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المعالج
+</th>
+
+<th class="border border-zinc-500 p-4">
+استهلاك الألعاب
+</th>
+
+<th class="border border-zinc-500 p-4">
+استهلاك الضغط الكامل
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
+Intel Core i5-12600K
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">
+125W
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">
+150W
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Intel Core i5-13600K
+</td>
+<td class="border border-zinc-500 p-4">
+145W
+</td>
+<td class="border border-zinc-500 p-4">
+181W
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Intel Core i5-14600K
+</td>
+<td class="border border-zinc-500 p-4">
+155W
+</td>
+<td class="border border-zinc-500 p-4">
+181W
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+Ryzen 5 7600X
+</td>
+<td class="border border-zinc-500 p-4">
+95W
+</td>
+<td class="border border-zinc-500 p-4">
+142W
+</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+بالنسبة للمستخدمين الذين لا يرغبون في الاستثمار في أنظمة تبريد مرتفعة التكلفة، قد يكون Intel Core i5-12600K خياراً أكثر راحة من الأجيال الأحدث.
+</p>
+
+<h2>مقارنة مباشرة بين Intel Core i5-12600K و Intel Core i5-13600K و Intel Core i5-14600K</h2>
+
+<p>
+تعد هذه المقارنة من أكثر المقارنات التي يبحث عنها المستخدمون حالياً، خصوصاً بعد انخفاض أسعار معالجات Alder Lake وRaptor Lake بشكل ملحوظ. ورغم أن المعالجات الثلاثة تنتمي إلى الفئة نفسها تقريباً، إلا أن هناك فروقات مهمة يجب أخذها بعين الاعتبار قبل اتخاذ قرار الشراء.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+
+<th class="border border-zinc-500 p-4">
+المعيار
+</th>
+
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
+Core i5-12600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i5-13600K
+</th>
+
+<th class="border border-zinc-500 p-4">
+Core i5-14600K
+</th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+الألعاب
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">
+ممتاز
+</td>
+<td class="border border-zinc-500 p-4">
+ممتاز جداً
+</td>
+<td class="border border-zinc-500 p-4">
+ممتاز جداً
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+الإنتاجية
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">
+جيدة جداً
+</td>
+<td class="border border-zinc-500 p-4">
+ممتازة
+</td>
+<td class="border border-zinc-500 p-4">
+ممتازة
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+استهلاك الطاقة
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">
+الأفضل
+</td>
+<td class="border border-zinc-500 p-4">
+أعلى
+</td>
+<td class="border border-zinc-500 p-4">
+الأعلى
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+سهولة التبريد
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">
+ممتازة
+</td>
+<td class="border border-zinc-500 p-4">
+جيدة جداً
+</td>
+<td class="border border-zinc-500 p-4">
+جيدة
+</td>
+</tr>
+
+<tr>
+<td class="border border-zinc-500 p-4">
+القيمة مقابل السعر
+</td>
+<td class="border border-zinc-500 p-4 bg-blue-950/15 text-indigo-300">
+ممتازة
+</td>
+<td class="border border-zinc-500 p-4">
+ممتازة
+</td>
+<td class="border border-zinc-500 p-4">
+جيدة جداً
+</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p>
+إذا كنت تبحث عن أفضل قيمة ممكنة بأقل تكلفة، فإن Intel Core i5-12600K ما زال خياراً ممتازاً. أما إذا كنت تعمل على برامج الرندر والمونتاج بشكل متكرر، فإن Core i5-13600K و Core i5-14600K يقدمان قفزة واضحة في الأداء بفضل العدد الأكبر من أنوية الكفاءة.
+</p>
+
+<h2>المميزات والعيوب</h2>
+
+<div
+style="
+background:#0f172a;
+border:1px solid #1e293b;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>المميزات</strong>
+
+<ul>
+
+<li>أداء ألعاب ممتاز حتى في عام 2026.</li>
+
+<li>قيمة مقابل السعر من الأفضل في السوق.</li>
+
+<li>استهلاك طاقة أقل من 13600K و14600K.</li>
+
+<li>سهولة التبريد مقارنة بالأجيال الأحدث.</li>
+
+<li>دعم DDR4 وDDR5.</li>
+
+<li>دعم Intel Quick Sync لتسريع أعمال المونتاج.</li>
+
+<li>متوفر بأسعار منخفضة في الأسواق حالياً.</li>
+
+</ul>
+
+</div>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>العيوب</strong>
+
+<ul>
+
+<li>أداء الإنتاجية أقل من 13600K و14600K.</li>
+
+<li>عدد أنوية الكفاءة أقل من الأجيال اللاحقة.</li>
+
+<li>منصة LGA1700 وصلت إلى نهاية دورة حياتها تقريباً.</li>
+
+<li>أضعف من معالجات X3D في الألعاب المعتمدة على الذاكرة المخبأة.</li>
+
+</ul>
+
+</div>
+
+<h2>هل ما زال Intel Core i5-12600K يستحق الشراء في 2026؟</h2>
+
+<p>
+نعم، وبقوة.
+</p>
+
+<p>
+رغم مرور عدة سنوات على إطلاقه، ما زال Intel Core i5-12600K يقدم توازناً ممتازاً بين الأداء والسعر. فهو قادر على تشغيل أحدث الألعاب بمعدلات إطارات مرتفعة، كما يوفر أداءً جيداً جداً في الإنتاجية وصناعة المحتوى بالنسبة لفئته السعرية.
+</p>
+
+<p>
+إذا كان هدفك الحصول على أفضل قيمة ممكنة دون دفع تكلفة إضافية مقابل بضعة إطارات أو دقائق أقل في عمليات الرندر، فإن Core i5-12600K يبقى واحداً من أكثر المعالجات إقناعاً في السوق حتى اليوم.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>لمن نوصي بهذا المعالج؟</strong>
+
+<ul>
+
+<li>لاعبي 1080p و1440p.</li>
+
+<li>المستخدمين أصحاب الميزانية المحدودة.</li>
+
+<li>صناع المحتوى المبتدئين والمتوسطين.</li>
+
+<li>من يرغبون في الاستفادة من منصات DDR4 الحالية.</li>
+
+<li>الباحثين عن أفضل قيمة مقابل السعر.</li>
+
+</ul>
+
+</div>
+
+<h2>الخلاصة</h2>
+
+<p>
+قد لا يكون Intel Core i5-12600K أحدث معالج في السوق، لكنه ما زال واحداً من أكثر المعالجات توازناً ونجاحاً في تاريخ Intel الحديث.
+</p>
+
+<p>
+فهو يقدم أداء ألعاب قوياً للغاية، وأداء إنتاجية جيداً جداً، مع استهلاك طاقة ودرجات حرارة أسهل في التعامل مقارنة بالأجيال اللاحقة.
+</p>
+
+<p>
+إذا وجدته بسعر مناسب في 2026، فمن الصعب العثور على معالج يقدم القيمة نفسها مقابل التكلفة، خصوصاً للاعبين الذين يريدون بناء حاسوب قوي دون تجاوز الميزانية.
+</p>
+
+<h2>الأسئلة الشائعة</h2>
+
+<h3>هل Intel Core i5-12600K مناسب للألعاب في 2026؟</h3>
+
+<p>
+نعم، وما زال قادراً على تشغيل أحدث الألعاب بمعدلات إطارات مرتفعة جداً مع بطاقات مثل RTX 4070 وRTX 5070.
+</p>
+
+<h3>هل يستحق الترقية إلى Core i5-13600K؟</h3>
+
+<p>
+إذا كنت تعمل كثيراً على الإنتاجية والرندر، نعم. أما للألعاب فقط فالفارق أقل أهمية.
+</p>
+
+<h3>هل يتفوق Ryzen 5 7600X عليه؟</h3>
+
+<p>
+في بعض الألعاب قد يكون الأداء متقارباً جداً، لكن 12600K يتفوق غالباً في المهام متعددة الخيوط والإنتاجية.
+</p>
+
+<h3>هل يحتاج إلى مبرد مائي؟</h3>
+
+<p>
+ليس بالضرورة، فالمعالج أسهل تبريداً من 13600K و14600K ويمكن تشغيله بكفاءة مع مبردات هوائية جيدة.
+</p>
+
+`},
+
+
   {
     
 title:
@@ -43,11 +850,18 @@ content:
 
 
 <p>
-رغم مرور عدة سنوات على إطلاقه، ما زال معالج Intel Core i5-13600K يُعتبر واحداً من أنجح معالجات إنتل خلال العقد الأخير. فعندما ظهر لأول مرة ضمن عائلة Raptor Lake نجح في تقديم مزيج استثنائي من الأداء والسعر، حيث اقترب من أداء معالجات Core i7 الرائدة مع الحفاظ على سعر أقل بكثير.
+رغم مرور عدة سنوات على إطلاقه، ما زال معالج Intel Core i5-13600K يُعتبر واحداً من أنجح معالجات إنتل خلال العقد الأخير.
+فعندما ظهر لأول مرة ضمن عائلة Raptor Lake نجح في تقديم مزيج استثنائي من الأداء والسعر،
+حيث اقترب من أداء معالجات Core i7 الرائدة مع الحفاظ على سعر أقل بكثير.
 </p>
 
 <p>
-وفي عام 2026 ما زال هذا المعالج حاضراً بقوة في تجميعات الألعاب وصناعة المحتوى، خصوصاً مع انخفاض أسعاره مقارنة بالجيل الأحدث Core i5-14600K ومعالجات Intel Core Ultra الجديدة. لذلك يطرح كثير من المستخدمين سؤالاً مهماً: هل ما زال Intel Core i5-13600K خياراً ذكياً للشراء أم أن الوقت حان للانتقال إلى بدائل أحدث؟
+وفي عام 2026 ما زال هذا المعالج حاضراً بقوة في تجميعات الألعاب وصناعة المحتوى،
+خصوصاً مع انخفاض أسعاره مقارنة بالجيل الأحدث <a href="/news/intel-core-i5-14600k-review" style="color:#818cf8;font-weight:600;text-decoration:none;">
+معالج Intel Core i5-14600K
+</a> ومعالجات Intel Core Ultra الجديدة.
+لذلك يطرح كثير من المستخدمين سؤالاً مهماً: هل ما زال Intel Core i5-13600K خياراً ذكياً للشراء
+أم أن الوقت حان للانتقال إلى بدائل أحدث؟
 </p>
 
 <p>
@@ -67,7 +881,7 @@ margin:24px 0;
 <strong>اقرأ أيضاً:</strong>
 
 <a href="/news/intel-core-i5-14600k-review"
-style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+style="display:block;margin-top:10px;color:#818cf8;font-weight:600;">
 Intel Core-i5 14600K مراجعة شاملة
 </a>
 
@@ -100,7 +914,7 @@ Intel Core-i5 14600K مراجعة شاملة
 المعيار
 </th>
 
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-400 font-bold">
 Intel Core i5-13600K
 </th>
 
@@ -127,7 +941,7 @@ Ryzen 7 7700X
 
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">الأنوية / الخيوط</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">14 / 20</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">14 / 20</td>
 <td class="border border-zinc-500 p-4">14 / 20</td>
 <td class="border border-zinc-500 p-4">14 / 14</td>
 <td class="border border-zinc-500 p-4">6 / 12</td>
@@ -136,7 +950,7 @@ Ryzen 7 7700X
 
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">أنوية الأداء</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">6</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">6</td>
 <td class="border border-zinc-500 p-4">6</td>
 <td class="border border-zinc-500 p-4">6</td>
 <td class="border border-zinc-500 p-4">6</td>
@@ -145,7 +959,7 @@ Ryzen 7 7700X
 
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">أنوية الكفاءة</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">8</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">8</td>
 <td class="border border-zinc-500 p-4">8</td>
 <td class="border border-zinc-500 p-4">8</td>
 <td class="border border-zinc-500 p-4">لا يوجد</td>
@@ -154,7 +968,7 @@ Ryzen 7 7700X
 
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">أقصى تردد</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">5.1GHz</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">5.1GHz</td>
 <td class="border border-zinc-500 p-4">5.3GHz</td>
 <td class="border border-zinc-500 p-4">5.2GHz</td>
 <td class="border border-zinc-500 p-4">5.3GHz</td>
@@ -163,7 +977,7 @@ Ryzen 7 7700X
 
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4">L3 Cache</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-300 font-bold">24MB</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">24MB</td>
 <td class="border border-zinc-500 p-4">24MB</td>
 <td class="border border-zinc-500 p-4">24MB</td>
 <td class="border border-zinc-500 p-4">32MB</td>
@@ -236,7 +1050,7 @@ margin-top:10px;
 اللعبة
 </th>
 
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 Core i5-13600K
 </th>
 
@@ -266,7 +1080,7 @@ Ryzen 7 7800X3D
 <td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
 Cyberpunk 2077
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">172</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">172</td>
 <td class="border border-zinc-500 p-4">177</td>
 <td class="border border-zinc-500 p-4">175</td>
 <td class="border border-zinc-500 p-4">174</td>
@@ -277,7 +1091,7 @@ Cyberpunk 2077
 <td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
 Starfield
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">106</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">106</td>
 <td class="border border-zinc-500 p-4">111</td>
 <td class="border border-zinc-500 p-4">109</td>
 <td class="border border-zinc-500 p-4">108</td>
@@ -288,7 +1102,7 @@ Starfield
 <td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
 Hogwarts Legacy
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">141</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">141</td>
 <td class="border border-zinc-500 p-4">146</td>
 <td class="border border-zinc-500 p-4">144</td>
 <td class="border border-zinc-500 p-4">142</td>
@@ -299,7 +1113,7 @@ Hogwarts Legacy
 <td class="sticky right-0 z-20 bg-zinc-950 border border-zinc-500 p-4">
 Dragon's Dogma 2
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">88</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">88</td>
 <td class="border border-zinc-500 p-4">93</td>
 <td class="border border-zinc-500 p-4">91</td>
 <td class="border border-zinc-500 p-4">89</td>
@@ -332,7 +1146,7 @@ margin:24px 0;
 <strong>اقرأ أيضاً:</strong>
 
 <a href="/news/amd-ryzen-5-7600x3d-review"
-style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+style="display:block;margin-top:10px;color:#818cf8;font-weight:600;">
 AMD Ryzen 5 7600X3D مراجعة شاملة
 </a>
 
@@ -448,10 +1262,10 @@ Cinebench R23 Multi-Core
 <tbody>
 
 <tr>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 Intel Core i5-13600K
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 24100
 </td>
 </tr>
@@ -501,6 +1315,7 @@ Ryzen 5 7600X
 توضح نتائج Cinebench R23 أن Intel Core i5-13600K ما زال يمتلك قوة حوسبية كبيرة حتى بعد عدة أجيال من إطلاقه. فالفرق بينه وبين Core i5-14600K محدود نسبياً، بينما يتفوق بوضوح على Ryzen 5 7600X و Ryzen 7 7700X في الأداء متعدد الخيوط.
 </p>
 
+
 <h3>الأداء في Adobe Premiere Pro</h3>
 
 <p>
@@ -530,7 +1345,7 @@ margin:24px 0;
 <strong>اقرأ أيضاً:</strong>
 
 <a href="/news/ryzen-vs-intel-ultimate-guide"
-style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+style="display:block;margin-top:10px;color:#818cf8;font-weight:600;">
 مقارنة شاملة بين AMD و Intel
 </a>
 
@@ -573,13 +1388,13 @@ style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
 <tbody>
 
 <tr>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 Intel Core i5-13600K
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 145W
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 181W
 </td>
 </tr>
@@ -680,7 +1495,7 @@ margin-top:10px;
 المعيار
 </th>
 
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 i5-13600K
 </th>
 
@@ -697,7 +1512,7 @@ i5-14600K
 <td class="border border-zinc-500 p-4">
 الألعاب
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 ممتاز
 </td>
 <td class="border border-zinc-500 p-4">
@@ -709,7 +1524,7 @@ i5-14600K
 <td class="border border-zinc-500 p-4">
 الإنتاجية
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 ممتاز
 </td>
 <td class="border border-zinc-500 p-4">
@@ -721,7 +1536,7 @@ i5-14600K
 <td class="border border-zinc-500 p-4">
 استهلاك الطاقة
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 أقل قليلاً
 </td>
 <td class="border border-zinc-500 p-4">
@@ -733,7 +1548,7 @@ i5-14600K
 <td class="border border-zinc-500 p-4">
 القيمة مقابل السعر
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 ممتازة
 </td>
 <td class="border border-zinc-500 p-4">
@@ -770,7 +1585,7 @@ i5-14600K
 المعيار
 </th>
 
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 Core i5-13600K
 </th>
 
@@ -787,7 +1602,7 @@ Core Ultra 5 245K
 <td class="border border-zinc-500 p-4">
 الألعاب
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 ممتاز
 </td>
 <td class="border border-zinc-500 p-4">
@@ -799,7 +1614,7 @@ Core Ultra 5 245K
 <td class="border border-zinc-500 p-4">
 الإنتاجية
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 قوية جداً
 </td>
 <td class="border border-zinc-500 p-4">
@@ -811,7 +1626,7 @@ Core Ultra 5 245K
 <td class="border border-zinc-500 p-4">
 استهلاك الطاقة
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 أعلى
 </td>
 <td class="border border-zinc-500 p-4">
@@ -823,7 +1638,7 @@ Core Ultra 5 245K
 <td class="border border-zinc-500 p-4">
 دعم المنصة
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 LGA1700
 </td>
 <td class="border border-zinc-500 p-4">
@@ -835,7 +1650,7 @@ LGA1851
 <td class="border border-zinc-500 p-4">
 القيمة مقابل السعر
 </td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 ممتازة
 </td>
 <td class="border border-zinc-500 p-4">
@@ -1007,6 +1822,7 @@ margin:24px 0;
 
 `
   },
+
   {
 title:
 "Intel Core i5-14600K Review: هل ما زال ملك الفئة المتوسطة للألعاب والإنتاجية؟",
@@ -1079,7 +1895,7 @@ content:
 Core i5-13600K
 </th>
 
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">
 Core i5-14600K
 </th>
 
@@ -1107,7 +1923,7 @@ Core i9-14900K
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,1.35)]">أنوية الأداء (P-Cores)</td>
 <td class="border border-zinc-500 p-4">6</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">6</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">6</td>
 <td class="border border-zinc-500 p-4">8</td>
 <td class="border border-zinc-500 p-4">8</td>
 <td class="border border-zinc-500 p-4">8</td>
@@ -1117,7 +1933,7 @@ Core i9-14900K
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,1.35)]">أقصى تردد لأنوية الأداء</td>
 <td class="border border-zinc-500 p-4">5.1GHz</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">5.3GHz</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">5.3GHz</td>
 <td class="border border-zinc-500 p-4">5.4GHz</td>
 <td class="border border-zinc-500 p-4">5.6GHz</td>
 <td class="border border-zinc-500 p-4">5.8GHz</td>
@@ -1127,7 +1943,7 @@ Core i9-14900K
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">أنوية الكفاءة (E-Cores)</td>
 <td class="border border-zinc-500 p-4">8</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">8</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">8</td>
 <td class="border border-zinc-500 p-4">8</td>
 <td class="border border-zinc-500 p-4">12</td>
 <td class="border border-zinc-500 p-4">16</td>
@@ -1137,7 +1953,7 @@ Core i9-14900K
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">أقصى تردد لأنوية الكفاءة</td>
 <td class="border border-zinc-500 p-4">3.9GHz</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">4.0GHz</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">4.0GHz</td>
 <td class="border border-zinc-500 p-4">4.2GHz</td>
 <td class="border border-zinc-500 p-4">4.3GHz</td>
 <td class="border border-zinc-500 p-4">4.3GHz</td>
@@ -1147,7 +1963,7 @@ Core i9-14900K
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">عدد الخيوط (Threads)</td>
 <td class="border border-zinc-500 p-4">20</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">20</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">20</td>
 <td class="border border-zinc-500 p-4">24</td>
 <td class="border border-zinc-500 p-4">28</td>
 <td class="border border-zinc-500 p-4">32</td>
@@ -1157,7 +1973,7 @@ Core i9-14900K
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">ذاكرة L3 Cache</td>
 <td class="border border-zinc-500 p-4">24MB</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">24MB</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">24MB</td>
 <td class="border border-zinc-500 p-4">30MB</td>
 <td class="border border-zinc-500 p-4">33MB</td>
 <td class="border border-zinc-500 p-4">36MB</td>
@@ -1167,7 +1983,7 @@ Core i9-14900K
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">كرت الشاشة المدمج</td>
 <td class="border border-zinc-500 p-4">UHD 770</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">UHD 770</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">UHD 770</td>
 <td class="border border-zinc-500 p-4">UHD 770</td>
 <td class="border border-zinc-500 p-4">UHD 770</td>
 <td class="border border-zinc-500 p-4">UHD 770</td>
@@ -1177,7 +1993,7 @@ Core i9-14900K
 <tr>
 <td class="sticky right-0 z-10 bg-zinc-950 border border-zinc-500 p-4 shadow-[8px_0_12px_rgba(0,0,0,0.35)]">استهلاك الطاقة </td>
 <td class="border border-zinc-500 p-4">125W - 181W</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">125W - 181W</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">125W - 181W</td>
 <td class="border border-zinc-500 p-4">125W - 253W</td>
 <td class="border border-zinc-500 p-4">125W - 253W</td>
 <td class="border border-zinc-500 p-4">125W - 253W</td>
@@ -1307,8 +2123,8 @@ margin:24px 0;
 </tr>
 
 <tr>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">Intel Core i5-14600K</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">93%</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">Intel Core i5-14600K</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">93%</td>
 </tr>
 
 <tr>
@@ -1430,8 +2246,8 @@ amd-ryzen-5-7600x3d-review
 <tbody>
 
 <tr>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">Intel Core i5-14600K</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">≈ 24,700</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">Intel Core i5-14600K</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">≈ 24,700</td>
 </tr>
 
 <tr>
@@ -1572,8 +2388,8 @@ margin:24px 0;
 </tr>
 
 <tr>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">Intel Core i5-14600K</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">155W</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">Intel Core i5-14600K</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">155W</td>
 </tr>
 
 </tbody>
@@ -1628,7 +2444,7 @@ margin:24px 0;
 <tr class="bg-zinc-900">
 
 <th class="border border-zinc-500 p-4">المعيار</th>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">i5-14600K</th>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">i5-14600K</th>
 <th class="border border-zinc-500 p-4">Ryzen 5 7600X</th>
 
 </tr>
@@ -1638,25 +2454,25 @@ margin:24px 0;
 
 <tr>
 <td class="border border-zinc-500 p-4">الأنوية</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">14</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">14</td>
 <td class="border border-zinc-500 p-4">6</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">الخيوط</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">20</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">20</td>
 <td class="border border-zinc-500 p-4">12</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">الألعاب</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">أفضل قليلاً</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">أفضل قليلاً</td>
 <td class="border border-zinc-500 p-4">ممتاز</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">الإنتاجية</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">أفضل بوضوح</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">أفضل بوضوح</td>
 <td class="border border-zinc-500 p-4">أضعف</td>
 </tr>
 
@@ -1682,7 +2498,7 @@ margin:24px 0;
 <tr class="bg-zinc-900">
 
 <th class="border border-zinc-500 p-4">المعيار</th>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">i5-14600K</th>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">i5-14600K</th>
 <th class="border border-zinc-500 p-4">7600X3D</th>
 
 </tr>
@@ -1692,25 +2508,25 @@ margin:24px 0;
 
 <tr>
 <td class="border border-zinc-500 p-4">الألعاب</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">ممتاز</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">ممتاز</td>
 <td class="border border-zinc-500 p-4">الأفضل</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">الإنتاجية</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">أفضل بكثير</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">أفضل بكثير</td>
 <td class="border border-zinc-500 p-4">أضعف</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">استهلاك الطاقة</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">أعلى</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">أعلى</td>
 <td class="border border-zinc-500 p-4">أقل</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">القيمة للاعبين</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">ممتازة</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">ممتازة</td>
 <td class="border border-zinc-500 p-4">استثنائية</td>
 </tr>
 
@@ -1736,7 +2552,7 @@ margin:24px 0;
 <tr class="bg-zinc-900">
 
 <th class="border border-zinc-500 p-4">المعيار</th>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">i5-14600K</th>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">i5-14600K</th>
 <th class="border border-zinc-500 p-4">7700X</th>
 
 </tr>
@@ -1746,25 +2562,25 @@ margin:24px 0;
 
 <tr>
 <td class="border border-zinc-500 p-4">الأنوية</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">14</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">14</td>
 <td class="border border-zinc-500 p-4">8</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">الخيوط</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">20</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">20</td>
 <td class="border border-zinc-500 p-4">16</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">الألعاب</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">متقارب جداً</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">متقارب جداً</td>
 <td class="border border-zinc-500 p-4">متقارب جداً</td>
 </tr>
 
 <tr>
 <td class="border border-zinc-500 p-4">الإنتاجية</td>
-<th class="border border-zinc-500 p-4 bg-blue-950/30 text-blue-400 font-bold">أفضل</td>
+<th class="border border-zinc-500 p-4 bg-blue-950/30 text-indigo-300 font-bold">أفضل</td>
 <td class="border border-zinc-500 p-4">أقل قليلاً</td>
 </tr>
 
@@ -3638,7 +4454,6 @@ AMD أم Intel للألعاب؟ مقارنة شاملة بين العملاقي�
 
 `
   },
-
 
   {
   title:
@@ -5683,7 +6498,6 @@ style="
 #Ryzen7 #Corei7 #AMD #Intel #GamingPC #CPU #معالجات #ألعاب
 </div>`,
   },
-
 
   {
 title:
