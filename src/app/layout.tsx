@@ -3,6 +3,10 @@ import { Cairo } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
+import Script from "next/script";
+
+
+
 
 const cairo = Cairo({
   subsets: ["arabic"],
@@ -72,6 +76,14 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={`${cairo.className} bg-black text-white`}>
+
+        <Script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8482461516133186"
+    crossOrigin="anonymous"
+    strategy="afterInteractive"
+  />
+  
         {children}
         <Footer />
       </body>
