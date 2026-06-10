@@ -6,6 +6,9 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import NewsCard from "@/components/NewsCard";
 import ShareButtons from "@/components/ShareButtons";
+import ArticleImageLightbox from "@/components/ArticleImageLightbox";
+import BenchmarkSlider from "@/components/BenchmarkSlider";
+import type { SliderImage } from "@/components/BenchmarkSlider";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +17,7 @@ import ReadingProgress from "@/components/ReadingProgress";
 
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
+import { Fragment } from "react";
 
 
 
@@ -21,12 +25,85 @@ import type { CSSProperties } from "react";
     
   ===================================================== */
 
-  const createSlug = (text: string) =>
+const createSlug = (text: string) =>
   text
     .toLowerCase()
     .trim()
     .replace(/[^\w\s-]/g, "")
     .replace(/\s+/g, "-");
+
+const categorySlugs: Record<string, string> = {
+  سياسة: "politics",
+  اقتصاد: "economy",
+  تكنولوجيا: "technology",
+  ثقافة: "culture",
+};
+
+type ArticleContentPart =
+  | {
+      type: "html";
+      html: string;
+    }
+  | {
+      type: "slider";
+      images: SliderImage[];
+    };
+
+const imageSliderRegex =
+  /<div\s+data-image-slider(?:\s[^>]*)?>([\s\S]*?)<\/div>/g;
+
+const imageTagRegex = /<img\s+[^>]*src=["']([^"']+)["'][^>]*>/g;
+
+const getImageAlt = (imageTag: string) =>
+  imageTag.match(/\salt=["']([^"']*)["']/)?.[1] ?? "";
+
+const parseArticleContent = (html: string): ArticleContentPart[] => {
+  const parts: ArticleContentPart[] = [];
+  let lastIndex = 0;
+
+  for (const sliderMatch of html.matchAll(imageSliderRegex)) {
+    const fullMatch = sliderMatch[0];
+    const sliderHtml = sliderMatch[1];
+    const index = sliderMatch.index ?? 0;
+
+    if (index > lastIndex) {
+      parts.push({
+        type: "html",
+        html: html.slice(lastIndex, index),
+      });
+    }
+
+    const images = Array.from(sliderHtml.matchAll(imageTagRegex)).map(
+      (imageMatch) => ({
+        src: imageMatch[1],
+        alt: getImageAlt(imageMatch[0]),
+      })
+    );
+
+    if (images.length > 0) {
+      parts.push({
+        type: "slider",
+        images,
+      });
+    } else {
+      parts.push({
+        type: "html",
+        html: fullMatch,
+      });
+    }
+
+    lastIndex = index + fullMatch.length;
+  }
+
+  if (lastIndex < html.length) {
+    parts.push({
+      type: "html",
+      html: html.slice(lastIndex),
+    });
+  }
+
+  return parts;
+};
 
 
 /* =========================================================
@@ -189,6 +266,18 @@ export default async function ArticlePage({
       ? "#818cf8"
       : "#22c55e";
 
+  const categoryHref = `/category/${
+    categorySlugs[article.category] ?? createSlug(article.category)
+  }`;
+
+  const articleHtml = article.content.replace(
+    /<h([23])>([\s\S]*?)<\/h\1>/g,
+    (_, level, title) =>
+      `<h${level} id="${createSlug(title)}">${title}</h${level}>`
+  );
+
+  const articleParts = parseArticleContent(articleHtml);
+
   return (
     <>
     <script
@@ -311,9 +400,9 @@ export default async function ArticlePage({
 
   <span>
 
-<a href={`/category/${article.category}`}
-className="hover:text-white transition-colors" >
-  {article.category} </a>
+<Link href={categoryHref} className="hover:text-white transition-colors">
+  {article.category}
+</Link>
 
   </span>
 
@@ -489,14 +578,23 @@ className="hover:text-white transition-colors" >
                 "--article-accent": articleAccentColor,
               } as CSSProperties
             }
-            dangerouslySetInnerHTML={{
-            __html: article.content.replace(
-              /<h([23])>([\s\S]*?)<\/h\1>/g,
-              (_, level, title) =>
-                `<h${level} id="${createSlug(title)}">${title}</h${level}>`
-            ),
-            }}
-          />
+          >
+            {articleParts.map((part, index) => (
+              <Fragment key={index}>
+                {part.type === "html" ? (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: part.html,
+                    }}
+                  />
+                ) : (
+                  <BenchmarkSlider images={part.images} />
+                )}
+              </Fragment>
+            ))}
+          </article>
+
+          <ArticleImageLightbox />
 
 </div>
 

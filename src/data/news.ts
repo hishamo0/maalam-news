@@ -6469,9 +6469,26 @@ content:
 فكلتا السلسلتين تقدمان أداءً قوياً جداً في الألعاب والعمل والمونتاج، لكن هناك اختلافات مهمة قد تجعل أحدهما أفضل بالنسبة لك حسب طبيعة استخدامك وميزانيتك.
 </p>
 
-<p>
-في هذا الدليل سنقارن بين Ryzen 7 و Core i7 من جميع الجوانب، بداية من الأداء في الألعاب وحتى استهلاك الطاقة والترقية المستقبلية، لمعرفة أيهما يستحق الشراء في 2026.
-</p>
+
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/ryzen-vs-intel-ultimate-guide"
+style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+مقارنة شاملة بين AMD و Intel وأيهما أفضل في 2026؟
+</a>
+
+</div>
 
 <img
 src="/images/ryzen7-vs-i7-main.webp"
@@ -6488,46 +6505,46 @@ style="
 </h2>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[750px] text-right border-collapse">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">الفئة</th>
-<th class="px-3 py-3 border border-white/10">Ryzen 7</th>
-<th class="px-3 py-3 border border-white/10">Core i7</th>
+<th class="px-3 py-3 border border-zinc-500">الفئة</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core i7</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">الألعاب</td>
-<td class="px-3 py-3 border border-white/10">ممتاز</td>
-<td class="px-3 py-3 border border-white/10">متفوق قليلاً ببعض الألعاب</td>
+<td class="px-3 py-3 border border-zinc-500">الألعاب</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">ممتاز</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">متفوق قليلاً ببعض الألعاب</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">المونتاج والرندر</td>
-<td class="px-3 py-3 border border-white/10">قوي جداً</td>
-<td class="px-3 py-3 border border-white/10">ممتاز</td>
+<td class="px-3 py-3 border border-zinc-500">المونتاج والرندر</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">قوي جداً</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">ممتاز</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">الحرارة</td>
-<td class="px-3 py-3 border border-white/10">أبرد غالباً</td>
-<td class="px-3 py-3 border border-white/10">أعلى حرارة تحت الضغط</td>
+<td class="px-3 py-3 border border-zinc-500">الحرارة</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">أبرد غالباً</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">أعلى حرارة تحت الضغط</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">استهلاك الطاقة</td>
-<td class="px-3 py-3 border border-white/10">أفضل</td>
-<td class="px-3 py-3 border border-white/10">أعلى غالباً</td>
+<td class="px-3 py-3 border border-zinc-500">استهلاك الطاقة</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">أفضل</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">أعلى غالباً</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">السعر مقابل الأداء</td>
-<td class="px-3 py-3 border border-white/10">ممتاز</td>
-<td class="px-3 py-3 border border-white/10">قوي لكن أغلى أحياناً</td>
+<td class="px-3 py-3 border border-zinc-500">السعر مقابل الأداء</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">ممتاز</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">قوي لكن أغلى أحياناً</td>
 </tr>
 
 </tbody>
@@ -6552,34 +6569,34 @@ style="
 </h2>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[850px] text-right border-collapse">
+<table class="w-full min-w-[500px] md:min-w-[700px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">المعالج</th>
-<th class="px-3 py-3 border border-white/10">الأنوية</th>
-<th class="px-3 py-3 border border-white/10">الخيوط</th>
-<th class="px-3 py-3 border border-white/10">التردد الأقصى</th>
-<th class="px-3 py-3 border border-white/10">الكاش</th>
+<th class="px-3 py-3 border border-zinc-500">المعالج</th>
+<th class="px-3 py-3 border border-zinc-500">الأنوية</th>
+<th class="px-3 py-3 border border-zinc-500">الخيوط</th>
+<th class="px-3 py-3 border border-zinc-500">التردد الأقصى</th>
+<th class="px-3 py-3 border border-zinc-500">الكاش</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</td>
-<td class="px-3 py-3 border border-white/10">8</td>
-<td class="px-3 py-3 border border-white/10">16</td>
-<td class="px-3 py-3 border border-white/10">5.0GHz</td>
-<td class="px-3 py-3 border border-white/10">104MB</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7 7800X3D</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">8</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">16</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">5.0GHz</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">104MB</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Core i7-14700K</td>
-<td class="px-3 py-3 border border-white/10">20</td>
-<td class="px-3 py-3 border border-white/10">28</td>
-<td class="px-3 py-3 border border-white/10">5.6GHz</td>
-<td class="px-3 py-3 border border-white/10">61MB</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core i7-14700K</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">20</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">28</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">5.6GHz</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">61MB</td>
 </tr>
 
 </tbody>
@@ -6587,15 +6604,7 @@ style="
 </table>
 </div>
 
-<img
-src="/images/gaming-performance-chart.webp"
-alt="أداء الألعاب Ryzen 7 vs Core i7"
-style="
- width:100%;
- border-radius:18px;
- margin:24px 0;
-"
-/>
+
 
 <div
 style="
@@ -6636,40 +6645,40 @@ Benchmark نتائج الألعاب – دقة 1440p مع RTX 4080
 </h2>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[900px] text-right border-collapse">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">اللعبة</th>
-<th class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</th>
-<th class="px-3 py-3 border border-white/10">Core i7-14700K</th>
+<th class="px-3 py-3 border border-zinc-500">اللعبة</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7 7800X3D</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core i7-14700K</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">CS2</td>
-<td class="px-3 py-3 border border-white/10">420 FPS</td>
-<td class="px-3 py-3 border border-white/10">380 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">CS2</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">420 FPS</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">380 FPS</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Valorant</td>
-<td class="px-3 py-3 border border-white/10">690 FPS</td>
-<td class="px-3 py-3 border border-white/10">650 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Valorant</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">690 FPS</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">650 FPS</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Rainbow Six Siege</td>
-<td class="px-3 py-3 border border-white/10">510 FPS</td>
-<td class="px-3 py-3 border border-white/10">492 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Rainbow Six Siege</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">510 FPS</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">492 FPS</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Fortnite</td>
-<td class="px-3 py-3 border border-white/10">425 FPS</td>
-<td class="px-3 py-3 border border-white/10">410 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Fortnite</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400">425 FPS</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">410 FPS</td>
 </tr>
 
 </tbody>
@@ -6682,45 +6691,45 @@ Benchmark نتائج الألعاب – دقة 1440p مع RTX 4080
 </h2>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[950px] text-right border-collapse">
+<table class="w-full min-w-[450px] md:min-w-[700px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">اللعبة</th>
-<th class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</th>
-<th class="px-3 py-3 border border-white/10">Core i7-14700K</th>
-<th class="px-3 py-3 border border-white/10">الفارق</th>
+<th class="px-3 py-3 border border-zinc-500">اللعبة</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7 7500X3D</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core i7-14700K</th>
+<th class="px-3 py-3 border border-zinc-500">الفارق</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Cyberpunk 2077</td>
-<td class="px-3 py-3 border border-white/10">88 FPS</td>
-<td class="px-3 py-3 border border-white/10">84 FPS</td>
-<td class="px-3 py-3 border border-white/10">+4 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Cyberpunk 2077</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 p-4 text-red-400">88 FPS</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">84 FPS</td>
+<td dir="ltr" class="px-3 py-3 border border-zinc-500">+4 FPS</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Starfield</td>
-<td class="px-3 py-3 border border-white/10">75 FPS</td>
-<td class="px-3 py-3 border border-white/10">70 FPS</td>
-<td class="px-3 py-3 border border-white/10">+5 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Starfield</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 p-4 text-red-400">75 FPS</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">70 FPS</td>
+<td dir="ltr" class="px-3 py-3 border border-zinc-500">+5 FPS</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Red Dead Redemption 2</td>
-<td class="px-3 py-3 border border-white/10">144 FPS</td>
-<td class="px-3 py-3 border border-white/10">138 FPS</td>
-<td class="px-3 py-3 border border-white/10">+6 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Red Dead Redemption 2</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 p-4 text-red-400">144 FPS</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">138 FPS</td>
+<td dir="ltr" class="px-3 py-3 border border-zinc-500">+6 FPS</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Hogwarts Legacy</td>
-<td class="px-3 py-3 border border-white/10">92 FPS</td>
-<td class="px-3 py-3 border border-white/10">88 FPS</td>
-<td class="px-3 py-3 border border-white/10">+4 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Hogwarts Legacy</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 p-4 text-red-400">92 FPS</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 p-4 text-blue-400">88 FPS</td>
+<td dir="ltr" class="px-3 py-3 border border-zinc-500">+4 FPS</td>
 </tr>
 
 </tbody>
@@ -6734,51 +6743,61 @@ Benchmark نتائج الألعاب – دقة 1440p مع RTX 4080
 </h2>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[950px] text-right border-collapse">
+<table class="w-full min-w-[500px] md:min-w-[700px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">اللعبة</th>
-<th class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</th>
-<th class="px-3 py-3 border border-white/10">Core i7-14700K</th>
-<th class="px-3 py-3 border border-white/10">الأفضل</th>
+<th class="px-3 py-3 border border-zinc-500">اللعبة</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7 7500X3D</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core i7-14700K</th>
+<th class="px-3 py-3 border border-zinc-500">الأفضل</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Spider-Man Remastered</td>
-<td class="px-3 py-3 border border-white/10">95 FPS</td>
-<td class="px-3 py-3 border border-white/10">92 FPS</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+<td class="px-3 py-3 border border-zinc-500">Spider-Man Remastered</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-red-400">95 FPS</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-blue-400">92 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Ryzen 7</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">A Plague Tale Requiem</td>
-<td class="px-3 py-3 border border-white/10">121 FPS</td>
-<td class="px-3 py-3 border border-white/10">117 FPS</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+<td class="px-3 py-3 border border-zinc-500">A Plague Tale Requiem</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-red-400">121 FPS</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-blue-400">117 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Ryzen 7</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Forza Horizon 5</td>
-<td class="px-3 py-3 border border-white/10">187 FPS</td>
-<td class="px-3 py-3 border border-white/10">181 FPS</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+<td class="px-3 py-3 border border-zinc-500">Forza Horizon 5</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-red-400">187 FPS</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-blue-400">181 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Ryzen 7</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Far Cry 6</td>
-<td class="px-3 py-3 border border-white/10">201 FPS</td>
-<td class="px-3 py-3 border border-white/10">194 FPS</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+<td class="px-3 py-3 border border-zinc-500">Far Cry 6</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-red-400">201 FPS</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-blue-400">194 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Ryzen 7</td>
 </tr>
 
 </tbody>
 
 </table>
 </div>
+
+
+
+<h2>
+الأداء في المونتاج والعمل
+</h2>
+
+<p>
+في برامج المونتاج والرندر مثل Premiere Pro و Blender و After Effects تظهر قوة الأنوية والخيوط بشكل واضح.
+</p>
 
 <img
 src="/images/productivity-performance-chart.webp"
@@ -6790,58 +6809,50 @@ style="
 "
 />
 
-<h2>
-الأداء في المونتاج والعمل
-</h2>
-
-<p>
-في برامج المونتاج والرندر مثل Premiere Pro و Blender و After Effects تظهر قوة الأنوية والخيوط بشكل واضح.
-</p>
-
 <p>
 يتفوق Core i7 غالباً في بعض برامج الإنتاجية بفضل عدد الأنوية المرتفع، بينما يقدم Ryzen 7 أداءً ممتازاً مع استهلاك طاقة أقل.
 </p>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[950px] text-right border-collapse">
+<table class="w-full min-w-[500px] md:min-w-[700px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">البرنامج</th>
-<th class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</th>
-<th class="px-3 py-3 border border-white/10">Core i7-14700K</th>
-<th class="px-3 py-3 border border-white/10">الفائز</th>
+<th class="px-3 py-3 border border-zinc-500">البرنامج</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7 7500X3D</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core i7-14700K</th>
+<th class="px-3 py-3 border border-zinc-500">الفائز</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Premiere Pro</td>
-<td class="px-3 py-3 border border-white/10">873</td>
-<td class="px-3 py-3 border border-white/10">1042</td>
-<td class="px-3 py-3 border border-white/10">Core i7</td>
+<td class="px-3 py-3 border border-zinc-500">Premiere Pro</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-red-400">873</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-blue-400">1042</td>
+<td class="px-3 py-3 border border-zinc-500">Core i7</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Blender Render</td>
-<td class="px-3 py-3 border border-white/10">255 Samples</td>
-<td class="px-3 py-3 border border-white/10">339 Samples</td>
-<td class="px-3 py-3 border border-white/10">Core i7</td>
+<td class="px-3 py-3 border border-zinc-500">Blender Render</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-red-400">255 Samples</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-blue-400">339 Samples</td>
+<td class="px-3 py-3 border border-zinc-500">Core i7</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Cinebench R23</td>
-<td class="px-3 py-3 border border-white/10">18100</td>
-<td class="px-3 py-3 border border-white/10">33200</td>
-<td class="px-3 py-3 border border-white/10">Core i7</td>
+<td class="px-3 py-3 border border-zinc-500">Cinebench R23</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-red-400">18100</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-blue-400">33200</td>
+<td class="px-3 py-3 border border-zinc-500">Core i7</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">7-Zip Compression</td>
-<td class="px-3 py-3 border border-white/10">148 FPS</td>
-<td class="px-3 py-3 border border-white/10">211 FPS</td>
-<td class="px-3 py-3 border border-white/10">Core i7</td>
+<td class="px-3 py-3 border border-zinc-500">7-Zip Compression</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-red-400">148 FPS</td>
+<th dir="ltr" class="px-3 py-3 border border-zinc-500 text-blue-400">211 FPS</td>
+<td class="px-3 py-3 border border-zinc-500">Core i7</td>
 </tr>
 
 </tbody>
@@ -6858,6 +6869,25 @@ style="
 تعتمد النتائج السابقة على اختبارات متعددة باستخدام RTX 4080 ودقة 1440p وإعدادات High أو Ultra، وقد تختلف النتائج قليلاً حسب التجميعة والتبريد وإصدار اللعبة.
 </p>
 
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/ryzen-7-9800x3d-vs-core-ultra-7-265k"
+style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+Ryzen 7 9800X3D و Core Ultra 7 265K أيهما أفضل للألعاب والإنتاجية
+</a>
+
+</div>
+
 
 <h2>
 Ryzen 7 أم Core i7 للابتوبات؟
@@ -6872,63 +6902,63 @@ Ryzen 7 أم Core i7 للابتوبات؟
 </p>
 
 <p>
-أما معالجات Core i7 المحمولة فتقدم أداءً قوياً جداً خصوصاً في اللابتوبات المخصصة للألعاب والعمل الاحترافي.
+أما معالجات Core i7 المحمولة فتقدم أداءً قوياً جداً خصوصاً في اللابتوبات المخصصة للألعاب والعمل الاحترافي، ولكن ذلك غالباً ما يكون على حساب عمر البطارية بسبب الحرارة والاستهلاك العالي للطاقة..
 </p>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[950px] text-right border-collapse">
+<table class="w-full min-w-[700px] md:min-w-[900px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">العامل</th>
-<th class="px-3 py-3 border border-white/10">AMD Ryzen 7</th>
-<th class="px-3 py-3 border border-white/10">Intel Core i7</th>
-<th class="px-3 py-3 border border-white/10">الأفضل</th>
+<th class="px-3 py-3 border border-zinc-500">العامل</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">AMD Ryzen 7</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Intel Core i7</th>
+<th class="px-3 py-3 border border-zinc-500">الأفضل</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">كفاءة استهلاك الطاقة</td>
-<td class="px-3 py-3 border border-white/10">كفاءة ممتازة مع استهلاك طاقة أقل</td>
-<td class="px-3 py-3 border border-white/10">أداء قوي لكن باستهلاك طاقة أعلى</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+<td class="px-3 py-3 border border-zinc-500">كفاءة استهلاك الطاقة</td>
+<td class="px-3 py-3 border border-zinc-500">كفاءة ممتازة مع استهلاك طاقة أقل</td>
+<td class="px-3 py-3 border border-zinc-500">أداء قوي لكن باستهلاك طاقة أعلى</td>
+<td class="px-3 py-3 border border-zinc-500">Ryzen 7</td>
 </tr>
 
 <tr class="bg-white/5">
-<td class="px-3 py-3 border border-white/10">عمر البطارية</td>
-<td class="px-3 py-3 border border-white/10">غالباً أطول في اللابتوبات النحيفة</td>
-<td class="px-3 py-3 border border-white/10">منافس لكنه أقصر في كثير من الحالات</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+<td class="px-3 py-3 border border-zinc-500">عمر البطارية</td>
+<td class="px-3 py-3 border border-zinc-500">غالباً أطول في اللابتوبات النحيفة</td>
+<td class="px-3 py-3 border border-zinc-500">منافس لكنه أقصر في كثير من الحالات</td>
+<td class="px-3 py-3 border border-zinc-500">Ryzen 7</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">الحرارة</td>
-<td class="px-3 py-3 border border-white/10">حرارة أقل أثناء الاستخدام الطويل</td>
-<td class="px-3 py-3 border border-white/10">درجات حرارة أعلى تحت الضغط</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+<td class="px-3 py-3 border border-zinc-500">الحرارة</td>
+<td class="px-3 py-3 border border-zinc-500">حرارة أقل أثناء الاستخدام الطويل</td>
+<td class="px-3 py-3 border border-zinc-500">درجات حرارة أعلى تحت الضغط</td>
+<td class="px-3 py-3 border border-zinc-500">Ryzen 7</td>
 </tr>
 
 <tr class="bg-white/5">
-<td class="px-3 py-3 border border-white/10">الأداء مقابل استهلاك الطاقة</td>
-<td class="px-3 py-3 border border-white/10">توازن ممتاز بين الأداء والكفاءة</td>
-<td class="px-3 py-3 border border-white/10">أداء أعلى لكن بكفاءة أقل</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+<td class="px-3 py-3 border border-zinc-500">الأداء مقابل استهلاك الطاقة</td>
+<td class="px-3 py-3 border border-zinc-500">توازن ممتاز بين الأداء والكفاءة</td>
+<td class="px-3 py-3 border border-zinc-500">أداء أعلى لكن بكفاءة أقل</td>
+<td class="px-3 py-3 border border-zinc-500">Ryzen 7</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">الأداء اللحظي</td>
-<td class="px-3 py-3 border border-white/10">قوي ومستقر</td>
-<td class="px-3 py-3 border border-white/10">أداء أعلى في المهام الثقيلة</td>
-<td class="px-3 py-3 border border-white/10">Core i7</td>
+<td class="px-3 py-3 border border-zinc-500">الأداء اللحظي</td>
+<td class="px-3 py-3 border border-zinc-500">قوي ومستقر</td>
+<td class="px-3 py-3 border border-zinc-500">أداء أعلى في المهام الثقيلة</td>
+<td class="px-3 py-3 border border-zinc-500">Core i7</td>
 </tr>
 
 <tr class="bg-white/5">
-<td class="px-3 py-3 border border-white/10">الاستخدام الواقعي</td>
-<td class="px-3 py-3 border border-white/10">توفير ثابت وملحوظ للبطارية</td>
-<td class="px-3 py-3 border border-white/10">يعتمد بشكل كبير على تبريد الجهاز وإعدادات الشركة المصنعة</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7</td>
+<td class="px-3 py-3 border border-zinc-500">الاستخدام الواقعي</td>
+<td class="px-3 py-3 border border-zinc-500">توفير ثابت وملحوظ للبطارية</td>
+<td class="px-3 py-3 border border-zinc-500">يعتمد بشكل كبير على تبريد الجهاز وإعدادات الشركة المصنعة</td>
+<td class="px-3 py-3 border border-zinc-500">Ryzen 7</td>
 </tr>
 
 </tbody>
@@ -6989,28 +7019,31 @@ style="
 </p>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[850px] text-right border-collapse">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
+
+
+
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">المعالج</th>
-<th class="px-3 py-3 border border-white/10">أفضل كرت شاشة</th>
-<th class="px-3 py-3 border border-white/10">الاستخدام</th>
+<th class="px-3 py-3 border border-zinc-500">المعالج</th>
+<th class="px-3 py-3 border border-zinc-500">أفضل كرت شاشة</th>
+<th class="px-3 py-3 border border-zinc-500">الاستخدام</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</td>
-<td class="px-3 py-3 border border-white/10">RTX 4070 Super</td>
-<td class="px-3 py-3 border border-white/10">ألعاب 1440p</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7 7500X3D</td>
+<td class="px-3 py-3 border border-zinc-500">RTX 4070 Super</td>
+<td class="px-3 py-3 border border-zinc-500">ألعاب 1440p</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Core i7-14700K</td>
-<td class="px-3 py-3 border border-white/10">RTX 4080 Super</td>
-<td class="px-3 py-3 border border-white/10">ألعاب ومونتاج</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core i7-14700K</td>
+<td class="px-3 py-3 border border-zinc-500">RTX 4080 Super</td>
+<td class="px-3 py-3 border border-zinc-500">ألعاب ومونتاج</td>
 </tr>
 
 </tbody>
@@ -7048,31 +7081,31 @@ style="
 </h2>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[900px] text-right border-collapse">
+<table class="w-full min-w-[450px] md:min-w-[700px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">الاستخدام</th>
-<th class="px-3 py-3 border border-white/10">المعالج</th>
-<th class="px-3 py-3 border border-white/10">كرت الشاشة</th>
-<th class="px-3 py-3 border border-white/10">الرام</th>
+<th class="px-3 py-3 border border-zinc-500">الاستخدام</th>
+<th class="px-3 py-3 border border-zinc-500">المعالج</th>
+<th class="px-3 py-3 border border-zinc-500">كرت الشاشة</th>
+<th class="px-3 py-3 border border-zinc-500">الرام</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">ألعاب 1440p</td>
-<td class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</td>
-<td class="px-3 py-3 border border-white/10">RTX 4070 Super</td>
-<td class="px-3 py-3 border border-white/10">32GB DDR5</td>
+<td class="px-3 py-3 border border-zinc-500">ألعاب 1440p</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7 7500X3D</td>
+<td class="px-3 py-3 border border-zinc-500">RTX 4070 Super</td>
+<td class="px-3 py-3 border border-zinc-500">32GB DDR5</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">مونتاج ورندر</td>
-<td class="px-3 py-3 border border-white/10">Core i7-14700K</td>
-<td class="px-3 py-3 border border-white/10">RTX 4080 Super</td>
-<td class="px-3 py-3 border border-white/10">64GB DDR5</td>
+<td class="px-3 py-3 border border-zinc-500">مونتاج ورندر</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core i7-14700K</td>
+<td class="px-3 py-3 border border-zinc-500">RTX 4080 Super</td>
+<td class="px-3 py-3 border border-zinc-500">64GB DDR5</td>
 </tr>
 
 </tbody>
@@ -7105,28 +7138,40 @@ style="
 </p>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[750px] text-right border-collapse">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">المعالج</th>
-<th class="px-3 py-3 border border-white/10">استهلاك الضغط الكامل</th>
-<th class="px-3 py-3 border border-white/10">متوسط الحرارة</th>
+<th class="px-3 py-3 border border-zinc-500">المعالج</th>
+<th class="px-3 py-3 border border-zinc-500">استهلاك الضغط الكامل</th>
+<th class="px-3 py-3 border border-zinc-500">متوسط الحرارة</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Ryzen 7 7500X3D</td>
-<td class="px-3 py-3 border border-white/10">90W</td>
-<td class="px-3 py-3 border border-white/10">70°C</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7 7500X3D</td>
+<td class="px-3 py-3 border border-zinc-500 text-red-400">90W</td>
+<td class="px-3 py-3 border border-zinc-500 text-red-400">70°C</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">Core i7-14700K</td>
-<td class="px-3 py-3 border border-white/10">185W</td>
-<td class="px-3 py-3 border border-white/10">88°C</td>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core i7-14700K</td>
+<th class="px-3 py-3 border border-zinc-500 text-blue-400">280W</td>
+<th class="px-3 py-3 border border-zinc-500 text-blue-400">88°C</td>
+</tr>
+
+<tr>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7 7800X3D</td>
+<td class="px-3 py-3 border border-zinc-500 text-red-400">88W</td>
+<td class="px-3 py-3 border border-zinc-500 text-red-400">66°C</td>
+</tr>
+
+<tr>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core Ultra 7 265K</td>
+<th class="px-3 py-3 border border-zinc-500 text-blue-400">250W</td>
+<th class="px-3 py-3 border border-zinc-500 text-blue-400">125°C</td>
 </tr>
 
 </tbody>
@@ -7164,35 +7209,35 @@ style="
 </h2>
 
 <div class="overflow-x-auto custom-scrollbar my-8">
-<table class="w-auto min-w-[850px] text-right border-collapse">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-3 py-3 border border-white/10">Ryzen 7</th>
-<th class="px-3 py-3 border border-white/10">Core i7</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-red-400 font-bold">Ryzen 7</th>
+<th class="px-3 py-3 border border-zinc-500 p-4 text-blue-400 font-bold">Core i7</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">حرارة أقل</td>
-<td class="px-3 py-3 border border-white/10">أداء إنتاجية قوي</td>
+<td class="px-3 py-3 border border-zinc-500">حرارة أقل</td>
+<td class="px-3 py-3 border border-zinc-500">أداء إنتاجية قوي</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">كفاءة ممتازة</td>
-<td class="px-3 py-3 border border-white/10">ترددات أعلى</td>
+<td class="px-3 py-3 border border-zinc-500">كفاءة ممتازة</td>
+<td class="px-3 py-3 border border-zinc-500">ترددات أعلى</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">منصة أطول عمراً</td>
-<td class="px-3 py-3 border border-white/10">أداء ممتاز بالألعاب التنافسية</td>
+<td class="px-3 py-3 border border-zinc-500">منصة أطول عمراً</td>
+<td class="px-3 py-3 border border-zinc-500">أداء ممتاز بالألعاب التنافسية</td>
 </tr>
 
 <tr>
-<td class="px-3 py-3 border border-white/10">أفضل قيمة للألعاب</td>
-<td class="px-3 py-3 border border-white/10">أنوية أكثر ببعض الفئات</td>
+<td class="px-3 py-3 border border-zinc-500">أفضل قيمة للألعاب</td>
+<td class="px-3 py-3 border border-zinc-500">أنوية أكثر ببعض الفئات</td>
 </tr>
 
 </tbody>
