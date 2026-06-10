@@ -727,7 +727,7 @@ margin-top:10px;
 </p>
 
 `
-},
+  },
 
   {
 title:

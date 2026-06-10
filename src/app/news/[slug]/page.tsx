@@ -15,6 +15,8 @@ import ReadingProgress from "@/components/ReadingProgress";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 
+
+
     /* =====================================================
     
   ===================================================== */
@@ -496,9 +498,9 @@ className="hover:text-white transition-colors" >
             }}
           />
 
-        </div>
+</div>
 
-      </section>
+</section>
 
       {/* =================================================
          الأخبار المتعلقة
