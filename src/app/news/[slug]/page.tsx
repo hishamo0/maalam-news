@@ -50,7 +50,7 @@ type ArticleContentPart =
     };
 
 const imageSliderRegex =
-  /<div\s+data-image-slider(?:\s[^>]*)?>([\s\S]*?)<\/div>/g;
+  /<div\b(?=[^>]*\bdata-image-slider\b)[^>]*>([\s\S]*?)<\/div>/g;
 
 const imageTagRegex = /<img\s+[^>]*src=["']([^"']+)["'][^>]*>/g;
 
@@ -277,7 +277,6 @@ export default async function ArticlePage({
   );
 
   const articleParts = parseArticleContent(articleHtml);
-
   return (
     <>
     <script

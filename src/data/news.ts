@@ -6630,6 +6630,25 @@ Intel Core Ultra 7 265K vs Intel Core Ultra 9 285K
 </a>
 </div>
 
+<div data-image-slider>
+  <img
+    src="/images/ryzen-7-vs-core-7-counter-strike-test.webp"
+    alt="Ryzen 7 vs Core i7 gaming performance test"
+  />
+  <img
+    src="/images/ryzen-7-vs-core-7-hitman-test.webp"
+    alt="Ryzen 7 vs Core i7 gaming performance test"
+  />
+  <img
+    src="/images/ryzen-7-vs-core-7-watch-dogs-test.webp"
+    alt="Ryzen 7 vs Core i7 gaming performance test"
+  />
+  <img
+    src="/images/ryzen-7-vs-core-7-hogwarts-legacy-test.webp"
+    alt="Ryzen 7 vs Core i7 gaming performance test"
+  />
+</div>
+
 <h2>
 Benchmark نتائج الألعاب – دقة 1440p مع RTX 4080
 </h2>

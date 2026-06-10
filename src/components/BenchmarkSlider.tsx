@@ -29,7 +29,12 @@ export default function BenchmarkSlider({
   };
 
   return (
-    <div className="my-8">
+    <div
+      className="my-8"
+      data-lightbox-gallery
+      data-lightbox-images={JSON.stringify(images)}
+      data-lightbox-current={current}
+    >
       <div className="relative overflow-hidden border border-white/10 bg-zinc-950">
       <Image
         src={images[current].src}
@@ -37,6 +42,7 @@ export default function BenchmarkSlider({
         width={1600}
         height={900}
         className="w-full aspect-video object-cover"
+        data-lightbox-index={current}
       />
 
         {images.length > 1 && (
