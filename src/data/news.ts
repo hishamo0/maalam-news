@@ -16,6 +16,827 @@ export const news: NewsItem[] = [
 
   {
 title:
+"مراجعة Intel Core Ultra 7 265K: هل هو أفضل معالج متوازن في 2026؟",
+
+slug:
+"intel-core-ultra-7-265k-review",
+
+excerpt:
+"يعد Intel Core Ultra 7 265K أحد أهم معالجات Intel الحديثة، لكن هل يستطيع منافسة Ryzen 7 9800X3D في الألعاب؟ وهل يمثل ترقية حقيقية مقارنة بـ Core i7-14700K؟",
+
+description:
+"مراجعة شاملة لمعالج Intel Core Ultra 7 265K تتضمن الأداء في الألعاب والبرامج واستهلاك الطاقة ومقارنته مع Ryzen 7 9800X3D وCore i7-14700K.",
+
+category:
+"تكنولوجيا",
+
+image:
+"/images/core-ultra-7-265k-review.webp",
+
+author:
+"هيئة التحرير",
+
+date:
+"11 يونيو 2026",
+
+content:
+`
+
+<p>
+لم يكن إطلاق Intel Core Ultra 7 265K مجرد تحديث اعتيادي لمعالجات إنتل المكتبية، بل كان محاولة حقيقية لإعادة رسم صورة الشركة بعد سنوات من المنافسة الشرسة مع AMD. فبعد أن سيطرت معالجات Ryzen X3D على معظم اختبارات الألعاب، وجدت Intel نفسها أمام تحدٍ كبير يتمثل في تقديم معالج قادر على تحقيق توازن بين الأداء واستهلاك الطاقة والحرارة دون التضحية بالقوة الخام.
+</p>
+
+<p>
+لهذا السبب جاء Core Ultra 7 265K بمعمارية Arrow Lake الجديدة التي تختلف بشكل ملحوظ عن أجيال Alder Lake وRaptor Lake السابقة. فبدلاً من التركيز على رفع الترددات واستهلاك الطاقة إلى مستويات مرتفعة، حاولت Intel تحسين كفاءة الأنوية نفسها وتقديم منصة أكثر حداثة واستقراراً للمستخدمين.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/ntel-core-ultra-7-265k-vs-intel-core-ultra-9-285k"
+style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+Intel Core Ultra 7 265K vs Intel Core Ultra 9 285K
+</a>
+
+</div>
+
+
+
+
+<p>
+لكن السؤال الأهم يبقى: هل نجحت Intel فعلاً في ذلك؟ وهل يستحق Core Ultra 7 265K الشراء في 2026؟ أم أن Ryzen 7 9800X3D وRyzen 7 7800X3D ما زالا يتفوقان عليه بشكل واضح؟
+</p>
+
+<div class="bg-blue-950/30 border-r-4 border-blue-500 py-3 px-5 my-8 text-zinc-200 leading-loose rounded-sm">
+يقدم Core Ultra 7 265K أداءً قوياً في الألعاب والبرامج، لكنه يركز على الكفاءة واستهلاك الطاقة أكثر من التركيز على تحقيق أعلى عدد إطارات ممكن.
+</div>
+
+<h2>
+المواصفات التقنية
+</h2>
+
+<p>
+على الورق قد لا تبدو مواصفات Core Ultra 7 265K ثورية مقارنة بالجيل السابق، لكن التفاصيل تخفي وراءها تغييرات كبيرة في طريقة تصميم المعالج وآلية عمله.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-900">
+<th class="px-3 py-3 border border-zinc-500">المواصفة</th>
+<th class="px-3 py-3 border border-zinc-500">Core Ultra 7 265K</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">عدد الأنوية</td>
+<td class="px-3 py-3 border border-zinc-500">20 نواة</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">عدد الخيوط</td>
+<td class="px-3 py-3 border border-zinc-500">20 خيطاً</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">أنوية الأداء</td>
+<td class="px-3 py-3 border border-zinc-500">8</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">أنوية الكفاءة</td>
+<td class="px-3 py-3 border border-zinc-500">12</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">التردد الأقصى</td>
+<td class="px-3 py-3 border border-zinc-500">5.5GHz</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">ذاكرة L3</td>
+<td class="px-3 py-3 border border-zinc-500">30MB</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">دعم PCIe</td>
+<td class="px-3 py-3 border border-zinc-500">PCIe 5.0</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">دعم الذاكرة</td>
+<td class="px-3 py-3 border border-zinc-500">DDR5</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h2>
+ماذا يعني حذف Hyper-Threading في Core Ultra 7 265K؟
+</h2>
+
+<p>
+واحدة من أكثر التغييرات المثيرة للجدل في معمارية Arrow Lake الجديدة هي قرار Intel التخلي عن تقنية Hyper-Threading 
+التي رافقت معالجاتها لسنوات طويلة. تسمح هذه
+ التقنية للنواة الواحدة بتنفيذ خيطي معالجة في الوقت نفسه، ما يؤدي إلى زيادة عدد
+ الخيوط البرمجية التي يستطيع المعالج التعامل معها.
+</p>
+
+<p>
+ورغم أن هذا الأمر قد يبدو تراجعاً على الورق، فإن الواقع أكثر تعقيداً. فقد ركزت Intel
+ في Arrow Lake على تحسين كفاءة الأنوية نفسها
+  بدلاً من الاعتماد على الخيوط الإضافية لرفع الأداء. 
+  </p>
+
+  <p>
+  في الألعاب الحديثة لا
+  تمثل تقنية Hyper-Threading عاملاً حاسماً في معظم الحالات، لأن الأداء يعتمد بشكل أكبر على قوة النواة
+  وسرعة الوصول إلى البيانات وحجم الذاكرة المخبأة.
+</p>
+
+<p>
+أما في برامج الرندر والمونتاج وتعدد المهام الثقيلة، فما زالت الخيوط الإضافية تمنح أفضلية في بعض السيناريوهات،
+وهو ما يفسر استمرار Core i7-14700K في تقديم نتائج قوية داخل بعض التطبيقات الاحترافية.
+</p>
+
+<p>
+ومع ذلك نجحت Intel في تعويض جزء كبير من هذا النقص عبر تحسين بنية
+الأنوية وزيادة الكفاءة، ما سمح لمعالج Core Ultra 7 265K بتقديم أداء قوي مع استهلاك طاقة أقل ودرجات حرارة
+أفضل مقارنة بالجيل السابق.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/best-gaming-cpus-2026"
+style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+أفضل معالجات الألعاب في 2026
+</a>
+
+</div>
+
+
+<h2>
+أداء Core Ultra 7 265K في الألعاب
+</h2>
+
+<p>
+تعتمد الألعاب الحديثة بشكل متزايد على قوة المعالج، خصوصاً عند استخدام بطاقات رسومية فائقة الأداء مثل RTX 4090 أو RTX 5090. لذلك تم إجراء جميع الاختبارات باستخدام عتاد من الفئة العليا لإظهار الفروقات الحقيقية بين المعالجات.
+</p>
+
+<div class="bg-blue-950/30 border-r-4 border-blue-500 px-5 py-2 my-8 text-zinc-200 leading-loose rounded-sm">
+وعند النظر إلى نتائج الألعاب يتبين أن Core Ultra 7 265K يقدم أداءً قوياً للغاية، لكنه يواجه منافسة صعبة من معالجات Ryzen X3D التي تستفيد من تقنية 3D V-Cache.
+</div>
+
+<h2>
+Counter-Strike 2: نقطة ضعف واضحة أمام Ryzen
+</h2>
+
+<p>
+تعتبر Counter-Strike 2 واحدة من أكثر الألعاب اعتماداً على أداء المعالج، ولهذا السبب تظهر أفضلية معالجات X3D بشكل واضح جداً.
+</p>
+
+<p>
+في الاختبارات سجل Ryzen 7 9800X3D متوسط 668 إطاراً في الثانية، بينما حقق Ryzen 7 7800X3D نحو 592 إطاراً. أما Core Ultra 7 265K فقد سجل 440 إطاراً في الثانية.
+</p>
+
+<p>
+ورغم أن 440 إطاراً رقم ضخم عملياً ولن يشعر معظم اللاعبين بأي مشكلة، إلا أن الفارق الكبير يكشف مدى قوة ذاكرة 3D V-Cache في الألعاب التنافسية.
+</p>
+
+<img src="/images/cs2-7800x3d-vs-14700k.webp" alt="Counter Strike 2 Benchmark"/>
+
+<h2>
+Hitman: عندما تتقارب Intel وAMD
+</h2>
+
+<p>
+على عكس Counter-Strike 2، لا تعتمد Hitman بشكل كبير على حجم الذاكرة المخبأة فقط، بل تستفيد أيضاً من قوة الأنوية وسرعة المعالج بشكل عام. ولهذا السبب نرى تقارباً أكبر بين معالجات Intel وAMD مقارنة بما شاهدناه في الألعاب التنافسية.
+</p>
+
+<p>
+في هذا الاختبار حقق Core i7-14700K أفضل نتيجة بمتوسط 271 إطاراً في الثانية، بينما جاء Ryzen 7 7800X3D خلفه مباشرة مع 268 إطاراً. أما Core Ultra 7 265K فحقق نتيجة قوية جعلته قريباً من قمة الترتيب، مؤكداً أن الفارق بين المعالجات الحديثة أصبح محدوداً جداً في العديد من الألعاب الواقعية.
+</p>
+
+<p>
+الأمر المهم هنا أن تجربة اللعب الفعلية ستكون متشابهة إلى حد كبير بين جميع هذه المعالجات، خصوصاً عند استخدام شاشة بمعدل تحديث 144 أو 240 هرتز.
+</p>
+
+<img src="/images/hitman-7800x3d-vs-14700k.webp" alt="Hitman Benchmark">
+
+<div class="bg-green-950/30 border-r-4 border-green-500 py-3 px-5 my-8 text-zinc-200 leading-loose rounded-sm">
+إذا كنت تلعب ألعاب AAA الحديثة فقط، فلن تشعر غالباً بفارق كبير بين Core Ultra 7 265K وRyzen 7 7800X3D، لأن البطاقة الرسومية تصبح العامل الأكثر تأثيراً مع ارتفاع الدقة.
+</div>
+
+<h2>
+Hogwarts Legacy: عودة AMD إلى الصدارة
+</h2>
+
+<p>
+تعد Hogwarts Legacy من الألعاب التي تستفيد بشكل واضح من حجم الذاكرة المخبأة وسرعة الوصول إلى البيانات، وهو ما يمنح أفضلية لمعالجات Ryzen X3D.
+</p>
+
+<p>
+في هذا الاختبار حقق Ryzen 7 9800X3D متوسط 170 إطاراً في الثانية، متفوقاً بفارق مريح على Ryzen 7 7800X3D الذي سجل 141 إطاراً في الثانية.
+</p>
+
+<p>
+أما Core i7-14700K فقد سجل 121 إطاراً في الثانية، بينما جاء Core Ultra 7 265K بنتيجة 117 إطاراً في الثانية.
+</p>
+
+<p>
+قد يبدو الفارق محدوداً للوهلة الأولى، لكنه يصبح مهماً عند استخدام بطاقات رسومية فائقة الأداء وشاشات ذات معدلات تحديث مرتفعة.
+</p>
+
+<img src="/images/hogwarts-7800x3d-vs-14700k.webp" alt="Hogwarts Legacy Benchmark">
+
+<p>
+وتكشف هذه النتيجة عن نقطة مهمة للغاية؛ فمعالج Core Ultra 7 265K ليس مصمماً لمطاردة أرقام Ryzen X3D في الألعاب فقط، بل لتقديم توازن شامل بين الألعاب والعمل والإنتاجية.
+</p>
+
+<h2>
+Watch Dogs: أداء ممتاز لكن المنافسة شرسة
+</h2>
+
+<p>
+لطالما كانت سلسلة Watch Dogs من الألعاب الحساسة لأداء المعالج، خصوصاً عند استخدام إعدادات مرتفعة وبطاقات رسومية قوية.
+</p>
+
+<p>
+في هذا الاختبار حقق Ryzen 7 9800X3D متوسط 217 إطاراً في الثانية، بينما سجل Ryzen 7 7800X3D نحو 205 إطارات في الثانية.
+</p>
+
+<p>
+أما Core i7-14700K فقد حقق 179 إطاراً في الثانية، في حين سجل Core Ultra 7 265K حوالي 154 إطاراً في الثانية.
+</p>
+
+<p>
+هذه النتائج تؤكد مرة أخرى أن معالجات Ryzen X3D ما زالت تحتفظ بصدارة الألعاب البحتة، لكن الفارق لا يعني بالضرورة أن تجربة اللعب ستكون أفضل بشكل دراماتيكي.
+</p>
+
+<img src="/images/watchdogs-7800x3d-vs-14700k.webp" alt="Watch Dogs Benchmark">
+
+<h2>
+متوسط الأداء عبر 14 لعبة
+</h2>
+
+<p>
+عند تقييم أي معالج لا يكفي الاعتماد على لعبة واحدة أو لعبتين فقط، لأن بعض الألعاب قد تستفيد من خصائص معينة لا تتكرر في جميع العناوين الأخرى.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/ryzen-7-9800x3d-vs-core-ultra-7-265k"
+style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+مقارنة Ryzen 7 9800X3D و Core Ultra 7 265K
+</a>
+
+</div>
+
+<p>
+ولهذا السبب يعتبر متوسط الأداء عبر مجموعة كبيرة من الألعاب أفضل طريقة لمعرفة القوة الحقيقية للمعالج.
+</p>
+
+<p>
+في متوسط 14 لعبة حديثة احتل Ryzen 9 7950X3D الصدارة بمتوسط 177 إطاراً في الثانية، بينما جاء Core i9-14900K عند 162 إطاراً.
+</p>
+
+<p>
+أما Core Ultra 9 285K فسجل 154 إطاراً في الثانية، وهو ما يعطينا فكرة عامة عن مكانة معمارية Arrow Lake الجديدة مقارنة بالمنافسين.
+</p>
+
+<p>
+وتوضح هذه النتائج أن Intel نجحت في تحسين كفاءة معالجاتها بشكل ملحوظ، لكنها لم تستطع حتى الآن انتزاع تاج الألعاب من AMD.
+</p>
+
+<img src="/images/amd-vs-intel-14game-testing.webp" alt="14 Game Average">
+
+<div class="bg-yellow-950/30 border-r-4 border-yellow-500 py-3 px-5 my-8 text-zinc-200 leading-loose rounded-sm">
+إذا كان هدفك الأساسي هو الألعاب فقط، فمعالجات Ryzen X3D ما زالت تتصدر المشهد. أما إذا كنت تبحث عن معالج متوازن يجمع بين الألعاب والعمل واستهلاك الطاقة المعقول، فإن Core Ultra 7 265K يصبح خياراً أكثر جاذبية.
+</div>
+
+<h2>
+أداء Core Ultra 7 265K في البرامج والإنتاجية
+</h2>
+
+<p>
+بعيداً عن الألعاب تبدأ نقاط القوة الحقيقية لمعالج Core Ultra 7 265K بالظهور. فالمعالج يمتلك 20 نواة فعلية قادرة على التعامل مع أحمال العمل المتعددة بكفاءة عالية.
+</p>
+
+<p>
+سواء كنت تعمل على تحرير الفيديو أو تصميم النماذج ثلاثية الأبعاد أو تشغيل عدة تطبيقات احترافية في الوقت نفسه، فإن Core Ultra 7 265K يقدم تجربة سلسة ومستقرة للغاية.
+</p>
+
+<p>
+ولذلك لا يمكن تقييم هذا المعالج من خلال نتائج الألعاب فقط، لأن جزءاً كبيراً من قيمته الحقيقية يظهر داخل البرامج الاحترافية.
+</p>
+
+<h2>
+أداء Core Ultra 7 265K في Cinebench 2024
+</h2>
+
+<p>
+تعتبر اختبارات Cinebench من أهم الاختبارات المستخدمة لقياس قوة المعالج الخام في الأعمال الاحترافية مثل الرندر والتصميم الهندسي وإنشاء المحتوى. وعلى عكس الألعاب التي قد تستفيد من تقنيات معينة مثل 3D V-Cache، فإن Cinebench يكشف بشكل مباشر قدرة المعالج على استغلال جميع أنويته تحت الضغط الكامل.
+</p>
+
+<p>
+في هذا الاختبار حقق Core Ultra 7 265K نتيجة بلغت 2165 نقطة، متفوقاً بشكل طفيف على Core i7-14700K الذي سجل 1991 نقطة في بعض الاختبارات ومتقارباً معه في اختبارات أخرى تبعاً لإعدادات الطاقة المستخدمة.
+</p>
+
+<p>
+ورغم أن هذه النتيجة لا تضع المعالج في قمة الترتيب المطلق، إلا أنها تؤكد أنه ما زال قادراً على التعامل مع المشاريع الاحترافية الثقيلة دون أي مشكلة تذكر.
+</p>
+
+<p>
+أما Ryzen 7 7800X3D فقد سجل نحو 1116 نقطة فقط، وهو ما يعكس حقيقة معروفة منذ سنوات: معالجات X3D مصممة للألعاب أولاً، بينما تركز معالجات Intel غالباً على تحقيق توازن أفضل بين الألعاب والإنتاجية.
+</p>
+
+<img src="/images/intel-cpu-vs-amd-cpu-cinebench-testing.webp" alt="Core Ultra 7 265K Cinebench 2024">
+
+<div class="bg-blue-950/30 border-r-4 border-blue-500 py-3 px-5 my-8 text-zinc-200 leading-loose rounded-sm">
+إذا كنت تعمل على برامج التصميم والرندر بشكل يومي، فإن نتيجة Cinebench أهم بكثير من نتائج الألعاب، لأنها تعكس الأداء الفعلي الذي ستشاهده أثناء العمل.
+</div>
+
+<h2>
+أداء Core Ultra 7 265K في Blender
+</h2>
+
+<p>
+برنامج Blender يمثل اختباراً مختلفاً تماماً عن الألعاب. فهنا لا يهم عدد الإطارات في الثانية، بل الوقت اللازم لإنهاء عملية الرندر.
+</p>
+
+<p>
+كلما انخفض الزمن كان أداء المعالج أفضل، لأن المشروع ينتهي بسرعة أكبر ويصبح سير العمل أكثر سلاسة.
+</p>
+
+<p>
+في اختبار Blender Gooseberry حقق Core Ultra 7 265K زمناً قدره 360 ثانية تقريباً، متقدماً على Core i7-14700K الذي احتاج إلى 377 ثانية لإنهاء نفس المشهد.
+</p>
+
+<p>
+أما Ryzen 7 7800X3D فاحتاج إلى 541 ثانية تقريباً، بينما سجل Ryzen 7 9800X3D نحو 462 ثانية.
+</p>
+
+<p>
+هذه النتائج تظهر بوضوح أن Core Ultra 7 265K ليس مجرد معالج ألعاب، بل معالج قادر على تقديم أداء قوي في الأعمال الاحترافية أيضاً.
+</p>
+
+<img src="/images/core-ultra-7-265k-blender.webp" alt="Core Ultra 7 265K Blender Benchmark">
+
+<p>
+في المشاريع الطويلة التي تستغرق ساعات من الرندر يومياً، يمكن لهذا الفارق أن يوفر وقتاً كبيراً على صناع المحتوى ومصممي الرسوم ثلاثية الأبعاد.
+</p>
+
+<h2>
+أداء Core Ultra 7 265K في Adobe Premiere Pro
+</h2>
+
+<p>
+بالنسبة لصناع المحتوى ومحرري الفيديو، يعتبر Adobe Premiere Pro أحد أهم البرامج التي تحدد قيمة المعالج الحقيقية.
+</p>
+
+<p>
+فالمعالج لا يقتصر دوره على تصدير الفيديو فقط، بل يساهم أيضاً في تشغيل الخط الزمني والتعامل مع المؤثرات والانتقالات وتحسين سرعة العمل اليومية.
+</p>
+
+<p>
+في اختبارات Premiere Pro أظهر Core Ultra 7 265K أداءً قوياً جداً بفضل عدد الأنوية المرتفع والتحسينات التي قدمتها Intel في معمارية Arrow Lake.
+</p>
+
+<p>
+وعند مقارنة المعالج مع Ryzen 7 7800X3D يتضح أن Intel ما زالت تمتلك أفضلية واضحة في العديد من تطبيقات إنشاء المحتوى الاحترافية.
+</p>
+
+<img src="/images/intel-cpu-vs-amd-cpu-premiere-testing.webp" alt="Core Ultra 7 265K Premiere Pro">
+
+<h2>
+استهلاك الطاقة والحرارة
+</h2>
+
+<p>
+إذا كان هناك جانب واحد نجحت Intel في تحسينه بشكل واضح في هذا الجيل فهو استهلاك الطاقة.
+</p>
+
+<p>
+فخلال السنوات الماضية تعرضت معالجات Intel لانتقادات متكررة بسبب استهلاك الطاقة المرتفع ودرجات الحرارة العالية مقارنة بمنافساتها من AMD.
+</p>
+
+<img src="/images/intel-cpu-vs-amd-cpu-power-consumption.webp" alt="Core Ultra 7 265K Premiere Pro">
+
+<p>
+لكن Core Ultra 7 265K قدم تحسناً ملحوظاً في هذا الجانب، حيث أصبح أكثر كفاءة من Core i7-14700K مع الحفاظ على مستوى أداء قريب جداً منه في معظم السيناريوهات.
+</p>
+
+<p>
+وهذا يعني أن المستخدم سيحصل على حرارة أقل وضجيج أقل من نظام التبريد، إضافة إلى استقرار أفضل أثناء جلسات العمل الطويلة.
+</p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+
+<strong>اقرأ أيضاً:</strong>
+
+<a href="/news/intel-core-i5-14600k-review"
+style="display:block;margin-top:10px;color:#60a5fa;font-weight:600;">
+Intel Core i5-14600K مراجعة شاملة
+</a>
+
+</div>
+
+<h2>
+Core Ultra 7 265K أم Core i7-14700K؟
+</h2>
+
+<p>
+تبدو هذه المقارنة مربكة للعديد من المستخدمين، لأن Core Ultra 7 265K أحدث من Core i7-14700K
+، لكنه لا يتفوق عليه دائماً في كل الاختبارات.
+</p>
+
+<p>
+يمتلك Core i7-14700K عدداً أكبر من الخيوط بفضل Hyper-Threading، حيث يأتي مع 20 نواة
+و28 خيطاً، بينما يأتي Core Ultra 7 265K مع 20 نواة و20 خيطاً فقط.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[450px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-zinc-800">
+<th class="px-3 py-3 border border-zinc-500">المعيار</th>
+<th class="px-3 py-3 border border-zinc-500">Intel Core Ultra 7 265K</th>
+<th class="px-3 py-3 border border-zinc-500">Intel Core i7-14700K</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">المعمارية</td>
+<td class="px-3 py-3 border border-zinc-500">Arrow Lake</td>
+<td class="px-3 py-3 border border-zinc-500">Raptor Lake Refresh</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">دقة التصنيع</td>
+<td class="px-3 py-3 border border-zinc-500">TSMC N3B / N5</td>
+<td class="px-3 py-3 border border-zinc-500">Intel 7</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">عدد الأنوية/الخيوط</td>
+<td class="px-3 py-3 border border-zinc-500">20/20 </td>
+<td class="px-3 py-3 border border-zinc-500">20/28 </td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">أنوية الأداء (P-Cores)</td>
+<td class="px-3 py-3 border border-zinc-500">8</td>
+<td class="px-3 py-3 border border-zinc-500">8</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">أنوية الكفاءة (E-Cores)</td>
+<td class="px-3 py-3 border border-zinc-500">12</td>
+<td class="px-3 py-3 border border-zinc-500">12</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">التردد الأقصى</td>
+<td class="px-3 py-3 border border-zinc-500">5.5 GHz</td>
+<td class="px-3 py-3 border border-zinc-500">5.6 GHz</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">ذاكرة الكاش</td>
+<td class="px-3 py-3 border border-zinc-500">L2=36 / L3=30 MB</td>
+<td class="px-3 py-3 border border-zinc-500">L2=28 / L3=33 MB</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">كرت الشاشة المدمج</td>
+<td class="px-3 py-3 border border-zinc-500">Intel Xe-LPG</td>
+<td class="px-3 py-3 border border-zinc-500">Intel UHD 770</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">دعم الذاكرة</td>
+<td class="px-3 py-3 border border-zinc-500">DDR5 فقط</td>
+<td class="px-3 py-3 border border-zinc-500">DDR4 و DDR5</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">المقبس</td>
+<td class="px-3 py-3 border border-zinc-500">LGA1851</td>
+<td class="px-3 py-3 border border-zinc-500">LGA1700</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">استهلاك الطاقة</td>
+<td class="px-3 py-3 border border-zinc-500">125/250W </td>
+<td class="px-3 py-3 border border-zinc-500">125/283W </td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<p>
+من ناحية الأداء الخام، لا يقدم Core Ultra 7 265K قفزة ضخمة مقارنة بـ Core i7-14700K في الألعاب. بل إن بعض الاختبارات تظهر تفوقاً طفيفاً للجيل السابق.
+</p>
+
+<p>
+لكن الصورة تختلف عندما ننظر إلى استهلاك الطاقة والحرارة وكفاءة التشغيل، حيث يتمتع Core Ultra 7 265K بأفضلية واضحة.
+</p>
+
+<div data-image-slider>
+  <img
+    src="/images/ultra-7-265K-vs-core-i7-14700K-premiere-testing.webp"
+    alt="Core Ultra 7 265K vs Core i7 14700K premiere performance test"
+  />
+  <img
+    src="/images/ultra-7-265K-vs-core-i7-14700K-gaming-testing.webp"
+    alt="Core Ultra 7 265K vs Core i7 14700K gaming performance test"
+  />
+</div>
+
+<p>
+لذلك إذا كنت تمتلك Core i7-14700K بالفعل فلا توجد حاجة ملحة للترقية، أما إذا كنت تبني جهازاً جديداً من الصفر فسيكون Core Ultra 7 265K خياراً أكثر منطقية على المدى الطويل.
+</p>
+
+<h2>
+Core Ultra 7 265K أم Ryzen 7 9800X3D؟
+</h2>
+
+<p>
+هنا تصبح المقارنة أكثر تعقيداً، فـ Ryzen 7 9800X3D لا يحاول أن يكون أفضل معالج لكل شيء،
+بل يركز بشكل واضح على الألعاب، وهذا ما يجعله خطيراً جداً في هذا المجال.
+</p>
+
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[470px] md:min-w-[700px] text-right border-collapse">
+
+<thead>
+<tr class="bg-white/10">
+<th class="px-3 py-3 border border-zinc-500">المعيار</th>
+<th class="px-3 py-3 border border-zinc-500">AMD Ryzen 7 9800X3D</th>
+<th class="px-3 py-3 border border-zinc-500">Intel Core Ultra 7 265K</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">المعمارية</td>
+<td class="px-3 py-3 border border-zinc-500">Zen 5 X3D</td>
+<td class="px-3 py-3 border border-zinc-500">Arrow Lake</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">دقة التصنيع</td>
+<td class="px-3 py-3 border border-zinc-500">TSMC 4nm</td>
+<td class="px-3 py-3 border border-zinc-500">TSMC N3B / N5</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">الأنوية/الخيوط</td>
+<td class="px-3 py-3 border border-zinc-500">8/16</td>
+<td class="px-3 py-3 border border-zinc-500">20/20</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">أنوية الأداء</td>
+<td class="px-3 py-3 border border-zinc-500">8 Zen 5</td>
+<td class="px-3 py-3 border border-zinc-500">8 P-Cores</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">أنوية الكفاءة</td>
+<td class="px-3 py-3 border border-zinc-500">لا يوجد</td>
+<td class="px-3 py-3 border border-zinc-500">12 E-Cores</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">التردد </td>
+<td dir="ltr" class="px-3 py-3 border border-zinc-500">4.7 GHz / 5.2 GHz</td>
+<td dir="ltr" class="px-3 py-3 border border-zinc-500">3.9 GHz / 5.5 GHz</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">ذاكرة الكاش</td>
+<td class="px-3 py-3 border border-zinc-500">L2=8MB / L3=96 MB</td>
+<td class="px-3 py-3 border border-zinc-500">L2=36 MB / L3=30 MB</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">تقنية 3D V-Cache</td>
+<td class="px-3 py-3 border border-zinc-500">✔️ نعم</td>
+<td class="px-3 py-3 border border-zinc-500">❌ لا</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">كرت الشاشة المدمج</td>
+<td class="px-3 py-3 border border-zinc-500">AMD Radeon Graphics</td>
+<td class="px-3 py-3 border border-zinc-500">Intel Xe-LPG</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">دعم الذاكرة</td>
+<td class="px-3 py-3 border border-zinc-500">DDR5</td>
+<td class="px-3 py-3 border border-zinc-500">DDR5</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">المقبس</td>
+<td class="px-3 py-3 border border-zinc-500">AM5</td>
+<td class="px-3 py-3 border border-zinc-500">LGA1851</td>
+</tr>
+
+<tr>
+<td class="px-3 py-3 border border-zinc-500">استهلاك الطاقة الرسمي</td>
+<td class="px-3 py-3 border border-zinc-500">120 واط</td>
+<td class="px-3 py-3 border border-zinc-500">125 واط</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<p>
+إذا كان استخدامك يقتصر على الألعاب فقط، فإن Ryzen 7 9800X3D يتفوق بوضوح في معظم الاختبارات، بفضل تقنية 3D V-Cache وذاكرة L3 الضخمة، وخصوصاً
+الألعاب التي تعتمد بشكل كبير على المعالج مثل Counter-Strike 2 وHogwarts Legacy.
+</p>
+
+<div data-image-slider>
+  <img
+    src="/images/ultra-7-265K-vs-ryzen-7-9800x3d-gaming-testing.webp"
+    alt="Core Ultra 7 265K vs Core i7 14700K Game performance test"
+  />
+  <img
+    src="/images/ultra-7-265K-vs-ryzen-7-9800x3d-cinebench-testing.webp"
+    alt="Core Ultra 7 265K vs Ryzen 7 9800X3D Cinbench Test"
+  />
+</div>
+
+<p>
+أما إذا كنت تجمع بين الألعاب والعمل الاحترافي، فإن Core Ultra 7 265K يصبح منافساً قوياً جداً بفضل تفوقه في العديد من برامج الإنتاجية والرندر.
+</p>
+
+<div class="bg-red-950/30 border-r-4 border-red-500 py-3 px-5 my-8 text-zinc-200 leading-loose rounded-sm">
+Ryzen 7 9800X3D هو الخيار الأفضل للألعاب البحتة، بينما يقدم Core Ultra 7 265K توازناً أفضل بين الألعاب والعمل الاحترافي.
+</div>
+
+<h3>
+منصة Arrow Lake وLGA1851: هل هي ترقية مستقبلية جيدة؟
+</h3>
+
+<p>
+لا يمكن تقييم Core Ultra 7 265K بمعزل عن المنصة التي يأتي معها. فالمعالج يعتمد على مقبس LGA1851 الجديد، وهذا يعني أن المستخدم يحتاج إلى لوحة أم جديدة بدلاً من استخدام لوحات LGA1700 الخاصة بمعالجات الجيل الثاني عشر والثالث عشر والرابع عشر.
+</p>
+
+<p>
+هذه النقطة مهمة جداً، لأن تكلفة الترقية لا تقتصر على سعر المعالج وحده، بل تشمل اللوحة الأم وربما الذاكرة أيضاً حسب التجميعة القديمة.
+</p>
+
+<p>
+من ناحية التقنيات الحديثة، توفر منصة Arrow Lake دعماً قوياً لذاكرة DDR5 وواجهة PCIe 5.0، ما يجعلها مناسبة للتجميعات الحديثة التي تستخدم بطاقات رسومية ووحدات تخزين فائقة السرعة.
+</p>
+
+<p>
+لكن في المقابل، إذا كنت تمتلك بالفعل منصة LGA1700 مع معالج مثل Core i7-14700K أو Core i9-13900K، فقد لا تكون الترقية إلى Core Ultra 7 265K مغرية بما يكفي، لأنك ستدفع تكلفة منصة كاملة مقابل تحسن محدود في بعض السيناريوهات.
+</p>
+
+<div class="bg-blue-950/30 border-r-4 border-blue-500 py-3 px-5 my-8 text-zinc-200 leading-loose rounded-sm">
+Core Ultra 7 265K يصبح خياراً منطقياً أكثر عند بناء جهاز جديد من الصفر، أما كترقية من منصة Intel حديثة فقد لا يكون الخيار الأكثر توفيراً.
+</div>
+
+
+
+
+
+
+
+
+<h2>
+هل يستحق Intel Core Ultra 7 265K الشراء؟
+</h2>
+
+<p>
+الإجابة تعتمد على نوع استخدامك أكثر من أي شيء آخر.
+</p>
+
+<p>
+إذا كنت تبحث عن أعلى عدد إطارات ممكن بغض النظر عن أي عامل آخر، فإن Ryzen 7 9800X3D يبقى الخيار الأقوى حالياً.
+</p>
+
+<p>
+أما إذا كنت تريد معالجاً قادراً على تشغيل أحدث الألعاب، وتحرير الفيديو، والرندر، والعمل الاحترافي، مع استهلاك طاقة أقل من الأجيال السابقة، فإن Core Ultra 7 265K يعد واحداً من أفضل المعالجات المتوازنة التي أطلقتها Intel خلال السنوات الأخيرة.
+</p>
+
+<p>
+ورغم أنه لا ينتزع تاج الألعاب من AMD، إلا أنه يثبت أن Intel ما زالت تمتلك القدرة على المنافسة بقوة، خصوصاً لدى المستخدمين الذين يبحثون عن جهاز قادر على أداء جميع المهام بكفاءة عالية دون التضحية بالاستقرار أو كفاءة الطاقة.
+</p>
+<h2>
+الأسئلة الشائعة حول Intel Core Ultra 7 265K
+</h2>
+
+<h3>
+هل Core Ultra 7 265K أفضل من Core i7-14700K؟
+</h3>
+
+<p>
+يعتمد ذلك على طبيعة الاستخدام. ففي الألعاب البحتة لا يقدم Core Ultra 7 265K قفزة كبيرة مقارنة بـ Core i7-14700K، بل إن بعض الألعاب قد تظهر نتائج متقاربة جداً بين المعالجين. لكن عند النظر إلى استهلاك الطاقة والحرارة وكفاءة التشغيل، فإن معالج Core Ultra 7 265K يتفوق بوضوح بفضل معمارية Arrow Lake الأحدث.
+</p>
+
+<h3>
+هل Core Ultra 7 265K مناسب للألعاب؟
+</h3>
+
+<p>
+نعم، يعد Core Ultra 7 265K من أقوى معالجات الألعاب المتوفرة حالياً، وقادر على تشغيل أحدث البطاقات الرسومية مثل RTX 4090 وRTX 5090 دون مشاكل. لكنه لا يتصدر اختبارات الألعاب أمام معالجات AMD المزودة بتقنية 3D V-Cache مثل Ryzen 7 7800X3D وRyzen 7 9800X3D.
+</p>
+
+<h3>
+هل Core Ultra 7 265K مناسب للمونتاج وصناعة المحتوى؟
+</h3>
+
+<p>
+يعتبر المعالج خياراً ممتازاً للمونتاج وصناعة المحتوى بفضل امتلاكه 20 نواة فعلية وأدائه القوي في برامج مثل Adobe Premiere Pro وBlender وCinebench. ولهذا السبب يعد خياراً متوازناً للمستخدمين الذين يجمعون بين الألعاب والعمل الاحترافي.
+</p>
+
+<h3>
+هل يحتاج Core Ultra 7 265K إلى تبريد مائي؟
+</h3>
+
+<p>
+يفضل استخدام مبرد هوائي احترافي من الفئة العليا أو نظام تبريد مائي بقياس 240 ملم أو 360 ملم للحصول على أفضل درجات حرارة ممكنة، خصوصاً أثناء الضغط الطويل أو أعمال الرندر.
+</p>
+
+<h3>
+هل يستحق Core Ultra 7 265K الترقية من Core i7-12700K؟
+</h3>
+
+<p>
+نعم، في هذه الحالة تكون الترقية منطقية أكثر، لأن الفارق بين المعالجين يظهر بوضوح في الألعاب الحديثة وبرامج الإنتاجية واستهلاك الطاقة ودعم التقنيات الحديثة مثل DDR5 وPCIe 5.0.
+</p>
+
+<h3>
+الخلاصة النهائية
+</h3>
+
+<p>
+نجحت Intel مع Core Ultra 7 265K في معالجة عدد من أبرز مشاكل الأجيال السابقة، وعلى رأسها استهلاك الطاقة والحرارة المرتفعة. ورغم أن المعالج لا يستطيع انتزاع لقب أفضل معالج ألعاب من Ryzen 7 9800X3D، إلا أنه يقدم مزيجاً متوازناً من الأداء والكفاءة يجعله خياراً ممتازاً للمستخدمين الذين لا يقتصر استخدامهم على الألعاب فقط.
+</p>
+
+<p>
+فإذا كان هدفك الرئيسي هو تحقيق أعلى عدد إطارات ممكن في الألعاب التنافسية، فإن Ryzen 7 9800X3D يبقى الخيار الأفضل. أما إذا كنت تبحث عن معالج قادر على تشغيل أحدث الألعاب والعمل الاحترافي والرندر والمونتاج بكفاءة عالية مع استهلاك طاقة أكثر اعتدالاً، فإن Intel Core Ultra 7 265K يعد من أفضل الخيارات المتاحة في 2026.
+</p>
+
+`
+  },
+
+
+
+  {
+title:
 "أفضل معالجات الألعاب في 2026: ترتيب أقوى معالجات AMD و Intel للألعاب",
 
 slug:
@@ -994,7 +1815,7 @@ Core i7-14700K
 </p>
 
 `
-},
+  },
 
 
   {
