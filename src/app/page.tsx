@@ -28,7 +28,7 @@ export default function Home() {
       <Hero />
 
       {/* الإعلان */}
-      <section className="w-full px-4 md:px-8 py-8">
+      <section className="hidden">
 
         <div
           className="

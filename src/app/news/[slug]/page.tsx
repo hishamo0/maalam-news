@@ -9,6 +9,7 @@ import ShareButtons from "@/components/ShareButtons";
 import ArticleImageLightbox from "@/components/ArticleImageLightbox";
 import BenchmarkSlider from "@/components/BenchmarkSlider";
 import type { SliderImage } from "@/components/BenchmarkSlider";
+import { getDraftArticle, getPublishedArticle } from "@/lib/cmsStore";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -18,6 +19,9 @@ import ReadingProgress from "@/components/ReadingProgress";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { Fragment } from "react";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 
 
@@ -114,6 +118,9 @@ type Props = {
   params: Promise<{
     slug: string;
   }>;
+  searchParams?: Promise<{
+    preview?: string;
+  }>;
 };
 
 /* =========================================================
@@ -126,17 +133,25 @@ export async function generateMetadata({
 
   const { slug } = await params;
 
-  const article = news.find(
+  const baseArticle = news.find(
     (a) => a.slug === slug
   );
 
-  if (!article) {
+  if (!baseArticle) {
 
     return {
       title: "المقال غير موجود",
     };
 
   }
+
+  const publishedArticle = await getPublishedArticle(slug);
+  const article = publishedArticle
+    ? {
+        ...baseArticle,
+        ...publishedArticle,
+      }
+    : baseArticle;
 
 
   /* =====================================================
@@ -201,6 +216,7 @@ export async function generateMetadata({
 
 export default async function ArticlePage({
   params,
+  searchParams,
 }: Props) {
 
   /* =====================================================
@@ -208,12 +224,13 @@ export default async function ArticlePage({
   ===================================================== */
 
   const { slug } = await params;
+  const previewMode = (await searchParams)?.preview === "draft";
 
   /* =====================================================
      البحث عن المقال الحالي
   ===================================================== */
 
-  const article = news.find(
+  const baseArticle = news.find(
     (a) => a.slug === slug
   );
 
@@ -221,9 +238,23 @@ export default async function ArticlePage({
      إذا المقال غير موجود
   ===================================================== */
 
-  if (!article) {
+  if (!baseArticle) {
     notFound();
   }
+
+  const publishedArticle = await getPublishedArticle(slug);
+  const draftArticle = previewMode ? await getDraftArticle(slug) : null;
+  const article = draftArticle
+    ? {
+        ...baseArticle,
+        ...draftArticle,
+      }
+    : publishedArticle
+    ? {
+        ...baseArticle,
+        ...publishedArticle,
+      }
+    : baseArticle;
 
   const headings = Array.from(
   article.content.matchAll(/<h([23])>([\s\S]*?)<\/h\1>/g)
@@ -320,6 +351,31 @@ export default async function ArticlePage({
 
       <Header />
 
+      {previewMode && (
+        <div className="fixed bottom-4 left-4 z-[60] max-w-sm border border-sky-400/30 bg-sky-950/95 p-3 text-sm leading-7 text-sky-100 shadow-2xl">
+          <p>
+            {draftArticle
+              ? "أنت تشاهد معاينة المسودة. لن تظهر هذه التغييرات للزوار إلا بعد الضغط على نشر."
+              : "لا توجد مسودة محفوظة لهذا المقال حالياً."}
+          </p>
+          <Link
+            href={`/dashboard/news/${article.slug}/edit`}
+            className="mt-3 flex h-10 items-center justify-center bg-white px-4 text-sm font-black text-black hover:bg-zinc-200"
+          >
+            الرجوع للمحرر
+          </Link>
+        </div>
+      )}
+
+      {!previewMode && (
+        <Link
+          href={`/dashboard/news/${article.slug}/edit`}
+          className="fixed bottom-4 left-4 z-[60] flex h-11 items-center justify-center border border-white/10 bg-[#101012] px-4 text-sm font-black text-white shadow-2xl hover:bg-white/10"
+        >
+          الرجوع للمحرر
+        </Link>
+      )}
+
       {/* =================================================
          Hero المقال
       ================================================= */}
@@ -412,7 +468,10 @@ export default async function ArticlePage({
 
             {/* العنوان */}
 
-            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mt-6 max-w-5xl">
+            <h1
+              className="text-3xl md:text-5xl font-extrabold leading-tight mt-6 max-w-5xl"
+              data-article-title
+            >
 
               {article.title}
 
@@ -422,7 +481,7 @@ export default async function ArticlePage({
 
             <div className="flex items-center gap-4 text-zinc-300 mt-6 text-sm">
 
-              <span>
+              <span data-article-author>
                 {article.author}
               </span>
 
@@ -430,7 +489,7 @@ export default async function ArticlePage({
                 •
               </span>
 
-              <span>
+              <span data-article-date>
                 {article.date}
               </span>
 
@@ -568,8 +627,6 @@ export default async function ArticlePage({
 
               prose-li:text-zinc-300
 
-              prose-a:text-indigo-400
-
               prose-blockquote:border-indigo-500
             "
             style={
@@ -577,6 +634,7 @@ export default async function ArticlePage({
                 "--article-accent": articleAccentColor,
               } as CSSProperties
             }
+            data-article-content
           >
             {articleParts.map((part, index) => (
               <Fragment key={index}>
