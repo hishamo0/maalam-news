@@ -8571,7 +8571,7 @@ font-weight:600;">
 <tbody>
 
 <tr>
-<td class="p-4 border border-zinc-500 text-red-400 font-bold">Ryzen 7 7500X3D</td>
+<td class="p-4 border border-zinc-500 text-red-400 font-bold">Ryzen 7 7800X3D</td>
 <td class="p-4 border border-zinc-500">الألعاب</td>
 <td class="p-4 border border-zinc-500">8</td>
 <td class="p-4 border border-zinc-500">16</td>

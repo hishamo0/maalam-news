@@ -2,13 +2,20 @@
 
 import { useEffect, useState } from "react";
 
-import { news } from "@/data/news";
 import Image from "next/image";
 import Link from "next/link";
 
 const SLIDE_DELAY = 5000;
 const FADE_DELAY = 280;
 const FEATURED_COUNT = 5;
+
+type HeroItem = {
+  category: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  slug: string;
+};
 
 const categoryStyles: Record<string, { text: string; hover: string }> = {
   سياسة: {
@@ -29,12 +36,13 @@ const categoryStyles: Record<string, { text: string; hover: string }> = {
   },
 };
 
-export default function Hero() {
+export default function Hero({ items }: { items: HeroItem[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isChanging, setIsChanging] = useState(false);
 
-  const featuredNews = news.slice(0, FEATURED_COUNT);
+  const featuredNews = items.slice(0, FEATURED_COUNT);
   const heroArticle = featuredNews[currentIndex];
+
   const categoryStyle = categoryStyles[heroArticle.category] ?? categoryStyles.سياسة;
 
   const goToSlide = (index: number) => {
@@ -51,6 +59,10 @@ export default function Hero() {
   };
 
   useEffect(() => {
+    if (featuredNews.length <= 1) {
+      return;
+    }
+
     const interval = window.setInterval(() => {
       setIsChanging(true);
 
@@ -62,6 +74,10 @@ export default function Hero() {
 
     return () => window.clearInterval(interval);
   }, [featuredNews.length]);
+
+  if (!heroArticle) {
+    return null;
+  }
 
   return (
     <section className="w-full px-2 py-6 sm:px-4 sm:py-8">

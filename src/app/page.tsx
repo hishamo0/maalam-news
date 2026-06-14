@@ -1,5 +1,3 @@
-"use client";
-
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LatestNewsSlider from "@/components/LatestNewsSlider";
@@ -15,6 +13,18 @@ import { news } from "@/data/news";
 
 
 export default function Home() {
+  const homeNews = news.map(
+    ({ category, title, excerpt, image, slug, author, date }) => ({
+      category,
+      title,
+      excerpt,
+      image,
+      slug,
+      author,
+      date,
+    })
+  );
+
   const technologyNews = news.filter(
     (item) => item.category === "تكنولوجيا"
   );
@@ -25,7 +35,7 @@ export default function Home() {
 
 <Header />
 
-      <Hero />
+      <Hero items={homeNews} />
 
       {/* الإعلان */}
       <section className="hidden">
@@ -161,7 +171,7 @@ export default function Home() {
                 color="bg-red-500"
               />
 
-              <LatestNewsSlider items={news} />
+              <LatestNewsSlider items={homeNews} />
 
         </div>
 

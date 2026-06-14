@@ -2,13 +2,22 @@
 
 import { useEffect, useState } from "react";
 
-import type { NewsItem } from "@/data/news";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+type LatestNewsSliderItem = {
+  category: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  slug: string;
+  author: string;
+  date: string;
+};
+
 type LatestNewsSliderProps = {
-  items: NewsItem[];
+  items: LatestNewsSliderItem[];
 };
 
 const SLIDE_DELAY = 5000;
