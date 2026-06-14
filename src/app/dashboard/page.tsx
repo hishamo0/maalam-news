@@ -3,6 +3,8 @@ import Link from "next/link";
 import {
   BarChart3,
   CalendarDays,
+  CheckCircle2,
+  Clock3,
   Eye,
   FilePenLine,
   FileText,
@@ -11,7 +13,6 @@ import {
   ImageIcon,
   LayoutDashboard,
   Newspaper,
-  Plus,
   Search,
   Settings,
   Sparkles,
@@ -19,10 +20,23 @@ import {
 } from "lucide-react";
 
 import { news } from "@/data/news";
+import { getCmsStoreSnapshot } from "@/lib/cmsStore";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "لوحة التحكم | Maalam.net",
   description: "لوحة تحكم تحريرية لإدارة محتوى Maalam.net.",
+};
+
+type DashboardSearchParams = {
+  q?: string;
+  category?: string;
+  status?: string;
+};
+
+type Props = {
+  searchParams?: Promise<DashboardSearchParams>;
 };
 
 const categoryStyles: Record<string, { text: string; border: string; bg: string }> = {
@@ -57,52 +71,122 @@ const navItems = [
   { label: "الإعدادات", icon: Settings },
 ];
 
+const statusLabels = {
+  all: "الكل",
+  draft: "مسودات",
+  updated: "منشور معدل",
+  published: "منشور",
+} as const;
+
 const stripHtml = (html: string) => html.replace(/<[^>]*>/g, "").trim();
 
-const categoryCounts = news.reduce<Record<string, number>>((acc, item) => {
-  acc[item.category] = (acc[item.category] ?? 0) + 1;
-  return acc;
-}, {});
+const normalizeText = (value: string) => value.trim().toLowerCase();
 
-const recentNews = news.slice(0, 7);
-const featuredNews = news[0];
-const averageExcerptLength = Math.round(
-  news.reduce((total, item) => total + stripHtml(item.excerpt).length, 0) /
-    Math.max(news.length, 1)
-);
+function buildDashboardHref(params: DashboardSearchParams) {
+  const query = new URLSearchParams();
 
-const stats = [
-  {
-    label: "كل المقالات",
-    value: news.length.toString(),
-    change: "منشورة",
-    icon: FileText,
-    accent: "text-red-300",
-  },
-  {
-    label: "التصنيفات",
-    value: Object.keys(categoryCounts).length.toString(),
-    change: "نشطة",
-    icon: FolderKanban,
-    accent: "text-sky-300",
-  },
-  {
-    label: "متوسط المقتطف",
-    value: averageExcerptLength.toString(),
-    change: "حرف",
-    icon: BarChart3,
-    accent: "text-indigo-300",
-  },
-  {
-    label: "جاهزية النشر",
-    value: "100%",
-    change: "بدون مسودات",
-    icon: Gauge,
-    accent: "text-emerald-300",
-  },
-];
+  if (params.q) query.set("q", params.q);
+  if (params.category) query.set("category", params.category);
+  if (params.status) query.set("status", params.status);
 
-export default function DashboardPage() {
+  const queryString = query.toString();
+  return queryString ? `/dashboard?${queryString}` : "/dashboard";
+}
+
+export default async function DashboardPage({ searchParams }: Props) {
+  const params = (await searchParams) ?? {};
+  const query = params.q?.trim() ?? "";
+  const selectedCategory = params.category?.trim() ?? "";
+  const selectedStatus = params.status?.trim() ?? "all";
+  const store = await getCmsStoreSnapshot();
+
+  const dashboardArticles = news.map((item) => {
+    const draft = store.drafts[item.slug];
+    const publishedOverride = store.published[item.slug];
+    const editableArticle = draft ?? publishedOverride ?? item;
+    const status = draft ? "draft" : publishedOverride ? "updated" : "published";
+
+    return {
+      ...item,
+      ...editableArticle,
+      status,
+      updatedAt: "updatedAt" in editableArticle ? editableArticle.updatedAt : null,
+    };
+  });
+
+  const categoryCounts = dashboardArticles.reduce<Record<string, number>>(
+    (acc, item) => {
+      acc[item.category] = (acc[item.category] ?? 0) + 1;
+      return acc;
+    },
+    {}
+  );
+
+  const filteredArticles = dashboardArticles.filter((item) => {
+    const matchesQuery = query
+      ? normalizeText(
+          `${item.title} ${item.slug} ${item.category} ${item.author} ${stripHtml(
+            item.excerpt
+          )}`
+        ).includes(normalizeText(query))
+      : true;
+    const matchesCategory = selectedCategory
+      ? item.category === selectedCategory
+      : true;
+    const matchesStatus =
+      selectedStatus && selectedStatus !== "all"
+        ? item.status === selectedStatus
+        : true;
+
+    return matchesQuery && matchesCategory && matchesStatus;
+  });
+
+  const featuredArticle =
+    filteredArticles.find((item) => item.status === "draft") ??
+    filteredArticles[0] ??
+    dashboardArticles[0];
+  const averageExcerptLength = Math.round(
+    dashboardArticles.reduce(
+      (total, item) => total + stripHtml(item.excerpt).length,
+      0
+    ) / Math.max(dashboardArticles.length, 1)
+  );
+  const draftCount = dashboardArticles.filter((item) => item.status === "draft")
+    .length;
+  const updatedCount = dashboardArticles.filter((item) => item.status === "updated")
+    .length;
+
+  const stats = [
+    {
+      label: "كل المقالات",
+      value: dashboardArticles.length.toString(),
+      change: "متاحة للتحرير",
+      icon: FileText,
+      accent: "text-red-300",
+    },
+    {
+      label: "المسودات",
+      value: draftCount.toString(),
+      change: draftCount ? "تحتاج مراجعة" : "لا توجد مسودات",
+      icon: Clock3,
+      accent: "text-amber-300",
+    },
+    {
+      label: "تعديلات منشورة",
+      value: updatedCount.toString(),
+      change: "من مخزن المحرر",
+      icon: CheckCircle2,
+      accent: "text-emerald-300",
+    },
+    {
+      label: "متوسط المقتطف",
+      value: averageExcerptLength.toString(),
+      change: "حرف",
+      icon: BarChart3,
+      accent: "text-indigo-300",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-[#080808] text-white">
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-[clamp(220px,18vw,280px)_minmax(0,1fr)]">
@@ -120,18 +204,18 @@ export default function DashboardPage() {
                 const Icon = item.icon;
 
                 return (
-                  <button
+                  <a
                     key={item.label}
+                    href={item.active ? "/dashboard" : "#articles"}
                     className={`flex min-w-fit items-center gap-3 border px-3 py-3 text-sm font-bold transition-colors sm:px-4 ${
                       item.active
                         ? "border-red-500/40 bg-red-500/10 text-white"
                         : "border-transparent text-zinc-400 hover:border-white/10 hover:bg-white/5 hover:text-white"
                     }`}
-                    type="button"
                   >
                     <Icon size={18} />
                     <span>{item.label}</span>
-                  </button>
+                  </a>
                 );
               })}
             </nav>
@@ -143,7 +227,8 @@ export default function DashboardPage() {
                   <span className="text-sm font-bold">مركز التحرير</span>
                 </div>
                 <p className="mt-3 text-sm leading-7 text-zinc-400">
-                  متابعة سريعة لحالة المحتوى، التصنيفات، وجودة المقالات.
+                  القائمة تقرأ كل المقالات من ملف الأخبار وتعرض حالة المسودات
+                  والتعديلات المنشورة من مخزن المحرر.
                 </p>
               </div>
             </div>
@@ -160,24 +245,35 @@ export default function DashboardPage() {
                 </h1>
               </div>
 
-              <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-center">
+              <form
+                action="/dashboard"
+                className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-center"
+              >
+                {selectedCategory ? (
+                  <input name="category" type="hidden" value={selectedCategory} />
+                ) : null}
+                {selectedStatus !== "all" ? (
+                  <input name="status" type="hidden" value={selectedStatus} />
+                ) : null}
                 <label className="flex h-11 min-w-0 items-center gap-3 border border-white/10 bg-white/[0.03] px-3 sm:w-72 md:w-80">
                   <Search size={18} className="shrink-0 text-zinc-500" />
                   <input
                     className="min-w-0 flex-1 bg-transparent text-sm text-white outline-none placeholder:text-zinc-600"
-                    placeholder="بحث في المقالات"
+                    defaultValue={query}
+                    name="q"
+                    placeholder="بحث في كل المقالات"
                     type="search"
                   />
                 </label>
 
                 <button
                   className="flex h-11 items-center justify-center gap-2 bg-red-600 px-4 text-sm font-black text-white transition-colors hover:bg-red-500"
-                  type="button"
+                  type="submit"
                 >
-                  <Plus size={18} />
-                  <span>مقال جديد</span>
+                  <Search size={18} />
+                  <span>بحث</span>
                 </button>
-              </div>
+              </form>
             </div>
           </header>
 
@@ -207,33 +303,78 @@ export default function DashboardPage() {
             </section>
 
             <section className="grid grid-cols-1 gap-6 2xl:grid-cols-[minmax(0,1.45fr)_minmax(320px,0.65fr)]">
-              <div className="min-w-0 border border-white/10 bg-[#101012]">
-                <div className="flex flex-col gap-3 border-b border-white/10 p-5 md:flex-row md:items-center md:justify-between">
-                  <div className="min-w-0">
-                    <h2 className="text-xl font-black">المقالات الأخيرة</h2>
-                    <p className="mt-1 text-sm text-zinc-500">
-                      {recentNews.length} عناصر في قائمة التحرير
-                    </p>
+              <div
+                id="articles"
+                className="min-w-0 border border-white/10 bg-[#101012]"
+              >
+                <div className="flex flex-col gap-4 border-b border-white/10 p-5">
+                  <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                    <div className="min-w-0">
+                      <h2 className="text-xl font-black">كل المقالات</h2>
+                      <p className="mt-1 text-sm text-zinc-500">
+                        {filteredArticles.length} من {dashboardArticles.length} مقال
+                        في قائمة التحرير
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      {Object.entries(statusLabels).map(([status, label]) => (
+                        <Link
+                          key={status}
+                          href={buildDashboardHref({
+                            q: query,
+                            category: selectedCategory,
+                            status: status === "all" ? "" : status,
+                          })}
+                          className={`border px-3 py-2 text-sm font-bold ${
+                            selectedStatus === status ||
+                            (!selectedStatus && status === "all")
+                              ? "border-red-500/40 bg-red-500/10 text-white"
+                              : "border-white/10 text-zinc-300 hover:bg-white/5"
+                          }`}
+                        >
+                          {label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
 
-                  <div className="flex gap-2">
-                    <button
-                      className="border border-white/10 px-3 py-2 text-sm font-bold text-zinc-300 hover:bg-white/5"
-                      type="button"
+                  <div className="flex flex-wrap gap-2">
+                    <Link
+                      href={buildDashboardHref({
+                        q: query,
+                        status: selectedStatus === "all" ? "" : selectedStatus,
+                      })}
+                      className={`border px-3 py-2 text-sm font-bold ${
+                        selectedCategory
+                          ? "border-white/10 text-zinc-300 hover:bg-white/5"
+                          : "border-red-500/40 bg-red-500/10 text-white"
+                      }`}
                     >
-                      منشور
-                    </button>
-                    <button
-                      className="border border-white/10 px-3 py-2 text-sm font-bold text-zinc-300 hover:bg-white/5"
-                      type="button"
-                    >
-                      الأحدث
-                    </button>
+                      كل التصنيفات
+                    </Link>
+                    {Object.keys(categoryCounts).map((category) => (
+                      <Link
+                        key={category}
+                        href={buildDashboardHref({
+                          q: query,
+                          category,
+                          status: selectedStatus === "all" ? "" : selectedStatus,
+                        })}
+                        className={`border px-3 py-2 text-sm font-bold ${
+                          selectedCategory === category
+                            ? "border-red-500/40 bg-red-500/10 text-white"
+                            : "border-white/10 text-zinc-300 hover:bg-white/5"
+                        }`}
+                      >
+                        {category}
+                      </Link>
+                    ))}
                   </div>
                 </div>
 
                 <div className="grid gap-3 p-4 lg:hidden">
-                  {recentNews.map((item) => {
+                  {filteredArticles.map((item) => {
                     const categoryStyle =
                       categoryStyles[item.category] ?? {
                         text: "text-zinc-300",
@@ -267,6 +408,15 @@ export default function DashboardPage() {
                           <span className="text-left">{item.date}</span>
                         </div>
 
+                        <div className="mt-4 flex items-center justify-between gap-3 text-xs">
+                          <ArticleStatus status={item.status} />
+                          {item.updatedAt ? (
+                            <span className="text-zinc-500">
+                              {new Date(item.updatedAt).toLocaleDateString("ar")}
+                            </span>
+                          ) : null}
+                        </div>
+
                         <div className="mt-4 flex gap-2">
                           <Link
                             href={`/news/${item.slug}`}
@@ -286,6 +436,8 @@ export default function DashboardPage() {
                       </article>
                     );
                   })}
+
+                  {filteredArticles.length === 0 ? <EmptyArticlesState /> : null}
                 </div>
 
                 <div className="hidden overflow-x-auto lg:block">
@@ -301,7 +453,7 @@ export default function DashboardPage() {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-white/10">
-                      {recentNews.map((item) => {
+                      {filteredArticles.map((item) => {
                         const categoryStyle =
                           categoryStyles[item.category] ?? {
                             text: "text-zinc-300",
@@ -333,10 +485,7 @@ export default function DashboardPage() {
                               {item.date}
                             </td>
                             <td className="px-5 py-4">
-                              <span className="inline-flex items-center gap-2 text-sm font-bold text-emerald-300">
-                                <span className="h-2 w-2 bg-emerald-400" />
-                                منشور
-                              </span>
+                              <ArticleStatus status={item.status} />
                             </td>
                             <td className="px-5 py-4">
                               <div className="flex items-center gap-2">
@@ -361,6 +510,8 @@ export default function DashboardPage() {
                       })}
                     </tbody>
                   </table>
+
+                  {filteredArticles.length === 0 ? <EmptyArticlesState /> : null}
                 </div>
               </div>
 
@@ -371,14 +522,14 @@ export default function DashboardPage() {
                     <FilePenLine className="text-red-300" size={22} />
                   </div>
 
-                  {featuredNews ? (
+                  {featuredArticle ? (
                     <div className="mt-5 space-y-4">
                       <div>
                         <label className="text-xs font-bold text-zinc-500">
                           العنوان
                         </label>
                         <div className="mt-2 border border-white/10 bg-black/30 p-3 text-sm font-bold leading-7">
-                          {featuredNews.title}
+                          {featuredArticle.title}
                         </div>
                       </div>
 
@@ -388,7 +539,7 @@ export default function DashboardPage() {
                             التصنيف
                           </label>
                           <div className="mt-2 border border-white/10 bg-black/30 p-3 text-sm">
-                            {featuredNews.category}
+                            {featuredArticle.category}
                           </div>
                         </div>
                         <div>
@@ -396,7 +547,7 @@ export default function DashboardPage() {
                             التاريخ
                           </label>
                           <div className="mt-2 border border-white/10 bg-black/30 p-3 text-sm">
-                            {featuredNews.date}
+                            {featuredArticle.date}
                           </div>
                         </div>
                       </div>
@@ -406,20 +557,20 @@ export default function DashboardPage() {
                           المقتطف
                         </label>
                         <div className="mt-2 min-h-28 border border-white/10 bg-black/30 p-3 text-sm leading-7 text-zinc-300">
-                          {featuredNews.excerpt}
+                          {featuredArticle.excerpt}
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                         <Link
-                          href={`/news/${featuredNews.slug}`}
+                          href={`/news/${featuredArticle.slug}`}
                           className="flex h-11 items-center justify-center gap-2 border border-white/10 text-sm font-black hover:bg-white/5"
                         >
                           <Eye size={17} />
                           <span>معاينة</span>
                         </Link>
                         <Link
-                          href={`/dashboard/news/${featuredNews.slug}/edit`}
+                          href={`/dashboard/news/${featuredArticle.slug}/edit`}
                           className="flex h-11 items-center justify-center gap-2 bg-white px-3 text-sm font-black text-black hover:bg-zinc-200"
                         >
                           <FilePenLine size={17} />
@@ -434,7 +585,9 @@ export default function DashboardPage() {
                   <h2 className="text-xl font-black">التصنيفات</h2>
                   <div className="mt-5 space-y-3">
                     {Object.entries(categoryCounts).map(([category, count]) => {
-                      const percentage = Math.round((count / news.length) * 100);
+                      const percentage = Math.round(
+                        (count / dashboardArticles.length) * 100
+                      );
                       const categoryStyle =
                         categoryStyles[category] ?? {
                           text: "text-zinc-300",
@@ -464,12 +617,18 @@ export default function DashboardPage() {
                   <article className="border border-white/10 bg-[#101012] p-4">
                     <CalendarDays className="text-sky-300" size={22} />
                     <p className="mt-4 text-sm text-zinc-500">آخر تحديث</p>
-                    <p className="mt-1 font-black">{featuredNews?.date ?? "-"}</p>
+                    <p className="mt-1 font-black">
+                      {featuredArticle?.updatedAt
+                        ? new Date(featuredArticle.updatedAt).toLocaleDateString(
+                            "ar"
+                          )
+                        : featuredArticle?.date ?? "-"}
+                    </p>
                   </article>
                   <article className="border border-white/10 bg-[#101012] p-4">
-                    <Newspaper className="text-emerald-300" size={22} />
-                    <p className="mt-4 text-sm text-zinc-500">قيد العرض</p>
-                    <p className="mt-1 font-black">{recentNews.length}</p>
+                    <Gauge className="text-emerald-300" size={22} />
+                    <p className="mt-4 text-sm text-zinc-500">نتائج العرض</p>
+                    <p className="mt-1 font-black">{filteredArticles.length}</p>
                   </article>
                 </section>
               </div>
@@ -478,5 +637,46 @@ export default function DashboardPage() {
         </section>
       </div>
     </main>
+  );
+}
+
+function ArticleStatus({ status }: { status: string }) {
+  if (status === "draft") {
+    return (
+      <span className="inline-flex items-center gap-2 text-sm font-bold text-amber-300">
+        <span className="h-2 w-2 bg-amber-300" />
+        مسودة
+      </span>
+    );
+  }
+
+  if (status === "updated") {
+    return (
+      <span className="inline-flex items-center gap-2 text-sm font-bold text-sky-300">
+        <span className="h-2 w-2 bg-sky-300" />
+        منشور معدل
+      </span>
+    );
+  }
+
+  return (
+    <span className="inline-flex items-center gap-2 text-sm font-bold text-emerald-300">
+      <span className="h-2 w-2 bg-emerald-400" />
+      منشور
+    </span>
+  );
+}
+
+function EmptyArticlesState() {
+  return (
+    <div className="p-8 text-center">
+      <p className="text-sm font-bold text-zinc-300">لا توجد مقالات مطابقة</p>
+      <Link
+        href="/dashboard"
+        className="mt-4 inline-flex h-10 items-center justify-center border border-white/10 px-4 text-sm font-bold text-zinc-300 hover:bg-white/5"
+      >
+        عرض كل المقالات
+      </Link>
+    </div>
   );
 }

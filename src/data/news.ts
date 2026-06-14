@@ -8068,7 +8068,12 @@ date:
 
 content:
 `<p>
-تعد معالجات Ryzen من AMD ومعالجات Intel Core من أكثر المعالجات انتشاراً في عالم الكمبيوترات والألعاب وصناعة المحتوى، ومع احتدام المنافسة بين الشركتين أصبح اختيار المعالج المناسب أكثر صعوبة من أي وقت مضى.
+تعد معالجات Ryzen من AMD ومعالجات Intel Core من أكثر المعالجات انتشاراً في عالم الكمبيوترات
+والألعاب وصناعة المحتوى.
+</p>
+<p>
+وإذا أردنا إجابة سريعة فيمكننا القول بأن Intel باتت تركّز على برامج الـ3D والرندر والمونتاج، في حين
+ أن AMD باتت تستهدف سوق الألعاب إلى حد كبير، مع بعض الاستثناءات والفروق.
 
 </p>
 
@@ -8081,8 +8086,8 @@ content:
 </p>
 
 <img
-src="/images/ryzen7500-vs-intel14700k.webp"
-alt="مقارنة بين ryzen 7 7500 و intel ه7 14700k
+src="/images/ryzen-7-7800x3d-vs-intel-7-14700k.webp"
+alt="مقارنة بين ryzen 7 7800X3D و intel ه7 14700K
 style="
  width:100%;
  border-radius:18px;
@@ -8091,50 +8096,50 @@ style="
 />
 
 <h2>
-الإجابة السريعة
+مقارنة سريعة بين AMD و Intel
 </h2>
 
-<div class="overflow-x-auto my-8">
-<table class="w-auto min-w-[550px] text-right border-collapse">
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[700px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="px-2 py-2 border border-white/10">الفئة</th>
-<th class="px-2 py-2 border border-white/10">Ryzen</th>
-<th class="px-2 py-2 border border-white/10">Intel</th>
+<th class="px-2 py-2 border border-zinc-500">الفئة</th>
+<th class="px-2 py-2 border border-zinc-500">Ryzen</th>
+<th class="px-2 py-2 border border-zinc-500">Intel</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="px-2 py-2 border border-white/10">الألعاب</td>
-<td class="px-2 py-2 border border-white/10">ممتاز</td>
-<td class="px-2 py-2 border border-white/10">متفوق أحياناً</td>
+<td class="px-2 py-2 border border-zinc-500">الألعاب</td>
+<td class="px-2 py-2 border border-zinc-500">متفوق أحياناً</td>
+<td class="px-2 py-2 border border-zinc-500">ممتاز</td>
 </tr>
 
 <tr>
-<td class="px-2 py-2 border border-white/10">المونتاج والرندر</td>
-<td class="px-2 py-2 border border-white/10">متفوق غالباً</td>
-<td class="px-2 py-2 border border-white/10">قوي جداً</td>
+<td class="px-2 py-2 border border-zinc-500">المونتاج والرندر</td>
+<td class="px-2 py-2 border border-zinc-500">قوي جداً</td>
+<td class="px-2 py-2 border border-zinc-500">متفوق غالباً</td>
 </tr>
 
 <tr>
-<td class="px-2 py-2 border border-white/10">الحرارة</td>
-<td class="px-2 py-2 border border-white/10">أفضل غالباً</td>
-<td class="px-2 py-2 border border-white/10">أعلى ببعض الفئات</td>
+<td class="px-2 py-2 border border-zinc-500">الحرارة</td>
+<td class="px-2 py-2 border border-zinc-500">أفضل غالباً</td>
+<td class="px-2 py-2 border border-zinc-500">أعلى ببعض الفئات</td>
 </tr>
 
 <tr>
-<td class="px-2 py-2 border border-white/10">السعر مقابل الأداء</td>
-<td class="px-2 py-2 border border-white/10">أفضل غالباً</td>
-<td class="px-2 py-2 border border-white/10">جيد جداً</td>
+<td class="px-2 py-2 border border-zinc-500">السعر مقابل الأداء</td>
+<td class="px-2 py-2 border border-zinc-500">أفضل غالباً</td>
+<td class="px-2 py-2 border border-zinc-500">جيد جداً</td>
 </tr>
 
 <tr>
-<td class="px-2 py-2 border border-white/10">الترقية المستقبلية</td>
-<td class="px-2 py-2 border border-white/10">أفضل</td>
-<td class="px-2 py-2 border border-white/10">أضعف نسبياً</td>
+<td class="px-2 py-2 border border-zinc-500">الترقية المستقبلية</td>
+<td class="px-2 py-2 border border-zinc-500">أفضل</td>
+<td class="px-2 py-2 border border-zinc-500">أضعف نسبياً</td>
 </tr>
 
 </tbody>
@@ -8150,46 +8155,66 @@ style="
 تقسم AMD و Intel معالجاتها إلى عدة فئات تستهدف استخدامات مختلفة.
 </p>
 
+<img
+src="/images/types-of-intel-and-amd-processors.webp"
+alt="مقارنة بين أنواع معالجات AMD و Intel
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+<p>
+حيث تأتي الفئة core-3 و ryzen-3 كفئة اقتصادية ورخيصة وتستخدم للأعمال المكتبية الخفيفة والألعاب بدقة 1080.
+في حين أن core-5 و ryzen-5 لبرامج المونتاج والثري دي ضمن المشاريع الخفيفة والألعاب المتوسطة.
+</p>
+
+<p>
+أما core-7-9 و ryzen-7-9 فهي للأعمال والمشاريع الضخمة والبث المباشر والألعاب الثقلية والتي تتطلب أداءً عالياً من المعالج.
+</p>
+
+
 <div class="overflow-x-auto my-8">
 <table class="w-full min-w-[850px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="p-4 border border-white/10">الفئة</th>
-<th class="p-4 border border-white/10">AMD Ryzen</th>
-<th class="p-4 border border-white/10">Intel Core</th>
-<th class="p-4 border border-white/10">الاستخدام</th>
+<th class="p-4 border border-zinc-500">الفئة</th>
+<th class="p-4 border border-zinc-500">AMD Ryzen</th>
+<th class="p-4 border border-zinc-500">Intel Core</th>
+<th class="p-4 border border-zinc-500">الاستخدام</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="p-4 border border-white/10">اقتصادي</td>
-<td class="p-4 border border-white/10">Ryzen 3</td>
-<td class="p-4 border border-white/10">Core i3</td>
-<td class="p-4 border border-white/10">استخدام يومي</td>
+<td class="p-4 border border-zinc-500">اقتصادي</td>
+<td class="p-4 border border-zinc-500">Ryzen 3</td>
+<td class="p-4 border border-zinc-500">Core i3</td>
+<td class="p-4 border border-zinc-500">استخدام يومي</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">متوسط</td>
-<td class="p-4 border border-white/10">Ryzen 5</td>
-<td class="p-4 border border-white/10">Core i5</td>
-<td class="p-4 border border-white/10">ألعاب وعمل</td>
+<td class="p-4 border border-zinc-500">متوسط</td>
+<td class="p-4 border border-zinc-500">Ryzen 5</td>
+<td class="p-4 border border-zinc-500">Core i5</td>
+<td class="p-4 border border-zinc-500">ألعاب وعمل</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">قوي</td>
-<td class="p-4 border border-white/10">Ryzen 7</td>
-<td class="p-4 border border-white/10">Core i7</td>
-<td class="p-4 border border-white/10">مونتاج وألعاب قوية</td>
+<td class="p-4 border border-zinc-500">قوي</td>
+<td class="p-4 border border-zinc-500">Ryzen 7</td>
+<td class="p-4 border border-zinc-500">Core i7</td>
+<td class="p-4 border border-zinc-500">مونتاج وألعاب قوية</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">احترافي</td>
-<td class="p-4 border border-white/10">Ryzen 9</td>
-<td class="p-4 border border-white/10">Core i9</td>
-<td class="p-4 border border-white/10">رندر واحتراف</td>
+<td class="p-4 border border-zinc-500">احترافي</td>
+<td class="p-4 border border-zinc-500">Ryzen 9</td>
+<td class="p-4 border border-zinc-500">Core i9</td>
+<td class="p-4 border border-zinc-500">رندر واحتراف</td>
 </tr>
 
 </tbody>
@@ -8197,29 +8222,184 @@ style="
 </table>
 </div>
 
-<h2>
-ما معنى الأنوية والخيوط؟
-</h2>
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>اقرأ أيضاً:</strong>
 
-<p>
-الأنوية Cores هي الوحدات الأساسية داخل المعالج والمسؤولة عن تنفيذ العمليات، بينما تمثل الخيوط Threads عدد المهام التي يستطيع المعالج التعامل معها بنفس الوقت.
-</p>
+<a
+href="/news/ryzen-7-vs-core-i7"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;">
+Ryzen 7 vs Core i7.. أيهما أفضل للألعاب والعمل
+</a>
+</div>
 
-<p>
-كلما زاد عدد الأنوية والخيوط تحسن الأداء في:
-</p>
+  <h2>ما معنى الأنوية والخيوط في معالجات Intel و AMD؟</h2>
 
-<ul>
-<li>المونتاج</li>
-<li>الرندر</li>
-<li>البث المباشر</li>
-<li>تشغيل برامج متعددة</li>
-<li>تعدد المهام</li>
-</ul>
+  <p>
+    عند قراءة مواصفات أي معالج من <strong>Intel</strong> أو <strong>AMD</strong> ستجد غالباً مصطلحين مهمين هما
+    <strong>الأنوية Cores</strong> و <strong>الخيوط Threads</strong>. هذان المصطلحان يساعدان على فهم قدرة المعالج
+    على تنفيذ المهام، خصوصاً عند تشغيل الألعاب، برامج المونتاج، التصميم، البث المباشر، أو استخدام أكثر من برنامج في نفس الوقت.
+  </p>
 
-<p>
-أما الألعاب فتعتمد غالباً بشكل أكبر على سرعة النواة الواحدة.
-</p>
+  <h3>ما هي الأنوية Cores؟</h3>
+
+  <p>
+    النواة هي وحدة معالجة فعلية داخل المعالج، ويمكن تشبيهها بمعالج صغير موجود داخل المعالج الرئيسي. فإذا كان المعالج يحتوي
+    على 8 أنوية، فهذا يعني أن بداخله 8 وحدات قادرة على تنفيذ الأوامر ومعالجة البيانات.
+  </p>  
+    <div class="bg-amber-950/30 border-r-4 border-amber-500 px-5 py-2 my-8 text-zinc-200 leading-loose rounded-sm">
+    كلما زاد عدد الأنوية، أصبح المعالج
+    أكثر قدرة على التعامل مع المهام المتعددة والبرامج الثقيلة.
+  </div>
+
+
+
+  <h3>ما هي الخيوط Threads؟</h3>
+
+  <p>
+    الخيوط هي مسارات عمل تساعد النواة على التعامل مع أكثر من مهمة في الوقت نفسه. بمعنى أبسط، النواة هي العامل الحقيقي داخل
+    المعالج، أما الخيط فهو مسار العمل الذي تستخدمه هذه النواة لتنفيذ الأوامر.
+  </p>
+
+  <div class="bg-zinc-900 px-5 py-2 my-8 text-zinc-200 leading-loose rounded-sm">  
+    لذلك قد تجد معالجاً يحتوي على
+    <strong>8 أنوية و16 خيطاً</strong>، أي أن عدد الأنوية الفعلية هو 8، لكن المعالج يستطيع التعامل مع عدد أكبر من مسارات العمل.
+  </div>
+
+  <p>
+    في معالجات Intel تُعرف هذه الفكرة غالباً باسم <strong>Hyper-Threading</strong>، أما في معالجات AMD فتُعرف باسم
+    <strong>SMT</strong> أو <strong>Simultaneous Multithreading</strong>. والهدف في الحالتين هو تحسين أداء المعالج في البرامج
+    التي تستفيد من تعدد المهام والخيوط.
+  </p>
+
+  <h3>مثال بسيط لفهم الفرق</h3>
+
+  <p>
+    يمكن تشبيه المعالج بمطعم. في هذا المثال، حيث تمثلّ الأنوية عدد الطباخين الموجودين في المطبخ،
+    أما الخيوط فهي عدد الطلبات التي
+    يستطيع هؤلاء الطباخون التعامل معها في الوقت نفسه.
+  </p>  
+    
+  <p>  
+    كلما زاد عدد الطباخين،
+    زادت قدرة المطعم على خدمة عدد أكبر من الزبائن.
+    وإذا كان كل طباخ يستطيع متابعة أكثر من طلب في نفس الوقت،
+    فهذا يشبه وجود عدد أكبر من الخيوط داخل المعالج.
+  </p>
+
+  <h3>هل زيادة عدد الأنوية تعني دائماً أداء أفضل؟</h3>
+
+  <p>
+    ليس دائماً. زيادة عدد الأنوية مفيدة جداً في الأعمال الثقيلة مثل المونتاج، الرندر، ضغط الملفات،
+    البث المباشر، وتشغيل
+    عدة برامج معاً.
+  </p>
+
+  <p>
+    لكن في الألعاب، لا يعتمد الأداء على عدد الأنوية فقط،
+    بل يعتمد أيضاً على قوة النواة الواحدة، سرعة التردد،
+    حجم الذاكرة المخبأة <strong>Cache</strong>، جيل المعالج، وكرت الشاشة المستخدم.
+  </p>
+
+  <div class="bg-green-950/30 border-r-4 border-green-500 px-5 py-2 my-8 text-zinc-200 leading-loose rounded-sm">
+    لذلك قد يتفوق معالج حديث يحتوي على 8 أنوية على معالج قديم يحتوي
+    على عدد أنوية أكبر، لأن المعمارية الأحدث وقوة النواة
+    الواحدة تلعبان دوراً كبيراً في الأداء الفعلي.
+  </div>
+
+  <h3>الفرق بين Intel و AMD في الأنوية والخيوط</h3>
+
+  <p>
+    الفكرة الأساسية في معالجات Intel و AMD متشابهة، فكلاهما يستخدم الأنوية والخيوط لتحسين الأداء.
+    لكن بعض معالجات Intel
+    الحديثة تستخدم نوعين من الأنوية:
+    <ul>
+        <li>    <strong>P-Cores:</strong> وهي أنوية الأداء العالي المخصصة للمهام الثقيلة.</li>
+        <li>    <strong>E-Cores:</strong> وهي أنوية الكفاءة المخصصة للمهام
+        الخفيفة والخلفية وتوفير الطاقة.   </li>
+    </ul>
+    
+  </p>
+
+  <p>
+    أما معالجات AMD فغالباً تعتمد على أنوية متقاربة في النوع داخل نفس المعالج، مع دعم تقنية <strong>SMT</strong> التي تسمح
+    للنواة الواحدة بالتعامل مع أكثر من خيط. كما تركز AMD في بعض معالجاتها، مثل فئة <strong>X3D</strong>، على زيادة حجم
+    الذاكرة المخبأة لتحسين الأداء خصوصاً في الألعاب.
+  </p>
+
+
+  <h2>ما هو Clock Speed في المعالجات؟</h2>
+
+  <p>
+    يُقصد بمصطلح <strong>Clock Speed</strong> أو <strong>سرعة التردد</strong> سرعة عمل المعالج أثناء تنفيذ الأوامر ومعالجة البيانات.
+    وتُقاس هذه السرعة غالباً بوحدة <strong>GHz</strong>، وهي اختصار لـ <strong>Gigahertz</strong>. وكلما ارتفع رقم التردد،
+    استطاعت النواة تنفيذ عدد أكبر من الدورات في الثانية، مما قد يساهم في تحسين أداء المعالج، خصوصاً في المهام التي تعتمد على
+    قوة النواة الواحدة.
+  </p>
+
+  <p>
+    عند قراءة مواصفات معالج مثل <strong>Intel Core i9-14900K</strong> قد تجد عبارة مثل <strong>up to 6.0 GHz</strong>،
+    وهذا يعني أن المعالج يستطيع الوصول إلى تردد مرتفع يصل إلى 6.0 جيجاهرتز في ظروف معينة. لكن هذا لا يعني أن المعالج يعمل
+    دائماً على هذا التردد، لأن سرعة المعالج تتغير حسب طبيعة الاستخدام، درجة الحرارة، استهلاك الطاقة، ونظام التبريد المستخدم.
+  </p>
+
+  <h3>ما الفرق بين Base Clock و Boost Clock؟</h3>
+ 
+
+         
+
+    
+  <p>
+    يوجد نوعان مهمان من التردد في المعالجات،
+      <ul>
+         <li>
+         الأول هو <strong>Base Clock</strong> أو التردد الأساسي، وهو السرعة التي يعمل
+    عليها المعالج في الظروف العادية أو عند تنفيذ المهام الخفيفة والمتوسطة.
+         </li>  
+         <li>
+    أما النوع الثاني فهو <strong>Boost Clock</strong>
+    أو <strong>Turbo Clock</strong>، وهو أعلى تردد يمكن أن يصل إليه المعالج بشكل مؤقت عند الحاجة إلى أداء أعلى، مثل تشغيل
+    الألعاب أو برامج التصميم والمونتاج.
+         </li>
+      </ul>
+  </p>
+
+  <p>
+    يعتمد وصول المعالج إلى تردد التعزيز على عدة عوامل، منها جودة التبريد،
+    درجة حرارة المعالج، كمية الطاقة المتاحة، ونوع المهمة
+    التي يتم تنفيذها.
+    </p>
+
+    <div class="bg-red-950/30 border-r-4 border-red-500 px-5 py-2 my-8 text-zinc-200 leading-loose rounded-sm">
+    لذلك قد لا يصل المعالج دائماً إلى أعلى تردد مكتوب في المواصفات،
+    خصوصاً إذا كانت الحرارة مرتفعة أو كان
+    نظام التبريد ضعيفاً.
+    </div>
+
+  <h3>هل التردد الأعلى يعني دائماً معالجاً أقوى؟</h3>
+
+  <p>
+    لا يمكن الحكم على قوة المعالج من خلال <strong>Clock Speed</strong> فقط. فمعالج حديث بتردد أقل قد يكون أقوى من معالج قديم
+    بتردد أعلى، لأن الأداء لا يعتمد على التردد وحده، بل يتأثر أيضاً بعوامل أخرى مثل معمارية المعالج، عدد الأنوية، عدد الخيوط،
+    حجم الذاكرة المخبأة <strong>Cache</strong>، كفاءة استهلاك الطاقة، وتقنيات التصنيع.
+  </p>
+
+  <p>
+    لذلك يُعد تردد المعالج عاملاً مهماً في الأداء، لكنه ليس العامل الوحيد. وعند المقارنة بين معالجات <strong>Intel</strong>
+    و <strong>AMD</strong>، من الأفضل النظر إلى الصورة الكاملة، بما في ذلك الجيل، عدد الأنوية والخيوط، حجم الكاش، واختبارات
+    الأداء الفعلية في الألعاب والبرامج.
+  </p>
 
 <div
 style="
@@ -8238,38 +8418,11 @@ style="
 display:block;
 margin-top:10px;
 color:#60a5fa;
-font-weight:600;
-"
->
+font-weight:600;">
 Intel Core Ultra 7 265K vs Intel Core Ultra 9 285K
 </a>
 </div>
 
-<h2>
-ما هو Clock Speed؟
-</h2>
-
-<p>
-سرعة المعالج أو Clock Speed تقاس بالجيجاهرتز GHz، وهي تمثل سرعة تنفيذ العمليات داخل المعالج.
-</p>
-
-<p>
-كلما ارتفع التردد زادت سرعة المعالج في بعض المهام، خصوصاً الألعاب والأداء الأحادي.
-</p>
-
-<p>
-لهذا السبب تتفوق Intel أحياناً في الألعاب التنافسية بسبب الترددات المرتفعة والأداء الأحادي القوي.
-</p>
-
-<img
-src="/images/cache-memory.webp"
-alt="ما هي ذاكرة الكاش"
-style="
- width:100%;
- border-radius:18px;
- margin:24px 0;
-"
-/>
 
 <h2>
 ما هي ذاكرة Cache؟
@@ -8279,24 +8432,29 @@ style="
 الـCache هي ذاكرة فائقة السرعة داخل المعالج تساعد على الوصول السريع للبيانات وتقليل وقت الاستجابة.
 </p>
 
+<img
+src="/images/cache-memory.webp"
+alt="ما هي ذاكرة الكاش"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"/>
+
 <p>
 المعالجات التي تحتوي على Cache أكبر قد تقدم أداء أفضل خصوصاً في الألعاب.
 </p>
 
-<h2>
-ما هي تقنية X3D من AMD؟
-</h2>
 
-<p>
-قدمت AMD تقنية 3D V-Cache ضمن بعض معالجات Ryzen X3D مثل Ryzen 7 7500X3D، وهي تعتمد على إضافة ذاكرة Cache ضخمة فوق المعالج لتحسين الأداء في الألعاب.
-</p>
 
-<p>
-هذه التقنية جعلت بعض معالجات Ryzen من أقوى الخيارات المخصصة للألعاب حالياً.
-</p>
 
-<img
-src="/images/amd-x3d-gaming.webp"
+  <h2>ما هي تقنية X3D من AMD؟</h2>
+  <p>
+    تقنية <strong>X3D</strong> من AMD هي الاسم التجاري لمعالجات Ryzen التي تستخدم تقنية تُعرف باسم <strong>AMD 3D V-Cache</strong>. وتعتمد هذه التقنية على إضافة ذاكرة كاش إضافية فوق شريحة المعالج بشكل ثلاثي الأبعاد، بدلاً من وضع كل الذاكرة بجانب الأنوية على نفس الطبقة.
+  </p>
+
+  <img
+src="/images/amd-x3d-technique.webp"
 alt="معالجات Ryzen X3D"
 style="
  width:100%;
@@ -8305,50 +8463,139 @@ style="
 "
 />
 
+  <p>
+    بمعنى أبسط، لا تقوم AMD فقط بزيادة حجم الكاش أفقياً على سطح الشريحة، بل تضيف طبقة إضافية من الذاكرة فوق المعالج، وهذا يسمح بزيادة حجم ذاكرة الكاش دون الحاجة إلى تكبير حجم الشريحة نفسها بشكل كبير.
+  </p>
+
+  <h3>ما معنى ذاكرة الكاش داخل المعالج؟</h3>
+  <p>
+    داخل أي معالج توجد ذاكرة صغيرة وسريعة جداً تُسمى <strong>Cache</strong>. وظيفتها تخزين البيانات التي يحتاجها المعالج بسرعة، حتى لا يضطر في كل مرة إلى الرجوع إلى ذاكرة الرام، والتي تكون أبطأ مقارنة بالكاش الموجود داخل المعالج.
+  </p>
+  <p>
+    توجد عدة مستويات من ذاكرة الكاش داخل المعالج، مثل <strong>L1 Cache</strong> و <strong>L2 Cache</strong> و <strong>L3 Cache</strong>. وتُعد ذاكرة L1 الأسرع والأصغر، بينما تكون L3 أكبر حجماً وتخدم عدداً أوسع من الأنوية داخل المعالج.
+  </p>
+  <div class="bg-yellow-950/30 border-r-4 border-yellow-500 px-5 py-2 my-8 text-zinc-200 leading-loose rounded-sm">
+    تقنية <strong>X3D</strong> تركز بشكل أساسي على زيادة حجم <strong>L3 Cache</strong>، وهي الذاكرة التي تستفيد منها الألعاب بشكل واضح في كثير من الحالات.
+  </div>
+
+  <h3>ما المختلف في معالجات X3D؟</h3>
+  <p>
+    في المعالجات التقليدية، يكون حجم ذاكرة الكاش محدوداً بسبب مساحة الشريحة نفسها. أما في معالجات <strong>X3D</strong>، فتستخدم AMD تقنية التكديس ثلاثي الأبعاد، حيث تضع طبقة إضافية من الكاش فوق شريحة المعالج.
+  </p>
+  <p>
+    هذه الطريقة تجعل المعالج قادراً على الاحتفاظ بكمية أكبر من البيانات قريبة جداً من الأنوية، مما يقلل الحاجة إلى الرجوع المتكرر إلى ذاكرة الرام. والنتيجة تكون استجابة أسرع في بعض التطبيقات، وخصوصاً في الألعاب التي تعتمد كثيراً على المعالج.
+  </p>
+
+  <h3>لماذا معالجات X3D ممتازة في الألعاب؟</h3>
+  <p>
+    تستفيد الألعاب كثيراً من ذاكرة الكاش الكبيرة، لأنها تحتاج إلى الوصول السريع والمتكرر إلى بيانات كثيرة مثل حركة الشخصيات، والفيزياء داخل اللعبة، وبيانات العالم المفتوح، والذكاء الاصطناعي للأعداء، وتعليمات الإطارات القادمة.
+  </p>
+  <p>
+    عندما تكون ذاكرة الكاش أكبر، يستطيع المعالج الاحتفاظ ببيانات أكثر بالقرب من الأنوية، بدلاً من الاعتماد الدائم على الرام. وهذا قد يؤدي إلى تحسين معدل الإطارات، وتقليل التقطيع، وتحسين سلاسة الأداء في بعض الألعاب.
+  </p>
+  <p>
+    لهذا السبب تُعد معالجات مثل <strong>Ryzen 7 7800X3D</strong> و <strong>Ryzen 7 9800X3D</strong> و <strong>Ryzen 9 7950X3D</strong> و <strong>Ryzen 9 9950X3D</strong> من الخيارات القوية جداً للألعاب، لأنها تستفيد من الكاش الكبير أكثر من اعتمادها فقط على التردد أو عدد الأنوية.
+  </p>
+
+  <h3>هل X3D أفضل دائماً؟</h3>
+  <p>
+    رغم أن تقنية <strong>X3D</strong> ممتازة في الألعاب، إلا أنها ليست الأفضل في كل الاستخدامات. ففي بعض الأعمال الاحترافية مثل الرندر، وتصدير الفيديو، والضغط وفك الضغط، والبرمجة الثقيلة، قد لا يكون تأثير الكاش الكبير واضحاً بنفس الدرجة.
+  </p>
+  <div class="bg-red-950/30 border-r-4 border-red-500 px-5 py-2 my-8 text-zinc-200 leading-loose rounded-sm">
+    قد يكون المعالج العادي بدون X3D أفضل أحياناً، خصوصاً إذا كان يملك تردداً أعلى أو عدداً أكبر من الأنوية، أو إذا كانت البرامج المستخدمة تستفيد من القوة الخام للمعالج أكثر من استفادتها من حجم الكاش.
+  </div>
+
+  <h3>هل تردد معالجات X3D أقل من المعالجات العادية؟</h3>
+  <p>
+    في كثير من الأحيان، تكون معالجات <strong>X3D</strong> بترددات أقل قليلاً من النسخ العادية، أو تكون أكثر حساسية من ناحية الحرارة والفولت. والسبب أن وجود طبقة إضافية من الكاش فوق شريحة المعالج يجعل عملية تبديد الحرارة أصعب قليلاً مقارنة بالتصميم التقليدي.
+  </p>
+  <p>
+    لذلك تضبط AMD هذه المعالجات غالباً بطريقة أكثر تحفظاً من ناحية التردد والحرارة. ومع ذلك، فإن الكاش الكبير يعوض هذا الفرق في الألعاب، ويجعل أداء معالجات X3D ممتازاً حتى لو لم تكن تردداتها الأعلى على الورق.
+  </p>
+
+  <h3>مثال بسيط لفهم تقنية X3D</h3>
+  <p>
+    يمكن تشبيه المعالج بموظف سريع جداً، وتشبيه ذاكرة الرام بمستودع بعيد يحتوي على الملفات. في المعالج العادي، يضطر الموظف إلى الذهاب كثيراً إلى المستودع لجلب الملفات التي يحتاجها.
+  </p>
+  <p>
+    أما في معالج <strong>X3D</strong>، فالموظف يملك مكتباً كبيراً جداً بجانبه يحتوي على عدد أكبر من الملفات المهمة. وبذلك يستطيع الوصول إلى البيانات بسرعة أكبر، ويقضي وقتاً أقل في انتظار وصول المعلومات من الذاكرة البعيدة.
+  </p>
+
+  <h3>هل تستحق معالجات X3D الشراء؟</h3>
+  <p>
+    إذا كان الهدف الأساسي من شراء الكمبيوتر هو الألعاب، فإن معالجات <strong>X3D</strong> غالباً تكون من أفضل الخيارات، خصوصاً في الألعاب التي تعتمد كثيراً على المعالج وتستفيد من حجم الكاش الكبير.
+  </p>
+  <p>
+    أما إذا كان الاستخدام الأساسي هو المونتاج، أو الرندر، أو التصميم ثلاثي الأبعاد، أو البرمجة الثقيلة، فقد يكون من الأفضل مقارنة معالج X3D مع معالج Ryzen عادي من نفس الفئة، لأن بعض هذه الأعمال قد تستفيد أكثر من التردد العالي أو عدد الأنوية.
+  </p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>اقرأ أيضاً:</strong>
+
+<a
+href="/news/amd-ryzen-5-vs-amd-ryzen-7"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;">
+الفرق بين AMD Ryzen 5 و AMD Ryzen 7
+</a>
+</div>
+
+
 <h2>
 أفضل المعالجات الحالية
 </h2>
 
-<div class="overflow-x-auto my-8">
-<table class="w-full min-w-[900px] text-right border-collapse">
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[500px] md:min-w-[800px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="p-4 border border-white/10">المعالج</th>
-<th class="p-4 border border-white/10">الاستخدام</th>
-<th class="p-4 border border-white/10">عدد الأنوية</th>
-<th class="p-4 border border-white/10">عدد الخيوط</th>
+<th class="p-4 border border-zinc-500">المعالج</th>
+<th class="p-4 border border-zinc-500">الاستخدام</th>
+<th class="p-4 border border-zinc-500">عدد الأنوية</th>
+<th class="p-4 border border-zinc-500">عدد الخيوط</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="p-4 border border-white/10">Ryzen 7 7500X3D</td>
-<td class="p-4 border border-white/10">الألعاب</td>
-<td class="p-4 border border-white/10">8</td>
-<td class="p-4 border border-white/10">16</td>
+<td class="p-4 border border-zinc-500 text-red-400 font-bold">Ryzen 7 7500X3D</td>
+<td class="p-4 border border-zinc-500">الألعاب</td>
+<td class="p-4 border border-zinc-500">8</td>
+<td class="p-4 border border-zinc-500">16</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">Core i7-14700K</td>
-<td class="p-4 border border-white/10">ألعاب وعمل</td>
-<td class="p-4 border border-white/10">20</td>
-<td class="p-4 border border-white/10">28</td>
+<td class="p-4 border border-zinc-500 text-blue-400 font-bold">Core i7-14700K</td>
+<td class="p-4 border border-zinc-500">ألعاب وعمل</td>
+<td class="p-4 border border-zinc-500">20</td>
+<td class="p-4 border border-zinc-500">28</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">Ryzen 9 7950X</td>
-<td class="p-4 border border-white/10">مونتاج ورندر</td>
-<td class="p-4 border border-white/10">16</td>
-<td class="p-4 border border-white/10">32</td>
+<td class="p-4 border border-zinc-500 text-red-400 font-bold">Ryzen 9 7950X</td>
+<td class="p-4 border border-zinc-500">مونتاج ورندر</td>
+<td class="p-4 border border-zinc-500">16</td>
+<td class="p-4 border border-zinc-500">32</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">Core i9-14900K</td>
-<td class="p-4 border border-white/10">احترافي</td>
-<td class="p-4 border border-white/10">24</td>
-<td class="p-4 border border-white/10">32</td>
+<td class="p-4 border border-zinc-500 text-blue-400 font-bold">Core i9-14900K</td>
+<td class="p-4 border border-zinc-500">احترافي</td>
+<td class="p-4 border border-zinc-500">24</td>
+<td class="p-4 border border-zinc-500">32</td>
 </tr>
 
 </tbody>
@@ -8356,15 +8603,7 @@ style="
 </table>
 </div>
 
-<img
-src="/images/ryzen-vs-intel-gaming-performance.webp"
-alt="الأداء في الألعاب بين ryzen و intel"
-style="
- width:100%;
- border-radius:18px;
- margin:24px 0;
-"
-/>
+
 
 <h2>
 الأداء في الألعاب
@@ -8374,46 +8613,74 @@ style="
 في الماضي كانت Intel تتفوق بشكل واضح في الألعاب، لكن الفارق أصبح صغيراً جداً حالياً.
 </p>
 
+<img
+src="/images/ryzen-7800x3d-vs-core-i7-14700k-performance.webp"
+alt="الأداء في الألعاب بين ryzen و intel"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
 <p>
 بعض معالجات Intel ما تزال تحقق FPS أعلى قليلاً في الألعاب التنافسية، بينما تتفوق معالجات Ryzen X3D في عدد كبير من الألعاب الحديثة.
 </p>
 
 
-<div class="overflow-x-auto my-8">
-<table class="w-full min-w-[850px] text-right border-collapse">
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[450px] md:min-w-[850px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="p-4 border border-white/10">اللعبة</th>
-<th class="p-4 border border-white/10">Ryzen 7 7500X3D</th>
-<th class="p-4 border border-white/10">Core i7-14700K</th>
+<th class="p-4 border border-zinc-500">اللعبة</th>
+<th class="p-4 border border-zinc-500 text-red-400 font-bold">Ryzen 5 7600X</th>
+<th class="p-4 border border-zinc-500 text-blue-400 font-bold">Core i5-12600K</th>
+<th class="p-4 border border-zinc-500 text-red-400 font-bold">Ryzen 9 7900X3D</th>
+<th class="p-4 border border-zinc-500 text-blue-400 font-bold">Core i9-14900K</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="p-4 border border-white/10">CS2</td>
-<td class="p-4 border border-white/10">520 FPS</td>
-<td class="p-4 border border-white/10">540 FPS</td>
+<td class="p-4 border border-zinc-500">Remnant II</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-red-400">113 FPS</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-blue-400">101 FPS</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-red-400">135 FPS</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-blue-400">120 FPS</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">Cyberpunk 2077</td>
-<td class="p-4 border border-white/10">188 FPS</td>
-<td class="p-4 border border-white/10">181 FPS</td>
+<td class="p-4 border border-zinc-500">Homeworld 3</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-red-400">89 FPS</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-blue-400">72 FPS</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-red-400">86 FPS</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-blue-400">89 FPS</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">Fortnite</td>
-<td class="p-4 border border-white/10">410 FPS</td>
-<td class="p-4 border border-white/10">425 FPS</td>
+<td class="p-4 border border-zinc-500">Starfield</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-red-400">101 FPS</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-blue-400">98 FPS</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-red-400">106 FPS</td>
+<td dir="ltr" class="p-4 border border-zinc-500 text-blue-400">126 FPS</td>
 </tr>
 
 </tbody>
 
 </table>
 </div>
+
+
+
+<h2>
+الأداء في المونتاج والرندر
+</h2>
+
+<p>
+في برامج مثل Premiere Pro و Blender تتفوق المعالجات ذات الأنوية الكثيرة بشكل واضح.
+</p>
 
 <img
 src="/images/ryzen-vs-intel-production-and-editing.webp"
@@ -8425,16 +8692,18 @@ style="
 "
 />
 
+<p>
+لهذا السبب تعتبر معالجات Ryzen 9 و Core i9 من أفضل الخيارات للمونتاج والرندر الثقيل.
+</p>
+
+
+
 <h2>
-الأداء في المونتاج والرندر
+استهلاك الطاقة والحرارة
 </h2>
 
 <p>
-في برامج مثل Premiere Pro و Blender تتفوق المعالجات ذات الأنوية الكثيرة بشكل واضح.
-</p>
-
-<p>
-لهذا السبب تعتبر معالجات Ryzen 9 و Core i9 من أفضل الخيارات للمونتاج والرندر الثقيل.
+بعض معالجات Intel الحديثة قد تستهلك طاقة مرتفعة تحت الضغط، ما يؤدي إلى حرارة أعلى وحاجة لتبريد قوي.
 </p>
 
 <img
@@ -8447,46 +8716,60 @@ style="
 "
 />
 
-<h2>
-استهلاك الطاقة والحرارة
-</h2>
-
-<p>
-بعض معالجات Intel الحديثة قد تستهلك طاقة مرتفعة تحت الضغط، ما يؤدي إلى حرارة أعلى وحاجة لتبريد قوي.
-</p>
-
 <p>
 أما AMD فقد حسنت بشكل كبير كفاءة استهلاك الطاقة ضمن الأجيال الحديثة.
 </p>
 
-<div class="overflow-x-auto my-8">
-<table class="w-full min-w-[850px] text-right border-collapse">
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[850px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="p-4 border border-white/10">المعالج</th>
-<th class="p-4 border border-white/10">متوسط الاستهلاك</th>
-<th class="p-4 border border-white/10">متوسط الحرارة</th>
+<th class="p-4 border border-zinc-500">المعالج</th>
+<th class="p-4 border border-zinc-500">متوسط الاستهلاك</th>
+<th class="p-4 border border-zinc-500">متوسط الحرارة</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="p-4 border border-white/10">Ryzen 7 7500X3D</td>
-<td class="p-4 border border-white/10">90W</td>
-<td class="p-4 border border-white/10">70°C</td>
+<td class="p-4 border border-zinc-500">Ryzen 7 7500X3D</td>
+<td class="p-4 border border-zinc-500">90W</td>
+<td class="p-4 border border-zinc-500">70°C</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">Core i7-14700K</td>
-<td class="p-4 border border-white/10">180W</td>
-<td class="p-4 border border-white/10">88°C</td>
+<td class="p-4 border border-zinc-500">Core i7-14700K</td>
+<td class="p-4 border border-zinc-500">180W</td>
+<td class="p-4 border border-zinc-500">88°C</td>
 </tr>
 
 </tbody>
 
 </table>
+</div>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>اقرأ أيضاً:</strong>
+
+<a
+href="/news/ryzen-7-9800x3d-vs-core-ultra-7-265k"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;">
+مقارنة Ryzen 7 9800X3D و Core Ultra 7 265K
+</a>
 </div>
 
 <h2>
@@ -8497,21 +8780,219 @@ style="
 بعض المعالجات تأتي مع معالج رسومي مدمج Integrated Graphics يسمح بتشغيل الجهاز بدون كرت شاشة منفصل.
 </p>
 
-<p>
+<div class="bg-blue-950/30 border-r-4 border-blue-500 px-5 py-2 my-8 text-zinc-200 leading-loose rounded-sm">
 هذه الميزة مفيدة للأعمال المكتبية والاستخدام اليومي وبعض الألعاب الخفيفة.
-</p>
+</div>
+
+
+  <h2>دلالات الحروف واللواحق في أسماء معالجات Intel و AMD</h2>
+
+  <p>
+    تظهر بعض الحروف في نهاية أسماء المعالجات لتوضيح خصائص مهمة تتعلق بالمعالج، 
+    لذلك يجب الانتباه
+    إلى اللاحقة الموجودة في نهاية الاسم لأنها قد تغيّر معنى المعالج واستخدامه.
+  </p>
+
+  <img
+src="/images/letter-number-symbols-intel-and-amd.webp"
+alt="دلالات الحروف والأرقام في معالجات Intel و AMD"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+  <h3>أولاً: دلالات حروف معالجات Intel</h3>
+
+  <ul>
+    <li>
+      <strong>K:</strong>
+      تعني أن المعالج قابل لكسر السرعة، أي يمكن رفع تردده للحصول على أداء أعلى بشرط وجود لوحة أم وتبريد مناسبين.
+    </li>
+
+    <li>
+      <strong>F:</strong>
+      تعني أن المعالج لا يحتوي على بطاقة رسومية مدمجة، لذلك يحتاج إلى كرت شاشة منفصل حتى يعمل الجهاز بشكل طبيعي.
+    </li>
+
+    <li>
+      <strong>KF:</strong>
+      تجمع بين ميزتين؛ المعالج قابل لكسر السرعة، لكنه لا يحتوي على بطاقة رسومية مدمجة.
+    </li>
+
+    <li>
+      <strong>T:</strong>
+      تشير إلى معالج أقل استهلاكاً للطاقة، وغالباً يكون مناسباً للأجهزة الصغيرة أو الأنظمة التي تحتاج حرارة واستهلاكاً أقل.
+    </li>
+
+    <li>
+      <strong>S:</strong>
+      تشير غالباً إلى إصدار خاص من المعالج، وقد يكون موجهاً لفئة محددة أو إصداراً محسناً عن النسخة العادية.
+    </li>
+
+    <li>
+      <strong>H:</strong>
+      تُستخدم غالباً في معالجات اللابتوب عالية الأداء، وهي مناسبة للألعاب والعمل الثقيل مقارنة بمعالجات اللابتوب الاقتصادية.
+    </li>
+
+    <li>
+      <strong>HX:</strong>
+      تشير إلى أعلى فئة أداء في معالجات اللابتوب، وغالباً تكون موجهة للألعاب القوية ومحطات العمل المحمولة.
+    </li>
+
+    <li>
+      <strong>HK:</strong>
+      تعني معالج لابتوب عالي الأداء وقابل لكسر السرعة، وهي أقل شيوعاً من H و HX.
+    </li>
+
+    <li>
+      <strong>U:</strong>
+      تشير إلى معالجات لابتوب موفرة للطاقة، وتكون مناسبة للأجهزة الخفيفة والاستخدام اليومي وعمر البطارية الطويل.
+    </li>
+
+    <li>
+      <strong>P:</strong>
+      تشير إلى معالجات موجهة للأجهزة النحيفة والخفيفة، وتقدم توازناً بين الأداء واستهلاك الطاقة.
+    </li>
+
+    <li>
+      <strong>Y:</strong>
+      تشير إلى معالجات منخفضة جداً في استهلاك الطاقة، وغالباً تكون مخصصة للأجهزة فائقة النحافة أو الاستخدام الخفيف.
+    </li>
+  </ul>
+
+  <h3>ثانياً: دلالات حروف معالجات AMD</h3>
+
+  <ul>
+    <li>
+      <strong>X:</strong>
+      تعني غالباً أن المعالج نسخة أعلى أداءً من الإصدار الأساسي، مع ترددات أعلى واستهلاك طاقة أكبر نسبياً.
+    </li>
+
+    <li>
+      <strong>X3D:</strong>
+      تشير إلى وجود تقنية <strong>3D V-Cache</strong>، وهي ذاكرة مخبأة إضافية تساعد كثيراً في تحسين أداء الألعاب.
+    </li>
+
+    <li>
+      <strong>G:</strong>
+      تشير غالباً إلى معالج مكتبي يحتوي على بطاقة رسومية مدمجة، وهو مناسب لمن لا يريد استخدام كرت شاشة منفصل.
+    </li>
+
+    <li>
+      <strong>GE:</strong>
+      تعني نسخة من معالجات G لكن باستهلاك طاقة أقل، وتكون مناسبة للأجهزة الصغيرة أو الاقتصادية.
+    </li>
+
+    <li>
+      <strong>U:</strong>
+      تُستخدم في معالجات اللابتوب الموفرة للطاقة، وهي مناسبة للتصفح، الدراسة، العمل المكتبي، وعمر البطارية الطويل.
+    </li>
+
+    <li>
+      <strong>HS:</strong>
+      تشير إلى معالجات لابتوب تقدم أداءً قوياً مع استهلاك طاقة مضبوط، وغالباً تُستخدم في أجهزة الألعاب النحيفة أو أجهزة العمل المحمولة.
+    </li>
+
+    <li>
+      <strong>H:</strong>
+      تشير إلى معالجات لابتوب عالية الأداء، مناسبة للألعاب والبرامج الثقيلة مقارنة بمعالجات U.
+    </li>
+
+    <li>
+      <strong>HX:</strong>
+      تشير إلى أعلى فئة أداء في معالجات AMD المحمولة، وتكون موجهة للألعاب القوية والرندر والعمل الاحترافي على اللابتوب.
+    </li>
+  </ul>
+
+
+
+  <h2>ما هي تقنيات PCIe و DDR5 في المعالجات؟</h2>
+  <p>
+    عند الحديث عن المعالجات الحديثة، لا يكفي النظر إلى عدد الأنوية
+    أو سرعة التردد فقط، بل يجب الانتباه أيضاً إلى التقنيات التي يدعمها المعالج
+    مثل <strong>PCIe</strong> و <strong>DDR5</strong>.<br>
+    هذه التقنيات لا تعمل من المعالج وحده،
+    بل تعتمد على توافق كامل بين المعالج واللوحة الأم والذاكرة وباقي القطع.
+  </p>
+  <h3>أولاً: ما هي تقنية PCIe؟</h3>
+  <p>
+    تقنية <strong>PCIe</strong> هي اختصار لـ <strong>Peripheral Component Interconnect Express</strong>، ويمكن اعتبارها الطريق السريع الذي يربط المعالج واللوحة الأم بالقطع الأخرى داخل الكمبيوتر، مثل كرت الشاشة، وأقراص التخزين السريعة من نوع NVMe SSD، وكروت الشبكة والصوت والتقاط الفيديو.
+  </p>
+
+  <img
+src="/images/peripheral-component-interconnect-express.webp"
+alt="شرح خاصية PCIe"
+style="
+ width:100%;
+ border-radius:18px;
+ margin:24px 0;
+"
+/>
+
+  <p>
+    تعتمد PCIe على ما يُعرف باسم <strong>المسارات</strong> أو <strong>Lanes</strong>. فمثلاً، كرت الشاشة غالباً يستخدم منفذ <strong>PCIe x16</strong>، بينما أقراص NVMe SSD غالباً تستخدم <strong>PCIe x4</strong>. وكلما زاد عدد المسارات، زادت قدرة القطعة على نقل البيانات بسرعة أكبر.
+  </p>
+  <p>
+    ومع كل جيل جديد من PCIe، تزداد سرعة نقل البيانات. فهناك PCIe 3.0 و PCIe 4.0 و PCIe 5.0، إضافة إلى PCIe 6.0 الذي يُعد أحدث من حيث المواصفات، لكنه لا يزال غير منتشر بشكل واسع .
+  </p>
+  
+  <div class="bg-indigo-950/30 border-r-4 border-indigo-500 px-5 py-2 my-8 text-zinc-200 leading-loose rounded-sm">
+    في الاستخدام اليومي والألعاب، قد لا يظهر فرق كبير دائماً بين أجيال 
+    PCIe المختلفة، خصوصاً عند استخدام كرت شاشة واحد.
+  </div>  
+
+  <p>
+    لكن الفائدة تصبح أوضح مع أقراص التخزين فائقة السرعة، أو في أعمال المونتاج، والذكاء
+    الاصطناعي، ونقل الملفات الضخمة، واستخدام القطع الاحترافية.
+  </p>
+  <h3>ثانياً: ما هي ذاكرة DDR5؟</h3>
+  <p>
+    تقنية <strong>DDR5</strong> هي الجيل الأحدث من ذاكرة الوصول العشوائي RAM بعد DDR4. وهي مسؤولة عن تخزين البيانات المؤقتة التي يحتاجها المعالج أثناء تشغيل البرامج والألعاب والنظام.
+  </p>
+  <p>
+    عندما نقول إن المعالج يدعم DDR5، فهذا لا يكفي وحده، إذ يجب أيضاً أن تكون اللوحة الأم مصممة لدعم DDR5، لأن ذاكرة DDR5 لا تعمل على لوحات DDR4، والعكس صحيح.
+  </p>
+  <p>
+    تتميز DDR5 بسرعات أعلى، وعرض نطاق أكبر، وكفاءة أفضل في استهلاك الطاقة مقارنة بذاكرة DDR4. كما أنها تدعم سعات أكبر، وتوفر تقنيات أفضل لإدارة الطاقة والاستقرار، وهذا يجعلها مناسبة أكثر للأجهزة الحديثة والمستقبلية.
+  </p>
+  <h3>هل DDR5 تؤثر على الأداء؟</h3>
+  <p>
+    نعم، يمكن أن تؤثر ذاكرة DDR5 على الأداء، لكن مقدار الفرق يعتمد على نوع
+    الاستخدام.<br>
+     في الألعاب، قد يكون الفرق موجوداً لكنه
+    ليس دائماً ضخماً، لأن كرت الشاشة غالباً يكون العامل
+    الأهم. أما في برامج المونتاج، والرندر، والضغط،
+    وبعض تطبيقات الذكاء الاصطناعي، فقد يكون تأثير DDR5 أوضح.
+  </p>
+  <p>
+    كذلك تظهر أهمية سرعة الذاكرة بشكل أكبر عند استخدام كرت شاشة مدمج داخل المعالج، لأن هذا النوع من المعالجات يعتمد على ذاكرة النظام بدلاً من ذاكرة مستقلة خاصة بكرت الشاشة.
+  </p>
+  <h3>العلاقة بين المعالج و PCIe و DDR5</h3>
+  <p>
+    المعالج هو العنصر الأساسي الذي يحدد نوع التقنيات المدعومة. فهو يحدد إصدار PCIe المتاح، وعدد المسارات التي يمكن استخدامها، كما يحدد نوع الذاكرة المدعومة، سواء كانت DDR4 أو DDR5، إضافة إلى السرعات الرسمية التي يمكن تشغيلها.
+  </p>
+  <div class="bg-zinc-900 px-2 py-2 my-8 text-center text-zinc-200 font-bold leading-loose rounded-sm">
+    لذلك<br>
+     عند شراء معالج جديد<br>
+     من المهم التأكد من توافقه<br>
+      مع اللوحة الأم<br>
+    والذاكرة وباقي القطع. 
+  </div>
+  
+
 
 <h2>
-PCIe و DDR5
+الترقية المستقبلية
 </h2>
 
 <p>
-المعالجات الحديثة من AMD و Intel تدعم تقنيات حديثة مثل PCIe 5.0 و DDR5 التي تقدم سرعات أعلى للأقراص والرامات.
+تشتهر AMD بدعم منصاتها لفترات طويلة، حيث يمكن ترقية المعالج مستقبلاً بدون تغيير اللوحة الأم في كثير من الأحيان.
 </p>
 
-<p>
-هذه التقنيات تساعد على تحسين الأداء وتجهيز الجهاز للمستقبل.
-</p>
+
+
 
 <img
 src="/images/ryzen-vs-intel-future-upgrade.webp"
@@ -8523,14 +9004,6 @@ style="
 "
 />
 
-<h2>
-الترقية المستقبلية
-</h2>
-
-<p>
-تشتهر AMD بدعم منصاتها لفترات طويلة، حيث يمكن ترقية المعالج مستقبلاً بدون تغيير اللوحة الأم في كثير من الأحيان.
-</p>
-
 <p>
 أما Intel فتقوم بتغيير المقبس بشكل متكرر نسبياً بين الأجيال.
 </p>
@@ -8539,35 +9012,35 @@ style="
 أفضل خيار حسب الميزانية
 </h2>
 
-<div class="overflow-x-auto my-8">
-<table class="w-full min-w-[900px] text-right border-collapse">
+<div class="overflow-x-auto custom-scrollbar my-8">
+<table class="w-full min-w-[400px] md:min-w-[850px] text-right border-collapse">
 
 <thead>
 <tr class="bg-white/10">
-<th class="p-4 border border-white/10">الميزانية</th>
-<th class="p-4 border border-white/10">أفضل Ryzen</th>
-<th class="p-4 border border-white/10">أفضل Intel</th>
+<th class="p-4 border border-zinc-500">الميزانية</th>
+<th class="p-4 border border-zinc-500">أفضل Ryzen</th>
+<th class="p-4 border border-zinc-500">أفضل Intel</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td class="p-4 border border-white/10">اقتصادية</td>
-<td class="p-4 border border-white/10">Ryzen 5 7600</td>
-<td class="p-4 border border-white/10">Core i5-14400F</td>
+<td class="p-4 border border-zinc-500">اقتصادية</td>
+<td class="p-4 border border-zinc-500">Ryzen 5 7600</td>
+<td class="p-4 border border-zinc-500">Core i5-14400F</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">متوسطة</td>
-<td class="p-4 border border-white/10">Ryzen 7 7700X</td>
-<td class="p-4 border border-white/10">Core i7-14700K</td>
+<td class="p-4 border border-zinc-500">متوسطة</td>
+<td class="p-4 border border-zinc-500">Ryzen 7 7700X</td>
+<td class="p-4 border border-zinc-500">Core i7-14700K</td>
 </tr>
 
 <tr>
-<td class="p-4 border border-white/10">احترافية</td>
-<td class="p-4 border border-white/10">Ryzen 9 7950X</td>
-<td class="p-4 border border-white/10">Core i9-14900K</td>
+<td class="p-4 border border-zinc-500">احترافية</td>
+<td class="p-4 border border-zinc-500">Ryzen 9 7950X</td>
+<td class="p-4 border border-zinc-500">Core i9-14900K</td>
 </tr>
 
 </tbody>
@@ -8610,6 +9083,28 @@ style="
 <p>
 AMD تقدم حالياً دعماً ممتازاً لمنصة AM5 والترقية المستقبلية.
 </p>
+
+<div
+style="
+background:#111827;
+border:1px solid #374151;
+padding:16px;
+border-radius:12px;
+margin:24px 0;
+"
+>
+<strong>اقرأ أيضاً:</strong>
+
+<a
+href="/news/best-gaming-cpus-2026"
+style="
+display:block;
+margin-top:10px;
+color:#60a5fa;
+font-weight:600;">
+أفضل معالجات الألعاب في 2026
+</a>
+</div>
 
 <h2>
 الخلاصة

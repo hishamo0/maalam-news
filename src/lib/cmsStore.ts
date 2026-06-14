@@ -54,6 +54,10 @@ export async function getPublishedArticle(slug: string) {
   return store.published[slug] ?? null;
 }
 
+export async function getCmsStoreSnapshot() {
+  return readStore();
+}
+
 export async function saveDraftArticle(
   slug: string,
   article: CmsArticlePayload
