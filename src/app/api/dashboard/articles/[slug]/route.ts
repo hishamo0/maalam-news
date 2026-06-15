@@ -28,15 +28,18 @@ export async function POST(request: Request, { params }: Props) {
     );
   }
 
+  const articleSlug = body.article.slug?.trim() || slug;
+
   if (body.mode === "published") {
-    await publishArticle(slug, body.article);
+    await publishArticle(articleSlug, body.article);
   } else {
-    await saveDraftArticle(slug, body.article);
+    await saveDraftArticle(articleSlug, body.article);
   }
 
   return NextResponse.json({
     ok: true,
     mode: body.mode,
+    slug: articleSlug,
     updatedAt: body.article.updatedAt,
   });
 }

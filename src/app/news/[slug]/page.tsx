@@ -9,7 +9,11 @@ import ShareButtons from "@/components/ShareButtons";
 import ArticleImageLightbox from "@/components/ArticleImageLightbox";
 import BenchmarkSlider from "@/components/BenchmarkSlider";
 import type { SliderImage } from "@/components/BenchmarkSlider";
-import { getDraftArticle, getPublishedArticle } from "@/lib/cmsStore";
+import {
+  getDraftArticle,
+  getPublishedArticle,
+  getStoredArticles,
+} from "@/lib/cmsStore";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -137,21 +141,21 @@ export async function generateMetadata({
     (a) => a.slug === slug
   );
 
-  if (!baseArticle) {
+  const publishedArticle = await getPublishedArticle(slug);
+  const article = publishedArticle
+    ? baseArticle
+      ? {
+          ...baseArticle,
+          ...publishedArticle,
+        }
+      : publishedArticle
+    : baseArticle;
 
+  if (!article) {
     return {
       title: "المقال غير موجود",
     };
-
   }
-
-  const publishedArticle = await getPublishedArticle(slug);
-  const article = publishedArticle
-    ? {
-        ...baseArticle,
-        ...publishedArticle,
-      }
-    : baseArticle;
 
 
   /* =====================================================
@@ -238,23 +242,27 @@ export default async function ArticlePage({
      إذا المقال غير موجود
   ===================================================== */
 
-  if (!baseArticle) {
-    notFound();
-  }
-
   const publishedArticle = await getPublishedArticle(slug);
   const draftArticle = previewMode ? await getDraftArticle(slug) : null;
   const article = draftArticle
-    ? {
-        ...baseArticle,
-        ...draftArticle,
-      }
+    ? baseArticle
+      ? {
+          ...baseArticle,
+          ...draftArticle,
+        }
+      : draftArticle
     : publishedArticle
-    ? {
-        ...baseArticle,
-        ...publishedArticle,
-      }
+    ? baseArticle
+      ? {
+          ...baseArticle,
+          ...publishedArticle,
+        }
+      : publishedArticle
     : baseArticle;
+
+  if (!article) {
+    notFound();
+  }
 
   const headings = Array.from(
   article.content.matchAll(/<h([23])>([\s\S]*?)<\/h\1>/g)
@@ -263,7 +271,13 @@ export default async function ArticlePage({
      مقالات متعلقة
   ===================================================== */
 
-  const relatedNews = news
+  const storedArticles = await getStoredArticles();
+  const allArticles = [...storedArticles, ...news].filter(
+    (item, index, list) =>
+      list.findIndex((current) => current.slug === item.slug) === index
+  );
+
+  const relatedNews = allArticles
     .filter(
       (item) =>
         item.category === article.category &&

@@ -58,6 +58,26 @@ export async function getCmsStoreSnapshot() {
   return readStore();
 }
 
+export async function getStoredArticle(slug: string) {
+  const store = await readStore();
+  return store.drafts[slug] ?? store.published[slug] ?? null;
+}
+
+export async function getStoredArticles() {
+  const store = await readStore();
+  const articles = new Map<string, CmsArticlePayload>();
+
+  Object.entries(store.published).forEach(([slug, article]) => {
+    articles.set(slug, article);
+  });
+
+  Object.entries(store.drafts).forEach(([slug, article]) => {
+    articles.set(slug, article);
+  });
+
+  return Array.from(articles.values());
+}
+
 export async function saveDraftArticle(
   slug: string,
   article: CmsArticlePayload

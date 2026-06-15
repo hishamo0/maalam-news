@@ -141,6 +141,12 @@ html {
   cursor: zoom-in;
 }
 
+.article-editor mark[data-editor-search-match] {
+  background: #facc15;
+  color: #18181b;
+  padding: 0 0.15em;
+}
+
 .article-content table,
 .article-content th,
 .article-content td {

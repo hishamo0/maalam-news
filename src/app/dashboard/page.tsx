@@ -13,6 +13,7 @@ import {
   ImageIcon,
   LayoutDashboard,
   Newspaper,
+  Plus,
   Search,
   Settings,
   Sparkles,
@@ -20,7 +21,7 @@ import {
 } from "lucide-react";
 
 import { news } from "@/data/news";
-import { getCmsStoreSnapshot } from "@/lib/cmsStore";
+import { getCmsStoreSnapshot, getStoredArticles } from "@/lib/cmsStore";
 
 export const dynamic = "force-dynamic";
 
@@ -99,8 +100,13 @@ export default async function DashboardPage({ searchParams }: Props) {
   const selectedCategory = params.category?.trim() ?? "";
   const selectedStatus = params.status?.trim() ?? "all";
   const store = await getCmsStoreSnapshot();
+  const storedArticles = await getStoredArticles();
+  const allArticles = [...storedArticles, ...news].filter(
+    (item, index, list) =>
+      list.findIndex((article) => article.slug === item.slug) === index
+  );
 
-  const dashboardArticles = news.map((item) => {
+  const dashboardArticles = allArticles.map((item) => {
     const draft = store.drafts[item.slug];
     const publishedOverride = store.published[item.slug];
     const editableArticle = draft ?? publishedOverride ?? item;
@@ -273,6 +279,13 @@ export default async function DashboardPage({ searchParams }: Props) {
                   <Search size={18} />
                   <span>بحث</span>
                 </button>
+                <Link
+                  href="/dashboard/news/new"
+                  className="flex h-11 items-center justify-center gap-2 bg-white px-4 text-sm font-black text-black transition-colors hover:bg-zinc-200"
+                >
+                  <Plus size={18} />
+                  <span>مقال جديد</span>
+                </Link>
               </form>
             </div>
           </header>

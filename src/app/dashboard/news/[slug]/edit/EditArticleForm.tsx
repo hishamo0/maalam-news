@@ -60,6 +60,7 @@ type TableMobileMode = "scroll" | "stack";
 type TableTextSize = "sm" | "md";
 type PreviewDevice = "desktop" | "mobile";
 type SaveMode = "draft" | "published";
+type SearchTarget = "editor" | "html";
 
 type EditableArticlePayload = Pick<
   NewsItem,
@@ -74,6 +75,96 @@ type EditableArticlePayload = Pick<
   | "content"
 > & {
   updatedAt: string;
+};
+
+type ArticleImportField = keyof Pick<
+  NewsItem,
+  | "title"
+  | "slug"
+  | "category"
+  | "author"
+  | "date"
+  | "image"
+  | "excerpt"
+  | "description"
+  | "content"
+>;
+
+type ArticleImportPayload = Partial<Record<ArticleImportField, string>>;
+
+const articleImportFields = [
+  "title",
+  "slug",
+  "category",
+  "author",
+  "date",
+  "image",
+  "excerpt",
+  "description",
+] as const;
+
+const escapeRegex = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const unescapeImportValue = (value: string) =>
+  value
+    .replace(/\\n/g, "\n")
+    .replace(/\\r/g, "\r")
+    .replace(/\\t/g, "\t")
+    .replace(/\\(["'`\\])/g, "$1")
+    .trim();
+
+const extractQuotedImportField = (source: string, field: ArticleImportField) => {
+  const match = new RegExp(
+    `${escapeRegex(field)}\\s*:\\s*(["'])([\\s\\S]*?)\\1\\s*,?`,
+    "m"
+  ).exec(source);
+
+  return match?.[2] ? unescapeImportValue(match[2]) : undefined;
+};
+
+const extractTemplateImportField = (
+  source: string,
+  field: ArticleImportField
+) => {
+  const marker = new RegExp(`${escapeRegex(field)}\\s*:\\s*\``).exec(source);
+  if (!marker) return undefined;
+
+  const startIndex = marker.index + marker[0].length;
+
+  for (let index = startIndex; index < source.length; index += 1) {
+    if (source[index] === "`" && source[index - 1] !== "\\") {
+      return unescapeImportValue(source.slice(startIndex, index));
+    }
+  }
+
+  return unescapeImportValue(source.slice(startIndex));
+};
+
+const parseArticleImport = (source: string): ArticleImportPayload | null => {
+  if (!source.includes(":")) return null;
+
+  const payload: ArticleImportPayload = {};
+
+  articleImportFields.forEach((field) => {
+    const value = extractQuotedImportField(source, field);
+    if (value !== undefined) {
+      payload[field] = value;
+    }
+  });
+
+  const contentValue =
+    extractTemplateImportField(source, "content") ??
+    extractQuotedImportField(source, "content");
+
+  if (contentValue !== undefined) {
+    payload.content = contentValue;
+  }
+
+  const importedFieldCount = Object.keys(payload).length;
+  if (importedFieldCount < 2 && payload.content === undefined) return null;
+
+  return importedFieldCount > 0 ? payload : null;
 };
 
 const editorButtonClass =
@@ -133,6 +224,7 @@ export default function EditArticleForm({
   const articlePickerRef = useRef<HTMLDivElement>(null);
   const htmlSourceRef = useRef<HTMLTextAreaElement>(null);
   const htmlDetailsRef = useRef<HTMLDetailsElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const lastEditorRangeRef = useRef<Range | null>(null);
   const selectedImageRef = useRef<HTMLImageElement | null>(null);
   const toolbarDragOffsetRef = useRef({ x: 0, y: 0 });
@@ -175,10 +267,10 @@ export default function EditArticleForm({
   const [saveError, setSaveError] = useState<string | null>(null);
   const [hasDraft, setHasDraft] = useState(initialHasDraft);
   const [previewVersion, setPreviewVersion] = useState(() => Date.now());
-  const [inlineImageSrc, setInlineImageSrc] = useState("");
-  const [inlineImageAlt, setInlineImageAlt] = useState("");
-  const [inlineImageCaption, setInlineImageCaption] = useState("");
-  const [showInlineImageForm, setShowInlineImageForm] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchTarget, setSearchTarget] = useState<SearchTarget>("editor");
+  const [searchResultLabel, setSearchResultLabel] = useState("");
   const [imageDeletePosition, setImageDeletePosition] = useState<{
     x: number;
     y: number;
@@ -209,6 +301,12 @@ export default function EditArticleForm({
   });
   const [isEditorToolbarResizing, setIsEditorToolbarResizing] = useState(false);
 
+  const prepareEditableTables = () => {
+    editorRef.current?.querySelectorAll("td, th").forEach((cell) => {
+      cell.setAttribute("contenteditable", "true");
+    });
+  };
+
   useEffect(() => {
     document.execCommand("defaultParagraphSeparator", false, "p");
   }, []);
@@ -217,6 +315,7 @@ export default function EditArticleForm({
     if (!editorRef.current) return;
 
     editorRef.current.innerHTML = contentRef.current;
+    prepareEditableTables();
   }, [article.slug]);
 
   useEffect(() => {
@@ -239,8 +338,8 @@ export default function EditArticleForm({
   }, [isArticlePickerOpen]);
 
   const categoryOptions = useMemo(
-    () => Array.from(new Set([article.category, ...categories])),
-    [article.category]
+    () => Array.from(new Set([article.category, category, ...categories])),
+    [article.category, category]
   );
 
   const linkableArticles = useMemo(
@@ -284,6 +383,7 @@ export default function EditArticleForm({
 
     if (editorRef.current) {
       editorRef.current.innerHTML = nextContent;
+      prepareEditableTables();
     }
 
     window.requestAnimationFrame(() => {
@@ -321,6 +421,204 @@ export default function EditArticleForm({
     event: KeyboardEvent<HTMLDivElement | HTMLTextAreaElement>
   ) => (event.ctrlKey || event.metaKey) && (event.key.toLowerCase() === "z" || event.code === "KeyZ");
 
+  const isFindShortcut = (
+    event: KeyboardEvent<HTMLDivElement | HTMLTextAreaElement | HTMLInputElement>
+  ) => (event.ctrlKey || event.metaKey) && (event.key.toLowerCase() === "f" || event.code === "KeyF");
+
+  const openEditorSearch = (target: SearchTarget) => {
+    setSearchTarget(target);
+    setIsSearchOpen(true);
+    setSearchResultLabel("");
+
+    window.requestAnimationFrame(() => {
+      searchInputRef.current?.focus();
+      searchInputRef.current?.select();
+    });
+  };
+
+  const removeEditorSearchHighlights = (targetEditor = editorRef.current) => {
+    targetEditor
+      ?.querySelectorAll("mark[data-editor-search-match]")
+      .forEach((mark) => {
+        mark.replaceWith(...Array.from(mark.childNodes));
+      });
+
+    targetEditor?.normalize();
+  };
+
+  const getEditorTextNodes = () => {
+    const editor = editorRef.current;
+    if (!editor) return [];
+
+    const walker = document.createTreeWalker(editor, NodeFilter.SHOW_TEXT);
+    const nodes: Text[] = [];
+    let currentNode = walker.nextNode();
+
+    while (currentNode) {
+      nodes.push(currentNode as Text);
+      currentNode = walker.nextNode();
+    }
+
+    return nodes;
+  };
+
+  const getEditorSelectionTextOffset = (nodes: Text[]) => {
+    const editor = editorRef.current;
+    const selection = window.getSelection();
+    if (!editor || !selection || selection.rangeCount === 0) return 0;
+
+    const range = selection.getRangeAt(0);
+    if (!editor.contains(range.startContainer)) return 0;
+
+    let offset = 0;
+
+    for (const node of nodes) {
+      if (node === range.startContainer) {
+        return offset + range.startOffset;
+      }
+
+      offset += node.data.length;
+    }
+
+    return offset;
+  };
+
+  const getTextPosition = (nodes: Text[], index: number) => {
+    let offset = 0;
+
+    for (const node of nodes) {
+      const nextOffset = offset + node.data.length;
+      if (index <= nextOffset) {
+        return {
+          node,
+          offset: Math.max(0, Math.min(node.data.length, index - offset)),
+        };
+      }
+
+      offset = nextOffset;
+    }
+
+    const fallbackNode = nodes.at(-1);
+    return fallbackNode
+      ? { node: fallbackNode, offset: fallbackNode.data.length }
+      : null;
+  };
+
+  const findInEditor = (
+    direction: "next" | "previous" = "next",
+    nextQuery = searchQuery
+  ) => {
+    const query = nextQuery.trim();
+    const editor = editorRef.current;
+    if (!query || !editor) return;
+
+    removeEditorSearchHighlights(editor);
+
+    const nodes = getEditorTextNodes();
+    const fullText = nodes.map((node) => node.data).join("");
+    const normalizedText = fullText.toLowerCase();
+    const normalizedQuery = query.toLowerCase();
+    const currentOffset = getEditorSelectionTextOffset(nodes);
+    const matches: number[] = [];
+    let nextMatchIndex = normalizedText.indexOf(normalizedQuery);
+
+    while (nextMatchIndex !== -1) {
+      matches.push(nextMatchIndex);
+      nextMatchIndex = normalizedText.indexOf(
+        normalizedQuery,
+        nextMatchIndex + normalizedQuery.length
+      );
+    }
+
+    if (matches.length === 0) {
+      setSearchResultLabel("لا توجد نتائج");
+      return;
+    }
+
+    const selectedMatchIndex =
+      direction === "next"
+        ? matches.find((index) => index > currentOffset) ?? matches[0]
+        : [...matches].reverse().find((index) => index < currentOffset) ??
+          matches.at(-1) ??
+          matches[0];
+
+    const startPosition = getTextPosition(nodes, selectedMatchIndex);
+    const endPosition = getTextPosition(nodes, selectedMatchIndex + query.length);
+    if (!startPosition || !endPosition) return;
+
+    const range = document.createRange();
+    range.setStart(startPosition.node, startPosition.offset);
+    range.setEnd(endPosition.node, endPosition.offset);
+
+    const marker = document.createElement("mark");
+    marker.setAttribute("data-editor-search-match", "true");
+    marker.appendChild(range.extractContents());
+    range.insertNode(marker);
+    marker.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    const markerRange = document.createRange();
+    markerRange.selectNodeContents(marker);
+    lastEditorRangeRef.current = markerRange.cloneRange();
+
+    const selectedResultNumber = matches.indexOf(selectedMatchIndex) + 1;
+    setSearchResultLabel(`${selectedResultNumber} من ${matches.length}`);
+  };
+
+  const findInHtmlSource = (
+    direction: "next" | "previous" = "next",
+    nextQuery = searchQuery
+  ) => {
+    const query = nextQuery.trim();
+    const textarea = htmlSourceRef.current;
+    if (!query || !textarea) return;
+
+    const source = textarea.value;
+    const normalizedSource = source.toLowerCase();
+    const normalizedQuery = query.toLowerCase();
+    const matches: number[] = [];
+    let nextMatchIndex = normalizedSource.indexOf(normalizedQuery);
+
+    while (nextMatchIndex !== -1) {
+      matches.push(nextMatchIndex);
+      nextMatchIndex = normalizedSource.indexOf(
+        normalizedQuery,
+        nextMatchIndex + normalizedQuery.length
+      );
+    }
+
+    if (matches.length === 0) {
+      setSearchResultLabel("لا توجد نتائج");
+      return;
+    }
+
+    const currentOffset =
+      direction === "next" ? textarea.selectionEnd : textarea.selectionStart;
+
+    const matchIndex =
+      direction === "next"
+        ? matches.find((index) => index >= currentOffset) ?? matches[0]
+        : [...matches].reverse().find((index) => index < currentOffset) ??
+          matches.at(-1) ??
+          matches[0];
+
+    htmlDetailsRef.current?.setAttribute("open", "true");
+    textarea.focus();
+    textarea.setSelectionRange(matchIndex, matchIndex + query.length);
+    textarea.scrollIntoView({ behavior: "smooth", block: "center" });
+    setSearchResultLabel(`${matches.indexOf(matchIndex) + 1} من ${matches.length}`);
+  };
+
+  const runEditorSearch = (
+    direction: "next" | "previous" = "next",
+    nextQuery = searchQuery
+  ) => {
+    if (searchTarget === "html") {
+      findInHtmlSource(direction, nextQuery);
+    } else {
+      findInEditor(direction, nextQuery);
+    }
+  };
+
   const undoContentChange = (focusTarget: "editor" | "html" = "editor") => {
     const currentContent =
       focusTarget === "html"
@@ -348,6 +646,14 @@ export default function EditArticleForm({
     clone.querySelectorAll("[data-selected-table]").forEach((element) => {
       element.removeAttribute("data-selected-table");
     });
+    clone.querySelectorAll("mark[data-editor-search-match]").forEach((mark) => {
+      mark.replaceWith(...Array.from(mark.childNodes));
+    });
+    clone.querySelectorAll("td[contenteditable], th[contenteditable]").forEach(
+      (element) => {
+        element.removeAttribute("contenteditable");
+      }
+    );
 
     return clone.innerHTML;
   };
@@ -400,17 +706,63 @@ export default function EditArticleForm({
     contentRef.current = nextContent;
     pushContentHistory(nextContent);
     setContent(nextContent);
-    window.requestAnimationFrame(restoreEditorSelection);
   };
 
-  const updateHtmlSource = (nextContent: string) => {
+  const updateEditorHtml = (nextContent: string) => {
+    if (!editorRef.current) return;
+
+    editorRef.current.innerHTML = nextContent;
+    prepareEditableTables();
+  };
+
+  const updateHtmlSource = (
+    nextContent: string,
+    options: { syncEditor?: boolean } = {}
+  ) => {
     contentRef.current = nextContent;
     pushContentHistory(nextContent);
     setContent(nextContent);
 
-    if (editorRef.current) {
-      editorRef.current.innerHTML = nextContent;
+    if (options.syncEditor ?? true) {
+      updateEditorHtml(nextContent);
     }
+  };
+
+  const applyArticleImport = (payload: ArticleImportPayload) => {
+    if (payload.title !== undefined) setTitle(payload.title);
+    if (payload.slug !== undefined) setSlug(payload.slug);
+    if (payload.category !== undefined) setCategory(payload.category);
+    if (payload.author !== undefined) setAuthor(payload.author);
+    if (payload.date !== undefined) setDate(payload.date);
+    if (payload.image !== undefined) setImage(payload.image);
+    if (payload.excerpt !== undefined) setExcerpt(payload.excerpt);
+    if (payload.description !== undefined) setDescription(payload.description);
+
+    if (payload.content !== undefined) {
+      updateHtmlSource(payload.content);
+    }
+
+    setSavedAt(null);
+    setLastAction(null);
+    setSaveError(null);
+    setPreviewVersion((version) => version + 1);
+  };
+
+  const handleArticleImportPaste = (event: ClipboardEvent<HTMLElement>) => {
+    if (event.defaultPrevented) return false;
+
+    const target = event.target as HTMLElement | null;
+    if (target?.closest("[data-skip-article-import]")) return false;
+
+    const pastedText = event.clipboardData.getData("text/plain");
+    if (!pastedText) return false;
+
+    const importedArticle = parseArticleImport(pastedText);
+    if (!importedArticle) return false;
+
+    event.preventDefault();
+    applyArticleImport(importedArticle);
+    return true;
   };
 
   const startEditorToolbarDrag = (event: PointerEvent<HTMLDivElement>) => {
@@ -507,7 +859,7 @@ export default function EditArticleForm({
     setSaveError(null);
 
     try {
-      const response = await fetch(`/api/dashboard/articles/${article.slug}`, {
+      const response = await fetch(`/api/dashboard/articles/${slug || article.slug}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -530,7 +882,7 @@ export default function EditArticleForm({
 
       if (mode === "published") {
         router.push(
-          `/news/${article.slug}?published=${encodeURIComponent(payload.updatedAt)}`
+          `/news/${payload.slug}?published=${encodeURIComponent(payload.updatedAt)}`
         );
       }
     } catch {
@@ -565,6 +917,7 @@ export default function EditArticleForm({
     }
 
     document.execCommand("insertHTML", false, html);
+    prepareEditableTables();
     rememberEditorSelection();
     syncContentState();
   };
@@ -612,6 +965,13 @@ export default function EditArticleForm({
     table.parentNode?.insertBefore(wrapper, table);
     wrapper.appendChild(table);
     return wrapper;
+  };
+
+  const getTableWrapper = (table: HTMLTableElement) => {
+    const currentParent = table.parentElement;
+    return currentParent?.classList.contains("article-table-wrap")
+      ? currentParent
+      : null;
   };
 
   const markSelectedTable = (index: number | null) => {
@@ -666,11 +1026,13 @@ export default function EditArticleForm({
   const selectTable = (table: HTMLTableElement) => {
     const tables = getEditorTables();
     const nextIndex = tables.indexOf(table);
-    const wrapper = ensureTableWrapper(table);
+    const wrapper = getTableWrapper(table);
 
     setSelectedTableIndex(nextIndex);
     markSelectedTable(nextIndex);
-    loadTableSettings(wrapper);
+    if (wrapper) {
+      loadTableSettings(wrapper);
+    }
   };
 
   const handleEditorClick = (event: MouseEvent<HTMLDivElement>) => {
@@ -678,7 +1040,6 @@ export default function EditArticleForm({
     const image = target.closest("img");
 
     rememberEditorSelection();
-    syncContent();
 
     if (image && editorRef.current?.contains(image)) {
       const rect = image.getBoundingClientRect();
@@ -699,7 +1060,6 @@ export default function EditArticleForm({
       setSelectedTableIndex(null);
       setSelectedTableCell(null);
       markSelectedTable(null);
-      window.requestAnimationFrame(restoreEditorSelection);
       return;
     }
 
@@ -713,7 +1073,7 @@ export default function EditArticleForm({
         cellIndex: cell.cellIndex,
         rowIndex: row.rowIndex,
       });
-      window.requestAnimationFrame(restoreEditorSelection);
+      window.requestAnimationFrame(rememberEditorSelection);
     }
   };
 
@@ -738,6 +1098,12 @@ export default function EditArticleForm({
   };
 
   const handleEditorKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (isFindShortcut(event)) {
+      event.preventDefault();
+      openEditorSearch("editor");
+      return;
+    }
+
     if (isUndoShortcut(event)) {
       event.preventDefault();
       undoContentChange("editor");
@@ -760,6 +1126,12 @@ export default function EditArticleForm({
   const handleHtmlSourceKeyDown = (
     event: KeyboardEvent<HTMLTextAreaElement>
   ) => {
+    if (isFindShortcut(event)) {
+      event.preventDefault();
+      openEditorSearch("html");
+      return;
+    }
+
     if (isUndoShortcut(event)) {
       event.preventDefault();
       undoContentChange("html");
@@ -767,6 +1139,8 @@ export default function EditArticleForm({
   };
 
   const handleEditorPaste = (event: ClipboardEvent<HTMLDivElement>) => {
+    if (handleArticleImportPaste(event)) return;
+
     const pastedText = event.clipboardData.getData("text/plain");
     if (!pastedText) return;
 
@@ -810,31 +1184,6 @@ export default function EditArticleForm({
     if (lastTable) {
       selectTable(lastTable);
     }
-  };
-
-  const insertImage = () => {
-    const src = inlineImageSrc.trim();
-    if (!src) return;
-
-    const alt = inlineImageAlt.trim() || title;
-    const caption = inlineImageCaption.trim();
-
-    insertHtml(`
-      <figure class="my-8">
-        <img src="${src}" alt="${alt}" class="w-full border border-zinc-500" />
-        ${
-          caption
-            ? `<figcaption class="text-center text-zinc-400 text-sm mt-2">${caption}</figcaption>`
-            : ""
-        }
-      </figure>
-      <p><br></p>
-    `);
-
-    setInlineImageSrc("");
-    setInlineImageAlt("");
-    setInlineImageCaption("");
-    setShowInlineImageForm(false);
   };
 
   const getSelectedArticle = () => selectedLinkableArticle;
@@ -895,8 +1244,8 @@ export default function EditArticleForm({
   };
 
   const previewHref = hasDraft
-    ? `/news/${article.slug}?preview=draft&saved=${previewVersion}`
-    : `/news/${article.slug}`;
+    ? `/news/${slug || article.slug}?preview=draft&saved=${previewVersion}`
+    : `/news/${slug || article.slug}`;
 
   const applyTableSettings = () => {
     if (selectedTableIndex === null) {
@@ -989,6 +1338,7 @@ export default function EditArticleForm({
   return (
     <form
       className="grid min-w-0 gap-6 pb-28 xl:grid-cols-[minmax(0,1fr)_360px]"
+      onPaste={handleArticleImportPaste}
       onSubmit={(event) => {
         event.preventDefault();
         void saveArticle("draft");
@@ -1051,6 +1401,73 @@ export default function EditArticleForm({
         >
           <X size={17} />
         </button>
+      ) : null}
+
+      {isSearchOpen ? (
+        <div className="fixed left-4 top-4 z-[80] w-[min(420px,calc(100vw-32px))] border border-white/10 bg-[#101012] p-2 shadow-2xl shadow-black/40">
+          <div className="flex items-center gap-2">
+            <Search className="shrink-0 text-zinc-400" size={16} />
+            <input
+              ref={searchInputRef}
+              className="h-9 min-w-0 flex-1 border border-white/10 bg-black/40 px-3 text-sm text-white outline-none focus:border-red-500/60"
+              dir="auto"
+              onChange={(event) => {
+                const nextQuery = event.target.value;
+                setSearchQuery(nextQuery);
+                setSearchResultLabel("");
+                window.requestAnimationFrame(() => {
+                  runEditorSearch("next", nextQuery);
+                });
+              }}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  event.preventDefault();
+                  runEditorSearch(event.shiftKey ? "previous" : "next");
+                }
+
+                if (event.key === "Escape") {
+                  setIsSearchOpen(false);
+                  removeEditorSearchHighlights();
+                }
+              }}
+              placeholder={
+                searchTarget === "html"
+                  ? "بحث داخل HTML"
+                  : "بحث داخل المحرر"
+              }
+              value={searchQuery}
+            />
+            <button
+              className="h-9 border border-white/10 px-3 text-xs font-bold text-zinc-200 hover:bg-white/10"
+              onClick={() => runEditorSearch("previous")}
+              type="button"
+            >
+              السابق
+            </button>
+            <button
+              className="h-9 bg-white px-3 text-xs font-bold text-black hover:bg-zinc-200"
+              onClick={() => runEditorSearch("next")}
+              type="button"
+            >
+              التالي
+            </button>
+            <button
+              aria-label="إغلاق البحث"
+              className="flex h-9 w-9 items-center justify-center border border-white/10 text-zinc-300 hover:bg-white/10"
+              onClick={() => {
+                setIsSearchOpen(false);
+                removeEditorSearchHighlights();
+              }}
+              type="button"
+            >
+              <X size={16} />
+            </button>
+          </div>
+          <div className="mt-2 flex items-center justify-between text-[11px] text-zinc-500">
+            <span>{searchTarget === "html" ? "HTML" : "المحرر العادي"}</span>
+            <span>{searchResultLabel || "Enter للنتيجة التالية"}</span>
+          </div>
+        </div>
       ) : null}
 
       <section className="min-w-0 space-y-5">
@@ -1166,12 +1583,14 @@ export default function EditArticleForm({
               top: editorToolbarPosition.y,
               width: `min(${editorToolbarSize.width}px, calc(100vw - 16px))`,
             }}
+          >
+          <div
+            className="mb-1.5 flex cursor-grab flex-col gap-1.5 lg:flex-row lg:items-center lg:justify-between"
             onPointerDown={startEditorToolbarDrag}
             onPointerMove={dragEditorToolbar}
             onPointerUp={stopEditorToolbarDrag}
             onPointerCancel={stopEditorToolbarDrag}
           >
-          <div className="mb-1.5 flex cursor-grab flex-col gap-1.5 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex items-center gap-2">
               <WrapText className="text-emerald-300" size={15} />
               <div>
@@ -1332,21 +1751,13 @@ export default function EditArticleForm({
               <span>جدول</span>
             </button>
             <button
-              className={`${editorButtonClass} ${
-                showInlineImageForm ? "bg-white/10 text-white" : ""
-              }`}
+              className={editorButtonClass}
               onMouseDown={(event) => event.preventDefault()}
-              onClick={() => {
-                setShowInlineImageForm((isOpen) => !isOpen);
-                setEditorToolbarSize((size) => ({
-                  ...size,
-                  height: Math.max(size.height, 320),
-                }));
-              }}
+              onClick={scrollToEditorCaret}
               type="button"
             >
-              <ImageIcon size={17} />
-              <span>صورة</span>
+              <WrapText size={17} />
+              <span>المؤشر</span>
             </button>
           </div>
 
@@ -1533,51 +1944,6 @@ export default function EditArticleForm({
             </button>
           </div>
 
-          {showInlineImageForm ? (
-            <div
-              className="mb-2 grid gap-1.5 border border-white/10 bg-black/25 p-1.5 md:grid-cols-[1.4fr_1fr_1fr_auto]"
-              onMouseDown={(event) => event.stopPropagation()}
-              onPointerDown={(event) => event.stopPropagation()}
-            >
-              <input
-                className="h-7 min-w-0 border border-white/10 bg-black/40 px-2 text-xs font-normal text-white outline-none"
-                dir="ltr"
-                onMouseDown={(event) => event.stopPropagation()}
-                onPointerDown={(event) => event.stopPropagation()}
-                placeholder="/images/example.webp"
-                value={inlineImageSrc}
-                onChange={(event) => setInlineImageSrc(event.target.value)}
-              />
-              <input
-                className="h-7 min-w-0 border border-white/10 bg-black/40 px-2 text-xs font-normal text-white outline-none"
-                onMouseDown={(event) => event.stopPropagation()}
-                onPointerDown={(event) => event.stopPropagation()}
-                placeholder="وصف الصورة"
-                value={inlineImageAlt}
-                onChange={(event) => setInlineImageAlt(event.target.value)}
-              />
-              <input
-                className="h-7 min-w-0 border border-white/10 bg-black/40 px-2 text-xs font-normal text-white outline-none"
-                onMouseDown={(event) => event.stopPropagation()}
-                onPointerDown={(event) => event.stopPropagation()}
-                placeholder="تعليق اختياري"
-                value={inlineImageCaption}
-                onChange={(event) => setInlineImageCaption(event.target.value)}
-              />
-              <button
-                className="flex h-7 items-center justify-center gap-1.5 bg-white px-2.5 text-xs font-semibold text-black hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50"
-                disabled={!inlineImageSrc.trim()}
-                onMouseDown={(event) => event.stopPropagation()}
-                onPointerDown={(event) => event.stopPropagation()}
-                onClick={insertImage}
-                type="button"
-              >
-                <ImageIcon size={15} />
-                <span>إدراج</span>
-              </button>
-            </div>
-          ) : null}
-
             <div className="mt-2 flex flex-nowrap items-end gap-1.5 overflow-x-auto border border-white/10 bg-black/20 p-1.5 text-xs">
               <label className="w-24 shrink-0">
                 <span className="text-[11px] font-normal text-zinc-500">الديسكتوب</span>
@@ -1729,7 +2095,10 @@ export default function EditArticleForm({
               ref={htmlSourceRef}
               className="mt-4 min-h-48 w-full border border-white/10 bg-black/40 p-3 font-mono text-xs leading-6 text-zinc-300 outline-none"
               dir="ltr"
-              onChange={(event) => updateHtmlSource(event.target.value)}
+              onBlur={() => updateEditorHtml(contentRef.current)}
+              onChange={(event) =>
+                updateHtmlSource(event.target.value, { syncEditor: false })
+              }
               onKeyDown={handleHtmlSourceKeyDown}
               value={content}
             />
@@ -1814,60 +2183,6 @@ export default function EditArticleForm({
             >
               الرجوع للوحة التحكم
             </Link>
-          </div>
-        </section>
-
-        <section className="border border-white/10 bg-[#101012] p-5">
-          <div className="flex items-center gap-3">
-            <ImageIcon className="text-indigo-300" size={22} />
-            <h2 className="text-xl font-black">إدراج صورة داخل المقال</h2>
-          </div>
-
-          <div className="mt-5 space-y-4">
-            <label className="block">
-              <span className="text-sm font-bold text-zinc-400">
-                رابط أو مسار الصورة
-              </span>
-              <input
-                className="mt-2 h-11 w-full border border-white/10 bg-black/30 px-3 text-sm text-white outline-none"
-                dir="ltr"
-                placeholder="/images/example.webp"
-                value={inlineImageSrc}
-                onChange={(event) => setInlineImageSrc(event.target.value)}
-              />
-            </label>
-
-            <label className="block">
-              <span className="text-sm font-bold text-zinc-400">
-                وصف الصورة
-              </span>
-              <input
-                className="mt-2 h-11 w-full border border-white/10 bg-black/30 px-3 text-sm text-white outline-none"
-                value={inlineImageAlt}
-                onChange={(event) => setInlineImageAlt(event.target.value)}
-              />
-            </label>
-
-            <label className="block">
-              <span className="text-sm font-bold text-zinc-400">
-                تعليق أسفل الصورة
-              </span>
-              <textarea
-                className="mt-2 min-h-20 w-full resize-y border border-white/10 bg-black/30 p-3 text-sm leading-7 text-white outline-none"
-                value={inlineImageCaption}
-                onChange={(event) => setInlineImageCaption(event.target.value)}
-              />
-            </label>
-
-            <button
-              className="flex h-11 w-full items-center justify-center gap-2 bg-white px-4 text-sm font-black text-black hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50"
-              disabled={!inlineImageSrc.trim()}
-              onClick={insertImage}
-              type="button"
-            >
-              <ImageIcon size={18} />
-              <span>إدراج الصورة في موضع المؤشر</span>
-            </button>
           </div>
         </section>
 
