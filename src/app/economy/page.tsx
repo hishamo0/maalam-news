@@ -1,10 +1,11 @@
 import NewsCard from "@/components/NewsCard";
 import SectionTitle from "@/components/SectionTitle";
-import { news } from "@/data/news";
+import { getAllPublishedArticles } from "@/lib/articles";
 
-export default function EconomyPage() {
+export default async function EconomyPage() {
 
-const economyNews = news.filter(
+const articles = await getAllPublishedArticles();
+const economyNews = articles.filter(
   (item) => item.category === "اقتصاد"
 );
 

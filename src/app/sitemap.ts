@@ -1,17 +1,18 @@
 import type { MetadataRoute } from "next";
-import { news } from "@/data/news";
+import { getAllPublishedArticles } from "@/lib/articles";
 
 /* =========================================================
    Sitemap.xml
 ========================================================= */
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   /* =====================================================
      روابط المقالات
   ===================================================== */
 
-  const articles = news.map((article) => ({
+  const publishedArticles = await getAllPublishedArticles();
+  const articles = publishedArticles.map((article) => ({
 
     url: `https://maalam.net/news/${article.slug}`,
 

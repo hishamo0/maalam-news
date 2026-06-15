@@ -1,10 +1,11 @@
 import NewsCard from "@/components/NewsCard";
 import SectionTitle from "@/components/SectionTitle";
-import { news } from "@/data/news";
+import { getAllPublishedArticles } from "@/lib/articles";
 
-export default function CulturePage() {
+export default async function CulturePage() {
 
-const cultureNews = news.filter(
+const articles = await getAllPublishedArticles();
+const cultureNews = articles.filter(
   (item) => item.category === "ثقافة"
 );
 

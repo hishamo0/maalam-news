@@ -1,10 +1,11 @@
 import NewsCard from "@/components/NewsCard";
 import SectionTitle from "@/components/SectionTitle";
-import { news } from "@/data/news";
+import { getAllPublishedArticles } from "@/lib/articles";
 
-export default function PoliticsPage() {
+export default async function PoliticsPage() {
 
-  const politicsNews = news.filter(
+  const articles = await getAllPublishedArticles();
+  const politicsNews = articles.filter(
     (item) => item.category === "سياسة"
   );
 
