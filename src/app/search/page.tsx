@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
+import { news } from "@/data/news";
 import NewsCard from "@/components/NewsCard";
-import { getAllPublishedArticles } from "@/lib/articles";
 
 /* =========================================================
    نوع البيانات القادمة من الرابط
@@ -39,8 +39,7 @@ export default async function SearchPage({
      فلترة الأخبار
   ======================================================= */
 
-  const articles = await getAllPublishedArticles();
-  const results = articles.filter((item) =>
+  const results = news.filter((item) =>
 
     item.title.toLowerCase().includes(query) ||
 

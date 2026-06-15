@@ -9,11 +9,6 @@ import ShareButtons from "@/components/ShareButtons";
 import ArticleImageLightbox from "@/components/ArticleImageLightbox";
 import BenchmarkSlider from "@/components/BenchmarkSlider";
 import type { SliderImage } from "@/components/BenchmarkSlider";
-import {
-  getDraftArticle,
-  getPublishedArticle,
-  getStoredArticles,
-} from "@/lib/cmsStore";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -23,11 +18,6 @@ import ReadingProgress from "@/components/ReadingProgress";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { Fragment } from "react";
-
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
-
 
     /* =====================================================
     
@@ -122,9 +112,6 @@ type Props = {
   params: Promise<{
     slug: string;
   }>;
-  searchParams?: Promise<{
-    preview?: string;
-  }>;
 };
 
 /* =========================================================
@@ -137,19 +124,9 @@ export async function generateMetadata({
 
   const { slug } = await params;
 
-  const baseArticle = news.find(
+  const article = news.find(
     (a) => a.slug === slug
   );
-
-  const publishedArticle = await getPublishedArticle(slug);
-  const article = publishedArticle
-    ? baseArticle
-      ? {
-          ...baseArticle,
-          ...publishedArticle,
-        }
-      : publishedArticle
-    : baseArticle;
 
   if (!article) {
     return {
@@ -220,7 +197,6 @@ export async function generateMetadata({
 
 export default async function ArticlePage({
   params,
-  searchParams,
 }: Props) {
 
   /* =====================================================
@@ -228,37 +204,18 @@ export default async function ArticlePage({
   ===================================================== */
 
   const { slug } = await params;
-  const previewMode = (await searchParams)?.preview === "draft";
 
   /* =====================================================
      البحث عن المقال الحالي
   ===================================================== */
 
-  const baseArticle = news.find(
+  const article = news.find(
     (a) => a.slug === slug
   );
 
   /* =====================================================
      إذا المقال غير موجود
   ===================================================== */
-
-  const publishedArticle = await getPublishedArticle(slug);
-  const draftArticle = previewMode ? await getDraftArticle(slug) : null;
-  const article = draftArticle
-    ? baseArticle
-      ? {
-          ...baseArticle,
-          ...draftArticle,
-        }
-      : draftArticle
-    : publishedArticle
-    ? baseArticle
-      ? {
-          ...baseArticle,
-          ...publishedArticle,
-        }
-      : publishedArticle
-    : baseArticle;
 
   if (!article) {
     notFound();
@@ -271,13 +228,7 @@ export default async function ArticlePage({
      مقالات متعلقة
   ===================================================== */
 
-  const storedArticles = await getStoredArticles();
-  const allArticles = [...storedArticles, ...news].filter(
-    (item, index, list) =>
-      list.findIndex((current) => current.slug === item.slug) === index
-  );
-
-  const relatedNews = allArticles
+  const relatedNews = news
     .filter(
       (item) =>
         item.category === article.category &&
@@ -364,31 +315,6 @@ export default async function ArticlePage({
       ================================================= */}
 
       <Header />
-
-      {previewMode && (
-        <div className="fixed bottom-4 left-4 z-[60] max-w-sm border border-sky-400/30 bg-sky-950/95 p-3 text-sm leading-7 text-sky-100 shadow-2xl">
-          <p>
-            {draftArticle
-              ? "أنت تشاهد معاينة المسودة. لن تظهر هذه التغييرات للزوار إلا بعد الضغط على نشر."
-              : "لا توجد مسودة محفوظة لهذا المقال حالياً."}
-          </p>
-          <Link
-            href={`/dashboard/news/${article.slug}/edit`}
-            className="mt-3 flex h-10 items-center justify-center bg-white px-4 text-sm font-black text-black hover:bg-zinc-200"
-          >
-            الرجوع للمحرر
-          </Link>
-        </div>
-      )}
-
-      {!previewMode && (
-        <Link
-          href={`/dashboard/news/${article.slug}/edit`}
-          className="fixed bottom-4 left-4 z-[60] flex h-11 items-center justify-center border border-white/10 bg-[#101012] px-4 text-sm font-black text-white shadow-2xl hover:bg-white/10"
-        >
-          الرجوع للمحرر
-        </Link>
-      )}
 
       {/* =================================================
          Hero المقال

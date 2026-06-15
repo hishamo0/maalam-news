@@ -5,16 +5,15 @@ import NewsCard from "@/components/NewsCard";
 import SectionTitle from "@/components/SectionTitle";
 import TrendingSidebar from "@/components/TrendingSidebar";
 
-import { getAllPublishedArticles } from "@/lib/articles";
+import { news } from "@/data/news";
 
  /* =========================================================
       Metadata
 ========================================================= */
 
 
-export default async function Home() {
-  const articles = await getAllPublishedArticles();
-  const homeNews = articles.map(
+export default function Home() {
+  const homeNews = news.map(
     ({ category, title, excerpt, image, slug, author, date }) => ({
       category,
       title,
@@ -26,7 +25,7 @@ export default async function Home() {
     })
   );
 
-  const technologyNews = articles.filter(
+  const technologyNews = news.filter(
     (item) => item.category === "تكنولوجيا"
   );
 

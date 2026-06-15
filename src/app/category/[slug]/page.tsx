@@ -1,3 +1,4 @@
+import { news } from "@/data/news";
 import { notFound } from "next/navigation";
 
 import Header from "@/components/Header";
@@ -5,7 +6,6 @@ import NewsCard from "@/components/NewsCard";
 import SectionTitle from "@/components/SectionTitle";
 
 import type { Metadata } from "next";
-import { getAllPublishedArticles } from "@/lib/articles";
 
 /* =========================================================
    نوع البيانات الخاصة بالصفحة
@@ -112,8 +112,7 @@ export default async function CategoryPage({
      أخبار التصنيف
   ===================================================== */
 
-  const articles = await getAllPublishedArticles();
-  const categoryNews = articles.filter(
+  const categoryNews = news.filter(
     (item) => item.category === categoryName
   );
 
