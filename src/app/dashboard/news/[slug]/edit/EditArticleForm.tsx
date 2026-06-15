@@ -848,7 +848,7 @@ export default function EditArticleForm({
     image,
     excerpt,
     description,
-    content: normalizeArticleHtml(getEditorHtml()),
+    content: normalizeArticleHtml(contentRef.current),
     updatedAt: new Date().toLocaleTimeString("ar", { hour12: false }),
   });
 
