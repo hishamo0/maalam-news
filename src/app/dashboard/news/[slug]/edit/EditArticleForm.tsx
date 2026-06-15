@@ -114,6 +114,23 @@ const unescapeImportValue = (value: string) =>
     .replace(/\\(["'`\\])/g, "$1")
     .trim();
 
+const escapeTemplateLiteral = (value: string) =>
+  value.replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$\{/g, "\\${");
+
+const formatArticleForNewsFile = (
+  payload: Omit<EditableArticlePayload, "updatedAt">
+) => `{
+  title: ${JSON.stringify(payload.title)},
+  slug: ${JSON.stringify(payload.slug)},
+  excerpt: ${JSON.stringify(payload.excerpt)},
+  description: ${JSON.stringify(payload.description)},
+  category: ${JSON.stringify(payload.category)},
+  image: ${JSON.stringify(payload.image)},
+  author: ${JSON.stringify(payload.author)},
+  date: ${JSON.stringify(payload.date)},
+  content: \`${escapeTemplateLiteral(payload.content)}\`,
+}`;
+
 const extractQuotedImportField = (source: string, field: ArticleImportField) => {
   const match = new RegExp(
     `${escapeRegex(field)}\\s*:\\s*(["'])([\\s\\S]*?)\\1\\s*,?`,
@@ -224,6 +241,7 @@ export default function EditArticleForm({
   const articlePickerRef = useRef<HTMLDivElement>(null);
   const htmlSourceRef = useRef<HTMLTextAreaElement>(null);
   const htmlDetailsRef = useRef<HTMLDetailsElement>(null);
+  const isEditingArticleExportRef = useRef(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const lastEditorRangeRef = useRef<Range | null>(null);
   const selectedImageRef = useRef<HTMLImageElement | null>(null);
@@ -247,6 +265,19 @@ export default function EditArticleForm({
   const [excerpt, setExcerpt] = useState(article.excerpt);
   const [description, setDescription] = useState(article.description);
   const [content, setContent] = useState(article.content);
+  const [articleExport, setArticleExport] = useState(() =>
+    formatArticleForNewsFile({
+      title: article.title,
+      slug: article.slug,
+      category: article.category,
+      author: article.author,
+      date: article.date,
+      image: article.image,
+      excerpt: article.excerpt,
+      description: article.description,
+      content: article.content,
+    })
+  );
   const [savedAt, setSavedAt] = useState<string | null>(null);
   const [previewDevice, setPreviewDevice] = useState<PreviewDevice>("desktop");
   const [tableDesktopWidth, setTableDesktopWidth] =
@@ -317,6 +348,24 @@ export default function EditArticleForm({
     editorRef.current.innerHTML = contentRef.current;
     prepareEditableTables();
   }, [article.slug]);
+
+  useEffect(() => {
+    if (isEditingArticleExportRef.current) return;
+
+    setArticleExport(
+      formatArticleForNewsFile({
+        title,
+        slug,
+        category,
+        author,
+        date,
+        image,
+        excerpt,
+        description,
+        content,
+      })
+    );
+  }, [title, slug, category, author, date, image, excerpt, description, content]);
 
   useEffect(() => {
     if (!isArticlePickerOpen) return;
@@ -622,7 +671,8 @@ export default function EditArticleForm({
   const undoContentChange = (focusTarget: "editor" | "html" = "editor") => {
     const currentContent =
       focusTarget === "html"
-        ? htmlSourceRef.current?.value ?? contentRef.current
+        ? parseArticleImport(htmlSourceRef.current?.value ?? "")?.content ??
+          contentRef.current
         : getEditorHtml();
 
     if (contentHistoryRef.current[contentHistoryIndexRef.current] !== currentContent) {
@@ -726,6 +776,43 @@ export default function EditArticleForm({
     if (options.syncEditor ?? true) {
       updateEditorHtml(nextContent);
     }
+  };
+
+  const updateArticleExport = (nextExport: string) => {
+    setArticleExport(nextExport);
+
+    const importedArticle = parseArticleImport(nextExport);
+    if (importedArticle) {
+      applyArticleImport(importedArticle);
+    }
+  };
+
+  const refreshArticleExport = () => {
+    setArticleExport(
+      formatArticleForNewsFile({
+        title,
+        slug,
+        category,
+        author,
+        date,
+        image,
+        excerpt,
+        description,
+        content: contentRef.current,
+      })
+    );
+  };
+
+  const handleArticleExportBlur = () => {
+    isEditingArticleExportRef.current = false;
+    const importedArticle = parseArticleImport(articleExport);
+
+    if (importedArticle) {
+      applyArticleImport(importedArticle);
+    }
+
+    updateEditorHtml(contentRef.current);
+    window.requestAnimationFrame(refreshArticleExport);
   };
 
   const applyArticleImport = (payload: ArticleImportPayload) => {
@@ -2095,12 +2182,15 @@ export default function EditArticleForm({
               ref={htmlSourceRef}
               className="mt-4 min-h-48 w-full border border-white/10 bg-black/40 p-3 font-mono text-xs leading-6 text-zinc-300 outline-none"
               dir="ltr"
-              onBlur={() => updateEditorHtml(contentRef.current)}
+              onBlur={handleArticleExportBlur}
               onChange={(event) =>
-                updateHtmlSource(event.target.value, { syncEditor: false })
+                updateArticleExport(event.target.value)
               }
+              onFocus={() => {
+                isEditingArticleExportRef.current = true;
+              }}
               onKeyDown={handleHtmlSourceKeyDown}
-              value={content}
+              value={articleExport}
             />
           </details>
         </div>
