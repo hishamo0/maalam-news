@@ -23,6 +23,7 @@ import {
   ChevronDown,
   Code2,
   Columns3,
+  Copy,
   Eye,
   FileText,
   Heading2,
@@ -241,7 +242,6 @@ export default function EditArticleForm({
   const articlePickerRef = useRef<HTMLDivElement>(null);
   const htmlSourceRef = useRef<HTMLTextAreaElement>(null);
   const htmlDetailsRef = useRef<HTMLDetailsElement>(null);
-  const isEditingArticleExportRef = useRef(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const lastEditorRangeRef = useRef<Range | null>(null);
   const selectedImageRef = useRef<HTMLImageElement | null>(null);
@@ -265,19 +265,6 @@ export default function EditArticleForm({
   const [excerpt, setExcerpt] = useState(article.excerpt);
   const [description, setDescription] = useState(article.description);
   const [content, setContent] = useState(article.content);
-  const [articleExport, setArticleExport] = useState(() =>
-    formatArticleForNewsFile({
-      title: article.title,
-      slug: article.slug,
-      category: article.category,
-      author: article.author,
-      date: article.date,
-      image: article.image,
-      excerpt: article.excerpt,
-      description: article.description,
-      content: article.content,
-    })
-  );
   const [savedAt, setSavedAt] = useState<string | null>(null);
   const [previewDevice, setPreviewDevice] = useState<PreviewDevice>("desktop");
   const [tableDesktopWidth, setTableDesktopWidth] =
@@ -296,6 +283,7 @@ export default function EditArticleForm({
   const [lastAction, setLastAction] = useState<SaveMode | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [copyStatus, setCopyStatus] = useState("");
   const [hasDraft, setHasDraft] = useState(initialHasDraft);
   const [previewVersion, setPreviewVersion] = useState(() => Date.now());
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -350,24 +338,6 @@ export default function EditArticleForm({
   }, [article.slug]);
 
   useEffect(() => {
-    if (isEditingArticleExportRef.current) return;
-
-    setArticleExport(
-      formatArticleForNewsFile({
-        title,
-        slug,
-        category,
-        author,
-        date,
-        image,
-        excerpt,
-        description,
-        content,
-      })
-    );
-  }, [title, slug, category, author, date, image, excerpt, description, content]);
-
-  useEffect(() => {
     if (!isArticlePickerOpen) return;
 
     const closeArticlePicker = (event: globalThis.PointerEvent) => {
@@ -420,6 +390,22 @@ export default function EditArticleForm({
       tableCount: (content.match(/<table\b/gi) ?? []).length,
     }),
     [content, excerpt, image]
+  );
+
+  const articleExport = useMemo(
+    () =>
+      formatArticleForNewsFile({
+        title,
+        slug,
+        category,
+        author,
+        date,
+        image,
+        excerpt,
+        description,
+        content,
+      }),
+    [title, slug, category, author, date, image, excerpt, description, content]
   );
 
   const applyContentSnapshot = (
@@ -671,8 +657,7 @@ export default function EditArticleForm({
   const undoContentChange = (focusTarget: "editor" | "html" = "editor") => {
     const currentContent =
       focusTarget === "html"
-        ? parseArticleImport(htmlSourceRef.current?.value ?? "")?.content ??
-          contentRef.current
+        ? htmlSourceRef.current?.value ?? contentRef.current
         : getEditorHtml();
 
     if (contentHistoryRef.current[contentHistoryIndexRef.current] !== currentContent) {
@@ -778,41 +763,39 @@ export default function EditArticleForm({
     }
   };
 
-  const updateArticleExport = (nextExport: string) => {
-    setArticleExport(nextExport);
+  const getCurrentArticleExport = () => {
+    const currentContent = normalizeArticleHtml(getEditorHtml());
+    contentRef.current = currentContent;
+    setContent(currentContent);
 
-    const importedArticle = parseArticleImport(nextExport);
-    if (importedArticle) {
-      applyArticleImport(importedArticle);
-    }
+    return formatArticleForNewsFile({
+      title,
+      slug,
+      category,
+      author,
+      date,
+      image,
+      excerpt,
+      description,
+      content: currentContent,
+    });
   };
 
-  const refreshArticleExport = () => {
-    setArticleExport(
-      formatArticleForNewsFile({
-        title,
-        slug,
-        category,
-        author,
-        date,
-        image,
-        excerpt,
-        description,
-        content: contentRef.current,
-      })
-    );
-  };
+  const copyArticleExport = async () => {
+    const nextExport = getCurrentArticleExport();
+    setCopyStatus("");
 
-  const handleArticleExportBlur = () => {
-    isEditingArticleExportRef.current = false;
-    const importedArticle = parseArticleImport(articleExport);
-
-    if (importedArticle) {
-      applyArticleImport(importedArticle);
+    try {
+      await navigator.clipboard.writeText(nextExport);
+      setCopyStatus("تم نسخ كود المقال كاملاً");
+    } catch {
+      htmlDetailsRef.current?.setAttribute("open", "true");
+      window.requestAnimationFrame(() => {
+        htmlSourceRef.current?.focus();
+        htmlSourceRef.current?.select();
+      });
+      setCopyStatus("حدد النص وانسخه يدوياً");
     }
-
-    updateEditorHtml(contentRef.current);
-    window.requestAnimationFrame(refreshArticleExport);
   };
 
   const applyArticleImport = (payload: ArticleImportPayload) => {
@@ -1223,6 +1206,13 @@ export default function EditArticleForm({
       event.preventDefault();
       undoContentChange("html");
     }
+  };
+
+  const handleHtmlSourcePaste = () => {
+    window.requestAnimationFrame(() => {
+      const nextContent = htmlSourceRef.current?.value ?? "";
+      updateHtmlSource(nextContent);
+    });
   };
 
   const handleEditorPaste = (event: ClipboardEvent<HTMLDivElement>) => {
@@ -2174,22 +2164,39 @@ export default function EditArticleForm({
             ref={htmlDetailsRef}
             className="mt-4 border border-white/10 bg-black/20 p-4"
           >
-            <summary className="flex cursor-pointer items-center gap-2 text-sm font-bold text-zinc-300">
+            <summary className="flex cursor-pointer items-center justify-between gap-3 text-sm font-bold text-zinc-300">
               <Code2 size={17} />
               HTML الناتج للربط لاحقاً
             </summary>
+            {copyStatus ? (
+              <p className="mt-3 text-xs font-bold text-emerald-300">
+                {copyStatus}
+              </p>
+            ) : null}
+            <button
+              className="mt-4 flex h-10 items-center justify-center gap-2 border border-white/10 bg-white px-4 text-sm font-black text-black hover:bg-zinc-200"
+              onClick={() => void copyArticleExport()}
+              type="button"
+            >
+              <Copy size={17} />
+              <span>نسخ كود المقال كاملاً</span>
+            </button>
             <textarea
               ref={htmlSourceRef}
               className="mt-4 min-h-48 w-full border border-white/10 bg-black/40 p-3 font-mono text-xs leading-6 text-zinc-300 outline-none"
               dir="ltr"
-              onBlur={handleArticleExportBlur}
+              onBlur={() => updateEditorHtml(contentRef.current)}
               onChange={(event) =>
-                updateArticleExport(event.target.value)
+                updateHtmlSource(event.target.value, { syncEditor: false })
               }
-              onFocus={() => {
-                isEditingArticleExportRef.current = true;
-              }}
               onKeyDown={handleHtmlSourceKeyDown}
+              onPaste={handleHtmlSourcePaste}
+              value={content}
+            />
+            <textarea
+              className="mt-4 min-h-40 w-full border border-white/10 bg-black/40 p-3 font-mono text-xs leading-6 text-zinc-300 outline-none"
+              dir="ltr"
+              readOnly
               value={articleExport}
             />
           </details>

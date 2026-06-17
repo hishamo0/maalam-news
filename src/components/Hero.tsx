@@ -123,6 +123,8 @@ export default function Hero({ items }: { items: HeroItem[] }) {
               width={1600}
               height={900}
               priority
+              fetchPriority="high"
+              sizes="(max-width: 1024px) 100vw, 1280px"
               className={`h-full w-full object-cover transition-all duration-700 ease-in-out ${
                 isChanging ? "opacity-0 scale-105" : "opacity-100 scale-100"
               } group-hover:scale-105`}
