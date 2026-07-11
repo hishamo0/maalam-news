@@ -197,7 +197,7 @@ const hoverStyles: Record<string, string> = {
     بواسطة {author}
   </span>
 
-  <span className="text-xs text-gray-500">
+  <span className={`text-xs font-semibold ${categoryStyles[category]?.split(" ")[0] || "text-white"}`}>
     {date}
   </span>
 </div>

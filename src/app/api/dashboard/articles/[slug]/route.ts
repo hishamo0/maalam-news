@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import {
+  deleteDraftArticle,
   publishArticle,
   saveDraftArticle,
   type CmsArticlePayload,
@@ -41,5 +42,17 @@ export async function POST(request: Request, { params }: Props) {
     mode: body.mode,
     slug: articleSlug,
     updatedAt: body.article.updatedAt,
+  });
+}
+
+export async function DELETE(_request: Request, { params }: Props) {
+  const { slug } = await params;
+
+  await deleteDraftArticle(slug);
+
+  return NextResponse.json({
+    ok: true,
+    mode: "draft-deleted",
+    slug,
   });
 }

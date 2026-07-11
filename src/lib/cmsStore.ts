@@ -87,6 +87,12 @@ export async function saveDraftArticle(
   await writeStore(store);
 }
 
+export async function deleteDraftArticle(slug: string) {
+  const store = await readStore();
+  delete store.drafts[slug];
+  await writeStore(store);
+}
+
 export async function publishArticle(
   slug: string,
   article: CmsArticlePayload

@@ -136,7 +136,9 @@ export default function LatestNewsSlider({ items }: LatestNewsSliderProps) {
 
               <div className="mt-5 flex items-center justify-between border-t border-white/15 pt-4 text-xs text-zinc-300">
                 <span>{article.author}</span>
-                <span>{article.date}</span>
+                <span className={`font-semibold ${categoryStyle.text}`}>
+                  {article.date}
+                </span>
               </div>
             </div>
           </div>

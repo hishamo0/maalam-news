@@ -8,7 +8,6 @@ import {
   type ClipboardEvent,
   type KeyboardEvent,
   type MouseEvent,
-  type PointerEvent,
 } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -61,6 +60,7 @@ type TableMobileMode = "scroll" | "stack";
 type TableTextSize = "sm" | "md";
 type PreviewDevice = "desktop" | "mobile";
 type SaveMode = "draft" | "published";
+type EditorAction = SaveMode | "draft-deleted";
 type SearchTarget = "editor" | "html";
 
 type EditableArticlePayload = Pick<
@@ -245,13 +245,6 @@ export default function EditArticleForm({
   const searchInputRef = useRef<HTMLInputElement>(null);
   const lastEditorRangeRef = useRef<Range | null>(null);
   const selectedImageRef = useRef<HTMLImageElement | null>(null);
-  const toolbarDragOffsetRef = useRef({ x: 0, y: 0 });
-  const toolbarResizeStartRef = useRef({
-    height: 0,
-    pointerX: 0,
-    pointerY: 0,
-    width: 0,
-  });
   const contentRef = useRef(article.content);
   const contentHistoryRef = useRef<string[]>([article.content]);
   const contentHistoryIndexRef = useRef(0);
@@ -280,7 +273,7 @@ export default function EditArticleForm({
     cellIndex: number;
     rowIndex: number;
   } | null>(null);
-  const [lastAction, setLastAction] = useState<SaveMode | null>(null);
+  const [lastAction, setLastAction] = useState<EditorAction | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [copyStatus, setCopyStatus] = useState("");
@@ -301,25 +294,6 @@ export default function EditArticleForm({
   });
   const [isArticlePickerOpen, setIsArticlePickerOpen] = useState(false);
   const [articleSearchQuery, setArticleSearchQuery] = useState("");
-  const [editorToolbarPosition, setEditorToolbarPosition] = useState(() => {
-    if (typeof window === "undefined") {
-      return { x: 16, y: 16 };
-    }
-
-    const toolbarWidth = Math.min(620, window.innerWidth - 24);
-
-    return {
-      x: Math.max(12, window.innerWidth - toolbarWidth - 12),
-      y: 12,
-    };
-  });
-  const [isEditorToolbarDragging, setIsEditorToolbarDragging] = useState(false);
-  const [editorToolbarSize, setEditorToolbarSize] = useState({
-    height: 260,
-    width: 620,
-  });
-  const [isEditorToolbarResizing, setIsEditorToolbarResizing] = useState(false);
-
   const prepareEditableTables = () => {
     editorRef.current?.querySelectorAll("td, th").forEach((cell) => {
       cell.setAttribute("contenteditable", "true");
@@ -835,80 +809,6 @@ export default function EditArticleForm({
     return true;
   };
 
-  const startEditorToolbarDrag = (event: PointerEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLElement;
-
-    if (target.closest("button, input, select, textarea, a")) return;
-
-    const toolbar = editorToolbarRef.current;
-    if (!toolbar) return;
-
-    const rect = toolbar.getBoundingClientRect();
-    toolbarDragOffsetRef.current = {
-      x: event.clientX - rect.left,
-      y: event.clientY - rect.top,
-    };
-    setIsEditorToolbarDragging(true);
-    event.currentTarget.setPointerCapture(event.pointerId);
-  };
-
-  const dragEditorToolbar = (event: PointerEvent<HTMLDivElement>) => {
-    if (!isEditorToolbarDragging) return;
-
-    const toolbar = editorToolbarRef.current;
-    const width = toolbar?.offsetWidth ?? 720;
-    const height = toolbar?.offsetHeight ?? 160;
-    const margin = 8;
-
-    setEditorToolbarPosition({
-      x: Math.min(
-        Math.max(margin, event.clientX - toolbarDragOffsetRef.current.x),
-        Math.max(margin, window.innerWidth - width - margin)
-      ),
-      y: Math.min(
-        Math.max(margin, event.clientY - toolbarDragOffsetRef.current.y),
-        Math.max(margin, window.innerHeight - height - margin)
-      ),
-    });
-  };
-
-  const stopEditorToolbarDrag = (event: PointerEvent<HTMLDivElement>) => {
-    setIsEditorToolbarDragging(false);
-    event.currentTarget.releasePointerCapture(event.pointerId);
-  };
-
-  const startEditorToolbarResize = (event: PointerEvent<HTMLButtonElement>) => {
-    const toolbar = editorToolbarRef.current;
-    if (!toolbar) return;
-
-    toolbarResizeStartRef.current = {
-      height: toolbar.offsetHeight,
-      pointerX: event.clientX,
-      pointerY: event.clientY,
-      width: toolbar.offsetWidth,
-    };
-    setIsEditorToolbarResizing(true);
-    event.currentTarget.setPointerCapture(event.pointerId);
-  };
-
-  const resizeEditorToolbar = (event: PointerEvent<HTMLButtonElement>) => {
-    if (!isEditorToolbarResizing) return;
-
-    const start = toolbarResizeStartRef.current;
-    const maxWidth = Math.max(320, window.innerWidth - editorToolbarPosition.x - 8);
-    const maxHeight = Math.max(180, window.innerHeight - editorToolbarPosition.y - 8);
-
-    setEditorToolbarSize({
-      height: Math.min(Math.max(170, start.height + event.clientY - start.pointerY), maxHeight),
-      width: Math.min(Math.max(360, start.width + event.clientX - start.pointerX), maxWidth),
-    });
-  };
-
-  const stopEditorToolbarResize = (event: PointerEvent<HTMLButtonElement>) => {
-    setIsEditorToolbarResizing(false);
-    event.currentTarget.releasePointerCapture(event.pointerId);
-  };
-
   const getPayload = (): EditableArticlePayload => ({
     title,
     slug,
@@ -957,6 +857,39 @@ export default function EditArticleForm({
       }
     } catch {
       setSaveError("لم يتم الحفظ. تأكد أن خادم التطوير يعمل ثم جرّب مرة أخرى.");
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const deleteDraft = async () => {
+    if (!hasDraft) return;
+
+    const shouldDelete = window.confirm(
+      "حذف المسودة فقط؟ لن يتأثر المقال المنشور في الموقع."
+    );
+
+    if (!shouldDelete) return;
+
+    setIsSaving(true);
+    setSaveError(null);
+
+    try {
+      const response = await fetch(`/api/dashboard/articles/${slug || article.slug}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("تعذر حذف المسودة.");
+      }
+
+      setHasDraft(false);
+      setSavedAt(new Date().toLocaleTimeString("ar", { hour12: false }));
+      setLastAction("draft-deleted");
+      setPreviewVersion((version) => version + 1);
+      window.location.reload();
+    } catch {
+      setSaveError("لم يتم حذف المسودة. تأكد أن خادم التطوير يعمل ثم جرّب مرة أخرى.");
     } finally {
       setIsSaving(false);
     }
@@ -1649,24 +1582,10 @@ export default function EditArticleForm({
         <div className="border border-white/10 bg-[#101012] p-5">
           <div
             ref={editorToolbarRef}
-            className={`fixed z-50 overflow-y-auto border border-white/10 bg-[#101012]/95 p-2 shadow-2xl shadow-black/40 backdrop-blur ${
-              isEditorToolbarDragging || isEditorToolbarResizing
-                ? "select-none"
-                : ""
-            }`}
-            style={{
-              height: editorToolbarSize.height,
-              left: editorToolbarPosition.x,
-              top: editorToolbarPosition.y,
-              width: `min(${editorToolbarSize.width}px, calc(100vw - 16px))`,
-            }}
+            className="fixed inset-x-4 top-[50px] z-50 h-[215px] max-h-[calc(100vh-66px)] overflow-y-scroll border border-white/10 bg-[#101012]/95 p-2 shadow-2xl shadow-black/40 backdrop-blur md:inset-x-8"
           >
           <div
-            className="mb-1.5 flex cursor-grab flex-col gap-1.5 lg:flex-row lg:items-center lg:justify-between"
-            onPointerDown={startEditorToolbarDrag}
-            onPointerMove={dragEditorToolbar}
-            onPointerUp={stopEditorToolbarDrag}
-            onPointerCancel={stopEditorToolbarDrag}
+            className="mb-1.5 flex flex-col gap-1.5 lg:flex-row lg:items-center lg:justify-between"
           >
             <div className="flex items-center gap-2">
               <WrapText className="text-emerald-300" size={15} />
@@ -1697,15 +1616,6 @@ export default function EditArticleForm({
                 <span>موبايل</span>
               </button>
             </div>
-            <button
-              aria-label="تغيير حجم لوحة المحرر"
-              className="absolute bottom-1 left-1 h-4 w-4 cursor-nwse-resize border-b-2 border-l-2 border-zinc-500/80"
-              onPointerDown={startEditorToolbarResize}
-              onPointerMove={resizeEditorToolbar}
-              onPointerUp={stopEditorToolbarResize}
-              onPointerCancel={stopEditorToolbarResize}
-              type="button"
-            />
           </div>
 
           <div className="mb-1.5 flex flex-wrap gap-1">
@@ -1838,7 +1748,8 @@ export default function EditArticleForm({
             </button>
           </div>
 
-          <div className="mb-1.5 flex flex-wrap items-center gap-1 border border-white/10 bg-black/20 p-1">
+          <div className="mb-4 space-y-1.5 border border-white/10 bg-black/20 p-2">
+          <div className="flex flex-wrap items-center gap-1 border border-white/10 bg-black/20 p-1">
             <div className="flex h-6 items-center gap-1 px-1 text-[11px] font-normal text-zinc-400">
               <Palette size={13} />
               <span>لون</span>
@@ -2132,8 +2043,9 @@ export default function EditArticleForm({
               </div>
             </div>
           </div>
+          </div>
 
-          <div className="h-[205px] md:h-[128px] xl:h-[100px]" />
+          <div className="h-[215px]" />
 
           <div
             className={`mx-auto w-full min-w-0 overflow-hidden transition-all ${
@@ -2225,6 +2137,8 @@ export default function EditArticleForm({
                 <p>
                   {lastAction === "published"
                     ? "تم نشر النسخة الحالية"
+                    : lastAction === "draft-deleted"
+                      ? "تم حذف المسودة"
                     : "تم حفظ المسودة"}{" "}
                   عند {savedAt}.
                 </p>
@@ -2265,6 +2179,18 @@ export default function EditArticleForm({
               <Send size={18} />
               <span>نشر المقال</span>
             </button>
+
+            {hasDraft ? (
+              <button
+                className="flex h-11 items-center justify-center gap-2 border border-red-500/40 bg-red-500/10 px-4 text-sm font-black text-red-100 hover:bg-red-500/20 disabled:cursor-not-allowed disabled:opacity-50"
+                disabled={isSaving}
+                onClick={() => void deleteDraft()}
+                type="button"
+              >
+                <X size={18} />
+                <span>حذف المسودة</span>
+              </button>
+            ) : null}
 
             <Link
               href={previewHref}

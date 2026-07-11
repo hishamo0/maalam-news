@@ -53,7 +53,7 @@ export default function TrendingSidebar() {
               {article.title}
             </h4>
 
-            <p className="mt-3 text-sm text-zinc-500">
+            <p className={`mt-3 text-sm font-semibold ${article.color}`}>
               {article.date}
             </p>
           </Link>
